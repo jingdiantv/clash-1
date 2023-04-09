@@ -69,7 +69,7 @@ proxies:
 proxy-groups:
   - name: Free-servers
     type: select
-    proxies:
+    proxies: &ref_0
       - 美国 惠普HP
       - 美国+V2CROSS.COM
       - 美国 CloudFlare节点
@@ -77,6 +77,9 @@ proxy-groups:
       - 美国 CloudFlare节点 - 2
       - 美国 CloudFlare节点 - 3
       - 沙特阿拉伯+Arabic+Computer+System+Co. - 2
+  - name: 自动选择
+    type: url-test
+    proxies: *ref_0
 rule-providers:
   gfw:
     type: http
