@@ -1,4 +1,16 @@
 proxies:
+  - name: 美国+V2CROSS.COM
+    type: ss
+    server: 172.99.188.99
+    port: '5000'
+    cipher: aes-256-gcm
+    password: Y6R9pAtvxxzmGC
+  - name: 沙特阿拉伯+Arabic+Computer+System+Co.
+    type: ss
+    server: 85.208.108.60
+    port: '7001'
+    cipher: aes-256-gcm
+    password: RexnBgU7EV5ADxG
   - name: 丹麦 V2CROSS.COM
     type: vmess
     server: 185.162.228.1
@@ -75,6 +87,18 @@ proxies:
     ws-path: /filetransfer
     ws-headers:
       Host: us-west-1.292228.xyz
+  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 2
+    type: ss
+    server: 85.208.108.60
+    port: '5004'
+    cipher: aes-256-gcm
+    password: g5MeD6Ft3CWlJId
+  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 3
+    type: ss
+    server: 85.208.108.60
+    port: '8881'
+    cipher: aes-256-gcm
+    password: kDWvXYZoTBcGkC4
   - name: 美国 CloudFlare节点 - 4
     type: vmess
     server: www.udemy.com
@@ -88,17 +112,35 @@ proxies:
     ws-headers:
       Host: dynamic-sg3b.obfs.xyz
     tls: true
+  - name: 美国+V2CROSS.COM - 2
+    type: ss
+    server: 172.99.188.99
+    port: '6379'
+    cipher: aes-256-gcm
+    password: zDNVedRFPQexG9v
+  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 4
+    type: ss
+    server: 85.208.108.60
+    port: '8080'
+    cipher: aes-256-gcm
+    password: KixLvKzwjekG00rm
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
+      - 美国+V2CROSS.COM
+      - 沙特阿拉伯+Arabic+Computer+System+Co.
       - 丹麦 V2CROSS.COM
       - 美国 CloudFlare节点
       - 印度 V2CROSS.COM
       - 俄罗斯 V2CROSS.COM
       - 美国 CloudFlare节点 - 2
       - 美国 CloudFlare节点 - 3
+      - 沙特阿拉伯+Arabic+Computer+System+Co. - 2
+      - 沙特阿拉伯+Arabic+Computer+System+Co. - 3
       - 美国 CloudFlare节点 - 4
+      - 美国+V2CROSS.COM - 2
+      - 沙特阿拉伯+Arabic+Computer+System+Co. - 4
 rule-providers:
   gfw:
     type: http
