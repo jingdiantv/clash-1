@@ -1,8 +1,60 @@
 proxies:
+  - name: 丹麦 V2CROSS.COM
+    type: vmess
+    server: 185.162.228.1
+    port: 443
+    uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /ECTCJ0DF
+    ws-headers:
+      Host: 154.v2ray3.xyz
+    tls: true
   - name: 美国 CloudFlare节点
     type: vmess
+    server: 162.159.58.15
+    port: 443
+    uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /AUIKN8AU
+    ws-headers:
+      Host: lg1.v2ray6.xyz
+    tls: true
+  - name: 印度 V2CROSS.COM
+    type: vmess
+    server: 103.160.204.15
+    port: 443
+    uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /AUIKN8AU
+    ws-headers:
+      Host: lg1.v2ray6.xyz
+    tls: true
+  - name: 俄罗斯 V2CROSS.COM
+    type: vmess
+    server: 185.143.220.25
+    port: 443
+    uuid: f28e354e-c2d1-4983-9b07-5acaf1b3b3e5
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /6e9EtZ2dL
+    ws-headers:
+      Host: dengxin.one
+    tls: true
+  - name: 美国 CloudFlare节点 - 2
+    type: vmess
     server: cf.515188.xyz
-    port: 8880
+    port: 80
     uuid: f6aa4440-e7be-44e1-80e1-7e45ccd796cc
     alterId: 0
     cipher: auto
@@ -10,8 +62,8 @@ proxies:
     network: ws
     ws-path: /api/v3/download.getFile
     ws-headers:
-      Host: ssrsub.v02.ssrsub.com
-  - name: 美国 CloudFlare节点 - 2
+      Host: ssrsub.v01.ssrsub.com
+  - name: 美国 CloudFlare节点 - 3
     type: vmess
     server: target.292228.xyz
     port: 80
@@ -22,39 +74,31 @@ proxies:
     network: ws
     ws-path: /filetransfer
     ws-headers:
-      Host: us-east-1.292228.xyz
-  - name: 美国 CloudFlare节点 - 3
+      Host: us-west-1.292228.xyz
+  - name: 美国 CloudFlare节点 - 4
     type: vmess
-    server: 172.67.68.105
-    port: 8080
-    uuid: 9e609b63-8694-410a-c1ca-3d452889744d
+    server: www.udemy.com
+    port: 443
+    uuid: e6442903-4753-4783-8916-ac47c8080e4f
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /
+    ws-path: /worryfree
     ws-headers:
-      Host: longdiyyds.eu.org
-  - name: 美国 Cloudinnovation数据中心
-    type: vmess
-    server: 154.84.1.31
-    port: 44902
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /
-    ws-headers:
-      Host: ''
+      Host: dynamic-sg3b.obfs.xyz
+    tls: true
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
+      - 丹麦 V2CROSS.COM
       - 美国 CloudFlare节点
+      - 印度 V2CROSS.COM
+      - 俄罗斯 V2CROSS.COM
       - 美国 CloudFlare节点 - 2
       - 美国 CloudFlare节点 - 3
-      - 美国 Cloudinnovation数据中心
+      - 美国 CloudFlare节点 - 4
 rule-providers:
   gfw:
     type: http
