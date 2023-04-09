@@ -1,81 +1,42 @@
 proxies:
+  - name: 美国 惠普HP
+    type: vmess
+    server: hk3.af49c4e4c2ef.sanfen001.pics
+    port: 443
+    uuid: 8216e1fd-7f67-440d-9a63-51d0f6c38b10
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /zh-cn
+    ws-headers:
+      Host: hk3.af49c4e4c2ef.sanfen001.pics
+    tls: true
   - name: 美国+V2CROSS.COM
     type: ss
     server: 172.99.188.99
     port: '5000'
     cipher: aes-256-gcm
     password: Y6R9pAtvxxzmGC
+  - name: 美国 CloudFlare节点
+    type: vmess
+    server: s245.rpscloud3.cloud
+    port: 80
+    uuid: d65ca664-72d3-4a14-a836-00eadd0df46e
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /graphql
+    ws-headers:
+      Host: s245.rpscloud3.cloud
   - name: 沙特阿拉伯+Arabic+Computer+System+Co.
     type: ss
     server: 85.208.108.60
-    port: '7001'
+    port: '8080'
     cipher: aes-256-gcm
-    password: RexnBgU7EV5ADxG
-  - name: 丹麦 V2CROSS.COM
-    type: vmess
-    server: 185.162.228.1
-    port: 443
-    uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /ECTCJ0DF
-    ws-headers:
-      Host: 154.v2ray3.xyz
-    tls: true
-  - name: 美国 CloudFlare节点
-    type: vmess
-    server: 162.159.58.15
-    port: 443
-    uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /AUIKN8AU
-    ws-headers:
-      Host: lg1.v2ray6.xyz
-    tls: true
-  - name: 印度 V2CROSS.COM
-    type: vmess
-    server: 103.160.204.15
-    port: 443
-    uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /AUIKN8AU
-    ws-headers:
-      Host: lg1.v2ray6.xyz
-    tls: true
-  - name: 俄罗斯 V2CROSS.COM
-    type: vmess
-    server: 185.143.220.25
-    port: 443
-    uuid: f28e354e-c2d1-4983-9b07-5acaf1b3b3e5
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /6e9EtZ2dL
-    ws-headers:
-      Host: dengxin.one
-    tls: true
+    password: KixLvKzwjekG00rm
   - name: 美国 CloudFlare节点 - 2
-    type: vmess
-    server: cf.515188.xyz
-    port: 80
-    uuid: f6aa4440-e7be-44e1-80e1-7e45ccd796cc
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /api/v3/download.getFile
-    ws-headers:
-      Host: ssrsub.v01.ssrsub.com
-  - name: 美国 CloudFlare节点 - 3
     type: vmess
     server: target.292228.xyz
     port: 80
@@ -87,60 +48,35 @@ proxies:
     ws-path: /filetransfer
     ws-headers:
       Host: us-west-1.292228.xyz
-  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 2
-    type: ss
-    server: 85.208.108.60
-    port: '5004'
-    cipher: aes-256-gcm
-    password: g5MeD6Ft3CWlJId
-  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 3
-    type: ss
-    server: 85.208.108.60
-    port: '8881'
-    cipher: aes-256-gcm
-    password: kDWvXYZoTBcGkC4
-  - name: 美国 CloudFlare节点 - 4
+  - name: 美国 CloudFlare节点 - 3
     type: vmess
-    server: www.udemy.com
-    port: 443
-    uuid: e6442903-4753-4783-8916-ac47c8080e4f
+    server: cf.515188.xyz
+    port: 80
+    uuid: f6aa4440-e7be-44e1-80e1-7e45ccd796cc
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /worryfree
+    ws-path: /api/v3/download.getFile
     ws-headers:
-      Host: dynamic-sg3b.obfs.xyz
-    tls: true
-  - name: 美国+V2CROSS.COM - 2
-    type: ss
-    server: 172.99.188.99
-    port: '6379'
-    cipher: aes-256-gcm
-    password: zDNVedRFPQexG9v
-  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 4
+      Host: ssrsub.v01.ssrsub.com
+  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 2
     type: ss
     server: 85.208.108.60
-    port: '8080'
+    port: '5001'
     cipher: aes-256-gcm
-    password: KixLvKzwjekG00rm
+    password: Y6R9pAtvxxzmGC
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
+      - 美国 惠普HP
       - 美国+V2CROSS.COM
-      - 沙特阿拉伯+Arabic+Computer+System+Co.
-      - 丹麦 V2CROSS.COM
       - 美国 CloudFlare节点
-      - 印度 V2CROSS.COM
-      - 俄罗斯 V2CROSS.COM
+      - 沙特阿拉伯+Arabic+Computer+System+Co.
       - 美国 CloudFlare节点 - 2
       - 美国 CloudFlare节点 - 3
       - 沙特阿拉伯+Arabic+Computer+System+Co. - 2
-      - 沙特阿拉伯+Arabic+Computer+System+Co. - 3
-      - 美国 CloudFlare节点 - 4
-      - 美国+V2CROSS.COM - 2
-      - 沙特阿拉伯+Arabic+Computer+System+Co. - 4
 rule-providers:
   gfw:
     type: http
