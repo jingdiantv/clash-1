@@ -1,7 +1,20 @@
 proxies:
+  - name: 美国+V2CROSS.COM
+    type: ss
+    server: >-
+      ak1663.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou
+    port: '5000'
+    cipher: aes-256-gcm
+    password: Y6R9pAtvxxzmGC
+  - name: 沙特阿拉伯+Arabic+Computer+System+Co.
+    type: ss
+    server: 85.208.108.60
+    port: '8881'
+    cipher: aes-256-gcm
+    password: kDWvXYZoTBcGkC4
   - name: 美国 CloudFlare节点
     type: vmess
-    server: cf.515188.xyz
+    server: r2wind.com
     port: 80
     uuid: f6aa4440-e7be-44e1-80e1-7e45ccd796cc
     alterId: 0
@@ -11,86 +24,53 @@ proxies:
     ws-path: /api/v3/download.getFile
     ws-headers:
       Host: ssrsub.v01.ssrsub.com
-  - name: 丹麦 V2CROSS.COM
-    type: vmess
-    server: 185.162.228.229
-    port: 80
-    uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /
-    ws-headers:
-      Host: lg.v2ray8.xyz
   - name: 意大利+V2CROSS.COM
     type: ss
     server: 212.102.53.194
     port: '443'
     cipher: aes-128-gcm
     password: shadowsocks
-  - name: 亚太地区 V2CROSS.COM
+  - name: 美国 V2CROSS.COM
     type: vmess
-    server: 103.182.16.149
-    port: 80
-    uuid: a740cddf-bda7-4b58-8eda-35bece740b6e
-    alterId: 0
+    server: 137.175.18.107
+    port: 50004
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
     cipher: auto
     udp: true
-    network: ws
-    ws-path: /anti13.zingfast.vn
+    network: tcp
+    ws-path: /
     ws-headers:
       Host: ''
-  - name: 美国 CloudFlare节点 - 2
-    type: vmess
-    server: v143.toddns.tk
-    port: 80
-    uuid: a25881f3-967f-3265-bc7f-9e66857b016b
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /jp143-d2xddxxj
-    ws-headers:
-      Host: v143.toddns.tk
-  - name: 美国+V2CROSS.COM
-    type: ss
-    server: 172.99.188.99
-    port: '8882'
-    cipher: aes-256-gcm
-    password: kDWvXYZoTBcGkC4
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 美国 CloudFlare节点
-      - 丹麦 V2CROSS.COM
-      - 意大利+V2CROSS.COM
-      - 亚太地区 V2CROSS.COM
-      - 美国 CloudFlare节点 - 2
       - 美国+V2CROSS.COM
+      - 沙特阿拉伯+Arabic+Computer+System+Co.
+      - 美国 CloudFlare节点
+      - 意大利+V2CROSS.COM
+      - 美国 V2CROSS.COM
   - name: 自动选择
     type: url-test
     proxies:
-      - 美国 CloudFlare节点
-      - 丹麦 V2CROSS.COM
-      - 意大利+V2CROSS.COM
-      - 亚太地区 V2CROSS.COM
-      - 美国 CloudFlare节点 - 2
       - 美国+V2CROSS.COM
+      - 沙特阿拉伯+Arabic+Computer+System+Co.
+      - 美国 CloudFlare节点
+      - 意大利+V2CROSS.COM
+      - 美国 V2CROSS.COM
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 美国 CloudFlare节点
-      - 丹麦 V2CROSS.COM
-      - 意大利+V2CROSS.COM
-      - 亚太地区 V2CROSS.COM
-      - 美国 CloudFlare节点 - 2
       - 美国+V2CROSS.COM
+      - 沙特阿拉伯+Arabic+Computer+System+Co.
+      - 美国 CloudFlare节点
+      - 意大利+V2CROSS.COM
+      - 美国 V2CROSS.COM
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
