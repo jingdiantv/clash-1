@@ -1,4 +1,88 @@
 proxies:
+  - name: 美国 CloudFlare节点
+    type: vmess
+    server: 104.22.52.93
+    port: 443
+    uuid: 9a18cbb1-81d2-4720-9f09-46ea276b6ddb
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /huhublog
+    ws-headers:
+      Host: zhuyong.hucloud-dns.xyz
+    tls: true
+  - name: 美国 V2CROSS.COM
+    type: vmess
+    server: 143.42.87.69
+    port: 443
+    uuid: 927094d3-d678-4763-8591-e240d0bcae87
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /chat
+    ws-headers:
+      Host: 143.42.87.69
+    tls: true
+  - name: 美国 V2CROSS.COM - 2
+    type: vmess
+    server: cf-cdn.aoop.top
+    port: 2052
+    uuid: a0835719-0de6-4d1b-92cd-ebdbc15ca66a
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /jntm=2048
+    ws-headers:
+      Host: us-sm.91ip.xyz
+  - name: 沙特阿拉伯+Arabic+Computer+System+Co.
+    type: ss
+    server: 85.208.108.60
+    port: '8881'
+    cipher: aes-256-gcm
+    password: kDWvXYZoTBcGkC4
+  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 2
+    type: ss
+    server: 85.208.108.60
+    port: '3389'
+    cipher: aes-256-gcm
+    password: Y6R9pAtvxxzmGC
+  - name: 美国加利福尼亚州圣克拉拉+腾讯云
+    type: trojan
+    server: 43.153.34.170
+    port: '8443'
+    password: cf4295378e209e70d12c5bdd017144dfd1c772d3
+  - name: 美国+V2CROSS.COM
+    type: ss
+    server: 172.99.188.99
+    port: '5004'
+    cipher: aes-256-gcm
+    password: g5MeD6Ft3CWlJId
+  - name: 美国+V2CROSS.COM - 2
+    type: trojan
+    server: or.blowm1k.club
+    port: '31263'
+    password: MkoKA2iMSX
+  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 3
+    type: ss
+    server: 85.208.108.60
+    port: '2376'
+    cipher: aes-256-gcm
+    password: faBAoD54k87UJG7
+  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 4
+    type: ss
+    server: 85.208.108.60
+    port: '2375'
+    cipher: aes-256-gcm
+    password: faBAoD54k87UJG7
+  - name: 美国+V2CROSS.COM - 3
+    type: ss
+    server: 172.99.188.99
+    port: '6379'
+    cipher: aes-256-gcm
+    password: zDNVedRFPQexG9v
   - name: 美国 加利福尼亚州圣何塞PEG TECH
     type: vmess
     server: 142.4.104.201
@@ -11,117 +95,71 @@ proxies:
     ws-path: ''
     ws-headers:
       Host: ''
-  - name: 沙特阿拉伯+Arabic+Computer+System+Co.
-    type: ss
-    server: 85.208.108.60
-    port: '8881'
-    cipher: aes-256-gcm
-    password: kDWvXYZoTBcGkC4
-  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 2
-    type: ss
-    server: 85.208.108.60
-    port: '6379'
-    cipher: aes-256-gcm
-    password: zDNVedRFPQexG9v
-  - name: 美国 CloudFlare节点
+  - name: 亚太地区 V2CROSS.COM
     type: vmess
-    server: target.292228.xyz
+    server: 103.182.16.149
     port: 80
-    uuid: 12b1bed9-1534-41db-a530-a1dbf6c2a7c6
+    uuid: a740cddf-bda7-4b58-8eda-35bece740b6e
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /filetransfer
+    ws-path: /anti13.zingfast.vn
     ws-headers:
-      Host: us-west-1.292228.xyz
-  - name: 美国 Datability
-    type: vmess
-    server: 140.99.94.61
-    port: 48399
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /
-    ws-headers:
-      Host: ''
-  - name: 丹麦 V2CROSS.COM
-    type: vmess
-    server: 185.162.228.1
-    port: 443
-    uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /ECTCJ0DF
-    ws-headers:
-      Host: 154.v2ray3.xyz
-    tls: true
-  - name: 澳大利亚 悉尼
-    type: vmess
-    server: 203.24.108.2
-    port: 80
-    uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /
-    ws-headers:
-      Host: fr.v2ray1.xyz
-  - name: 英国 V2CROSS.COM
-    type: vmess
-    server: 167.172.20.69
-    port: 57955
-    uuid: 899df24c-6b7f-4592-f29d-4f8b495d071d
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /
-    ws-headers:
-      Host: ''
+      Host: 103.182.16.149
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 美国 加利福尼亚州圣何塞PEG TECH
+      - 美国 CloudFlare节点
+      - 美国 V2CROSS.COM
+      - 美国 V2CROSS.COM - 2
       - 沙特阿拉伯+Arabic+Computer+System+Co.
       - 沙特阿拉伯+Arabic+Computer+System+Co. - 2
-      - 美国 CloudFlare节点
-      - 美国 Datability
-      - 丹麦 V2CROSS.COM
-      - 澳大利亚 悉尼
-      - 英国 V2CROSS.COM
+      - 美国加利福尼亚州圣克拉拉+腾讯云
+      - 美国+V2CROSS.COM
+      - 美国+V2CROSS.COM - 2
+      - 沙特阿拉伯+Arabic+Computer+System+Co. - 3
+      - 沙特阿拉伯+Arabic+Computer+System+Co. - 4
+      - 美国+V2CROSS.COM - 3
+      - 美国 加利福尼亚州圣何塞PEG TECH
+      - 亚太地区 V2CROSS.COM
   - name: 自动选择
     type: url-test
     proxies:
-      - 美国 加利福尼亚州圣何塞PEG TECH
+      - 美国 CloudFlare节点
+      - 美国 V2CROSS.COM
+      - 美国 V2CROSS.COM - 2
       - 沙特阿拉伯+Arabic+Computer+System+Co.
       - 沙特阿拉伯+Arabic+Computer+System+Co. - 2
-      - 美国 CloudFlare节点
-      - 美国 Datability
-      - 丹麦 V2CROSS.COM
-      - 澳大利亚 悉尼
-      - 英国 V2CROSS.COM
+      - 美国加利福尼亚州圣克拉拉+腾讯云
+      - 美国+V2CROSS.COM
+      - 美国+V2CROSS.COM - 2
+      - 沙特阿拉伯+Arabic+Computer+System+Co. - 3
+      - 沙特阿拉伯+Arabic+Computer+System+Co. - 4
+      - 美国+V2CROSS.COM - 3
+      - 美国 加利福尼亚州圣何塞PEG TECH
+      - 亚太地区 V2CROSS.COM
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 美国 加利福尼亚州圣何塞PEG TECH
+      - 美国 CloudFlare节点
+      - 美国 V2CROSS.COM
+      - 美国 V2CROSS.COM - 2
       - 沙特阿拉伯+Arabic+Computer+System+Co.
       - 沙特阿拉伯+Arabic+Computer+System+Co. - 2
-      - 美国 CloudFlare节点
-      - 美国 Datability
-      - 丹麦 V2CROSS.COM
-      - 澳大利亚 悉尼
-      - 英国 V2CROSS.COM
+      - 美国加利福尼亚州圣克拉拉+腾讯云
+      - 美国+V2CROSS.COM
+      - 美国+V2CROSS.COM - 2
+      - 沙特阿拉伯+Arabic+Computer+System+Co. - 3
+      - 沙特阿拉伯+Arabic+Computer+System+Co. - 4
+      - 美国+V2CROSS.COM - 3
+      - 美国 加利福尼亚州圣何塞PEG TECH
+      - 亚太地区 V2CROSS.COM
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
