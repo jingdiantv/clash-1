@@ -1,65 +1,77 @@
 proxies:
-  - name: 美国 V2CROSS.COM
-    type: vmess
-    server: 45.159.209.44
-    port: 56
-    uuid: d5d7db3c-f865-4396-b029-b1bfe6fe5d6a
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /
-    ws-headers:
-      Host: ''
-  - name: 澳大利亚 Lyndhurst Secondary College
-    type: vmess
-    server: 203.30.188.2
-    port: 80
-    uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /
-    ws-headers:
-      Host: fr.v2ray1.xyz
-  - name: 日本 V2CROSS.COM
-    type: vmess
-    server: hk6.af49c4e4c2ef.sanfen001.pics
-    port: 443
-    uuid: da9d5c74-a572-4cf4-a375-19b886f5ffc4
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /zh-cn
-    ws-headers:
-      Host: www.microsoft.com
-    tls: true
-  - name: 美国 加利福尼亚州费里蒙Linode数据中心
-    type: vmess
-    server: 23.239.23.138
-    port: 80
-    uuid: 8131b9e9-332b-4402-a86a-72055b33a130
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /images
-    ws-headers:
-      Host: ''
   - name: 美国 CloudFlare节点
     type: vmess
-    server: 162.159.58.15
-    port: 443
-    uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
+    server: s245.rpscloud3.cloud
+    port: 80
+    uuid: d65ca664-72d3-4a14-a836-00eadd0df46e
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /AUIKN8AU
+    ws-path: /graphql
     ws-headers:
-      Host: lg1.v2ray6.xyz
+      Host: s245.rpscloud3.cloud
+  - name: 美国 CloudFlare节点 - 2
+    type: vmess
+    server: cf.dalazhi.eu.org
+    port: 443
+    uuid: 135c1110-52a4-45d1-9eae-cd9faaa7eada
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /135c1110-52a4-45d1-9eae-cd9faaa7eada-vm
+    ws-headers:
+      Host: dalazhi.eu.org
+    tls: true
+  - name: 美国 CloudFlare公司CDN节点(shopify)
+    type: vmess
+    server: 23.227.38.39
+    port: 80
+    uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /
+    ws-headers:
+      Host: lg.v2ray8.xyz
+  - name: 丹麦 V2CROSS.COM
+    type: vmess
+    server: 185.162.228.229
+    port: 80
+    uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /
+    ws-headers:
+      Host: lg.v2ray8.xyz
+  - name: 美国 CloudFlare节点 - 3
+    type: vmess
+    server: cf.noaries.de
+    port: 2082
+    uuid: 314c1387-618c-4689-97fc-4bc9a1ae5e05
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /
+    ws-headers:
+      Host: ir2.nmsl.ninja
+  - name: 澳大利亚 Langwarrin Secondary College
+    type: vmess
+    server: 203.30.190.1
+    port: 443
+    uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /ECTCJ0DF
+    ws-headers:
+      Host: 154.v2ray3.xyz
     tls: true
 proxy-groups:
   - name: Free-servers
@@ -67,29 +79,32 @@ proxy-groups:
     proxies:
       - 自动选择
       - 故障转移
-      - 美国 V2CROSS.COM
-      - 澳大利亚 Lyndhurst Secondary College
-      - 日本 V2CROSS.COM
-      - 美国 加利福尼亚州费里蒙Linode数据中心
       - 美国 CloudFlare节点
+      - 美国 CloudFlare节点 - 2
+      - 美国 CloudFlare公司CDN节点(shopify)
+      - 丹麦 V2CROSS.COM
+      - 美国 CloudFlare节点 - 3
+      - 澳大利亚 Langwarrin Secondary College
   - name: 自动选择
     type: url-test
     proxies:
-      - 美国 V2CROSS.COM
-      - 澳大利亚 Lyndhurst Secondary College
-      - 日本 V2CROSS.COM
-      - 美国 加利福尼亚州费里蒙Linode数据中心
       - 美国 CloudFlare节点
+      - 美国 CloudFlare节点 - 2
+      - 美国 CloudFlare公司CDN节点(shopify)
+      - 丹麦 V2CROSS.COM
+      - 美国 CloudFlare节点 - 3
+      - 澳大利亚 Langwarrin Secondary College
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 美国 V2CROSS.COM
-      - 澳大利亚 Lyndhurst Secondary College
-      - 日本 V2CROSS.COM
-      - 美国 加利福尼亚州费里蒙Linode数据中心
       - 美国 CloudFlare节点
+      - 美国 CloudFlare节点 - 2
+      - 美国 CloudFlare公司CDN节点(shopify)
+      - 丹麦 V2CROSS.COM
+      - 美国 CloudFlare节点 - 3
+      - 澳大利亚 Langwarrin Secondary College
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
