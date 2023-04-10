@@ -1,98 +1,111 @@
 proxies:
-  - name: 印度 V2CROSS.COM
-    type: vmess
-    server: 103.160.204.15
-    port: 443
-    uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /AUIKN8AU
-    ws-headers:
-      Host: lg1.v2ray6.xyz
-    tls: true
   - name: 美国 CloudFlare节点
     type: vmess
-    server: 141.101.114.31
-    port: 443
-    uuid: 56a2188b-2ab7-402c-b9b8-34847fdf0958
+    server: r2wind.com
+    port: 80
+    uuid: f6aa4440-e7be-44e1-80e1-7e45ccd796cc
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /5QNROSRV
+    ws-path: /api/v3/download.getFile
     ws-headers:
-      Host: oplg1.zhujicn2.com
-    tls: true
-  - name: 美国 CloudFlare节点 - 2
-    type: vmess
-    server: cf-lt.sharecentre.online
-    port: 443
-    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /shirker
-    ws-headers:
-      Host: lv3.sharecentrepro.org
-    tls: true
-  - name: 美国 CloudFlare节点 - 3
-    type: vmess
-    server: zhuyong.hucloud-dns.xyz
-    port: 443
-    uuid: 9a18cbb1-81d2-4720-9f09-46ea276b6ddb
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /huhublog
-    ws-headers:
-      Host: ''
-    tls: true
+      Host: ssrsub.v01.ssrsub.com
+  - name: 美国+V2CROSS.COM
+    type: ss
+    server: 172.99.188.99
+    port: '6379'
+    cipher: aes-256-gcm
+    password: zDNVedRFPQexG9v
   - name: 美国 V2CROSS.COM
     type: vmess
-    server: 143.42.87.69
+    server: 131.186.31.174
     port: 443
-    uuid: 927094d3-d678-4763-8591-e240d0bcae87
+    uuid: 05a6a4af-6aec-423f-d814-365c63d29efb
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /chat
+    ws-path: /
     ws-headers:
-      Host: 143.42.87.69
-    tls: true
+      Host: ''
+  - name: 美国 CloudFlare公司CDN节点(shopify)
+    type: vmess
+    server: 23.227.38.39
+    port: 80
+    uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /
+    ws-headers:
+      Host: lg.v2ray8.xyz
+  - name: 加拿大+V2CROSS.COM
+    type: ss
+    server: 142.202.48.99
+    port: '3306'
+    cipher: aes-256-gcm
+    password: Y6R9pAtvxxzmGC
+  - name: 美国 CloudFlare节点 - 2
+    type: vmess
+    server: 162.159.255.200
+    port: 80
+    uuid: 52466dc2-3550-4310-910c-74b7bf8a020e
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /
+    ws-headers:
+      Host: us-1.acyun.eu.org
+  - name: 澳大利亚 悉尼
+    type: vmess
+    server: 203.24.108.100
+    port: 80
+    uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /
+    ws-headers:
+      Host: lg.v2ray8.xyz
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 印度 V2CROSS.COM
       - 美国 CloudFlare节点
-      - 美国 CloudFlare节点 - 2
-      - 美国 CloudFlare节点 - 3
+      - 美国+V2CROSS.COM
       - 美国 V2CROSS.COM
+      - 美国 CloudFlare公司CDN节点(shopify)
+      - 加拿大+V2CROSS.COM
+      - 美国 CloudFlare节点 - 2
+      - 澳大利亚 悉尼
   - name: 自动选择
     type: url-test
     proxies:
-      - 印度 V2CROSS.COM
       - 美国 CloudFlare节点
-      - 美国 CloudFlare节点 - 2
-      - 美国 CloudFlare节点 - 3
+      - 美国+V2CROSS.COM
       - 美国 V2CROSS.COM
+      - 美国 CloudFlare公司CDN节点(shopify)
+      - 加拿大+V2CROSS.COM
+      - 美国 CloudFlare节点 - 2
+      - 澳大利亚 悉尼
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 印度 V2CROSS.COM
       - 美国 CloudFlare节点
-      - 美国 CloudFlare节点 - 2
-      - 美国 CloudFlare节点 - 3
+      - 美国+V2CROSS.COM
       - 美国 V2CROSS.COM
+      - 美国 CloudFlare公司CDN节点(shopify)
+      - 加拿大+V2CROSS.COM
+      - 美国 CloudFlare节点 - 2
+      - 澳大利亚 悉尼
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
