@@ -1,118 +1,97 @@
 proxies:
-  - name: 巴西圣保罗 CloudFlare节点
+  - name: 美国 V2CROSS.COM
     type: vmess
-    server: 188.114.96.1
+    server: 143.42.87.69
     port: 443
-    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
+    uuid: 927094d3-d678-4763-8591-e240d0bcae87
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /shirker
+    ws-path: /chat
     ws-headers:
-      Host: lv2.sharecentrepro.org
+      Host: 143.42.87.69
+    tls: true
+  - name: 日本 V2CROSS.COM
+    type: vmess
+    server: hk6.af49c4e4c2ef.sanfen001.pics
+    port: 443
+    uuid: da9d5c74-a572-4cf4-a375-19b886f5ffc4
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /zh-cn
+    ws-headers:
+      Host: www.microsoft.com
     tls: true
   - name: 美国 CloudFlare节点
     type: vmess
-    server: spectra.aryogen.store
-    port: 2052
-    uuid: 606da12b-c5e2-43fc-e3b8-800c81ace4a6
+    server: pm.motori.pw
+    port: 8880
+    uuid: d1c59699-1874-49f1-b9ba-bbbfd7968075
     alterId: 0
     cipher: auto
     udp: true
     network: ws
     ws-path: /
     ws-headers:
-      Host: spectra.aryogen.store
-  - name: 南非 V2CROSS.COM
-    type: vmess
-    server: 156.225.67.192
-    port: 48123
-    uuid: d024fd8b-ea78-4789-b928-70afa1a910ce
-    alterId: 64
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: ''
-    ws-headers:
       Host: ''
   - name: 美国+V2CROSS.COM
     type: ss
     server: 172.99.188.99
-    port: '8888'
+    port: '8882'
     cipher: aes-256-gcm
-    password: Y6R9pAtvxxzmGC
-  - name: 美国 CloudFlare节点 - 2
+    password: kDWvXYZoTBcGkC4
+  - name: 美国加利福尼亚州洛杉矶 V2CROSS.COM
     type: vmess
-    server: cf.noaries.de
-    port: 8080
-    uuid: 4f7d5d43-226e-48d8-9df0-5e8bf9f77288
-    alterId: 0
+    server: 156.251.135.11
+    port: 53302
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
     cipher: auto
     udp: true
-    network: ws
-    ws-path: /aries?ed=2048
-    ws-headers:
-      Host: buyvm.cloudflare.quest
-  - name: 美国 CloudFlare节点 - 3
-    type: vmess
-    server: cf.noaries.de
-    port: 8080
-    uuid: 4f7d5d43-226e-48d8-9df0-5e8bf9f77288
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /aries?ed=2048
-    ws-headers:
-      Host: buyvm.cloudflare.quest
-  - name: 美国 加利福尼亚州洛杉矶Dedipath数据中心
-    type: vmess
-    server: 45.89.106.13
-    port: 443
-    uuid: b9cd8c99-dfef-46a2-c220-ddb13b837303
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /ray
+    network: tcp
+    ws-path: /
     ws-headers:
       Host: ''
+  - name: 上海市+电信
+    type: trojan
+    server: official.taipeicitygovernment.kiev.ua
+    port: '8443'
+    password: 5505f6ba-cd37-30ce-8f92-be4120c83d7f
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 巴西圣保罗 CloudFlare节点
+      - 美国 V2CROSS.COM
+      - 日本 V2CROSS.COM
       - 美国 CloudFlare节点
-      - 南非 V2CROSS.COM
       - 美国+V2CROSS.COM
-      - 美国 CloudFlare节点 - 2
-      - 美国 CloudFlare节点 - 3
-      - 美国 加利福尼亚州洛杉矶Dedipath数据中心
+      - 美国加利福尼亚州洛杉矶 V2CROSS.COM
+      - 上海市+电信
   - name: 自动选择
     type: url-test
     proxies:
-      - 巴西圣保罗 CloudFlare节点
+      - 美国 V2CROSS.COM
+      - 日本 V2CROSS.COM
       - 美国 CloudFlare节点
-      - 南非 V2CROSS.COM
       - 美国+V2CROSS.COM
-      - 美国 CloudFlare节点 - 2
-      - 美国 CloudFlare节点 - 3
-      - 美国 加利福尼亚州洛杉矶Dedipath数据中心
+      - 美国加利福尼亚州洛杉矶 V2CROSS.COM
+      - 上海市+电信
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 巴西圣保罗 CloudFlare节点
+      - 美国 V2CROSS.COM
+      - 日本 V2CROSS.COM
       - 美国 CloudFlare节点
-      - 南非 V2CROSS.COM
       - 美国+V2CROSS.COM
-      - 美国 CloudFlare节点 - 2
-      - 美国 CloudFlare节点 - 3
-      - 美国 加利福尼亚州洛杉矶Dedipath数据中心
+      - 美国加利福尼亚州洛杉矶 V2CROSS.COM
+      - 上海市+电信
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
