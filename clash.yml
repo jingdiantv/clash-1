@@ -1,64 +1,29 @@
 proxies:
+  - name: 丹麦 V2CROSS.COM
+    type: vmess
+    server: 185.162.228.1
+    port: 443
+    uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /ECTCJ0DF
+    ws-headers:
+      Host: 154.v2ray3.xyz
+    tls: true
   - name: 美国 CloudFlare节点
     type: vmess
-    server: r2wind.com
-    port: 80
-    uuid: f6aa4440-e7be-44e1-80e1-7e45ccd796cc
+    server: cf.noaries.de
+    port: 8080
+    uuid: 4f7d5d43-226e-48d8-9df0-5e8bf9f77288
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /api/v3/download.getFile
+    ws-path: /aries?ed=2048
     ws-headers:
-      Host: ssrsub.v01.ssrsub.com
-  - name: 美国+V2CROSS.COM
-    type: ss
-    server: 172.99.188.99
-    port: '6379'
-    cipher: aes-256-gcm
-    password: zDNVedRFPQexG9v
-  - name: 美国 V2CROSS.COM
-    type: vmess
-    server: 131.186.31.174
-    port: 443
-    uuid: 05a6a4af-6aec-423f-d814-365c63d29efb
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /
-    ws-headers:
-      Host: ''
-  - name: 美国 CloudFlare公司CDN节点(shopify)
-    type: vmess
-    server: 23.227.38.39
-    port: 80
-    uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /
-    ws-headers:
-      Host: lg.v2ray8.xyz
-  - name: 加拿大+V2CROSS.COM
-    type: ss
-    server: 142.202.48.99
-    port: '3306'
-    cipher: aes-256-gcm
-    password: Y6R9pAtvxxzmGC
-  - name: 美国 CloudFlare节点 - 2
-    type: vmess
-    server: 162.159.255.200
-    port: 80
-    uuid: 52466dc2-3550-4310-910c-74b7bf8a020e
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /
-    ws-headers:
-      Host: us-1.acyun.eu.org
+      Host: buyvm.cloudflare.quest
   - name: 澳大利亚 悉尼
     type: vmess
     server: 203.24.108.100
@@ -71,41 +36,100 @@ proxies:
     ws-path: /
     ws-headers:
       Host: lg.v2ray8.xyz
+  - name: 巴西圣保罗 CloudFlare节点
+    type: vmess
+    server: 188.114.99.2
+    port: 80
+    uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /
+    ws-headers:
+      Host: fr.v2ray1.xyz
+  - name: 美国+V2CROSS.COM
+    type: ss
+    server: 172.99.188.99
+    port: '6379'
+    cipher: aes-256-gcm
+    password: zDNVedRFPQexG9v
+  - name: 美国 CloudFlare节点 - 2
+    type: vmess
+    server: cfcdn.sanfencdn.net
+    port: 443
+    uuid: da9d5c74-a572-4cf4-a375-19b886f5ffc4
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /zh-cn
+    ws-headers:
+      Host: us2.sanfencdn.net
+    tls: true
+  - name: 美国加利福尼亚州洛杉矶 V2CROSS.COM
+    type: vmess
+    server: 156.251.135.11
+    port: 53302
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /
+    ws-headers:
+      Host: ''
+  - name: 美国 CloudFlare节点 - 3
+    type: vmess
+    server: cdn.moonfree.top
+    port: 8443
+    uuid: edf140f1-35e9-4160-b5a0-6b27f3419a6f
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /figure
+    ws-headers:
+      Host: usv6warp.happyfree.top
+    tls: true
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
+      - 丹麦 V2CROSS.COM
       - 美国 CloudFlare节点
-      - 美国+V2CROSS.COM
-      - 美国 V2CROSS.COM
-      - 美国 CloudFlare公司CDN节点(shopify)
-      - 加拿大+V2CROSS.COM
-      - 美国 CloudFlare节点 - 2
       - 澳大利亚 悉尼
+      - 巴西圣保罗 CloudFlare节点
+      - 美国+V2CROSS.COM
+      - 美国 CloudFlare节点 - 2
+      - 美国加利福尼亚州洛杉矶 V2CROSS.COM
+      - 美国 CloudFlare节点 - 3
   - name: 自动选择
     type: url-test
     proxies:
+      - 丹麦 V2CROSS.COM
       - 美国 CloudFlare节点
-      - 美国+V2CROSS.COM
-      - 美国 V2CROSS.COM
-      - 美国 CloudFlare公司CDN节点(shopify)
-      - 加拿大+V2CROSS.COM
-      - 美国 CloudFlare节点 - 2
       - 澳大利亚 悉尼
+      - 巴西圣保罗 CloudFlare节点
+      - 美国+V2CROSS.COM
+      - 美国 CloudFlare节点 - 2
+      - 美国加利福尼亚州洛杉矶 V2CROSS.COM
+      - 美国 CloudFlare节点 - 3
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
+      - 丹麦 V2CROSS.COM
       - 美国 CloudFlare节点
-      - 美国+V2CROSS.COM
-      - 美国 V2CROSS.COM
-      - 美国 CloudFlare公司CDN节点(shopify)
-      - 加拿大+V2CROSS.COM
-      - 美国 CloudFlare节点 - 2
       - 澳大利亚 悉尼
+      - 巴西圣保罗 CloudFlare节点
+      - 美国+V2CROSS.COM
+      - 美国 CloudFlare节点 - 2
+      - 美国加利福尼亚州洛杉矶 V2CROSS.COM
+      - 美国 CloudFlare节点 - 3
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
