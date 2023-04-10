@@ -1,37 +1,64 @@
 proxies:
-  - name: 美国 V2CROSS.COM
+  - name: 美国 CloudFlare公司CDN节点(shopify)
     type: vmess
-    server: surongwei.eu.org
-    port: 443
-    uuid: 6093eefb-7ab6-41df-aba0-d5fa58147e10
+    server: 23.227.38.39
+    port: 80
+    uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /reffs7y26g0ua
+    ws-path: /
     ws-headers:
-      Host: surongwei.eu.org
-    tls: true
+      Host: lg.v2ray8.xyz
+  - name: 美国加利福尼亚州圣克拉拉+腾讯云
+    type: trojan
+    server: 43.153.34.170
+    port: '8443'
+    password: cf4295378e209e70d12c5bdd017144dfd1c772d3
   - name: 美国 CloudFlare节点
     type: vmess
-    server: cf.dalazhi.eu.org
-    port: 443
-    uuid: 23fd9f2e-7ff8-4d98-8099-8acce9499433
+    server: 172.64.195.14
+    port: 80
+    uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /ibtrvws
+    ws-path: /
     ws-headers:
-      Host: tj2.dalazhi.eu.org
-    tls: true
+      Host: fr.v2ray1.xyz
+  - name: 美国 CloudFlare节点 - 2
+    type: vmess
+    server: cf-lt.sharecentre.online
+    port: 80
+    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /shirker
+    ws-headers:
+      Host: lv1.sharecentrepro.org
+  - name: 美国 CloudFlare节点 - 3
+    type: vmess
+    server: v143.toddns.tk
+    port: 80
+    uuid: a25881f3-967f-3265-bc7f-9e66857b016b
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /jp143-d2xddxxj
+    ws-headers:
+      Host: v143.toddns.tk
   - name: 美国+V2CROSS.COM
     type: ss
     server: 172.99.188.99
     port: '5004'
     cipher: aes-256-gcm
     password: g5MeD6Ft3CWlJId
-  - name: 美国 CloudFlare节点 - 2
+  - name: 美国 CloudFlare节点 - 4
     type: vmess
     server: cf.515188.xyz
     port: 80
@@ -43,41 +70,41 @@ proxies:
     ws-path: /api/v3/download.getFile
     ws-headers:
       Host: ssrsub.v01.ssrsub.com
-  - name: 美国+V2CROSS.COM - 2
-    type: ss
-    server: 172.99.188.99
-    port: '8888'
-    cipher: aes-256-gcm
-    password: Y6R9pAtvxxzmGC
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 美国 V2CROSS.COM
+      - 美国 CloudFlare公司CDN节点(shopify)
+      - 美国加利福尼亚州圣克拉拉+腾讯云
       - 美国 CloudFlare节点
-      - 美国+V2CROSS.COM
       - 美国 CloudFlare节点 - 2
-      - 美国+V2CROSS.COM - 2
+      - 美国 CloudFlare节点 - 3
+      - 美国+V2CROSS.COM
+      - 美国 CloudFlare节点 - 4
   - name: 自动选择
     type: url-test
     proxies:
-      - 美国 V2CROSS.COM
+      - 美国 CloudFlare公司CDN节点(shopify)
+      - 美国加利福尼亚州圣克拉拉+腾讯云
       - 美国 CloudFlare节点
-      - 美国+V2CROSS.COM
       - 美国 CloudFlare节点 - 2
-      - 美国+V2CROSS.COM - 2
+      - 美国 CloudFlare节点 - 3
+      - 美国+V2CROSS.COM
+      - 美国 CloudFlare节点 - 4
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 美国 V2CROSS.COM
+      - 美国 CloudFlare公司CDN节点(shopify)
+      - 美国加利福尼亚州圣克拉拉+腾讯云
       - 美国 CloudFlare节点
-      - 美国+V2CROSS.COM
       - 美国 CloudFlare节点 - 2
-      - 美国+V2CROSS.COM - 2
+      - 美国 CloudFlare节点 - 3
+      - 美国+V2CROSS.COM
+      - 美国 CloudFlare节点 - 4
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
