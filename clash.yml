@@ -1,4 +1,41 @@
 proxies:
+  - name: 丹麦 V2CROSS.COM
+    type: vmess
+    server: 185.162.228.1
+    port: 443
+    uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /ECTCJ0DF
+    ws-headers:
+      Host: 154.v2ray3.xyz
+    tls: true
+  - name: 美国+V2CROSS.COM
+    type: ss
+    server: 172.99.188.99
+    port: '8882'
+    cipher: aes-256-gcm
+    password: kDWvXYZoTBcGkC4
+  - name: 美国 CloudFlare节点
+    type: vmess
+    server: r2wind.com
+    port: 80
+    uuid: f6aa4440-e7be-44e1-80e1-7e45ccd796cc
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /api/v3/download.getFile
+    ws-headers:
+      Host: ssrsub.v01.ssrsub.com
+  - name: 美国+V2CROSS.COM - 2
+    type: ss
+    server: 172.99.188.99
+    port: '5003'
+    cipher: aes-256-gcm
+    password: g5MeD6Ft3CWlJId
   - name: 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
     type: vmess
     server: 23.224.14.114
@@ -11,80 +48,51 @@ proxies:
     ws-path: /AUIKN8AU
     ws-headers:
       Host: lg1.v2ray6.xyz
-  - name: 美国 CloudFlare节点
+  - name: 美国 CloudFlare节点 - 2
     type: vmess
-    server: cf-lt.sharecentre.online
-    port: 80
-    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /shirker
-    ws-headers:
-      Host: lv2.sharecentrepro.org
-  - name: 台湾省台北市 中华电信
-    type: vmess
-    server: tw2.sanfen001.pics
+    server: cfcdn.sanfencdn.net
     port: 443
     uuid: da9d5c74-a572-4cf4-a375-19b886f5ffc4
     alterId: 0
     cipher: auto
     udp: true
-    network: tcp
-    ws-path: /
+    network: ws
+    ws-path: /zh-cn
     ws-headers:
-      Host: ''
+      Host: us2.sanfencdn.net
     tls: true
-  - name: 美国加利福尼亚州洛杉矶+蜂鸟云
-    type: trojan
-    server: us226.ljydw.top
-    port: '443'
-    password: c89f1371-e52f-4e6d-85f4-a62df0c7416b
-  - name: 美国+V2CROSS.COM
-    type: ss
-    server: 172.99.188.99
-    port: '5003'
-    cipher: aes-256-gcm
-    password: g5MeD6Ft3CWlJId
-  - name: 美国+V2CROSS.COM - 2
-    type: ss
-    server: 172.99.188.99
-    port: '6379'
-    cipher: aes-256-gcm
-    password: zDNVedRFPQexG9v
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
-      - 美国 CloudFlare节点
-      - 台湾省台北市 中华电信
-      - 美国加利福尼亚州洛杉矶+蜂鸟云
+      - 丹麦 V2CROSS.COM
       - 美国+V2CROSS.COM
+      - 美国 CloudFlare节点
       - 美国+V2CROSS.COM - 2
+      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
+      - 美国 CloudFlare节点 - 2
   - name: 自动选择
     type: url-test
     proxies:
-      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
-      - 美国 CloudFlare节点
-      - 台湾省台北市 中华电信
-      - 美国加利福尼亚州洛杉矶+蜂鸟云
+      - 丹麦 V2CROSS.COM
       - 美国+V2CROSS.COM
+      - 美国 CloudFlare节点
       - 美国+V2CROSS.COM - 2
+      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
+      - 美国 CloudFlare节点 - 2
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
-      - 美国 CloudFlare节点
-      - 台湾省台北市 中华电信
-      - 美国加利福尼亚州洛杉矶+蜂鸟云
+      - 丹麦 V2CROSS.COM
       - 美国+V2CROSS.COM
+      - 美国 CloudFlare节点
       - 美国+V2CROSS.COM - 2
+      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
+      - 美国 CloudFlare节点 - 2
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
