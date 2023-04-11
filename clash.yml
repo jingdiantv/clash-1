@@ -1,4 +1,16 @@
 proxies:
+  - name: 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
+    type: vmess
+    server: 23.225.33.169
+    port: 56002
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /
+    ws-headers:
+      Host: ''
   - name: 台湾省台北市 中华电信
     type: vmess
     server: tw2.sanfen001.pics
@@ -12,112 +24,102 @@ proxies:
     ws-headers:
       Host: ''
     tls: true
-  - name: 美国 CloudFlare节点
+  - name: 台湾省台北市 中华电信 - 2
     type: vmess
-    server: 162.159.58.15
-    port: 443
-    uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
+    server: polotw1.applebench.tech
+    port: 56568
+    uuid: cc73b2fd-6a45-4690-b0ad-ddb8df4fb333
     alterId: 0
     cipher: auto
     udp: true
-    network: ws
-    ws-path: /AUIKN8AU
+    network: tcp
+    ws-path: /
     ws-headers:
-      Host: lg1.v2ray6.xyz
-    tls: true
-  - name: 日本 V2CROSS.COM
+      Host: polotw1.applebench.tech
+  - name: 伊朗 V2CROSS.COM
     type: vmess
-    server: hk6.af49c4e4c2ef.sanfen001.pics
-    port: 443
-    uuid: da9d5c74-a572-4cf4-a375-19b886f5ffc4
+    server: 5.78.73.163
+    port: 80
+    uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /zh-cn
+    ws-path: /masvod/public/2023/04/08/20230408_1875e71ee4d_r1_1200k.mp4
     ws-headers:
-      Host: www.microsoft.com
-    tls: true
-  - name: 美国 惠普HP
+      Host: svideo.mfa.gov.cn
+  - name: 俄罗斯 V2CROSS.COM
     type: vmess
-    server: hk1.b.bd6b6c503c93.sanfen001.pics
+    server: 185.143.220.25
     port: 443
-    uuid: da9d5c74-a572-4cf4-a375-19b886f5ffc4
+    uuid: f28e354e-c2d1-4983-9b07-5acaf1b3b3e5
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /zh-cn
+    ws-path: /6e9EtZ2dL
     ws-headers:
-      Host: www.microsoft.com
+      Host: dengxin.one
     tls: true
-  - name: 美国 V2CROSS.COM
+  - name: 南非 V2CROSS.COM
     type: vmess
-    server: vus5.0bad.com
-    port: 443
-    uuid: 927094d3-d678-4763-8591-e240d0bcae87
-    alterId: 0
+    server: 156.225.67.110
+    port: 45208
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
     cipher: auto
     udp: true
-    network: ws
-    ws-path: /chat
+    network: tcp
+    ws-path: /
     ws-headers:
       Host: ''
-    tls: true
-  - name: 美国 CloudFlare节点 - 2
+  - name: 美国 得克萨斯州
     type: vmess
-    server: hk01.kelecloud.xyz
-    port: 443
-    uuid: fcca4d06-3d1a-4d11-b2bb-d8b87d0aa91c
+    server: wj-fi-01.wujie.bio
+    port: 9096
+    uuid: 234507c5-781a-4e92-8290-8264a0a4de87
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /qwerty
+    ws-path: /
     ws-headers:
-      Host: hk01.kelecloud.xyz
-    tls: true
-  - name: 美国+V2CROSS.COM
-    type: ss
-    server: 172.99.188.99
-    port: '6379'
-    cipher: aes-256-gcm
-    password: zDNVedRFPQexG9v
+      Host: wj-fi-01.wujie.bio
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
+      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
       - 台湾省台北市 中华电信
-      - 美国 CloudFlare节点
-      - 日本 V2CROSS.COM
-      - 美国 惠普HP
-      - 美国 V2CROSS.COM
-      - 美国 CloudFlare节点 - 2
-      - 美国+V2CROSS.COM
+      - 台湾省台北市 中华电信 - 2
+      - 伊朗 V2CROSS.COM
+      - 俄罗斯 V2CROSS.COM
+      - 南非 V2CROSS.COM
+      - 美国 得克萨斯州
   - name: 自动选择
     type: url-test
     proxies:
+      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
       - 台湾省台北市 中华电信
-      - 美国 CloudFlare节点
-      - 日本 V2CROSS.COM
-      - 美国 惠普HP
-      - 美国 V2CROSS.COM
-      - 美国 CloudFlare节点 - 2
-      - 美国+V2CROSS.COM
+      - 台湾省台北市 中华电信 - 2
+      - 伊朗 V2CROSS.COM
+      - 俄罗斯 V2CROSS.COM
+      - 南非 V2CROSS.COM
+      - 美国 得克萨斯州
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
+      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
       - 台湾省台北市 中华电信
-      - 美国 CloudFlare节点
-      - 日本 V2CROSS.COM
-      - 美国 惠普HP
-      - 美国 V2CROSS.COM
-      - 美国 CloudFlare节点 - 2
-      - 美国+V2CROSS.COM
+      - 台湾省台北市 中华电信 - 2
+      - 伊朗 V2CROSS.COM
+      - 俄罗斯 V2CROSS.COM
+      - 南非 V2CROSS.COM
+      - 美国 得克萨斯州
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
