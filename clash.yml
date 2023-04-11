@@ -1,41 +1,28 @@
 proxies:
-  - name: 台湾省台北市 中华电信
-    type: vmess
-    server: tw2.sanfen001.pics
-    port: 443
-    uuid: da9d5c74-a572-4cf4-a375-19b886f5ffc4
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /
-    ws-headers:
-      Host: ''
-    tls: true
-  - name: 美国+V2CROSS.COM
-    type: ss
-    server: 172.99.188.99
-    port: '5003'
-    cipher: aes-256-gcm
-    password: g5MeD6Ft3CWlJId
   - name: 南非 V2CROSS.COM
     type: vmess
-    server: 156.225.67.211
-    port: 46464
-    uuid: 3ca912da-6ac2-418f-b9cf-45b6f694579b
+    server: 156.225.67.40
+    port: 35685
+    uuid: de491802-233e-47f2-8c6c-d19bcf5bd56b
     alterId: 64
     cipher: auto
     udp: true
     network: tcp
-    ws-path: /
+    ws-path: ''
     ws-headers:
       Host: ''
-  - name: 美国+V2CROSS.COM - 2
-    type: ss
-    server: 172.99.188.99
-    port: '6379'
-    cipher: aes-256-gcm
-    password: zDNVedRFPQexG9v
+  - name: 澳大利亚 Kooweerup Secondary College
+    type: vmess
+    server: 203.30.189.2
+    port: 80
+    uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /
+    ws-headers:
+      Host: fr.v2ray1.xyz
   - name: 澳大利亚 Langwarrin Secondary College
     type: vmess
     server: 203.30.190.1
@@ -49,11 +36,47 @@ proxies:
     ws-headers:
       Host: 154.v2ray3.xyz
     tls: true
-  - name: 南非 V2CROSS.COM - 2
+  - name: 美国 CloudFlare节点
     type: vmess
-    server: 156.225.67.40
-    port: 35685
-    uuid: de491802-233e-47f2-8c6c-d19bcf5bd56b
+    server: cf.515188.xyz
+    port: 8880
+    uuid: f6aa4440-e7be-44e1-80e1-7e45ccd796cc
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /api/v3/download.getFile
+    ws-headers:
+      Host: ssrsub.v02.ssrsub.com
+  - name: 美国 Datability
+    type: vmess
+    server: 140.99.94.42
+    port: 44108
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /
+    ws-headers:
+      Host: gzyd.jcnode.top
+  - name: 丹麦 V2CROSS.COM
+    type: vmess
+    server: 185.162.228.229
+    port: 80
+    uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /
+    ws-headers:
+      Host: lg.v2ray8.xyz
+  - name: 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
+    type: vmess
+    server: 23.224.14.114
+    port: 51552
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
     alterId: 64
     cipher: auto
     udp: true
@@ -61,85 +84,41 @@ proxies:
     ws-path: /AUIKN8AU
     ws-headers:
       Host: lg1.v2ray6.xyz
-  - name: 美国 CloudFlare节点
-    type: vmess
-    server: cfcdn.sanfencdn.net
-    port: 443
-    uuid: da9d5c74-a572-4cf4-a375-19b886f5ffc4
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /zh-cn
-    ws-headers:
-      Host: us2.sanfencdn.net
-    tls: true
-  - name: 俄罗斯 V2CROSS.COM
-    type: vmess
-    server: 185.143.220.25
-    port: 443
-    uuid: f28e354e-c2d1-4983-9b07-5acaf1b3b3e5
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /6e9EtZ2dL
-    ws-headers:
-      Host: dengxin.one
-    tls: true
-  - name: 美国 CloudFlare节点 - 2
-    type: vmess
-    server: hax.smely.eu.org
-    port: 80
-    uuid: 58340bf3-d51d-45e2-87a8-effa78e4bca6
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /hax02
-    ws-headers:
-      Host: hax.smely.eu.org
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 台湾省台北市 中华电信
-      - 美国+V2CROSS.COM
       - 南非 V2CROSS.COM
-      - 美国+V2CROSS.COM - 2
+      - 澳大利亚 Kooweerup Secondary College
       - 澳大利亚 Langwarrin Secondary College
-      - 南非 V2CROSS.COM - 2
       - 美国 CloudFlare节点
-      - 俄罗斯 V2CROSS.COM
-      - 美国 CloudFlare节点 - 2
+      - 美国 Datability
+      - 丹麦 V2CROSS.COM
+      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
   - name: 自动选择
     type: url-test
     proxies:
-      - 台湾省台北市 中华电信
-      - 美国+V2CROSS.COM
       - 南非 V2CROSS.COM
-      - 美国+V2CROSS.COM - 2
+      - 澳大利亚 Kooweerup Secondary College
       - 澳大利亚 Langwarrin Secondary College
-      - 南非 V2CROSS.COM - 2
       - 美国 CloudFlare节点
-      - 俄罗斯 V2CROSS.COM
-      - 美国 CloudFlare节点 - 2
+      - 美国 Datability
+      - 丹麦 V2CROSS.COM
+      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 台湾省台北市 中华电信
-      - 美国+V2CROSS.COM
       - 南非 V2CROSS.COM
-      - 美国+V2CROSS.COM - 2
+      - 澳大利亚 Kooweerup Secondary College
       - 澳大利亚 Langwarrin Secondary College
-      - 南非 V2CROSS.COM - 2
       - 美国 CloudFlare节点
-      - 俄罗斯 V2CROSS.COM
-      - 美国 CloudFlare节点 - 2
+      - 美国 Datability
+      - 丹麦 V2CROSS.COM
+      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
