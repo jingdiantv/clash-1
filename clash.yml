@@ -1,4 +1,17 @@
 proxies:
+  - name: 印度 V2CROSS.COM
+    type: vmess
+    server: 103.160.204.15
+    port: 443
+    uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /AUIKN8AU
+    ws-headers:
+      Host: lg1.v2ray6.xyz
+    tls: true
   - name: 美国 V2CROSS.COM
     type: vmess
     server: 192.203.230.16
@@ -12,6 +25,18 @@ proxies:
     ws-headers:
       Host: hk01.kelecloud.xyz
     tls: true
+  - name: 马来西亚 V2CROSS.COM
+    type: vmess
+    server: join-bede.vmessorg.fun
+    port: 80
+    uuid: ea42be9f-5859-48c5-d555-9892cfbe87d8
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /
+    ws-headers:
+      Host: ''
   - name: 美国 惠普HP
     type: vmess
     server: hk1.b.bd6b6c503c93.sanfen001.pics
@@ -25,50 +50,118 @@ proxies:
     ws-headers:
       Host: www.microsoft.com
     tls: true
-  - name: 上海市+电信
+  - name: 日本+V2CROSS.COM
     type: trojan
-    server: official.taipeicitygovernment.kiev.ua
-    port: '8443'
-    password: 5505f6ba-cd37-30ce-8f92-be4120c83d7f
-  - name: 美国+V2CROSS.COM
-    type: trojan
-    server: 152.70.74.66
+    server: hk8.microsoftjs.top
     port: '443'
-    password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
-  - name: 美国+V2CROSS.COM - 2
+    password: 47194a1f-9152-4c89-93eb-2a6e7a7b0527
+  - name: 南非 V2CROSS.COM
+    type: vmess
+    server: 156.225.67.252
+    port: 59911
+    uuid: 3fd637ad-46fe-4f85-a6e8-86b00bca1122
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: ''
+    ws-headers:
+      Host: ''
+  - name: 美国+V2CROSS.COM
     type: ss
     server: 172.99.188.99
     port: '8882'
     cipher: aes-256-gcm
     password: kDWvXYZoTBcGkC4
+  - name: 美国加利福尼亚州洛杉矶 V2CROSS.COM
+    type: vmess
+    server: 156.251.135.11
+    port: 53302
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /
+    ws-headers:
+      Host: ''
+  - name: 丹麦 V2CROSS.COM
+    type: vmess
+    server: 185.162.228.1
+    port: 443
+    uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /ECTCJ0DF
+    ws-headers:
+      Host: 154.v2ray3.xyz
+    tls: true
+  - name: 美国 Datability
+    type: vmess
+    server: 140.99.94.42
+    port: 44108
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /
+    ws-headers:
+      Host: gzyd.jcnode.top
+  - name: 美国+V2CROSS.COM - 2
+    type: ss
+    server: 172.99.188.99
+    port: '5003'
+    cipher: aes-256-gcm
+    password: g5MeD6Ft3CWlJId
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
+      - 印度 V2CROSS.COM
       - 美国 V2CROSS.COM
+      - 马来西亚 V2CROSS.COM
       - 美国 惠普HP
-      - 上海市+电信
+      - 日本+V2CROSS.COM
+      - 南非 V2CROSS.COM
       - 美国+V2CROSS.COM
+      - 美国加利福尼亚州洛杉矶 V2CROSS.COM
+      - 丹麦 V2CROSS.COM
+      - 美国 Datability
       - 美国+V2CROSS.COM - 2
   - name: 自动选择
     type: url-test
     proxies:
+      - 印度 V2CROSS.COM
       - 美国 V2CROSS.COM
+      - 马来西亚 V2CROSS.COM
       - 美国 惠普HP
-      - 上海市+电信
+      - 日本+V2CROSS.COM
+      - 南非 V2CROSS.COM
       - 美国+V2CROSS.COM
+      - 美国加利福尼亚州洛杉矶 V2CROSS.COM
+      - 丹麦 V2CROSS.COM
+      - 美国 Datability
       - 美国+V2CROSS.COM - 2
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
+      - 印度 V2CROSS.COM
       - 美国 V2CROSS.COM
+      - 马来西亚 V2CROSS.COM
       - 美国 惠普HP
-      - 上海市+电信
+      - 日本+V2CROSS.COM
+      - 南非 V2CROSS.COM
       - 美国+V2CROSS.COM
+      - 美国加利福尼亚州洛杉矶 V2CROSS.COM
+      - 丹麦 V2CROSS.COM
+      - 美国 Datability
       - 美国+V2CROSS.COM - 2
     url: http://www.gstatic.com/generate_204
     interval: 86400
