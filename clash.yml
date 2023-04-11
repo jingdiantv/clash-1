@@ -1,49 +1,7 @@
 proxies:
-  - name: 美国弗吉尼亚州阿什本 CloudFlare节点
-    type: vmess
-    server: 173.245.49.8
-    port: 443
-    uuid: 9a18cbb1-81d2-4720-9f09-46ea276b6ddb
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /huhublog
-    ws-headers:
-      Host: zhuyong.hucloud-dns.xyz
-    tls: true
-  - name: 美国+V2CROSS.COM
-    type: trojan
-    server: 152.70.74.66
-    port: '443'
-    password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
   - name: 美国 CloudFlare节点
     type: vmess
-    server: cf.noaries.de
-    port: 8080
-    uuid: 4f7d5d43-226e-48d8-9df0-5e8bf9f77288
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /aries?ed=2048
-    ws-headers:
-      Host: buyvm.cloudflare.quest
-  - name: 美国 加利福尼亚州圣何塞PEG TECH数据中心
-    type: vmess
-    server: 192.74.229.215
-    port: 51592
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /
-    ws-headers:
-      Host: ''
-  - name: 丹麦 V2CROSS.COM
-    type: vmess
-    server: 185.162.228.229
+    server: 198.41.203.7
     port: 80
     uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
     alterId: 0
@@ -53,36 +11,22 @@ proxies:
     ws-path: /
     ws-headers:
       Host: lg.v2ray8.xyz
-  - name: 俄罗斯 V2CROSS.COM
+  - name: 美国 Datability
     type: vmess
-    server: 185.143.220.25
-    port: 443
-    uuid: f28e354e-c2d1-4983-9b07-5acaf1b3b3e5
-    alterId: 0
+    server: 140.99.94.42
+    port: 44108
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
     cipher: auto
     udp: true
-    network: ws
-    ws-path: /6e9EtZ2dL
+    network: tcp
+    ws-path: /
     ws-headers:
-      Host: dengxin.one
-    tls: true
-  - name: 印度 V2CROSS.COM
+      Host: gzyd.jcnode.top
+  - name: 巴西圣保罗 CloudFlare节点
     type: vmess
-    server: 103.160.204.15
+    server: 188.114.96.1
     port: 443
-    uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /AUIKN8AU
-    ws-headers:
-      Host: lg1.v2ray6.xyz
-    tls: true
-  - name: 美国 CloudFlare节点 - 2
-    type: vmess
-    server: cf-lt.sharecentre.online
-    port: 80
     uuid: 2e496758-950e-4549-8842-d5eec98d9fde
     alterId: 0
     cipher: auto
@@ -91,68 +35,93 @@ proxies:
     ws-path: /shirker
     ws-headers:
       Host: lv2.sharecentrepro.org
-  - name: 美国 惠普HP
+    tls: true
+  - name: 沙特阿拉伯+Arabic+Computer+System+Co.
+    type: ss
+    server: 85.208.108.93
+    port: '7306'
+    cipher: aes-256-gcm
+    password: FoOiGlkAA9yPEGP
+  - name: 美国 加利福尼亚州圣何塞PEG TECH数据中心
     type: vmess
-    server: hk1.b.bd6b6c503c93.sanfen001.pics
+    server: 192.74.228.171
+    port: 42857
+    uuid: 051b844f-efe3-4847-92aa-66b5de0b6d4e
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /
+    ws-headers:
+      Host: n1674862929.gofdwgy.cn
+  - name: 日本+V2CROSS.COM
+    type: trojan
+    server: hk7.microsoftjs.top
+    port: '443'
+    password: d81a8fe5-02d2-430b-8185-d0d9b67055b1
+  - name: 南非豪登省约翰内斯堡 Cloudinnovation数据中心
+    type: vmess
+    server: 156.249.18.232
+    port: 42542
+    uuid: f5250c4e-f855-4eff-b73c-a02226d42fe7
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /
+    ws-headers:
+      Host: ''
+  - name: 美国 CloudFlare节点 - 2
+    type: vmess
+    server: www.udemy.com
     port: 443
-    uuid: da9d5c74-a572-4cf4-a375-19b886f5ffc4
+    uuid: e6442903-4753-4783-8916-ac47c8080e4f
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /zh-cn
+    ws-path: /worryfree
     ws-headers:
-      Host: www.microsoft.com
+      Host: dynamic-sg3b.obfs.xyz
     tls: true
-  - name: 上海市+电信
-    type: trojan
-    server: official.taipeicitygovernment.kiev.ua
-    port: '8443'
-    password: 5505f6ba-cd37-30ce-8f92-be4120c83d7f
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 美国弗吉尼亚州阿什本 CloudFlare节点
-      - 美国+V2CROSS.COM
       - 美国 CloudFlare节点
+      - 美国 Datability
+      - 巴西圣保罗 CloudFlare节点
+      - 沙特阿拉伯+Arabic+Computer+System+Co.
       - 美国 加利福尼亚州圣何塞PEG TECH数据中心
-      - 丹麦 V2CROSS.COM
-      - 俄罗斯 V2CROSS.COM
-      - 印度 V2CROSS.COM
+      - 日本+V2CROSS.COM
+      - 南非豪登省约翰内斯堡 Cloudinnovation数据中心
       - 美国 CloudFlare节点 - 2
-      - 美国 惠普HP
-      - 上海市+电信
   - name: 自动选择
     type: url-test
     proxies:
-      - 美国弗吉尼亚州阿什本 CloudFlare节点
-      - 美国+V2CROSS.COM
       - 美国 CloudFlare节点
+      - 美国 Datability
+      - 巴西圣保罗 CloudFlare节点
+      - 沙特阿拉伯+Arabic+Computer+System+Co.
       - 美国 加利福尼亚州圣何塞PEG TECH数据中心
-      - 丹麦 V2CROSS.COM
-      - 俄罗斯 V2CROSS.COM
-      - 印度 V2CROSS.COM
+      - 日本+V2CROSS.COM
+      - 南非豪登省约翰内斯堡 Cloudinnovation数据中心
       - 美国 CloudFlare节点 - 2
-      - 美国 惠普HP
-      - 上海市+电信
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 美国弗吉尼亚州阿什本 CloudFlare节点
-      - 美国+V2CROSS.COM
       - 美国 CloudFlare节点
+      - 美国 Datability
+      - 巴西圣保罗 CloudFlare节点
+      - 沙特阿拉伯+Arabic+Computer+System+Co.
       - 美国 加利福尼亚州圣何塞PEG TECH数据中心
-      - 丹麦 V2CROSS.COM
-      - 俄罗斯 V2CROSS.COM
-      - 印度 V2CROSS.COM
+      - 日本+V2CROSS.COM
+      - 南非豪登省约翰内斯堡 Cloudinnovation数据中心
       - 美国 CloudFlare节点 - 2
-      - 美国 惠普HP
-      - 上海市+电信
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
