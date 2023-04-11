@@ -1,14 +1,44 @@
 proxies:
-  - name: 美国+V2CROSS.COM
-    type: ss
-    server: 172.99.188.99
-    port: '5003'
-    cipher: aes-256-gcm
-    password: g5MeD6Ft3CWlJId
-  - name: 美国 Datability
+  - name: 美国 V2CROSS.COM
     type: vmess
-    server: 140.99.94.42
-    port: 44108
+    server: 131.186.41.192
+    port: 26297
+    uuid: b0ed6eb7-dc30-4897-df50-c2c1d4ee6e91
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: ''
+    ws-headers:
+      Host: ''
+  - name: 香港 V2CROSS.COM
+    type: vmess
+    server: 156.245.8.27
+    port: 48123
+    uuid: f9fa3a9c-f7d5-414f-88e6-6970585d9949
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /
+    ws-headers:
+      Host: ''
+  - name: 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
+    type: vmess
+    server: 23.224.14.114
+    port: 51552
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /AUIKN8AU
+    ws-headers:
+      Host: lg1.v2ray6.xyz
+  - name: 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心 - 2
+    type: vmess
+    server: 23.225.33.169
+    port: 56002
     uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
     alterId: 64
     cipher: auto
@@ -16,32 +46,8 @@ proxies:
     network: tcp
     ws-path: /
     ws-headers:
-      Host: gzyd.jcnode.top
-  - name: 上海市+电信
-    type: trojan
-    server: official.taipeicitygovernment.kiev.ua
-    port: '8443'
-    password: 5505f6ba-cd37-30ce-8f92-be4120c83d7f
-  - name: 美国+V2CROSS.COM - 2
-    type: ss
-    server: 172.99.188.99
-    port: '8882'
-    cipher: aes-256-gcm
-    password: kDWvXYZoTBcGkC4
+      Host: ''
   - name: 美国 CloudFlare节点
-    type: vmess
-    server: cfcdn.sanfencdn.net
-    port: 443
-    uuid: da9d5c74-a572-4cf4-a375-19b886f5ffc4
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /zh-cn
-    ws-headers:
-      Host: us2.sanfencdn.net
-    tls: true
-  - name: 美国 CloudFlare节点 - 2
     type: vmess
     server: cf.515188.xyz
     port: 80
@@ -53,9 +59,34 @@ proxies:
     ws-path: /api/v3/download.getFile
     ws-headers:
       Host: ssrsub.v01.ssrsub.com
-  - name: 日本 V2CROSS.COM
+  - name: 美国 惠普HP
     type: vmess
-    server: hk6.af49c4e4c2ef.sanfen001.pics
+    server: hk1.b.bd6b6c503c93.sanfen001.pics
+    port: 443
+    uuid: da9d5c74-a572-4cf4-a375-19b886f5ffc4
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /zh-cn
+    ws-headers:
+      Host: www.microsoft.com
+    tls: true
+  - name: 美国 CloudFlare节点 - 2
+    type: vmess
+    server: cf-lt.sharecentre.online
+    port: 80
+    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /shirker
+    ws-headers:
+      Host: lv1.sharecentrepro.org
+  - name: 美国 惠普HP - 2
+    type: vmess
+    server: hk1.b.bd6b6c503c93.sanfen001.pics
     port: 443
     uuid: da9d5c74-a572-4cf4-a375-19b886f5ffc4
     alterId: 0
@@ -68,35 +99,21 @@ proxies:
     tls: true
   - name: 美国 CloudFlare节点 - 3
     type: vmess
-    server: cfcdn.sanfencdn.net
-    port: 443
-    uuid: da9d5c74-a572-4cf4-a375-19b886f5ffc4
+    server: 198.41.203.7
+    port: 80
+    uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /zh-cn
+    ws-path: /
     ws-headers:
-      Host: us2.sanfencdn.net
-    tls: true
-  - name: 乌克兰 V2CROSS.COM
-    type: vmess
-    server: 212.110.134.10
-    port: 443
-    uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /ECTCJ0DF
-    ws-headers:
-      Host: 154.v2ray3.xyz
-    tls: true
+      Host: lg.v2ray8.xyz
   - name: 南非 V2CROSS.COM
     type: vmess
-    server: 156.225.67.147
-    port: 51948
-    uuid: 93503dd5-245a-4eb1-ae2a-57ab9f2b3c29
+    server: 156.225.67.249
+    port: 34919
+    uuid: 84d1de11-ce12-4a15-8312-1338356d4ac4
     alterId: 64
     cipher: auto
     udp: true
@@ -104,50 +121,90 @@ proxies:
     ws-path: /
     ws-headers:
       Host: ''
+  - name: 美国 CloudFlare节点 - 4
+    type: vmess
+    server: zhuyong.hucloud-dns.xyz
+    port: 443
+    uuid: 9a18cbb1-81d2-4720-9f09-46ea276b6ddb
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /huhublog
+    ws-headers:
+      Host: ''
+    tls: true
+  - name: 美国 CloudFlare节点 - 5
+    type: vmess
+    server: 162.159.58.15
+    port: 443
+    uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /AUIKN8AU
+    ws-headers:
+      Host: lg1.v2ray6.xyz
+    tls: true
+  - name: 上海市+电信
+    type: trojan
+    server: official.taipeicitygovernment.kiev.ua
+    port: '8443'
+    password: 5505f6ba-cd37-30ce-8f92-be4120c83d7f
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 美国+V2CROSS.COM
-      - 美国 Datability
-      - 上海市+电信
-      - 美国+V2CROSS.COM - 2
+      - 美国 V2CROSS.COM
+      - 香港 V2CROSS.COM
+      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
+      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心 - 2
       - 美国 CloudFlare节点
+      - 美国 惠普HP
       - 美国 CloudFlare节点 - 2
-      - 日本 V2CROSS.COM
+      - 美国 惠普HP - 2
       - 美国 CloudFlare节点 - 3
-      - 乌克兰 V2CROSS.COM
       - 南非 V2CROSS.COM
+      - 美国 CloudFlare节点 - 4
+      - 美国 CloudFlare节点 - 5
+      - 上海市+电信
   - name: 自动选择
     type: url-test
     proxies:
-      - 美国+V2CROSS.COM
-      - 美国 Datability
-      - 上海市+电信
-      - 美国+V2CROSS.COM - 2
+      - 美国 V2CROSS.COM
+      - 香港 V2CROSS.COM
+      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
+      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心 - 2
       - 美国 CloudFlare节点
+      - 美国 惠普HP
       - 美国 CloudFlare节点 - 2
-      - 日本 V2CROSS.COM
+      - 美国 惠普HP - 2
       - 美国 CloudFlare节点 - 3
-      - 乌克兰 V2CROSS.COM
       - 南非 V2CROSS.COM
+      - 美国 CloudFlare节点 - 4
+      - 美国 CloudFlare节点 - 5
+      - 上海市+电信
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 美国+V2CROSS.COM
-      - 美国 Datability
-      - 上海市+电信
-      - 美国+V2CROSS.COM - 2
+      - 美国 V2CROSS.COM
+      - 香港 V2CROSS.COM
+      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
+      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心 - 2
       - 美国 CloudFlare节点
+      - 美国 惠普HP
       - 美国 CloudFlare节点 - 2
-      - 日本 V2CROSS.COM
+      - 美国 惠普HP - 2
       - 美国 CloudFlare节点 - 3
-      - 乌克兰 V2CROSS.COM
       - 南非 V2CROSS.COM
+      - 美国 CloudFlare节点 - 4
+      - 美国 CloudFlare节点 - 5
+      - 上海市+电信
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
