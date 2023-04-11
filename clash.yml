@@ -1,9 +1,9 @@
 proxies:
-  - name: 伊朗 V2CROSS.COM
+  - name: 台湾省台北市 中华电信
     type: vmess
-    server: 109.122.221.98
-    port: 28633
-    uuid: d47d6a05-92d0-42d5-b624-22431f263453
+    server: tw2.sanfen001.pics
+    port: 443
+    uuid: da9d5c74-a572-4cf4-a375-19b886f5ffc4
     alterId: 0
     cipher: auto
     udp: true
@@ -11,49 +11,13 @@ proxies:
     ws-path: /
     ws-headers:
       Host: ''
-  - name: 美国 CloudFlare节点
-    type: vmess
-    server: cf.515188.xyz
-    port: 80
-    uuid: f6aa4440-e7be-44e1-80e1-7e45ccd796cc
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /api/v3/download.getFile
-    ws-headers:
-      Host: ssrsub.v01.ssrsub.com
-  - name: 丹麦 V2CROSS.COM
-    type: vmess
-    server: 185.162.228.1
-    port: 443
-    uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /ECTCJ0DF
-    ws-headers:
-      Host: 154.v2ray3.xyz
-    tls: true
-  - name: 美国 CloudFlare节点 - 2
-    type: vmess
-    server: dj02.yumili.cf
-    port: 2096
-    uuid: c5cd4673-78de-43cd-b461-dd245c51f7b1
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /aaaa
-    ws-headers:
-      Host: dj02.yumili.cf
     tls: true
   - name: 美国+V2CROSS.COM
-    type: trojan
-    server: 152.70.74.66
-    port: '443'
-    password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
+    type: ss
+    server: 172.99.188.99
+    port: '5003'
+    cipher: aes-256-gcm
+    password: g5MeD6Ft3CWlJId
   - name: 南非 V2CROSS.COM
     type: vmess
     server: 156.225.67.211
@@ -66,53 +30,116 @@ proxies:
     ws-path: /
     ws-headers:
       Host: ''
-  - name: 美国 加利福尼亚州洛杉矶Dedipath数据中心
+  - name: 美国+V2CROSS.COM - 2
+    type: ss
+    server: 172.99.188.99
+    port: '6379'
+    cipher: aes-256-gcm
+    password: zDNVedRFPQexG9v
+  - name: 澳大利亚 Langwarrin Secondary College
     type: vmess
-    server: 45.89.106.139
+    server: 203.30.190.1
     port: 443
-    uuid: 8366f30c-126b-4711-d6af-79ed68a138b5
+    uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /ray
+    ws-path: /ECTCJ0DF
     ws-headers:
-      Host: 45.89.106.139
+      Host: 154.v2ray3.xyz
+    tls: true
+  - name: 南非 V2CROSS.COM - 2
+    type: vmess
+    server: 156.225.67.40
+    port: 35685
+    uuid: de491802-233e-47f2-8c6c-d19bcf5bd56b
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /AUIKN8AU
+    ws-headers:
+      Host: lg1.v2ray6.xyz
+  - name: 美国 CloudFlare节点
+    type: vmess
+    server: cfcdn.sanfencdn.net
+    port: 443
+    uuid: da9d5c74-a572-4cf4-a375-19b886f5ffc4
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /zh-cn
+    ws-headers:
+      Host: us2.sanfencdn.net
+    tls: true
+  - name: 俄罗斯 V2CROSS.COM
+    type: vmess
+    server: 185.143.220.25
+    port: 443
+    uuid: f28e354e-c2d1-4983-9b07-5acaf1b3b3e5
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /6e9EtZ2dL
+    ws-headers:
+      Host: dengxin.one
+    tls: true
+  - name: 美国 CloudFlare节点 - 2
+    type: vmess
+    server: hax.smely.eu.org
+    port: 80
+    uuid: 58340bf3-d51d-45e2-87a8-effa78e4bca6
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /hax02
+    ws-headers:
+      Host: hax.smely.eu.org
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 伊朗 V2CROSS.COM
-      - 美国 CloudFlare节点
-      - 丹麦 V2CROSS.COM
-      - 美国 CloudFlare节点 - 2
+      - 台湾省台北市 中华电信
       - 美国+V2CROSS.COM
       - 南非 V2CROSS.COM
-      - 美国 加利福尼亚州洛杉矶Dedipath数据中心
+      - 美国+V2CROSS.COM - 2
+      - 澳大利亚 Langwarrin Secondary College
+      - 南非 V2CROSS.COM - 2
+      - 美国 CloudFlare节点
+      - 俄罗斯 V2CROSS.COM
+      - 美国 CloudFlare节点 - 2
   - name: 自动选择
     type: url-test
     proxies:
-      - 伊朗 V2CROSS.COM
-      - 美国 CloudFlare节点
-      - 丹麦 V2CROSS.COM
-      - 美国 CloudFlare节点 - 2
+      - 台湾省台北市 中华电信
       - 美国+V2CROSS.COM
       - 南非 V2CROSS.COM
-      - 美国 加利福尼亚州洛杉矶Dedipath数据中心
+      - 美国+V2CROSS.COM - 2
+      - 澳大利亚 Langwarrin Secondary College
+      - 南非 V2CROSS.COM - 2
+      - 美国 CloudFlare节点
+      - 俄罗斯 V2CROSS.COM
+      - 美国 CloudFlare节点 - 2
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 伊朗 V2CROSS.COM
-      - 美国 CloudFlare节点
-      - 丹麦 V2CROSS.COM
-      - 美国 CloudFlare节点 - 2
+      - 台湾省台北市 中华电信
       - 美国+V2CROSS.COM
       - 南非 V2CROSS.COM
-      - 美国 加利福尼亚州洛杉矶Dedipath数据中心
+      - 美国+V2CROSS.COM - 2
+      - 澳大利亚 Langwarrin Secondary College
+      - 南非 V2CROSS.COM - 2
+      - 美国 CloudFlare节点
+      - 俄罗斯 V2CROSS.COM
+      - 美国 CloudFlare节点 - 2
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
