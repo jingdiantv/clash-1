@@ -1,29 +1,10 @@
 proxies:
-  - name: 南非 V2CROSS.COM
-    type: vmess
-    server: 156.225.67.249
-    port: 34919
-    uuid: 84d1de11-ce12-4a15-8312-1338356d4ac4
-    alterId: 64
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /
-    ws-headers:
-      Host: ''
-  - name: 台湾省台北市 中华电信
-    type: vmess
-    server: tw2.sanfen001.pics
-    port: 443
-    uuid: da9d5c74-a572-4cf4-a375-19b886f5ffc4
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /
-    ws-headers:
-      Host: ''
-    tls: true
+  - name: 美国+V2CROSS.COM
+    type: ss
+    server: 172.99.188.99
+    port: '5003'
+    cipher: aes-256-gcm
+    password: g5MeD6Ft3CWlJId
   - name: 美国 Datability
     type: vmess
     server: 140.99.94.42
@@ -36,96 +17,45 @@ proxies:
     ws-path: /
     ws-headers:
       Host: gzyd.jcnode.top
+  - name: 上海市+电信
+    type: trojan
+    server: official.taipeicitygovernment.kiev.ua
+    port: '8443'
+    password: 5505f6ba-cd37-30ce-8f92-be4120c83d7f
+  - name: 美国+V2CROSS.COM - 2
+    type: ss
+    server: 172.99.188.99
+    port: '8882'
+    cipher: aes-256-gcm
+    password: kDWvXYZoTBcGkC4
   - name: 美国 CloudFlare节点
     type: vmess
-    server: cdn.moonfree.top
-    port: 8443
-    uuid: edf140f1-35e9-4160-b5a0-6b27f3419a6f
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /figure
-    ws-headers:
-      Host: usv6warp.happyfree.top
-    tls: true
-  - name: 台湾省台北市 中华电信 - 2
-    type: vmess
-    server: polotw1.applebench.tech
-    port: 56568
-    uuid: cc73b2fd-6a45-4690-b0ad-ddb8df4fb333
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /
-    ws-headers:
-      Host: polotw1.applebench.tech
-  - name: 美国 加利福尼亚州洛杉矶Dedipath数据中心
-    type: vmess
-    server: 45.89.106.116
-    port: 443
-    uuid: 0050e5f9-5dcf-45b3-92b0-f6ee2b95f7f8
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /ray
-    ws-headers:
-      Host: ''
-  - name: 美国 CloudFlare节点 - 2
-    type: vmess
-    server: v140.toddns.tk
-    port: 443
-    uuid: a25881f3-967f-3265-bc7f-9e66857b016b
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /fr-888gikdlx
-    ws-headers:
-      Host: ''
-    tls: true
-  - name: 美国 V2CROSS.COM
-    type: vmess
-    server: 131.186.41.192
-    port: 26297
-    uuid: b0ed6eb7-dc30-4897-df50-c2c1d4ee6e91
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: ''
-    ws-headers:
-      Host: ''
-  - name: 南非 V2CROSS.COM - 2
-    type: vmess
-    server: 156.225.67.40
-    port: 35685
-    uuid: de491802-233e-47f2-8c6c-d19bcf5bd56b
-    alterId: 64
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /AUIKN8AU
-    ws-headers:
-      Host: lg1.v2ray6.xyz
-  - name: 台湾省台北市 中华电信 - 3
-    type: vmess
-    server: tw2.sanfen001.pics
+    server: cfcdn.sanfencdn.net
     port: 443
     uuid: da9d5c74-a572-4cf4-a375-19b886f5ffc4
     alterId: 0
     cipher: auto
     udp: true
-    network: tcp
-    ws-path: /
+    network: ws
+    ws-path: /zh-cn
     ws-headers:
-      Host: ''
+      Host: us2.sanfencdn.net
     tls: true
-  - name: 美国 惠普HP
+  - name: 美国 CloudFlare节点 - 2
     type: vmess
-    server: hk1.b.bd6b6c503c93.sanfen001.pics
+    server: cf.515188.xyz
+    port: 80
+    uuid: f6aa4440-e7be-44e1-80e1-7e45ccd796cc
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /api/v3/download.getFile
+    ws-headers:
+      Host: ssrsub.v01.ssrsub.com
+  - name: 日本 V2CROSS.COM
+    type: vmess
+    server: hk6.af49c4e4c2ef.sanfen001.pics
     port: 443
     uuid: da9d5c74-a572-4cf4-a375-19b886f5ffc4
     alterId: 0
@@ -136,19 +66,33 @@ proxies:
     ws-headers:
       Host: www.microsoft.com
     tls: true
-  - name: 美国 加利福尼亚州圣何塞PEG TECH数据中心
+  - name: 美国 CloudFlare节点 - 3
     type: vmess
-    server: 192.74.229.215
-    port: 51592
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
+    server: cfcdn.sanfencdn.net
+    port: 443
+    uuid: da9d5c74-a572-4cf4-a375-19b886f5ffc4
+    alterId: 0
     cipher: auto
     udp: true
-    network: tcp
-    ws-path: /
+    network: ws
+    ws-path: /zh-cn
     ws-headers:
-      Host: ''
-  - name: 南非 V2CROSS.COM - 3
+      Host: us2.sanfencdn.net
+    tls: true
+  - name: 乌克兰 V2CROSS.COM
+    type: vmess
+    server: 212.110.134.10
+    port: 443
+    uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /ECTCJ0DF
+    ws-headers:
+      Host: 154.v2ray3.xyz
+    tls: true
+  - name: 南非 V2CROSS.COM
     type: vmess
     server: 156.225.67.147
     port: 51948
@@ -160,84 +104,50 @@ proxies:
     ws-path: /
     ws-headers:
       Host: ''
-  - name: 美国+V2CROSS.COM
-    type: ss
-    server: 172.99.188.99
-    port: '8882'
-    cipher: aes-256-gcm
-    password: kDWvXYZoTBcGkC4
-  - name: 美国 CloudFlare节点 - 3
-    type: vmess
-    server: cf-lt.sharecentre.online
-    port: 443
-    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /shirker
-    ws-headers:
-      Host: ca.ilovescp.com
-    tls: true
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 南非 V2CROSS.COM
-      - 台湾省台北市 中华电信
-      - 美国 Datability
-      - 美国 CloudFlare节点
-      - 台湾省台北市 中华电信 - 2
-      - 美国 加利福尼亚州洛杉矶Dedipath数据中心
-      - 美国 CloudFlare节点 - 2
-      - 美国 V2CROSS.COM
-      - 南非 V2CROSS.COM - 2
-      - 台湾省台北市 中华电信 - 3
-      - 美国 惠普HP
-      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
-      - 南非 V2CROSS.COM - 3
       - 美国+V2CROSS.COM
+      - 美国 Datability
+      - 上海市+电信
+      - 美国+V2CROSS.COM - 2
+      - 美国 CloudFlare节点
+      - 美国 CloudFlare节点 - 2
+      - 日本 V2CROSS.COM
       - 美国 CloudFlare节点 - 3
+      - 乌克兰 V2CROSS.COM
+      - 南非 V2CROSS.COM
   - name: 自动选择
     type: url-test
     proxies:
-      - 南非 V2CROSS.COM
-      - 台湾省台北市 中华电信
-      - 美国 Datability
-      - 美国 CloudFlare节点
-      - 台湾省台北市 中华电信 - 2
-      - 美国 加利福尼亚州洛杉矶Dedipath数据中心
-      - 美国 CloudFlare节点 - 2
-      - 美国 V2CROSS.COM
-      - 南非 V2CROSS.COM - 2
-      - 台湾省台北市 中华电信 - 3
-      - 美国 惠普HP
-      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
-      - 南非 V2CROSS.COM - 3
       - 美国+V2CROSS.COM
+      - 美国 Datability
+      - 上海市+电信
+      - 美国+V2CROSS.COM - 2
+      - 美国 CloudFlare节点
+      - 美国 CloudFlare节点 - 2
+      - 日本 V2CROSS.COM
       - 美国 CloudFlare节点 - 3
+      - 乌克兰 V2CROSS.COM
+      - 南非 V2CROSS.COM
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 南非 V2CROSS.COM
-      - 台湾省台北市 中华电信
-      - 美国 Datability
-      - 美国 CloudFlare节点
-      - 台湾省台北市 中华电信 - 2
-      - 美国 加利福尼亚州洛杉矶Dedipath数据中心
-      - 美国 CloudFlare节点 - 2
-      - 美国 V2CROSS.COM
-      - 南非 V2CROSS.COM - 2
-      - 台湾省台北市 中华电信 - 3
-      - 美国 惠普HP
-      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
-      - 南非 V2CROSS.COM - 3
       - 美国+V2CROSS.COM
+      - 美国 Datability
+      - 上海市+电信
+      - 美国+V2CROSS.COM - 2
+      - 美国 CloudFlare节点
+      - 美国 CloudFlare节点 - 2
+      - 日本 V2CROSS.COM
       - 美国 CloudFlare节点 - 3
+      - 乌克兰 V2CROSS.COM
+      - 南非 V2CROSS.COM
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
