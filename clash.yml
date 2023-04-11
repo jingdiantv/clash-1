@@ -1,10 +1,41 @@
 proxies:
-  - name: 美国+V2CROSS.COM
-    type: ss
-    server: 172.99.188.99
-    port: '5003'
-    cipher: aes-256-gcm
-    password: g5MeD6Ft3CWlJId
+  - name: 俄罗斯 V2CROSS.COM
+    type: vmess
+    server: 185.143.220.25
+    port: 443
+    uuid: f28e354e-c2d1-4983-9b07-5acaf1b3b3e5
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /6e9EtZ2dL
+    ws-headers:
+      Host: dengxin.one
+    tls: true
+  - name: 巴西圣保罗 CloudFlare节点
+    type: vmess
+    server: 188.114.99.2
+    port: 80
+    uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /
+    ws-headers:
+      Host: fr.v2ray1.xyz
+  - name: 美国 加利福尼亚州洛杉矶Dedipath数据中心
+    type: vmess
+    server: 45.89.106.112
+    port: 443
+    uuid: 68b2f386-e061-40cb-8ca7-50e06c10b659
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /ray
+    ws-headers:
+      Host: 45.89.106.112
   - name: 美国 CloudFlare节点
     type: vmess
     server: cfcdn.sanfencdn.net
@@ -18,52 +49,22 @@ proxies:
     ws-headers:
       Host: us2.sanfencdn.net
     tls: true
-  - name: 南非 V2CROSS.COM
+  - name: 丹麦 V2CROSS.COM
     type: vmess
-    server: 156.225.67.40
-    port: 35685
-    uuid: de491802-233e-47f2-8c6c-d19bcf5bd56b
-    alterId: 64
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /AUIKN8AU
-    ws-headers:
-      Host: lg1.v2ray6.xyz
-  - name: 印度 V2CROSS.COM
-    type: vmess
-    server: 103.160.204.15
+    server: 185.162.228.1
     port: 443
-    uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
+    uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /AUIKN8AU
+    ws-path: /ECTCJ0DF
     ws-headers:
-      Host: lg1.v2ray6.xyz
+      Host: 154.v2ray3.xyz
     tls: true
-  - name: 美国 CloudFlare节点 - 2
+  - name: 澳大利亚 Lyndhurst Secondary College
     type: vmess
-    server: cfcdn.sanfencdn.net
-    port: 443
-    uuid: da9d5c74-a572-4cf4-a375-19b886f5ffc4
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /zh-cn
-    ws-headers:
-      Host: us2.sanfencdn.net
-    tls: true
-  - name: 美国+V2CROSS.COM - 2
-    type: trojan
-    server: 152.70.74.66
-    port: '443'
-    password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
-  - name: 巴西圣保罗 CloudFlare节点
-    type: vmess
-    server: 188.114.99.2
+    server: 203.30.188.2
     port: 80
     uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a
     alterId: 0
@@ -73,56 +74,38 @@ proxies:
     ws-path: /
     ws-headers:
       Host: fr.v2ray1.xyz
-  - name: 美国 加利福尼亚州圣何塞PEG TECH数据中心
-    type: vmess
-    server: 192.74.229.215
-    port: 51592
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /
-    ws-headers:
-      Host: ''
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 美国+V2CROSS.COM
-      - 美国 CloudFlare节点
-      - 南非 V2CROSS.COM
-      - 印度 V2CROSS.COM
-      - 美国 CloudFlare节点 - 2
-      - 美国+V2CROSS.COM - 2
+      - 俄罗斯 V2CROSS.COM
       - 巴西圣保罗 CloudFlare节点
-      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
+      - 美国 加利福尼亚州洛杉矶Dedipath数据中心
+      - 美国 CloudFlare节点
+      - 丹麦 V2CROSS.COM
+      - 澳大利亚 Lyndhurst Secondary College
   - name: 自动选择
     type: url-test
     proxies:
-      - 美国+V2CROSS.COM
-      - 美国 CloudFlare节点
-      - 南非 V2CROSS.COM
-      - 印度 V2CROSS.COM
-      - 美国 CloudFlare节点 - 2
-      - 美国+V2CROSS.COM - 2
+      - 俄罗斯 V2CROSS.COM
       - 巴西圣保罗 CloudFlare节点
-      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
+      - 美国 加利福尼亚州洛杉矶Dedipath数据中心
+      - 美国 CloudFlare节点
+      - 丹麦 V2CROSS.COM
+      - 澳大利亚 Lyndhurst Secondary College
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 美国+V2CROSS.COM
-      - 美国 CloudFlare节点
-      - 南非 V2CROSS.COM
-      - 印度 V2CROSS.COM
-      - 美国 CloudFlare节点 - 2
-      - 美国+V2CROSS.COM - 2
+      - 俄罗斯 V2CROSS.COM
       - 巴西圣保罗 CloudFlare节点
-      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
+      - 美国 加利福尼亚州洛杉矶Dedipath数据中心
+      - 美国 CloudFlare节点
+      - 丹麦 V2CROSS.COM
+      - 澳大利亚 Lyndhurst Secondary College
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
