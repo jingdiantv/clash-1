@@ -1,8 +1,40 @@
 proxies:
-  - name: 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
+  - name: 美国+V2CROSS.COM
+    type: ss
+    server: 172.99.188.99
+    port: '6379'
+    cipher: aes-256-gcm
+    password: zDNVedRFPQexG9v
+  - name: 美国 CloudFlare节点
     type: vmess
-    server: 23.225.33.169
-    port: 56002
+    server: www.udemy.com
+    port: 443
+    uuid: e6442903-4753-4783-8916-ac47c8080e4f
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /worryfree
+    ws-headers:
+      Host: dynamic-sg3b.obfs.xyz
+    tls: true
+  - name: 美国 V2CROSS.COM
+    type: vmess
+    server: 170.187.206.48
+    port: 443
+    uuid: 927094d3-d678-4763-8591-e240d0bcae87
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /chat
+    ws-headers:
+      Host: ''
+    tls: true
+  - name: 美国 加利福尼亚州圣何塞PEG TECH数据中心
+    type: vmess
+    server: 192.74.229.215
+    port: 51592
     uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
     alterId: 64
     cipher: auto
@@ -11,60 +43,10 @@ proxies:
     ws-path: /
     ws-headers:
       Host: ''
-  - name: 台湾省台北市 中华电信
+  - name: 美国加利福尼亚州洛杉矶 V2CROSS.COM
     type: vmess
-    server: tw2.sanfen001.pics
-    port: 443
-    uuid: da9d5c74-a572-4cf4-a375-19b886f5ffc4
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /
-    ws-headers:
-      Host: ''
-    tls: true
-  - name: 台湾省台北市 中华电信 - 2
-    type: vmess
-    server: polotw1.applebench.tech
-    port: 56568
-    uuid: cc73b2fd-6a45-4690-b0ad-ddb8df4fb333
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /
-    ws-headers:
-      Host: polotw1.applebench.tech
-  - name: 伊朗 V2CROSS.COM
-    type: vmess
-    server: 5.78.73.163
-    port: 80
-    uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /masvod/public/2023/04/08/20230408_1875e71ee4d_r1_1200k.mp4
-    ws-headers:
-      Host: svideo.mfa.gov.cn
-  - name: 俄罗斯 V2CROSS.COM
-    type: vmess
-    server: 185.143.220.25
-    port: 443
-    uuid: f28e354e-c2d1-4983-9b07-5acaf1b3b3e5
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /6e9EtZ2dL
-    ws-headers:
-      Host: dengxin.one
-    tls: true
-  - name: 南非 V2CROSS.COM
-    type: vmess
-    server: 156.225.67.110
-    port: 45208
+    server: 156.251.135.11
+    port: 53302
     uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
     alterId: 64
     cipher: auto
@@ -91,34 +73,31 @@ proxy-groups:
     proxies:
       - 自动选择
       - 故障转移
-      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
-      - 台湾省台北市 中华电信
-      - 台湾省台北市 中华电信 - 2
-      - 伊朗 V2CROSS.COM
-      - 俄罗斯 V2CROSS.COM
-      - 南非 V2CROSS.COM
+      - 美国+V2CROSS.COM
+      - 美国 CloudFlare节点
+      - 美国 V2CROSS.COM
+      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
+      - 美国加利福尼亚州洛杉矶 V2CROSS.COM
       - 美国 得克萨斯州
   - name: 自动选择
     type: url-test
     proxies:
-      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
-      - 台湾省台北市 中华电信
-      - 台湾省台北市 中华电信 - 2
-      - 伊朗 V2CROSS.COM
-      - 俄罗斯 V2CROSS.COM
-      - 南非 V2CROSS.COM
+      - 美国+V2CROSS.COM
+      - 美国 CloudFlare节点
+      - 美国 V2CROSS.COM
+      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
+      - 美国加利福尼亚州洛杉矶 V2CROSS.COM
       - 美国 得克萨斯州
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
-      - 台湾省台北市 中华电信
-      - 台湾省台北市 中华电信 - 2
-      - 伊朗 V2CROSS.COM
-      - 俄罗斯 V2CROSS.COM
-      - 南非 V2CROSS.COM
+      - 美国+V2CROSS.COM
+      - 美国 CloudFlare节点
+      - 美国 V2CROSS.COM
+      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
+      - 美国加利福尼亚州洛杉矶 V2CROSS.COM
       - 美国 得克萨斯州
     url: http://www.gstatic.com/generate_204
     interval: 86400
