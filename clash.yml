@@ -1,44 +1,32 @@
 proxies:
-  - name: 丹麦 V2CROSS.COM
+  - name: 印度 V2CROSS.COM
     type: vmess
-    server: 185.162.228.229
-    port: 80
-    uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /
-    ws-headers:
-      Host: lg.v2ray8.xyz
-  - name: 美国 CloudFlare节点
-    type: vmess
-    server: 162.159.58.15
+    server: 103.160.204.13
     port: 443
-    uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
+    uuid: 56a2188b-2ab7-402c-b9b8-34847fdf0958
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /AUIKN8AU
+    ws-path: /5QNROSRV
     ws-headers:
-      Host: lg1.v2ray6.xyz
+      Host: lg2.v2ray6.xyz
     tls: true
-  - name: 巴西圣保罗 CloudFlare节点
+  - name: 美国加利福尼亚州洛杉矶 V2CROSS.COM
     type: vmess
-    server: 188.114.99.2
-    port: 80
-    uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a
-    alterId: 0
+    server: 156.251.135.11
+    port: 53302
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
     cipher: auto
     udp: true
-    network: ws
+    network: tcp
     ws-path: /
     ws-headers:
-      Host: fr.v2ray1.xyz
-  - name: 美国 惠普HP
+      Host: ''
+  - name: 日本 V2CROSS.COM
     type: vmess
-    server: hk1.b.bd6b6c503c93.sanfen001.pics
+    server: hk6.af49c4e4c2ef.sanfen001.pics
     port: 443
     uuid: da9d5c74-a572-4cf4-a375-19b886f5ffc4
     alterId: 0
@@ -49,6 +37,30 @@ proxies:
     ws-headers:
       Host: www.microsoft.com
     tls: true
+  - name: 美国 CloudFlare节点
+    type: vmess
+    server: cf.515188.xyz
+    port: 80
+    uuid: f6aa4440-e7be-44e1-80e1-7e45ccd796cc
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /api/v3/download.getFile
+    ws-headers:
+      Host: ssrsub.v01.ssrsub.com
+  - name: 美国 得克萨斯州
+    type: vmess
+    server: wj-fi-01.wujie.bio
+    port: 9096
+    uuid: 234507c5-781a-4e92-8290-8264a0a4de87
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /
+    ws-headers:
+      Host: wj-fi-01.wujie.bio
   - name: 俄罗斯 V2CROSS.COM
     type: vmess
     server: 185.143.220.25
@@ -62,35 +74,63 @@ proxies:
     ws-headers:
       Host: dengxin.one
     tls: true
+  - name: 美国 惠普HP
+    type: vmess
+    server: hk1.b.bd6b6c503c93.sanfen001.pics
+    port: 443
+    uuid: da9d5c74-a572-4cf4-a375-19b886f5ffc4
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /zh-cn
+    ws-headers:
+      Host: www.microsoft.com
+    tls: true
+  - name: 美国+V2CROSS.COM
+    type: ss
+    server: 172.99.188.99
+    port: '5003'
+    cipher: aes-256-gcm
+    password: g5MeD6Ft3CWlJId
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 丹麦 V2CROSS.COM
+      - 印度 V2CROSS.COM
+      - 美国加利福尼亚州洛杉矶 V2CROSS.COM
+      - 日本 V2CROSS.COM
       - 美国 CloudFlare节点
-      - 巴西圣保罗 CloudFlare节点
-      - 美国 惠普HP
+      - 美国 得克萨斯州
       - 俄罗斯 V2CROSS.COM
+      - 美国 惠普HP
+      - 美国+V2CROSS.COM
   - name: 自动选择
     type: url-test
     proxies:
-      - 丹麦 V2CROSS.COM
+      - 印度 V2CROSS.COM
+      - 美国加利福尼亚州洛杉矶 V2CROSS.COM
+      - 日本 V2CROSS.COM
       - 美国 CloudFlare节点
-      - 巴西圣保罗 CloudFlare节点
-      - 美国 惠普HP
+      - 美国 得克萨斯州
       - 俄罗斯 V2CROSS.COM
+      - 美国 惠普HP
+      - 美国+V2CROSS.COM
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 丹麦 V2CROSS.COM
+      - 印度 V2CROSS.COM
+      - 美国加利福尼亚州洛杉矶 V2CROSS.COM
+      - 日本 V2CROSS.COM
       - 美国 CloudFlare节点
-      - 巴西圣保罗 CloudFlare节点
-      - 美国 惠普HP
+      - 美国 得克萨斯州
       - 俄罗斯 V2CROSS.COM
+      - 美国 惠普HP
+      - 美国+V2CROSS.COM
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
