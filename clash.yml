@@ -1,19 +1,32 @@
 proxies:
-  - name: 丹麦 V2CROSS.COM
+  - name: 美国 CloudFlare节点
     type: vmess
-    server: 185.162.228.2
-    port: 80
-    uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a
+    server: 162.159.58.15
+    port: 443
+    uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
     alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /AUIKN8AU
+    ws-headers:
+      Host: lg1.v2ray6.xyz
+    tls: true
+  - name: 广东省广州市 移动
+    type: vmess
+    server: kr.iggfastweb.com
+    port: 24100
+    uuid: 2fb128b9-f06f-431e-a69b-5aeab2fc0756
+    alterId: 2
     cipher: auto
     udp: true
     network: ws
     ws-path: /
     ws-headers:
-      Host: fr.v2ray1.xyz
-  - name: 美国 CloudFlare节点
+      Host: console.huaweicloud.com
+  - name: 丹麦 V2CROSS.COM
     type: vmess
-    server: 198.41.203.7
+    server: 185.162.228.229
     port: 80
     uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
     alterId: 0
@@ -25,72 +38,57 @@ proxies:
       Host: lg.v2ray8.xyz
   - name: 美国 CloudFlare节点 - 2
     type: vmess
-    server: cfcdn.sanfencdn.net
-    port: 443
-    uuid: da9d5c74-a572-4cf4-a375-19b886f5ffc4
+    server: cf.515188.xyz
+    port: 8880
+    uuid: f6aa4440-e7be-44e1-80e1-7e45ccd796cc
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /zh-cn
+    ws-path: /api/v3/download.getFile
     ws-headers:
-      Host: us2.sanfencdn.net
-    tls: true
-  - name: 俄罗斯 V2CROSS.COM
+      Host: ssrsub.v02.ssrsub.com
+  - name: 美国 CloudFlare节点 - 3
     type: vmess
-    server: 185.143.220.25
-    port: 443
-    uuid: f28e354e-c2d1-4983-9b07-5acaf1b3b3e5
+    server: 198.41.203.7
+    port: 80
+    uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /6e9EtZ2dL
+    ws-path: /
     ws-headers:
-      Host: dengxin.one
-    tls: true
-  - name: 美国 惠普HP
-    type: vmess
-    server: hk1.b.bd6b6c503c93.sanfen001.pics
-    port: 443
-    uuid: da9d5c74-a572-4cf4-a375-19b886f5ffc4
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /zh-cn
-    ws-headers:
-      Host: www.microsoft.com
-    tls: true
+      Host: lg.v2ray8.xyz
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 丹麦 V2CROSS.COM
       - 美国 CloudFlare节点
+      - 广东省广州市 移动
+      - 丹麦 V2CROSS.COM
       - 美国 CloudFlare节点 - 2
-      - 俄罗斯 V2CROSS.COM
-      - 美国 惠普HP
+      - 美国 CloudFlare节点 - 3
   - name: 自动选择
     type: url-test
     proxies:
-      - 丹麦 V2CROSS.COM
       - 美国 CloudFlare节点
+      - 广东省广州市 移动
+      - 丹麦 V2CROSS.COM
       - 美国 CloudFlare节点 - 2
-      - 俄罗斯 V2CROSS.COM
-      - 美国 惠普HP
+      - 美国 CloudFlare节点 - 3
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 丹麦 V2CROSS.COM
       - 美国 CloudFlare节点
+      - 广东省广州市 移动
+      - 丹麦 V2CROSS.COM
       - 美国 CloudFlare节点 - 2
-      - 俄罗斯 V2CROSS.COM
-      - 美国 惠普HP
+      - 美国 CloudFlare节点 - 3
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
