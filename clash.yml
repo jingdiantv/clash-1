@@ -1,96 +1,158 @@
 proxies:
-  - name: 台湾省台北市 中华电信
+  - name: 美国弗吉尼亚州阿什本 CloudFlare节点
     type: vmess
-    server: tw2.sanfen001.pics
+    server: 173.245.49.8
     port: 443
-    uuid: da9d5c74-a572-4cf4-a375-19b886f5ffc4
+    uuid: 9a18cbb1-81d2-4720-9f09-46ea276b6ddb
     alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /huhublog
+    ws-headers:
+      Host: zhuyong.hucloud-dns.xyz
+    tls: true
+  - name: 美国+V2CROSS.COM
+    type: trojan
+    server: 152.70.74.66
+    port: '443'
+    password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
+  - name: 美国 CloudFlare节点
+    type: vmess
+    server: cf.noaries.de
+    port: 8080
+    uuid: 4f7d5d43-226e-48d8-9df0-5e8bf9f77288
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /aries?ed=2048
+    ws-headers:
+      Host: buyvm.cloudflare.quest
+  - name: 美国 加利福尼亚州圣何塞PEG TECH数据中心
+    type: vmess
+    server: 192.74.229.215
+    port: 51592
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
     cipher: auto
     udp: true
     network: tcp
     ws-path: /
     ws-headers:
       Host: ''
-    tls: true
-  - name: 印度 V2CROSS.COM
+  - name: 丹麦 V2CROSS.COM
     type: vmess
-    server: 103.160.204.13
-    port: 443
-    uuid: 56a2188b-2ab7-402c-b9b8-34847fdf0958
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /5QNROSRV
-    ws-headers:
-      Host: lg2.v2ray6.xyz
-    tls: true
-  - name: 巴西圣保罗 CloudFlare节点
-    type: vmess
-    server: 188.114.99.2
+    server: 185.162.228.229
     port: 80
-    uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a
+    uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
     alterId: 0
     cipher: auto
     udp: true
     network: ws
     ws-path: /
     ws-headers:
-      Host: fr.v2ray1.xyz
-  - name: 美国 CloudFlare节点
+      Host: lg.v2ray8.xyz
+  - name: 俄罗斯 V2CROSS.COM
     type: vmess
-    server: dj02.yumili.cf
-    port: 2096
-    uuid: c5cd4673-78de-43cd-b461-dd245c51f7b1
+    server: 185.143.220.25
+    port: 443
+    uuid: f28e354e-c2d1-4983-9b07-5acaf1b3b3e5
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /aaaa
+    ws-path: /6e9EtZ2dL
     ws-headers:
-      Host: ''
+      Host: dengxin.one
+    tls: true
+  - name: 印度 V2CROSS.COM
+    type: vmess
+    server: 103.160.204.15
+    port: 443
+    uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /AUIKN8AU
+    ws-headers:
+      Host: lg1.v2ray6.xyz
     tls: true
   - name: 美国 CloudFlare节点 - 2
     type: vmess
-    server: cf.515188.xyz
+    server: cf-lt.sharecentre.online
     port: 80
-    uuid: f6aa4440-e7be-44e1-80e1-7e45ccd796cc
+    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /api/v3/download.getFile
+    ws-path: /shirker
     ws-headers:
-      Host: ssrsub.v01.ssrsub.com
+      Host: lv2.sharecentrepro.org
+  - name: 美国 惠普HP
+    type: vmess
+    server: hk1.b.bd6b6c503c93.sanfen001.pics
+    port: 443
+    uuid: da9d5c74-a572-4cf4-a375-19b886f5ffc4
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /zh-cn
+    ws-headers:
+      Host: www.microsoft.com
+    tls: true
+  - name: 上海市+电信
+    type: trojan
+    server: official.taipeicitygovernment.kiev.ua
+    port: '8443'
+    password: 5505f6ba-cd37-30ce-8f92-be4120c83d7f
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 台湾省台北市 中华电信
-      - 印度 V2CROSS.COM
-      - 巴西圣保罗 CloudFlare节点
+      - 美国弗吉尼亚州阿什本 CloudFlare节点
+      - 美国+V2CROSS.COM
       - 美国 CloudFlare节点
+      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
+      - 丹麦 V2CROSS.COM
+      - 俄罗斯 V2CROSS.COM
+      - 印度 V2CROSS.COM
       - 美国 CloudFlare节点 - 2
+      - 美国 惠普HP
+      - 上海市+电信
   - name: 自动选择
     type: url-test
     proxies:
-      - 台湾省台北市 中华电信
-      - 印度 V2CROSS.COM
-      - 巴西圣保罗 CloudFlare节点
+      - 美国弗吉尼亚州阿什本 CloudFlare节点
+      - 美国+V2CROSS.COM
       - 美国 CloudFlare节点
+      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
+      - 丹麦 V2CROSS.COM
+      - 俄罗斯 V2CROSS.COM
+      - 印度 V2CROSS.COM
       - 美国 CloudFlare节点 - 2
+      - 美国 惠普HP
+      - 上海市+电信
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 台湾省台北市 中华电信
-      - 印度 V2CROSS.COM
-      - 巴西圣保罗 CloudFlare节点
+      - 美国弗吉尼亚州阿什本 CloudFlare节点
+      - 美国+V2CROSS.COM
       - 美国 CloudFlare节点
+      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
+      - 丹麦 V2CROSS.COM
+      - 俄罗斯 V2CROSS.COM
+      - 印度 V2CROSS.COM
       - 美国 CloudFlare节点 - 2
+      - 美国 惠普HP
+      - 上海市+电信
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
