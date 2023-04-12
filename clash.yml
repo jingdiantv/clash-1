@@ -1,9 +1,33 @@
 proxies:
-  - name: 南非 V2CROSS.COM
+  - name: 丹麦 V2CROSS.COM
     type: vmess
-    server: 156.225.67.192
-    port: 38323
-    uuid: d024fd8b-ea78-4789-b928-70afa1a910ce
+    server: 185.162.228.229
+    port: 80
+    uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /
+    ws-headers:
+      Host: lg.v2ray8.xyz
+  - name: 澳大利亚 悉尼
+    type: vmess
+    server: 203.24.108.100
+    port: 80
+    uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /
+    ws-headers:
+      Host: lg.v2ray8.xyz
+  - name: 美国 加利福尼亚州圣何塞PEG TECH
+    type: vmess
+    server: 142.4.118.248
+    port: 57402
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
     alterId: 64
     cipher: auto
     udp: true
@@ -11,85 +35,61 @@ proxies:
     ws-path: /
     ws-headers:
       Host: ''
-  - name: 俄罗斯 V2CROSS.COM
+  - name: 美国 加利福尼亚州洛杉矶Sharktech数据中心
     type: vmess
-    server: 185.143.220.25
+    server: 170.178.179.189
     port: 443
-    uuid: f28e354e-c2d1-4983-9b07-5acaf1b3b3e5
-    alterId: 0
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
     cipher: auto
     udp: true
     network: ws
-    ws-path: /6e9EtZ2dL
-    ws-headers:
-      Host: dengxin.one
-    tls: true
-  - name: 美国 惠普HP
-    type: vmess
-    server: hk1.b.bd6b6c503c93.sanfen001.pics
-    port: 443
-    uuid: da9d5c74-a572-4cf4-a375-19b886f5ffc4
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /zh-cn
-    ws-headers:
-      Host: www.microsoft.com
-    tls: true
-  - name: 澳大利亚 Lyndhurst Secondary College
-    type: vmess
-    server: 203.30.188.2
-    port: 80
-    uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /
-    ws-headers:
-      Host: fr.v2ray1.xyz
-  - name: 伊朗 V2CROSS.COM
-    type: vmess
-    server: 5.78.96.204
-    port: 21
-    uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /
+    ws-path: /path/031730091420
     ws-headers:
       Host: ''
+    tls: true
+  - name: 美国 CloudFlare节点
+    type: vmess
+    server: usv6warp.happyfree.top
+    port: 8443
+    uuid: edf140f1-35e9-4160-b5a0-6b27f3419a6f
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /figure
+    ws-headers:
+      Host: ''
+    tls: true
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 南非 V2CROSS.COM
-      - 俄罗斯 V2CROSS.COM
-      - 美国 惠普HP
-      - 澳大利亚 Lyndhurst Secondary College
-      - 伊朗 V2CROSS.COM
+      - 丹麦 V2CROSS.COM
+      - 澳大利亚 悉尼
+      - 美国 加利福尼亚州圣何塞PEG TECH
+      - 美国 加利福尼亚州洛杉矶Sharktech数据中心
+      - 美国 CloudFlare节点
   - name: 自动选择
     type: url-test
     proxies:
-      - 南非 V2CROSS.COM
-      - 俄罗斯 V2CROSS.COM
-      - 美国 惠普HP
-      - 澳大利亚 Lyndhurst Secondary College
-      - 伊朗 V2CROSS.COM
+      - 丹麦 V2CROSS.COM
+      - 澳大利亚 悉尼
+      - 美国 加利福尼亚州圣何塞PEG TECH
+      - 美国 加利福尼亚州洛杉矶Sharktech数据中心
+      - 美国 CloudFlare节点
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 南非 V2CROSS.COM
-      - 俄罗斯 V2CROSS.COM
-      - 美国 惠普HP
-      - 澳大利亚 Lyndhurst Secondary College
-      - 伊朗 V2CROSS.COM
+      - 丹麦 V2CROSS.COM
+      - 澳大利亚 悉尼
+      - 美国 加利福尼亚州圣何塞PEG TECH
+      - 美国 加利福尼亚州洛杉矶Sharktech数据中心
+      - 美国 CloudFlare节点
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
