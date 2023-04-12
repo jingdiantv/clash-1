@@ -1,95 +1,89 @@
 proxies:
-  - name: 伊朗 V2CROSS.COM
+  - name: 南非 V2CROSS.COM
     type: vmess
-    server: f-us2.wvvvv.eu.org
-    port: 21
-    uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0
-    alterId: 0
+    server: 156.225.67.201
+    port: 47811
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
     cipher: auto
     udp: true
     network: tcp
     ws-path: /
     ws-headers:
-      Host: f-us2.wvvvv.eu.org
+      Host: z264.hongkongnode.top
+  - name: 美国+Microsoft数据中心
+    type: trojan
+    server: jp01.trojanyyds.xyz
+    port: '443'
+    password: f0c54c4a-747e-4305-a76c-9a85cf095bc1
   - name: 丹麦 V2CROSS.COM
     type: vmess
-    server: 185.162.228.229
-    port: 80
-    uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
+    server: 185.162.228.1
+    port: 443
+    uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /
+    ws-path: /ECTCJ0DF
     ws-headers:
-      Host: lg.v2ray8.xyz
-  - name: 美国 加利福尼亚州洛杉矶Sharktech数据中心
-    type: vmess
-    server: 170.178.179.189
-    port: 443
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /path/031730091420
-    ws-headers:
-      Host: ''
+      Host: 154.v2ray3.xyz
     tls: true
-  - name: 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
+  - name: 美国 V2CROSS.COM
     type: vmess
-    server: 23.224.110.183
+    server: surongwei.eu.org
     port: 443
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /path/080712342310
-    ws-headers:
-      Host: ''
-    tls: true
-  - name: 美国 CloudFlare节点
-    type: vmess
-    server: 172.64.173.160
-    port: 80
-    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
+    uuid: 6093eefb-7ab6-41df-aba0-d5fa58147e10
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /shirker
+    ws-path: /reffs7y26g0ua
     ws-headers:
-      Host: ca.ilovescp.com
+      Host: ''
+    tls: true
+  - name: 澳大利亚 Kooweerup Secondary College
+    type: vmess
+    server: 203.30.189.1
+    port: 443
+    uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /ECTCJ0DF
+    ws-headers:
+      Host: 154.v2ray3.xyz
+    tls: true
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 伊朗 V2CROSS.COM
+      - 南非 V2CROSS.COM
+      - 美国+Microsoft数据中心
       - 丹麦 V2CROSS.COM
-      - 美国 加利福尼亚州洛杉矶Sharktech数据中心
-      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
-      - 美国 CloudFlare节点
+      - 美国 V2CROSS.COM
+      - 澳大利亚 Kooweerup Secondary College
   - name: 自动选择
     type: url-test
     proxies:
-      - 伊朗 V2CROSS.COM
+      - 南非 V2CROSS.COM
+      - 美国+Microsoft数据中心
       - 丹麦 V2CROSS.COM
-      - 美国 加利福尼亚州洛杉矶Sharktech数据中心
-      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
-      - 美国 CloudFlare节点
+      - 美国 V2CROSS.COM
+      - 澳大利亚 Kooweerup Secondary College
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 伊朗 V2CROSS.COM
+      - 南非 V2CROSS.COM
+      - 美国+Microsoft数据中心
       - 丹麦 V2CROSS.COM
-      - 美国 加利福尼亚州洛杉矶Sharktech数据中心
-      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
-      - 美国 CloudFlare节点
+      - 美国 V2CROSS.COM
+      - 澳大利亚 Kooweerup Secondary College
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
