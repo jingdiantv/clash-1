@@ -1,7 +1,20 @@
 proxies:
   - name: 美国 CloudFlare节点
     type: vmess
-    server: cfcdn.sanfencdn.net
+    server: new6.huvicloud.com
+    port: 443
+    uuid: a11ca760-9ef9-4a63-95c9-4c5c32d56251
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /
+    ws-headers:
+      Host: new6.huvicloud.com
+    tls: true
+  - name: 美国 惠普HP
+    type: vmess
+    server: hk1.b.bd6b6c503c93.sanfen001.pics
     port: 443
     uuid: da9d5c74-a572-4cf4-a375-19b886f5ffc4
     alterId: 0
@@ -10,34 +23,20 @@ proxies:
     network: ws
     ws-path: /zh-cn
     ws-headers:
-      Host: us2.sanfencdn.net
+      Host: www.microsoft.com
     tls: true
-  - name: 美国 CloudFlare节点 - 2
+  - name: 欧洲 V2CROSS.COM
     type: vmess
-    server: 162.159.58.15
-    port: 443
-    uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
-    alterId: 0
+    server: b66e0559-rsngg0-1filk.uk.tcpbbr.net
+    port: 80
+    uuid: 627a1c98-3bbd-11ec-a8bf-f23c91cfbbc9
+    alterId: 2
     cipher: auto
     udp: true
     network: ws
-    ws-path: /AUIKN8AU
+    ws-path: /
     ws-headers:
-      Host: lg1.v2ray6.xyz
-    tls: true
-  - name: 俄罗斯 V2CROSS.COM
-    type: vmess
-    server: 185.143.220.25
-    port: 443
-    uuid: f28e354e-c2d1-4983-9b07-5acaf1b3b3e5
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /6e9EtZ2dL
-    ws-headers:
-      Host: dengxin.one
-    tls: true
+      Host: broadcastlv.chat.bilibili.com
   - name: 印度 V2CROSS.COM
     type: vmess
     server: 103.160.204.13
@@ -51,18 +50,18 @@ proxies:
     ws-headers:
       Host: lg2.v2ray6.xyz
     tls: true
-  - name: 美国 CloudFlare节点 - 3
+  - name: 美国 V2CROSS.COM
     type: vmess
-    server: r2wind.com
+    server: mci.mmdhossein20.tk
     port: 80
-    uuid: f6aa4440-e7be-44e1-80e1-7e45ccd796cc
+    uuid: 7bea35a3-d29c-4a33-b471-1eb63b3ecf70
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /api/v3/download.getFile
+    ws-path: /hahuutung
     ws-headers:
-      Host: ssrsub.v01.ssrsub.com
+      Host: vietnam8.azzphuc.pro
 proxy-groups:
   - name: Free-servers
     type: select
@@ -70,28 +69,28 @@ proxy-groups:
       - 自动选择
       - 故障转移
       - 美国 CloudFlare节点
-      - 美国 CloudFlare节点 - 2
-      - 俄罗斯 V2CROSS.COM
+      - 美国 惠普HP
+      - 欧洲 V2CROSS.COM
       - 印度 V2CROSS.COM
-      - 美国 CloudFlare节点 - 3
+      - 美国 V2CROSS.COM
   - name: 自动选择
     type: url-test
     proxies:
       - 美国 CloudFlare节点
-      - 美国 CloudFlare节点 - 2
-      - 俄罗斯 V2CROSS.COM
+      - 美国 惠普HP
+      - 欧洲 V2CROSS.COM
       - 印度 V2CROSS.COM
-      - 美国 CloudFlare节点 - 3
+      - 美国 V2CROSS.COM
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
       - 美国 CloudFlare节点
-      - 美国 CloudFlare节点 - 2
-      - 俄罗斯 V2CROSS.COM
+      - 美国 惠普HP
+      - 欧洲 V2CROSS.COM
       - 印度 V2CROSS.COM
-      - 美国 CloudFlare节点 - 3
+      - 美国 V2CROSS.COM
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
