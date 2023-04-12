@@ -1,67 +1,105 @@
 proxies:
   - name: 美国 CloudFlare节点
     type: vmess
-    server: new6.huvicloud.com
+    server: 162.159.58.15
     port: 443
-    uuid: a11ca760-9ef9-4a63-95c9-4c5c32d56251
+    uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
     alterId: 0
     cipher: auto
     udp: true
     network: ws
+    ws-path: /AUIKN8AU
+    ws-headers:
+      Host: lg1.v2ray6.xyz
+    tls: true
+  - name: 俄罗斯 V2CROSS.COM
+    type: vmess
+    server: 185.143.220.25
+    port: 443
+    uuid: f28e354e-c2d1-4983-9b07-5acaf1b3b3e5
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /6e9EtZ2dL
+    ws-headers:
+      Host: dengxin.one
+    tls: true
+  - name: 美国 CloudFlare节点 - 2
+    type: vmess
+    server: usv6warp.happyfree.top
+    port: 8443
+    uuid: edf140f1-35e9-4160-b5a0-6b27f3419a6f
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /figure
+    ws-headers:
+      Host: ''
+    tls: true
+  - name: 美国 Datability
+    type: vmess
+    server: 140.99.94.42
+    port: 44108
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: tcp
     ws-path: /
     ws-headers:
-      Host: new6.huvicloud.com
-    tls: true
-  - name: 美国 惠普HP
+      Host: gzyd.jcnode.top
+  - name: 美国 CloudFlare节点 - 3
     type: vmess
-    server: hk1.b.bd6b6c503c93.sanfen001.pics
-    port: 443
-    uuid: da9d5c74-a572-4cf4-a375-19b886f5ffc4
+    server: dj02.yumili.cf
+    port: 2096
+    uuid: c5cd4673-78de-43cd-b461-dd245c51f7b1
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /zh-cn
+    ws-path: /aaaa
     ws-headers:
-      Host: www.microsoft.com
+      Host: dj02.yumili.cf
     tls: true
-  - name: 欧洲 V2CROSS.COM
+  - name: 伊朗 V2CROSS.COM
     type: vmess
-    server: b66e0559-rsngg0-1filk.uk.tcpbbr.net
+    server: 5.78.73.163
+    port: 21
+    uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /
+    ws-headers:
+      Host: ''
+  - name: 印度 V2CROSS.COM
+    type: vmess
+    server: 103.160.204.15
+    port: 443
+    uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /AUIKN8AU
+    ws-headers:
+      Host: lg1.v2ray6.xyz
+    tls: true
+  - name: 日本 东京Amazon数据中心
+    type: vmess
+    server: sv1jptr3.151cc.xyz
     port: 80
-    uuid: 627a1c98-3bbd-11ec-a8bf-f23c91cfbbc9
+    uuid: 86e2466d-e1f8-3d62-938b-97191c0a43cf
     alterId: 2
     cipher: auto
     udp: true
     network: ws
-    ws-path: /
+    ws-path: /hls/cctv5phd.m3u8
     ws-headers:
-      Host: broadcastlv.chat.bilibili.com
-  - name: 印度 V2CROSS.COM
-    type: vmess
-    server: 103.160.204.13
-    port: 443
-    uuid: 56a2188b-2ab7-402c-b9b8-34847fdf0958
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /5QNROSRV
-    ws-headers:
-      Host: lg2.v2ray6.xyz
-    tls: true
-  - name: 美国 V2CROSS.COM
-    type: vmess
-    server: mci.mmdhossein20.tk
-    port: 80
-    uuid: 7bea35a3-d29c-4a33-b471-1eb63b3ecf70
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /hahuutung
-    ws-headers:
-      Host: vietnam8.azzphuc.pro
+      Host: sv1jptr3.151cc.xyz
 proxy-groups:
   - name: Free-servers
     type: select
@@ -69,28 +107,37 @@ proxy-groups:
       - 自动选择
       - 故障转移
       - 美国 CloudFlare节点
-      - 美国 惠普HP
-      - 欧洲 V2CROSS.COM
+      - 俄罗斯 V2CROSS.COM
+      - 美国 CloudFlare节点 - 2
+      - 美国 Datability
+      - 美国 CloudFlare节点 - 3
+      - 伊朗 V2CROSS.COM
       - 印度 V2CROSS.COM
-      - 美国 V2CROSS.COM
+      - 日本 东京Amazon数据中心
   - name: 自动选择
     type: url-test
     proxies:
       - 美国 CloudFlare节点
-      - 美国 惠普HP
-      - 欧洲 V2CROSS.COM
+      - 俄罗斯 V2CROSS.COM
+      - 美国 CloudFlare节点 - 2
+      - 美国 Datability
+      - 美国 CloudFlare节点 - 3
+      - 伊朗 V2CROSS.COM
       - 印度 V2CROSS.COM
-      - 美国 V2CROSS.COM
+      - 日本 东京Amazon数据中心
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
       - 美国 CloudFlare节点
-      - 美国 惠普HP
-      - 欧洲 V2CROSS.COM
+      - 俄罗斯 V2CROSS.COM
+      - 美国 CloudFlare节点 - 2
+      - 美国 Datability
+      - 美国 CloudFlare节点 - 3
+      - 伊朗 V2CROSS.COM
       - 印度 V2CROSS.COM
-      - 美国 V2CROSS.COM
+      - 日本 东京Amazon数据中心
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
