@@ -1,42 +1,30 @@
 proxies:
   - name: 美国 CloudFlare节点
     type: vmess
-    server: 172.64.173.160
-    port: 80
-    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
+    server: cf.515188.xyz
+    port: 8880
+    uuid: f6aa4440-e7be-44e1-80e1-7e45ccd796cc
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /shirker
+    ws-path: /api/v3/download.getFile
     ws-headers:
-      Host: ca.ilovescp.com
-  - name: 美国 V2CROSS.COM
+      Host: ssrsub.v02.ssrsub.com
+  - name: 俄罗斯 V2CROSS.COM
     type: vmess
-    server: vuk1.0bad.com
+    server: 185.143.220.25
     port: 443
-    uuid: 927094d3-d678-4763-8591-e240d0bcae87
+    uuid: f28e354e-c2d1-4983-9b07-5acaf1b3b3e5
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /chat
+    ws-path: /6e9EtZ2dL
     ws-headers:
-      Host: ''
+      Host: dengxin.one
     tls: true
   - name: 美国 CloudFlare节点 - 2
-    type: vmess
-    server: cf.noaries.de
-    port: 8080
-    uuid: 4f7d5d43-226e-48d8-9df0-5e8bf9f77288
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /aries?ed=2048
-    ws-headers:
-      Host: buyvm.cloudflare.quest
-  - name: 美国 CloudFlare节点 - 3
     type: vmess
     server: cf.515188.xyz
     port: 80
@@ -48,11 +36,25 @@ proxies:
     ws-path: /api/v3/download.getFile
     ws-headers:
       Host: ssrsub.v01.ssrsub.com
+  - name: 印度 V2CROSS.COM
+    type: vmess
+    server: 103.160.204.12
+    port: 443
+    uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /ECTCJ0DF
+    ws-headers:
+      Host: 154.v2ray3.xyz
+    tls: true
   - name: 美国+V2CROSS.COM
-    type: trojan
-    server: 152.70.74.66
-    port: '443'
-    password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
+    type: ss
+    server: 74.119.192.36
+    port: '38556'
+    cipher: chacha20-ietf-poly1305
+    password: GmfmweYODN7rICpJPmnlrI
 proxy-groups:
   - name: Free-servers
     type: select
@@ -60,17 +62,17 @@ proxy-groups:
       - 自动选择
       - 故障转移
       - 美国 CloudFlare节点
-      - 美国 V2CROSS.COM
+      - 俄罗斯 V2CROSS.COM
       - 美国 CloudFlare节点 - 2
-      - 美国 CloudFlare节点 - 3
+      - 印度 V2CROSS.COM
       - 美国+V2CROSS.COM
   - name: 自动选择
     type: url-test
     proxies:
       - 美国 CloudFlare节点
-      - 美国 V2CROSS.COM
+      - 俄罗斯 V2CROSS.COM
       - 美国 CloudFlare节点 - 2
-      - 美国 CloudFlare节点 - 3
+      - 印度 V2CROSS.COM
       - 美国+V2CROSS.COM
     url: http://www.gstatic.com/generate_204
     interval: 86400
@@ -78,9 +80,9 @@ proxy-groups:
     type: fallback
     proxies:
       - 美国 CloudFlare节点
-      - 美国 V2CROSS.COM
+      - 俄罗斯 V2CROSS.COM
       - 美国 CloudFlare节点 - 2
-      - 美国 CloudFlare节点 - 3
+      - 印度 V2CROSS.COM
       - 美国+V2CROSS.COM
     url: http://www.gstatic.com/generate_204
     interval: 86400
