@@ -1,51 +1,19 @@
 proxies:
-  - name: 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
+  - name: 南非 V2CROSS.COM
     type: vmess
-    server: 23.224.191.6
-    port: 443
+    server: 156.225.67.201
+    port: 47811
     uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
     alterId: 64
     cipher: auto
     udp: true
-    network: ws
-    ws-path: /path/220128071100
+    network: tcp
+    ws-path: /
     ws-headers:
-      Host: ''
-    tls: true
+      Host: z264.hongkongnode.top
   - name: 美国 CloudFlare节点
     type: vmess
-    server: dj02.yumili.cf
-    port: 2096
-    uuid: c5cd4673-78de-43cd-b461-dd245c51f7b1
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /aaaa
-    ws-headers:
-      Host: dj02.yumili.cf
-    tls: true
-  - name: 美国 CloudFlare节点 - 2
-    type: vmess
-    server: usv6warp.happyfree.top
-    port: 8443
-    uuid: edf140f1-35e9-4160-b5a0-6b27f3419a6f
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /figure
-    ws-headers:
-      Host: ''
-    tls: true
-  - name: 美国+V2CROSS.COM
-    type: trojan
-    server: 152.70.74.66
-    port: '443'
-    password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
-  - name: 美国 CloudFlare节点 - 3
-    type: vmess
-    server: r2wind.com
+    server: cf.515188.xyz
     port: 80
     uuid: f6aa4440-e7be-44e1-80e1-7e45ccd796cc
     alterId: 0
@@ -55,35 +23,71 @@ proxies:
     ws-path: /api/v3/download.getFile
     ws-headers:
       Host: ssrsub.v01.ssrsub.com
+  - name: 丹麦 V2CROSS.COM
+    type: vmess
+    server: 185.162.228.229
+    port: 80
+    uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /
+    ws-headers:
+      Host: lg.v2ray8.xyz
+  - name: 美国 CloudFlare节点 - 2
+    type: vmess
+    server: 162.159.255.200
+    port: 80
+    uuid: 52466dc2-3550-4310-910c-74b7bf8a020e
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /
+    ws-headers:
+      Host: us-1.acyun.eu.org
+  - name: 英国 V2CROSS.COM
+    type: vmess
+    server: 194.61.120.50
+    port: 25744
+    uuid: 5549f360-f590-479a-ba47-252073c053bc
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: ''
+    ws-headers:
+      Host: ''
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
+      - 南非 V2CROSS.COM
       - 美国 CloudFlare节点
+      - 丹麦 V2CROSS.COM
       - 美国 CloudFlare节点 - 2
-      - 美国+V2CROSS.COM
-      - 美国 CloudFlare节点 - 3
+      - 英国 V2CROSS.COM
   - name: 自动选择
     type: url-test
     proxies:
-      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
+      - 南非 V2CROSS.COM
       - 美国 CloudFlare节点
+      - 丹麦 V2CROSS.COM
       - 美国 CloudFlare节点 - 2
-      - 美国+V2CROSS.COM
-      - 美国 CloudFlare节点 - 3
+      - 英国 V2CROSS.COM
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
+      - 南非 V2CROSS.COM
       - 美国 CloudFlare节点
+      - 丹麦 V2CROSS.COM
       - 美国 CloudFlare节点 - 2
-      - 美国+V2CROSS.COM
-      - 美国 CloudFlare节点 - 3
+      - 英国 V2CROSS.COM
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
