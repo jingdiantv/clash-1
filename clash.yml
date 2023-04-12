@@ -1,95 +1,89 @@
 proxies:
-  - name: 伊朗 V2CROSS.COM
+  - name: 丹麦 V2CROSS.COM
     type: vmess
-    server: 5.78.73.163
-    port: 21
-    uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0
+    server: 185.162.228.1
+    port: 443
+    uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
     alterId: 0
     cipher: auto
     udp: true
-    network: tcp
+    network: ws
+    ws-path: /ECTCJ0DF
+    ws-headers:
+      Host: 154.v2ray3.xyz
+    tls: true
+  - name: 俄罗斯 V2CROSS.COM
+    type: vmess
+    server: 185.143.220.25
+    port: 443
+    uuid: f28e354e-c2d1-4983-9b07-5acaf1b3b3e5
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /6e9EtZ2dL
+    ws-headers:
+      Host: dengxin.one
+    tls: true
+  - name: 丹麦 V2CROSS.COM - 2
+    type: vmess
+    server: 185.162.228.229
+    port: 80
+    uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
     ws-path: /
     ws-headers:
-      Host: ''
+      Host: lg.v2ray8.xyz
+  - name: 美国 CloudFlare节点
+    type: vmess
+    server: cfcdn.sanfencdn.net
+    port: 443
+    uuid: da9d5c74-a572-4cf4-a375-19b886f5ffc4
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /zh-cn
+    ws-headers:
+      Host: us2.sanfencdn.net
+    tls: true
   - name: 美国+V2CROSS.COM
-    type: ss
-    server: 172.99.188.99
-    port: '6379'
-    cipher: aes-256-gcm
-    password: zDNVedRFPQexG9v
-  - name: 伊朗 V2CROSS.COM - 2
-    type: vmess
-    server: 109.122.221.98
-    port: 28633
-    uuid: d47d6a05-92d0-42d5-b624-22431f263453
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: ''
-    ws-headers:
-      Host: ''
-  - name: 伊朗 V2CROSS.COM - 3
-    type: vmess
-    server: 5.78.96.204
-    port: 21
-    uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /
-    ws-headers:
-      Host: ''
-  - name: 美国+V2CROSS.COM - 2
     type: trojan
     server: 152.70.74.66
     port: '443'
     password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
-  - name: 伊朗 V2CROSS.COM - 4
-    type: vmess
-    server: 109.122.221.98
-    port: 28633
-    uuid: d47d6a05-92d0-42d5-b624-22431f263453
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /
-    ws-headers:
-      Host: ''
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 伊朗 V2CROSS.COM
+      - 丹麦 V2CROSS.COM
+      - 俄罗斯 V2CROSS.COM
+      - 丹麦 V2CROSS.COM - 2
+      - 美国 CloudFlare节点
       - 美国+V2CROSS.COM
-      - 伊朗 V2CROSS.COM - 2
-      - 伊朗 V2CROSS.COM - 3
-      - 美国+V2CROSS.COM - 2
-      - 伊朗 V2CROSS.COM - 4
   - name: 自动选择
     type: url-test
     proxies:
-      - 伊朗 V2CROSS.COM
+      - 丹麦 V2CROSS.COM
+      - 俄罗斯 V2CROSS.COM
+      - 丹麦 V2CROSS.COM - 2
+      - 美国 CloudFlare节点
       - 美国+V2CROSS.COM
-      - 伊朗 V2CROSS.COM - 2
-      - 伊朗 V2CROSS.COM - 3
-      - 美国+V2CROSS.COM - 2
-      - 伊朗 V2CROSS.COM - 4
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 伊朗 V2CROSS.COM
+      - 丹麦 V2CROSS.COM
+      - 俄罗斯 V2CROSS.COM
+      - 丹麦 V2CROSS.COM - 2
+      - 美国 CloudFlare节点
       - 美国+V2CROSS.COM
-      - 伊朗 V2CROSS.COM - 2
-      - 伊朗 V2CROSS.COM - 3
-      - 美国+V2CROSS.COM - 2
-      - 伊朗 V2CROSS.COM - 4
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
