@@ -1,7 +1,37 @@
 proxies:
-  - name: 印度 V2CROSS.COM
+  - name: 美国 CloudFlare公司CDN节点(shopify)
     type: vmess
-    server: 103.160.204.15
+    server: 23.227.38.39
+    port: 80
+    uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /
+    ws-headers:
+      Host: lg.v2ray8.xyz
+  - name: 澳大利亚 Kooweerup Secondary College
+    type: vmess
+    server: 203.30.189.2
+    port: 80
+    uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /
+    ws-headers:
+      Host: fr.v2ray1.xyz
+  - name: 美国+V2CROSS.COM
+    type: ss
+    server: 172.99.188.99
+    port: '8882'
+    cipher: aes-256-gcm
+    password: kDWvXYZoTBcGkC4
+  - name: 美国 CloudFlare节点
+    type: vmess
+    server: 162.159.58.15
     port: 443
     uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
     alterId: 0
@@ -12,35 +42,11 @@ proxies:
     ws-headers:
       Host: lg1.v2ray6.xyz
     tls: true
-  - name: 美国 CloudFlare节点
+  - name: 台湾省台北市 中华电信
     type: vmess
-    server: r2wind.com
-    port: 80
-    uuid: f6aa4440-e7be-44e1-80e1-7e45ccd796cc
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /api/v3/download.getFile
-    ws-headers:
-      Host: ssrsub.v01.ssrsub.com
-  - name: 美国 CloudFlare节点 - 2
-    type: vmess
-    server: cf-lt.sharecentre.online
-    port: 80
-    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /shirker
-    ws-headers:
-      Host: de1.sharecentrepro.org
-  - name: 伊朗 V2CROSS.COM
-    type: vmess
-    server: 5.78.96.204
-    port: 21
-    uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0
+    server: tw2.sanfen001.pics
+    port: 443
+    uuid: da9d5c74-a572-4cf4-a375-19b886f5ffc4
     alterId: 0
     cipher: auto
     udp: true
@@ -48,78 +54,36 @@ proxies:
     ws-path: /
     ws-headers:
       Host: ''
-  - name: 美国 CloudFlare节点 - 3
-    type: vmess
-    server: 162.159.255.200
-    port: 80
-    uuid: 52466dc2-3550-4310-910c-74b7bf8a020e
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /
-    ws-headers:
-      Host: us-1.acyun.eu.org
-  - name: 美国 CloudFlare节点 - 4
-    type: vmess
-    server: 104.26.6.13
-    port: 443
-    uuid: 56a2188b-2ab7-402c-b9b8-34847fdf0958
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /5QNROSRV
-    ws-headers:
-      Host: lg2.v2ray6.xyz
     tls: true
-  - name: 美国 Datability
-    type: vmess
-    server: 140.99.94.42
-    port: 44108
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /
-    ws-headers:
-      Host: gzyd.jcnode.top
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 印度 V2CROSS.COM
+      - 美国 CloudFlare公司CDN节点(shopify)
+      - 澳大利亚 Kooweerup Secondary College
+      - 美国+V2CROSS.COM
       - 美国 CloudFlare节点
-      - 美国 CloudFlare节点 - 2
-      - 伊朗 V2CROSS.COM
-      - 美国 CloudFlare节点 - 3
-      - 美国 CloudFlare节点 - 4
-      - 美国 Datability
+      - 台湾省台北市 中华电信
   - name: 自动选择
     type: url-test
     proxies:
-      - 印度 V2CROSS.COM
+      - 美国 CloudFlare公司CDN节点(shopify)
+      - 澳大利亚 Kooweerup Secondary College
+      - 美国+V2CROSS.COM
       - 美国 CloudFlare节点
-      - 美国 CloudFlare节点 - 2
-      - 伊朗 V2CROSS.COM
-      - 美国 CloudFlare节点 - 3
-      - 美国 CloudFlare节点 - 4
-      - 美国 Datability
+      - 台湾省台北市 中华电信
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 印度 V2CROSS.COM
+      - 美国 CloudFlare公司CDN节点(shopify)
+      - 澳大利亚 Kooweerup Secondary College
+      - 美国+V2CROSS.COM
       - 美国 CloudFlare节点
-      - 美国 CloudFlare节点 - 2
-      - 伊朗 V2CROSS.COM
-      - 美国 CloudFlare节点 - 3
-      - 美国 CloudFlare节点 - 4
-      - 美国 Datability
+      - 台湾省台北市 中华电信
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
