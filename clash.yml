@@ -1,40 +1,9 @@
 proxies:
-  - name: 美国+V2CROSS.COM
-    type: trojan
-    server: 152.70.74.66
-    port: '443'
-    password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
-  - name: 印度 V2CROSS.COM
+  - name: 南非 V2CROSS.COM
     type: vmess
-    server: 103.160.204.15
-    port: 443
-    uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /AUIKN8AU
-    ws-headers:
-      Host: lg1.v2ray6.xyz
-    tls: true
-  - name: 美国 CloudFlare节点
-    type: vmess
-    server: 104.26.6.13
-    port: 443
-    uuid: 56a2188b-2ab7-402c-b9b8-34847fdf0958
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /5QNROSRV
-    ws-headers:
-      Host: lg2.v2ray6.xyz
-    tls: true
-  - name: 美国 加利福尼亚州圣何塞PEG TECH数据中心
-    type: vmess
-    server: 192.74.229.215
-    port: 51592
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    server: 156.225.67.192
+    port: 38323
+    uuid: d024fd8b-ea78-4789-b928-70afa1a910ce
     alterId: 64
     cipher: auto
     udp: true
@@ -42,31 +11,6 @@ proxies:
     ws-path: /
     ws-headers:
       Host: ''
-  - name: 美国 CloudFlare节点 - 2
-    type: vmess
-    server: cfcdn.sanfencdn.net
-    port: 443
-    uuid: da9d5c74-a572-4cf4-a375-19b886f5ffc4
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /zh-cn
-    ws-headers:
-      Host: us2.sanfencdn.net
-    tls: true
-  - name: 美国 CloudFlare节点 - 3
-    type: vmess
-    server: cf.515188.xyz
-    port: 80
-    uuid: f6aa4440-e7be-44e1-80e1-7e45ccd796cc
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /api/v3/download.getFile
-    ws-headers:
-      Host: ssrsub.v01.ssrsub.com
   - name: 俄罗斯 V2CROSS.COM
     type: vmess
     server: 185.143.220.25
@@ -80,41 +24,72 @@ proxies:
     ws-headers:
       Host: dengxin.one
     tls: true
+  - name: 美国 惠普HP
+    type: vmess
+    server: hk1.b.bd6b6c503c93.sanfen001.pics
+    port: 443
+    uuid: da9d5c74-a572-4cf4-a375-19b886f5ffc4
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /zh-cn
+    ws-headers:
+      Host: www.microsoft.com
+    tls: true
+  - name: 澳大利亚 Lyndhurst Secondary College
+    type: vmess
+    server: 203.30.188.2
+    port: 80
+    uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /
+    ws-headers:
+      Host: fr.v2ray1.xyz
+  - name: 伊朗 V2CROSS.COM
+    type: vmess
+    server: 5.78.96.204
+    port: 21
+    uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /
+    ws-headers:
+      Host: ''
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 美国+V2CROSS.COM
-      - 印度 V2CROSS.COM
-      - 美国 CloudFlare节点
-      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
-      - 美国 CloudFlare节点 - 2
-      - 美国 CloudFlare节点 - 3
+      - 南非 V2CROSS.COM
       - 俄罗斯 V2CROSS.COM
+      - 美国 惠普HP
+      - 澳大利亚 Lyndhurst Secondary College
+      - 伊朗 V2CROSS.COM
   - name: 自动选择
     type: url-test
     proxies:
-      - 美国+V2CROSS.COM
-      - 印度 V2CROSS.COM
-      - 美国 CloudFlare节点
-      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
-      - 美国 CloudFlare节点 - 2
-      - 美国 CloudFlare节点 - 3
+      - 南非 V2CROSS.COM
       - 俄罗斯 V2CROSS.COM
+      - 美国 惠普HP
+      - 澳大利亚 Lyndhurst Secondary College
+      - 伊朗 V2CROSS.COM
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 美国+V2CROSS.COM
-      - 印度 V2CROSS.COM
-      - 美国 CloudFlare节点
-      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
-      - 美国 CloudFlare节点 - 2
-      - 美国 CloudFlare节点 - 3
+      - 南非 V2CROSS.COM
       - 俄罗斯 V2CROSS.COM
+      - 美国 惠普HP
+      - 澳大利亚 Lyndhurst Secondary College
+      - 伊朗 V2CROSS.COM
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
