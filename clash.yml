@@ -1,96 +1,87 @@
 proxies:
-  - name: 丹麦 V2CROSS.COM
-    type: vmess
-    server: 185.162.228.1
-    port: 443
-    uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /ECTCJ0DF
-    ws-headers:
-      Host: 154.v2ray3.xyz
-    tls: true
   - name: 美国 CloudFlare节点
     type: vmess
-    server: usv6warp.happyfree.top
-    port: 8443
-    uuid: edf140f1-35e9-4160-b5a0-6b27f3419a6f
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /figure
-    ws-headers:
-      Host: ''
-    tls: true
-  - name: 美国 加利福尼亚州圣何塞PEG TECH
-    type: vmess
-    server: 142.4.118.248
-    port: 57402
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /
-    ws-headers:
-      Host: ''
-  - name: 丹麦 V2CROSS.COM - 2
-    type: vmess
-    server: 185.162.228.229
+    server: 172.64.173.160
     port: 80
-    uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
+    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /
+    ws-path: /shirker
     ws-headers:
-      Host: lg.v2ray8.xyz
-  - name: 俄罗斯 V2CROSS.COM
+      Host: ca.ilovescp.com
+  - name: 美国 V2CROSS.COM
     type: vmess
-    server: 185.143.220.25
+    server: vuk1.0bad.com
     port: 443
-    uuid: f28e354e-c2d1-4983-9b07-5acaf1b3b3e5
+    uuid: 927094d3-d678-4763-8591-e240d0bcae87
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /6e9EtZ2dL
+    ws-path: /chat
     ws-headers:
-      Host: dengxin.one
+      Host: ''
     tls: true
+  - name: 美国 CloudFlare节点 - 2
+    type: vmess
+    server: cf.noaries.de
+    port: 8080
+    uuid: 4f7d5d43-226e-48d8-9df0-5e8bf9f77288
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /aries?ed=2048
+    ws-headers:
+      Host: buyvm.cloudflare.quest
+  - name: 美国 CloudFlare节点 - 3
+    type: vmess
+    server: cf.515188.xyz
+    port: 80
+    uuid: f6aa4440-e7be-44e1-80e1-7e45ccd796cc
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /api/v3/download.getFile
+    ws-headers:
+      Host: ssrsub.v01.ssrsub.com
+  - name: 美国+V2CROSS.COM
+    type: trojan
+    server: 152.70.74.66
+    port: '443'
+    password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 丹麦 V2CROSS.COM
       - 美国 CloudFlare节点
-      - 美国 加利福尼亚州圣何塞PEG TECH
-      - 丹麦 V2CROSS.COM - 2
-      - 俄罗斯 V2CROSS.COM
+      - 美国 V2CROSS.COM
+      - 美国 CloudFlare节点 - 2
+      - 美国 CloudFlare节点 - 3
+      - 美国+V2CROSS.COM
   - name: 自动选择
     type: url-test
     proxies:
-      - 丹麦 V2CROSS.COM
       - 美国 CloudFlare节点
-      - 美国 加利福尼亚州圣何塞PEG TECH
-      - 丹麦 V2CROSS.COM - 2
-      - 俄罗斯 V2CROSS.COM
+      - 美国 V2CROSS.COM
+      - 美国 CloudFlare节点 - 2
+      - 美国 CloudFlare节点 - 3
+      - 美国+V2CROSS.COM
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 丹麦 V2CROSS.COM
       - 美国 CloudFlare节点
-      - 美国 加利福尼亚州圣何塞PEG TECH
-      - 丹麦 V2CROSS.COM - 2
-      - 俄罗斯 V2CROSS.COM
+      - 美国 V2CROSS.COM
+      - 美国 CloudFlare节点 - 2
+      - 美国 CloudFlare节点 - 3
+      - 美国+V2CROSS.COM
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
