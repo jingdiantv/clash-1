@@ -1,59 +1,77 @@
 proxies:
-  - name: 美国+V2CROSS.COM
-    type: ss
-    server: 74.119.192.36
-    port: '38556'
-    cipher: chacha20-ietf-poly1305
-    password: GmfmweYODN7rICpJPmnlrI
-  - name: 澳大利亚 Kooweerup Secondary College
+  - name: 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
     type: vmess
-    server: 203.30.189.1
-    port: 443
-    uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
-    alterId: 0
+    server: 23.224.9.93
+    port: 51504
+    uuid: bb25859e-f6da-4101-989f-b4dd67a22682
+    alterId: 64
     cipher: auto
     udp: true
-    network: ws
-    ws-path: /ECTCJ0DF
+    network: tcp
+    ws-path: /
     ws-headers:
-      Host: 154.v2ray3.xyz
-    tls: true
+      Host: ''
+  - name: 美国 加利福尼亚州圣何塞PEG TECH数据中心
+    type: vmess
+    server: 192.74.243.41
+    port: 49206
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /
+    ws-headers:
+      Host: ''
   - name: 美国 CloudFlare节点
     type: vmess
-    server: cf.noaries.de
-    port: 2082
-    uuid: 314c1387-618c-4689-97fc-4bc9a1ae5e05
+    server: 162.159.255.200
+    port: 80
+    uuid: 52466dc2-3550-4310-910c-74b7bf8a020e
     alterId: 0
     cipher: auto
     udp: true
     network: ws
     ws-path: /
     ws-headers:
-      Host: ir2.nmsl.ninja
-  - name: 美国 CloudFlare节点 - 2
+      Host: us-1.acyun.eu.org
+  - name: 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心 - 2
     type: vmess
-    server: cf.noaries.de
-    port: 8080
-    uuid: 4f7d5d43-226e-48d8-9df0-5e8bf9f77288
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /aries?ed=2048
-    ws-headers:
-      Host: buyvm.cloudflare.quest
-  - name: 美国 CloudFlare节点 - 3
-    type: vmess
-    server: 162.159.58.15
+    server: 23.224.191.6
     port: 443
-    uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 32
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /path/220128071100
+    ws-headers:
+      Host: ''
+    tls: true
+  - name: 丹麦 V2CROSS.COM
+    type: vmess
+    server: 185.162.228.2
+    port: 80
+    uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /AUIKN8AU
+    ws-path: /
     ws-headers:
-      Host: lg1.v2ray6.xyz
+      Host: fr.v2ray1.xyz
+  - name: 美国 加利福尼亚州洛杉矶Sharktech数据中心
+    type: vmess
+    server: 170.178.179.189
+    port: 443
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /path/031730091420
+    ws-headers:
+      Host: ''
     tls: true
 proxy-groups:
   - name: Free-servers
@@ -61,29 +79,32 @@ proxy-groups:
     proxies:
       - 自动选择
       - 故障转移
-      - 美国+V2CROSS.COM
-      - 澳大利亚 Kooweerup Secondary College
+      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
+      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
       - 美国 CloudFlare节点
-      - 美国 CloudFlare节点 - 2
-      - 美国 CloudFlare节点 - 3
+      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心 - 2
+      - 丹麦 V2CROSS.COM
+      - 美国 加利福尼亚州洛杉矶Sharktech数据中心
   - name: 自动选择
     type: url-test
     proxies:
-      - 美国+V2CROSS.COM
-      - 澳大利亚 Kooweerup Secondary College
+      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
+      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
       - 美国 CloudFlare节点
-      - 美国 CloudFlare节点 - 2
-      - 美国 CloudFlare节点 - 3
+      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心 - 2
+      - 丹麦 V2CROSS.COM
+      - 美国 加利福尼亚州洛杉矶Sharktech数据中心
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 美国+V2CROSS.COM
-      - 澳大利亚 Kooweerup Secondary College
+      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
+      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
       - 美国 CloudFlare节点
-      - 美国 CloudFlare节点 - 2
-      - 美国 CloudFlare节点 - 3
+      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心 - 2
+      - 丹麦 V2CROSS.COM
+      - 美国 加利福尼亚州洛杉矶Sharktech数据中心
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
