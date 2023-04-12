@@ -1,52 +1,16 @@
 proxies:
   - name: 丹麦 V2CROSS.COM
     type: vmess
-    server: 185.162.228.229
-    port: 80
-    uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /
-    ws-headers:
-      Host: lg.v2ray8.xyz
-  - name: 澳大利亚 悉尼
-    type: vmess
-    server: 203.24.108.100
-    port: 80
-    uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /
-    ws-headers:
-      Host: lg.v2ray8.xyz
-  - name: 美国 加利福尼亚州圣何塞PEG TECH
-    type: vmess
-    server: 142.4.118.248
-    port: 57402
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /
-    ws-headers:
-      Host: ''
-  - name: 美国 加利福尼亚州洛杉矶Sharktech数据中心
-    type: vmess
-    server: 170.178.179.189
+    server: 185.162.228.1
     port: 443
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
+    uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
+    alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /path/031730091420
+    ws-path: /ECTCJ0DF
     ws-headers:
-      Host: ''
+      Host: 154.v2ray3.xyz
     tls: true
   - name: 美国 CloudFlare节点
     type: vmess
@@ -61,6 +25,43 @@ proxies:
     ws-headers:
       Host: ''
     tls: true
+  - name: 美国 加利福尼亚州圣何塞PEG TECH
+    type: vmess
+    server: 142.4.118.248
+    port: 57402
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /
+    ws-headers:
+      Host: ''
+  - name: 丹麦 V2CROSS.COM - 2
+    type: vmess
+    server: 185.162.228.229
+    port: 80
+    uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /
+    ws-headers:
+      Host: lg.v2ray8.xyz
+  - name: 俄罗斯 V2CROSS.COM
+    type: vmess
+    server: 185.143.220.25
+    port: 443
+    uuid: f28e354e-c2d1-4983-9b07-5acaf1b3b3e5
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /6e9EtZ2dL
+    ws-headers:
+      Host: dengxin.one
+    tls: true
 proxy-groups:
   - name: Free-servers
     type: select
@@ -68,28 +69,28 @@ proxy-groups:
       - 自动选择
       - 故障转移
       - 丹麦 V2CROSS.COM
-      - 澳大利亚 悉尼
-      - 美国 加利福尼亚州圣何塞PEG TECH
-      - 美国 加利福尼亚州洛杉矶Sharktech数据中心
       - 美国 CloudFlare节点
+      - 美国 加利福尼亚州圣何塞PEG TECH
+      - 丹麦 V2CROSS.COM - 2
+      - 俄罗斯 V2CROSS.COM
   - name: 自动选择
     type: url-test
     proxies:
       - 丹麦 V2CROSS.COM
-      - 澳大利亚 悉尼
-      - 美国 加利福尼亚州圣何塞PEG TECH
-      - 美国 加利福尼亚州洛杉矶Sharktech数据中心
       - 美国 CloudFlare节点
+      - 美国 加利福尼亚州圣何塞PEG TECH
+      - 丹麦 V2CROSS.COM - 2
+      - 俄罗斯 V2CROSS.COM
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
       - 丹麦 V2CROSS.COM
-      - 澳大利亚 悉尼
-      - 美国 加利福尼亚州圣何塞PEG TECH
-      - 美国 加利福尼亚州洛杉矶Sharktech数据中心
       - 美国 CloudFlare节点
+      - 美国 加利福尼亚州圣何塞PEG TECH
+      - 丹麦 V2CROSS.COM - 2
+      - 俄罗斯 V2CROSS.COM
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
