@@ -1,89 +1,125 @@
 proxies:
+  - name: 美国 加利福尼亚州圣何塞PEG TECH数据中心
+    type: vmess
+    server: 192.74.229.215
+    port: 51592
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /
+    ws-headers:
+      Host: ''
+  - name: 丹麦 V2CROSS.COM
+    type: vmess
+    server: 185.162.228.229
+    port: 80
+    uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /
+    ws-headers:
+      Host: lg.v2ray8.xyz
   - name: 美国 CloudFlare节点
     type: vmess
-    server: cf.515188.xyz
-    port: 8880
-    uuid: f6aa4440-e7be-44e1-80e1-7e45ccd796cc
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /api/v3/download.getFile
-    ws-headers:
-      Host: ssrsub.v02.ssrsub.com
-  - name: 俄罗斯 V2CROSS.COM
-    type: vmess
-    server: 185.143.220.25
+    server: cfcdn.sanfencdn.net
     port: 443
-    uuid: f28e354e-c2d1-4983-9b07-5acaf1b3b3e5
+    uuid: da9d5c74-a572-4cf4-a375-19b886f5ffc4
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /6e9EtZ2dL
+    ws-path: /zh-cn
     ws-headers:
-      Host: dengxin.one
+      Host: us2.sanfencdn.net
     tls: true
-  - name: 美国 CloudFlare节点 - 2
+  - name: 韩国首尔 UCloud
     type: vmess
-    server: cf.515188.xyz
+    server: 118.193.69.158
+    port: 53173
+    uuid: 3b76d1a8-55fd-465e-aa04-68c39a506175
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /
+    ws-headers:
+      Host: ''
+  - name: 希腊 V2CROSS.COM
+    type: vmess
+    server: 144.24.72.125
+    port: 39867
+    uuid: 1c1d94dc-e79b-4a24-dc9f-7afa92539a80
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: ''
+    ws-headers:
+      Host: ''
+  - name: 澳大利亚 悉尼
+    type: vmess
+    server: 203.24.108.100
     port: 80
-    uuid: f6aa4440-e7be-44e1-80e1-7e45ccd796cc
+    uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /api/v3/download.getFile
+    ws-path: /
     ws-headers:
-      Host: ssrsub.v01.ssrsub.com
+      Host: lg.v2ray8.xyz
   - name: 印度 V2CROSS.COM
     type: vmess
-    server: 103.160.204.12
+    server: 103.160.204.13
     port: 443
-    uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
+    uuid: 56a2188b-2ab7-402c-b9b8-34847fdf0958
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /ECTCJ0DF
+    ws-path: /5QNROSRV
     ws-headers:
-      Host: 154.v2ray3.xyz
+      Host: lg2.v2ray6.xyz
     tls: true
-  - name: 美国+V2CROSS.COM
-    type: ss
-    server: 74.119.192.36
-    port: '38556'
-    cipher: chacha20-ietf-poly1305
-    password: GmfmweYODN7rICpJPmnlrI
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
+      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
+      - 丹麦 V2CROSS.COM
       - 美国 CloudFlare节点
-      - 俄罗斯 V2CROSS.COM
-      - 美国 CloudFlare节点 - 2
+      - 韩国首尔 UCloud
+      - 希腊 V2CROSS.COM
+      - 澳大利亚 悉尼
       - 印度 V2CROSS.COM
-      - 美国+V2CROSS.COM
   - name: 自动选择
     type: url-test
     proxies:
+      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
+      - 丹麦 V2CROSS.COM
       - 美国 CloudFlare节点
-      - 俄罗斯 V2CROSS.COM
-      - 美国 CloudFlare节点 - 2
+      - 韩国首尔 UCloud
+      - 希腊 V2CROSS.COM
+      - 澳大利亚 悉尼
       - 印度 V2CROSS.COM
-      - 美国+V2CROSS.COM
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
+      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
+      - 丹麦 V2CROSS.COM
       - 美国 CloudFlare节点
-      - 俄罗斯 V2CROSS.COM
-      - 美国 CloudFlare节点 - 2
+      - 韩国首尔 UCloud
+      - 希腊 V2CROSS.COM
+      - 澳大利亚 悉尼
       - 印度 V2CROSS.COM
-      - 美国+V2CROSS.COM
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
