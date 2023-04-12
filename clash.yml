@@ -1,16 +1,29 @@
 proxies:
-  - name: 丹麦 V2CROSS.COM
+  - name: 美国 CloudFlare节点
     type: vmess
-    server: 185.162.228.1
+    server: cfcdn.sanfencdn.net
     port: 443
-    uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
+    uuid: da9d5c74-a572-4cf4-a375-19b886f5ffc4
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /ECTCJ0DF
+    ws-path: /zh-cn
     ws-headers:
-      Host: 154.v2ray3.xyz
+      Host: us2.sanfencdn.net
+    tls: true
+  - name: 美国 CloudFlare节点 - 2
+    type: vmess
+    server: 162.159.58.15
+    port: 443
+    uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /AUIKN8AU
+    ws-headers:
+      Host: lg1.v2ray6.xyz
     tls: true
   - name: 俄罗斯 V2CROSS.COM
     type: vmess
@@ -25,65 +38,60 @@ proxies:
     ws-headers:
       Host: dengxin.one
     tls: true
-  - name: 丹麦 V2CROSS.COM - 2
+  - name: 印度 V2CROSS.COM
     type: vmess
-    server: 185.162.228.229
-    port: 80
-    uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /
-    ws-headers:
-      Host: lg.v2ray8.xyz
-  - name: 美国 CloudFlare节点
-    type: vmess
-    server: cfcdn.sanfencdn.net
+    server: 103.160.204.13
     port: 443
-    uuid: da9d5c74-a572-4cf4-a375-19b886f5ffc4
+    uuid: 56a2188b-2ab7-402c-b9b8-34847fdf0958
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /zh-cn
+    ws-path: /5QNROSRV
     ws-headers:
-      Host: us2.sanfencdn.net
+      Host: lg2.v2ray6.xyz
     tls: true
-  - name: 美国+V2CROSS.COM
-    type: trojan
-    server: 152.70.74.66
-    port: '443'
-    password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
+  - name: 美国 CloudFlare节点 - 3
+    type: vmess
+    server: r2wind.com
+    port: 80
+    uuid: f6aa4440-e7be-44e1-80e1-7e45ccd796cc
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /api/v3/download.getFile
+    ws-headers:
+      Host: ssrsub.v01.ssrsub.com
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 丹麦 V2CROSS.COM
-      - 俄罗斯 V2CROSS.COM
-      - 丹麦 V2CROSS.COM - 2
       - 美国 CloudFlare节点
-      - 美国+V2CROSS.COM
+      - 美国 CloudFlare节点 - 2
+      - 俄罗斯 V2CROSS.COM
+      - 印度 V2CROSS.COM
+      - 美国 CloudFlare节点 - 3
   - name: 自动选择
     type: url-test
     proxies:
-      - 丹麦 V2CROSS.COM
-      - 俄罗斯 V2CROSS.COM
-      - 丹麦 V2CROSS.COM - 2
       - 美国 CloudFlare节点
-      - 美国+V2CROSS.COM
+      - 美国 CloudFlare节点 - 2
+      - 俄罗斯 V2CROSS.COM
+      - 印度 V2CROSS.COM
+      - 美国 CloudFlare节点 - 3
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 丹麦 V2CROSS.COM
-      - 俄罗斯 V2CROSS.COM
-      - 丹麦 V2CROSS.COM - 2
       - 美国 CloudFlare节点
-      - 美国+V2CROSS.COM
+      - 美国 CloudFlare节点 - 2
+      - 俄罗斯 V2CROSS.COM
+      - 印度 V2CROSS.COM
+      - 美国 CloudFlare节点 - 3
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
