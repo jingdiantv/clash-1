@@ -1,7 +1,51 @@
 proxies:
+  - name: 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
+    type: vmess
+    server: 23.224.191.6
+    port: 443
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /path/220128071100
+    ws-headers:
+      Host: ''
+    tls: true
   - name: 美国 CloudFlare节点
     type: vmess
-    server: cf.515188.xyz
+    server: dj02.yumili.cf
+    port: 2096
+    uuid: c5cd4673-78de-43cd-b461-dd245c51f7b1
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /aaaa
+    ws-headers:
+      Host: dj02.yumili.cf
+    tls: true
+  - name: 美国 CloudFlare节点 - 2
+    type: vmess
+    server: usv6warp.happyfree.top
+    port: 8443
+    uuid: edf140f1-35e9-4160-b5a0-6b27f3419a6f
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /figure
+    ws-headers:
+      Host: ''
+    tls: true
+  - name: 美国+V2CROSS.COM
+    type: trojan
+    server: 152.70.74.66
+    port: '443'
+    password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
+  - name: 美国 CloudFlare节点 - 3
+    type: vmess
+    server: r2wind.com
     port: 80
     uuid: f6aa4440-e7be-44e1-80e1-7e45ccd796cc
     alterId: 0
@@ -11,98 +55,34 @@ proxies:
     ws-path: /api/v3/download.getFile
     ws-headers:
       Host: ssrsub.v01.ssrsub.com
-  - name: 美国 加利福尼亚州圣何塞PEG TECH数据中心
-    type: vmess
-    server: 192.74.229.215
-    port: 51592
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /
-    ws-headers:
-      Host: ''
-  - name: 澳大利亚 Lyndhurst Secondary College
-    type: vmess
-    server: 203.30.188.2
-    port: 80
-    uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /
-    ws-headers:
-      Host: fr.v2ray1.xyz
-  - name: 美国 CloudFlare节点 - 2
-    type: vmess
-    server: 162.159.255.200
-    port: 80
-    uuid: 52466dc2-3550-4310-910c-74b7bf8a020e
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /
-    ws-headers:
-      Host: us-1.acyun.eu.org
-  - name: 澳大利亚 悉尼
-    type: vmess
-    server: 203.24.108.100
-    port: 80
-    uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /
-    ws-headers:
-      Host: lg.v2ray8.xyz
-  - name: 美国 CloudFlare节点 - 3
-    type: vmess
-    server: 162.159.58.15
-    port: 443
-    uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /AUIKN8AU
-    ws-headers:
-      Host: lg1.v2ray6.xyz
-    tls: true
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
+      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
       - 美国 CloudFlare节点
-      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
-      - 澳大利亚 Lyndhurst Secondary College
       - 美国 CloudFlare节点 - 2
-      - 澳大利亚 悉尼
+      - 美国+V2CROSS.COM
       - 美国 CloudFlare节点 - 3
   - name: 自动选择
     type: url-test
     proxies:
+      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
       - 美国 CloudFlare节点
-      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
-      - 澳大利亚 Lyndhurst Secondary College
       - 美国 CloudFlare节点 - 2
-      - 澳大利亚 悉尼
+      - 美国+V2CROSS.COM
       - 美国 CloudFlare节点 - 3
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
+      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
       - 美国 CloudFlare节点
-      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
-      - 澳大利亚 Lyndhurst Secondary College
       - 美国 CloudFlare节点 - 2
-      - 澳大利亚 悉尼
+      - 美国+V2CROSS.COM
       - 美国 CloudFlare节点 - 3
     url: http://www.gstatic.com/generate_204
     interval: 86400
