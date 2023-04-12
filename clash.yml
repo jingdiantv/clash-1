@@ -1,93 +1,89 @@
 proxies:
-  - name: 南非 V2CROSS.COM
+  - name: 美国+V2CROSS.COM
+    type: ss
+    server: 74.119.192.36
+    port: '38556'
+    cipher: chacha20-ietf-poly1305
+    password: GmfmweYODN7rICpJPmnlrI
+  - name: 澳大利亚 Kooweerup Secondary College
     type: vmess
-    server: 156.225.67.201
-    port: 47811
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
+    server: 203.30.189.1
+    port: 443
+    uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
+    alterId: 0
     cipher: auto
     udp: true
-    network: tcp
-    ws-path: /
+    network: ws
+    ws-path: /ECTCJ0DF
     ws-headers:
-      Host: z264.hongkongnode.top
+      Host: 154.v2ray3.xyz
+    tls: true
   - name: 美国 CloudFlare节点
     type: vmess
-    server: cf.515188.xyz
-    port: 80
-    uuid: f6aa4440-e7be-44e1-80e1-7e45ccd796cc
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /api/v3/download.getFile
-    ws-headers:
-      Host: ssrsub.v01.ssrsub.com
-  - name: 丹麦 V2CROSS.COM
-    type: vmess
-    server: 185.162.228.229
-    port: 80
-    uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
+    server: cf.noaries.de
+    port: 2082
+    uuid: 314c1387-618c-4689-97fc-4bc9a1ae5e05
     alterId: 0
     cipher: auto
     udp: true
     network: ws
     ws-path: /
     ws-headers:
-      Host: lg.v2ray8.xyz
+      Host: ir2.nmsl.ninja
   - name: 美国 CloudFlare节点 - 2
     type: vmess
-    server: 162.159.255.200
-    port: 80
-    uuid: 52466dc2-3550-4310-910c-74b7bf8a020e
+    server: cf.noaries.de
+    port: 8080
+    uuid: 4f7d5d43-226e-48d8-9df0-5e8bf9f77288
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /
+    ws-path: /aries?ed=2048
     ws-headers:
-      Host: us-1.acyun.eu.org
-  - name: 英国 V2CROSS.COM
+      Host: buyvm.cloudflare.quest
+  - name: 美国 CloudFlare节点 - 3
     type: vmess
-    server: 194.61.120.50
-    port: 25744
-    uuid: 5549f360-f590-479a-ba47-252073c053bc
+    server: 162.159.58.15
+    port: 443
+    uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
     alterId: 0
     cipher: auto
     udp: true
-    network: tcp
-    ws-path: ''
+    network: ws
+    ws-path: /AUIKN8AU
     ws-headers:
-      Host: ''
+      Host: lg1.v2ray6.xyz
+    tls: true
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 南非 V2CROSS.COM
+      - 美国+V2CROSS.COM
+      - 澳大利亚 Kooweerup Secondary College
       - 美国 CloudFlare节点
-      - 丹麦 V2CROSS.COM
       - 美国 CloudFlare节点 - 2
-      - 英国 V2CROSS.COM
+      - 美国 CloudFlare节点 - 3
   - name: 自动选择
     type: url-test
     proxies:
-      - 南非 V2CROSS.COM
+      - 美国+V2CROSS.COM
+      - 澳大利亚 Kooweerup Secondary College
       - 美国 CloudFlare节点
-      - 丹麦 V2CROSS.COM
       - 美国 CloudFlare节点 - 2
-      - 英国 V2CROSS.COM
+      - 美国 CloudFlare节点 - 3
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 南非 V2CROSS.COM
+      - 美国+V2CROSS.COM
+      - 澳大利亚 Kooweerup Secondary College
       - 美国 CloudFlare节点
-      - 丹麦 V2CROSS.COM
       - 美国 CloudFlare节点 - 2
-      - 英国 V2CROSS.COM
+      - 美国 CloudFlare节点 - 3
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
