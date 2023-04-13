@@ -1,33 +1,29 @@
 proxies:
-  - name: 美国 CloudFlare公司CDN节点(shopify)
+  - name: 美国 V2CROSS.COM
     type: vmess
-    server: 23.227.38.102
-    port: 80
-    uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a
+    server: surongwei.eu.org
+    port: 443
+    uuid: 6093eefb-7ab6-41df-aba0-d5fa58147e10
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /
+    ws-path: /reffs7y26g0ua
     ws-headers:
-      Host: fr.v2ray1.xyz
-  - name: 希腊 V2CROSS.COM
+      Host: ''
+    tls: true
+  - name: 美国 加利福尼亚州圣何塞PEG TECH数据中心
     type: vmess
-    server: 144.24.72.125
-    port: 39867
-    uuid: 1c1d94dc-e79b-4a24-dc9f-7afa92539a80
-    alterId: 0
+    server: 192.74.229.215
+    port: 51592
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
     cipher: auto
     udp: true
     network: tcp
     ws-path: /
     ws-headers:
       Host: ''
-  - name: 美国+V2CROSS.COM
-    type: trojan
-    server: 152.70.74.66
-    port: '443'
-    password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
   - name: 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
     type: vmess
     server: 23.224.191.5
@@ -41,9 +37,21 @@ proxies:
     ws-headers:
       Host: ''
     tls: true
-  - name: 美国 CloudFlare节点
+  - name: 希腊 V2CROSS.COM
     type: vmess
-    server: 198.41.203.7
+    server: 144.24.72.125
+    port: 39867
+    uuid: 1c1d94dc-e79b-4a24-dc9f-7afa92539a80
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /
+    ws-headers:
+      Host: ''
+  - name: 澳大利亚 悉尼
+    type: vmess
+    server: 203.24.108.100
     port: 80
     uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
     alterId: 0
@@ -53,51 +61,35 @@ proxies:
     ws-path: /
     ws-headers:
       Host: lg.v2ray8.xyz
-  - name: 香港 BGP.NET CN2数据中心
-    type: vmess
-    server: 202.79.172.53
-    port: 443
-    uuid: 30216206-14b7-40e7-995d-61c1219ba584
-    alterId: 64
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /path/220128071100
-    ws-headers:
-      Host: ''
-    tls: true
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 美国 CloudFlare公司CDN节点(shopify)
-      - 希腊 V2CROSS.COM
-      - 美国+V2CROSS.COM
+      - 美国 V2CROSS.COM
+      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
       - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
-      - 美国 CloudFlare节点
-      - 香港 BGP.NET CN2数据中心
+      - 希腊 V2CROSS.COM
+      - 澳大利亚 悉尼
   - name: 自动选择
     type: url-test
     proxies:
-      - 美国 CloudFlare公司CDN节点(shopify)
-      - 希腊 V2CROSS.COM
-      - 美国+V2CROSS.COM
+      - 美国 V2CROSS.COM
+      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
       - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
-      - 美国 CloudFlare节点
-      - 香港 BGP.NET CN2数据中心
+      - 希腊 V2CROSS.COM
+      - 澳大利亚 悉尼
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 美国 CloudFlare公司CDN节点(shopify)
-      - 希腊 V2CROSS.COM
-      - 美国+V2CROSS.COM
+      - 美国 V2CROSS.COM
+      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
       - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
-      - 美国 CloudFlare节点
-      - 香港 BGP.NET CN2数据中心
+      - 希腊 V2CROSS.COM
+      - 澳大利亚 悉尼
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
