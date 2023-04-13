@@ -1,30 +1,4 @@
 proxies:
-  - name: 印度 V2CROSS.COM
-    type: vmess
-    server: 103.160.204.13
-    port: 443
-    uuid: 56a2188b-2ab7-402c-b9b8-34847fdf0958
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /5QNROSRV
-    ws-headers:
-      Host: lg2.v2ray6.xyz
-    tls: true
-  - name: 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
-    type: vmess
-    server: 23.224.191.5
-    port: 443
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /path/220128071100
-    ws-headers:
-      Host: ''
-    tls: true
   - name: 美国 加利福尼亚州洛杉矶Dedipath数据中心
     type: vmess
     server: 45.89.106.111
@@ -37,105 +11,84 @@ proxies:
     ws-path: /ray
     ws-headers:
       Host: ''
-  - name: 伊朗 V2CROSS.COM
-    type: vmess
-    server: f-us2.wvvvv.eu.org
-    port: 21
-    uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /
-    ws-headers:
-      Host: f-us2.wvvvv.eu.org
   - name: 美国 CloudFlare节点
     type: vmess
-    server: 172.67.13.10
-    port: 443
-    uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
+    server: lsb-gy.heinu.cf
+    port: 2096
+    uuid: d793c013-f596-4af9-de0a-2062bb864dd7
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /ECTCJ0DF
+    ws-path: /@heinuhome
     ws-headers:
-      Host: 154.v2ray3.xyz
+      Host: ''
     tls: true
-  - name: 丹麦 V2CROSS.COM
+  - name: 美国 CloudFlare节点 - 2
     type: vmess
-    server: 185.162.228.229
+    server: v143a.toddns.tk
     port: 80
-    uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
+    uuid: a25881f3-967f-3265-bc7f-9e66857b016b
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /
+    ws-path: /jp143-d2xddxxj
     ws-headers:
-      Host: lg.v2ray8.xyz
+      Host: v143a.toddns.tk
   - name: 南非 V2CROSS.COM
     type: vmess
-    server: 156.225.67.58
-    port: 58188
-    uuid: 9c026efe-6af0-465f-b8c0-3f58c8c2d4c5
+    server: 156.225.67.132
+    port: 48131
+    uuid: 515bcb4d-0ba1-4cae-87cf-a047007eec54
     alterId: 64
     cipher: auto
     udp: true
     network: tcp
-    ws-path: /
+    ws-path: ''
     ws-headers:
       Host: ''
-  - name: 韩国首尔 UCloud
+  - name: 美国 亚利桑那州凤凰城Oracle云计算数据中心
     type: vmess
-    server: 118.193.69.158
-    port: 53173
-    uuid: 3b76d1a8-55fd-465e-aa04-68c39a506175
+    server: 158.101.7.8
+    port: 80
+    uuid: 95b45c49-f5c0-4959-bb64-2b8fbc4a869c
     alterId: 0
     cipher: auto
     udp: true
-    network: tcp
+    network: ws
     ws-path: /
     ws-headers:
-      Host: ''
+      Host: 158.101.7.8
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 印度 V2CROSS.COM
-      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
       - 美国 加利福尼亚州洛杉矶Dedipath数据中心
-      - 伊朗 V2CROSS.COM
       - 美国 CloudFlare节点
-      - 丹麦 V2CROSS.COM
+      - 美国 CloudFlare节点 - 2
       - 南非 V2CROSS.COM
-      - 韩国首尔 UCloud
+      - 美国 亚利桑那州凤凰城Oracle云计算数据中心
   - name: 自动选择
     type: url-test
     proxies:
-      - 印度 V2CROSS.COM
-      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
       - 美国 加利福尼亚州洛杉矶Dedipath数据中心
-      - 伊朗 V2CROSS.COM
       - 美国 CloudFlare节点
-      - 丹麦 V2CROSS.COM
+      - 美国 CloudFlare节点 - 2
       - 南非 V2CROSS.COM
-      - 韩国首尔 UCloud
+      - 美国 亚利桑那州凤凰城Oracle云计算数据中心
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 印度 V2CROSS.COM
-      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
       - 美国 加利福尼亚州洛杉矶Dedipath数据中心
-      - 伊朗 V2CROSS.COM
       - 美国 CloudFlare节点
-      - 丹麦 V2CROSS.COM
+      - 美国 CloudFlare节点 - 2
       - 南非 V2CROSS.COM
-      - 韩国首尔 UCloud
+      - 美国 亚利桑那州凤凰城Oracle云计算数据中心
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
