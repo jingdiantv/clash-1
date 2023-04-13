@@ -1,88 +1,95 @@
 proxies:
-  - name: 美国 加利福尼亚州洛杉矶Dedipath数据中心
+  - name: 美国 CloudFlare节点
     type: vmess
-    server: 45.89.106.112
-    port: 443
-    uuid: 68b2f386-e061-40cb-8ca7-50e06c10b659
+    server: lsb-gy.heinu.cf
+    port: 2095
+    uuid: 1eda6b95-f248-4f3b-ae10-d7503415a788
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /ray
+    ws-path: /@heinuhome
     ws-headers:
-      Host: 45.89.106.112
-  - name: 美国 加利福尼亚州圣何塞PEG TECH
+      Host: lsb-gy.heinu.cf
+  - name: 美国 CloudFlare节点 - 2
     type: vmess
-    server: 142.4.99.69
-    port: 41169
-    uuid: b65da4af-a12a-4a59-9316-4549e12ba62c
-    alterId: 64
+    server: 162.159.255.200
+    port: 80
+    uuid: 52466dc2-3550-4310-910c-74b7bf8a020e
+    alterId: 0
     cipher: auto
     udp: true
-    network: tcp
+    network: ws
     ws-path: /
     ws-headers:
-      Host: ''
-  - name: 美国+V2CROSS.COM
-    type: trojan
-    server: 152.70.74.66
-    port: '443'
-    password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
-  - name: 美国 加利福尼亚州洛杉矶Sharktech数据中心
+      Host: us-1.acyun.eu.org
+  - name: 美国 V2CROSS.COM
     type: vmess
-    server: 170.178.179.189
+    server: surongwei.eu.org
+    port: 443
+    uuid: 6093eefb-7ab6-41df-aba0-d5fa58147e10
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /reffs7y26g0ua
+    ws-headers:
+      Host: surongwei.eu.org
+    tls: true
+  - name: 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
+    type: vmess
+    server: 23.224.191.5
     port: 443
     uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
     alterId: 64
     cipher: auto
     udp: true
     network: ws
-    ws-path: /path/031730091420
+    ws-path: /path/220128071100
     ws-headers:
       Host: ''
     tls: true
-  - name: 美国 CloudFlare节点
+  - name: 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心 - 2
     type: vmess
-    server: quiz.vidio.com
-    port: 443
-    uuid: e6442903-4753-4783-8916-ac47c8080e4f
-    alterId: 0
+    server: 23.224.9.93
+    port: 51504
+    uuid: bb25859e-f6da-4101-989f-b4dd67a22682
+    alterId: 64
     cipher: auto
     udp: true
-    network: ws
-    ws-path: /
+    network: tcp
+    ws-path: ''
     ws-headers:
-      Host: dynamic-sg3b.obfs.xyz
-    tls: true
+      Host: ''
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 美国 加利福尼亚州洛杉矶Dedipath数据中心
-      - 美国 加利福尼亚州圣何塞PEG TECH
-      - 美国+V2CROSS.COM
-      - 美国 加利福尼亚州洛杉矶Sharktech数据中心
       - 美国 CloudFlare节点
+      - 美国 CloudFlare节点 - 2
+      - 美国 V2CROSS.COM
+      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
+      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心 - 2
   - name: 自动选择
     type: url-test
     proxies:
-      - 美国 加利福尼亚州洛杉矶Dedipath数据中心
-      - 美国 加利福尼亚州圣何塞PEG TECH
-      - 美国+V2CROSS.COM
-      - 美国 加利福尼亚州洛杉矶Sharktech数据中心
       - 美国 CloudFlare节点
+      - 美国 CloudFlare节点 - 2
+      - 美国 V2CROSS.COM
+      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
+      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心 - 2
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 美国 加利福尼亚州洛杉矶Dedipath数据中心
-      - 美国 加利福尼亚州圣何塞PEG TECH
-      - 美国+V2CROSS.COM
-      - 美国 加利福尼亚州洛杉矶Sharktech数据中心
       - 美国 CloudFlare节点
+      - 美国 CloudFlare节点 - 2
+      - 美国 V2CROSS.COM
+      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
+      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心 - 2
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
