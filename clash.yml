@@ -1,89 +1,142 @@
 proxies:
-  - name: 印度 V2CROSS.COM
+  - name: 香港 BGP.NET CN2数据中心
     type: vmess
-    server: 103.160.204.13
+    server: 202.79.172.53
     port: 443
-    uuid: 56a2188b-2ab7-402c-b9b8-34847fdf0958
-    alterId: 0
+    uuid: 30216206-14b7-40e7-995d-61c1219ba584
+    alterId: 64
     cipher: auto
     udp: true
     network: ws
-    ws-path: /5QNROSRV
+    ws-path: /path/220128071100
     ws-headers:
-      Host: lg2.v2ray6.xyz
+      Host: ''
     tls: true
   - name: 美国 CloudFlare节点
     type: vmess
-    server: cf-lt.sharecentre.online
-    port: 443
-    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
+    server: lsb-gy.heinu.cf
+    port: 2096
+    uuid: d793c013-f596-4af9-de0a-2062bb864dd7
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /shirker
+    ws-path: /@heinuhome
     ws-headers:
-      Host: ca.ilovescp.com
+      Host: ''
     tls: true
-  - name: 美国 CloudFlare节点 - 2
+  - name: 澳大利亚 V2CROSS.COM
     type: vmess
-    server: quiz.vidio.com
+    server: 140.83.63.38
+    port: 24445
+    uuid: 94c5ef37-4d82-49f9-c624-f01259374a17
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /
+    ws-headers:
+      Host: ''
+  - name: 美国 V2CROSS.COM
+    type: vmess
+    server: surongwei.eu.org
     port: 443
-    uuid: e6442903-4753-4783-8916-ac47c8080e4f
+    uuid: 6093eefb-7ab6-41df-aba0-d5fa58147e10
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /reffs7y26g0ua
+    ws-headers:
+      Host: ''
+    tls: true
+  - name: 美国 加利福尼亚州圣何塞PEG TECH
+    type: vmess
+    server: 142.4.99.69
+    port: 41169
+    uuid: b65da4af-a12a-4a59-9316-4549e12ba62c
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /
+    ws-headers:
+      Host: ''
+  - name: 美国 加利福尼亚州圣何塞PEG TECH数据中心
+    type: vmess
+    server: 192.74.243.41
+    port: 49206
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /
+    ws-headers:
+      Host: ''
+  - name: 丹麦 V2CROSS.COM
+    type: vmess
+    server: 185.162.228.2
+    port: 80
+    uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a
     alterId: 0
     cipher: auto
     udp: true
     network: ws
     ws-path: /
     ws-headers:
-      Host: dynamic-sg3b.obfs.xyz
-    tls: true
-  - name: 美国+V2CROSS.COM
-    type: trojan
-    server: 152.70.74.66
-    port: '443'
-    password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
-  - name: 美国 CloudFlare节点 - 3
+      Host: fr.v2ray1.xyz
+  - name: 澳大利亚 Langwarrin Secondary College
     type: vmess
-    server: 172.64.173.160
-    port: 80
-    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
+    server: 203.30.190.1
+    port: 443
+    uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /shirker
+    ws-path: /ECTCJ0DF
     ws-headers:
-      Host: ca.ilovescp.com
+      Host: 154.v2ray3.xyz
+    tls: true
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 印度 V2CROSS.COM
+      - 香港 BGP.NET CN2数据中心
       - 美国 CloudFlare节点
-      - 美国 CloudFlare节点 - 2
-      - 美国+V2CROSS.COM
-      - 美国 CloudFlare节点 - 3
+      - 澳大利亚 V2CROSS.COM
+      - 美国 V2CROSS.COM
+      - 美国 加利福尼亚州圣何塞PEG TECH
+      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
+      - 丹麦 V2CROSS.COM
+      - 澳大利亚 Langwarrin Secondary College
   - name: 自动选择
     type: url-test
     proxies:
-      - 印度 V2CROSS.COM
+      - 香港 BGP.NET CN2数据中心
       - 美国 CloudFlare节点
-      - 美国 CloudFlare节点 - 2
-      - 美国+V2CROSS.COM
-      - 美国 CloudFlare节点 - 3
+      - 澳大利亚 V2CROSS.COM
+      - 美国 V2CROSS.COM
+      - 美国 加利福尼亚州圣何塞PEG TECH
+      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
+      - 丹麦 V2CROSS.COM
+      - 澳大利亚 Langwarrin Secondary College
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 印度 V2CROSS.COM
+      - 香港 BGP.NET CN2数据中心
       - 美国 CloudFlare节点
-      - 美国 CloudFlare节点 - 2
-      - 美国+V2CROSS.COM
-      - 美国 CloudFlare节点 - 3
+      - 澳大利亚 V2CROSS.COM
+      - 美国 V2CROSS.COM
+      - 美国 加利福尼亚州圣何塞PEG TECH
+      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
+      - 丹麦 V2CROSS.COM
+      - 澳大利亚 Langwarrin Secondary College
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
