@@ -1,84 +1,59 @@
 proxies:
-  - name: 印度 V2CROSS.COM
+  - name: 俄罗斯 V2CROSS.COM
     type: vmess
-    server: 103.160.204.13
+    server: 185.143.220.25
     port: 443
-    uuid: 56a2188b-2ab7-402c-b9b8-34847fdf0958
+    uuid: f28e354e-c2d1-4983-9b07-5acaf1b3b3e5
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /5QNROSRV
+    ws-path: /6e9EtZ2dL
     ws-headers:
-      Host: lg2.v2ray6.xyz
+      Host: dengxin.one
     tls: true
-  - name: 澳大利亚 V2CROSS.COM
+  - name: 新加坡 DigitalOcean数据中心
     type: vmess
-    server: 140.83.63.38
-    port: 24445
-    uuid: 94c5ef37-4d82-49f9-c624-f01259374a17
-    alterId: 64
+    server: sg1.fightertunnel.xyz
+    port: 80
+    uuid: 4b56da6d-a62e-40e0-85b7-fc7a7ca31c46
+    alterId: 0
     cipher: auto
     udp: true
-    network: tcp
-    ws-path: /
-    ws-headers:
-      Host: ''
-  - name: 南非 V2CROSS.COM
-    type: vmess
-    server: 156.225.67.88
-    port: 52292
-    uuid: 20b30916-e203-412e-8ec0-900f3acd5128
-    alterId: 64
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /
+    network: ws
+    ws-path: /vmess
     ws-headers:
       Host: ''
   - name: 美国 CloudFlare节点
     type: vmess
-    server: quiz.vidio.com
-    port: 443
-    uuid: e6442903-4753-4783-8916-ac47c8080e4f
+    server: v143a.toddns.tk
+    port: 80
+    uuid: a25881f3-967f-3265-bc7f-9e66857b016b
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /
+    ws-path: /jp143-d2xddxxj
     ws-headers:
-      Host: dynamic-sg3b.obfs.xyz
-    tls: true
-  - name: 南非 V2CROSS.COM - 2
-    type: vmess
-    server: 156.225.67.145
-    port: 51948
-    uuid: 93503dd5-245a-4eb1-ae2a-57ab9f2b3c29
-    alterId: 64
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /
-    ws-headers:
-      Host: 18.143.123.35
-  - name: 南非 V2CROSS.COM - 3
-    type: vmess
-    server: 156.225.67.212
-    port: 46464
-    uuid: 3ca912da-6ac2-418f-b9cf-45b6f694579b
-    alterId: 64
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /shirker
-    ws-headers:
-      Host: uk1.scproxy.top
+      Host: v143a.toddns.tk
   - name: 广东省广州市+移动
     type: trojan
     server: as.steamdownload.top
-    port: '36643'
+    port: '36614'
     password: 6e3d2643-6283-4962-82b5-2fca9753e4cb
-  - name: 南非 V2CROSS.COM - 4
+  - name: 伊朗 V2CROSS.COM
+    type: vmess
+    server: f-us1.wvvvv.eu.org
+    port: 21
+    uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /
+    ws-headers:
+      Host: f-us1.wvvvv.eu.org
+  - name: 南非 V2CROSS.COM
     type: vmess
     server: 156.225.67.108
     port: 49920
@@ -90,44 +65,53 @@ proxies:
     ws-path: /
     ws-headers:
       Host: ''
+  - name: 南非豪登省约翰内斯堡 Cloudinnovation数据中心
+    type: vmess
+    server: 156.249.18.233
+    port: 42533
+    uuid: f5250c4e-f855-4eff-b73c-a02226d42fe7
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /
+    ws-headers:
+      Host: dynamic-sg3b.obfs.xyz
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 印度 V2CROSS.COM
-      - 澳大利亚 V2CROSS.COM
-      - 南非 V2CROSS.COM
+      - 俄罗斯 V2CROSS.COM
+      - 新加坡 DigitalOcean数据中心
       - 美国 CloudFlare节点
-      - 南非 V2CROSS.COM - 2
-      - 南非 V2CROSS.COM - 3
       - 广东省广州市+移动
-      - 南非 V2CROSS.COM - 4
+      - 伊朗 V2CROSS.COM
+      - 南非 V2CROSS.COM
+      - 南非豪登省约翰内斯堡 Cloudinnovation数据中心
   - name: 自动选择
     type: url-test
     proxies:
-      - 印度 V2CROSS.COM
-      - 澳大利亚 V2CROSS.COM
-      - 南非 V2CROSS.COM
+      - 俄罗斯 V2CROSS.COM
+      - 新加坡 DigitalOcean数据中心
       - 美国 CloudFlare节点
-      - 南非 V2CROSS.COM - 2
-      - 南非 V2CROSS.COM - 3
       - 广东省广州市+移动
-      - 南非 V2CROSS.COM - 4
+      - 伊朗 V2CROSS.COM
+      - 南非 V2CROSS.COM
+      - 南非豪登省约翰内斯堡 Cloudinnovation数据中心
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 印度 V2CROSS.COM
-      - 澳大利亚 V2CROSS.COM
-      - 南非 V2CROSS.COM
+      - 俄罗斯 V2CROSS.COM
+      - 新加坡 DigitalOcean数据中心
       - 美国 CloudFlare节点
-      - 南非 V2CROSS.COM - 2
-      - 南非 V2CROSS.COM - 3
       - 广东省广州市+移动
-      - 南非 V2CROSS.COM - 4
+      - 伊朗 V2CROSS.COM
+      - 南非 V2CROSS.COM
+      - 南非豪登省约翰内斯堡 Cloudinnovation数据中心
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
