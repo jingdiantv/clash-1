@@ -1,9 +1,9 @@
 proxies:
   - name: 南非 V2CROSS.COM
     type: vmess
-    server: 156.225.67.88
-    port: 52292
-    uuid: 20b30916-e203-412e-8ec0-900f3acd5128
+    server: 156.225.67.58
+    port: 58188
+    uuid: 9c026efe-6af0-465f-b8c0-3f58c8c2d4c5
     alterId: 64
     cipher: auto
     udp: true
@@ -11,44 +11,36 @@ proxies:
     ws-path: /
     ws-headers:
       Host: ''
-  - name: 澳大利亚 悉尼
+  - name: 新加坡 DigitalOcean数据中心
     type: vmess
-    server: 203.24.108.100
+    server: sg1.fightertunnel.xyz
     port: 80
-    uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
+    uuid: 4b56da6d-a62e-40e0-85b7-fc7a7ca31c46
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /
+    ws-path: /vmess
     ws-headers:
-      Host: lg.v2ray8.xyz
-  - name: 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
-    type: vmess
-    server: 172.247.67.22
-    port: 42940
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /shirker
-    ws-headers:
-      Host: uk1.scproxy.top
+      Host: ''
   - name: 美国 CloudFlare节点
     type: vmess
-    server: lsb-gy.heinu.cf
-    port: 2096
-    uuid: d793c013-f596-4af9-de0a-2062bb864dd7
+    server: cf.noaries.de
+    port: 8080
+    uuid: 4f7d5d43-226e-48d8-9df0-5e8bf9f77288
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /@heinuhome
+    ws-path: /aries?ed=2048
     ws-headers:
-      Host: ''
-    tls: true
-  - name: 澳大利亚 悉尼 - 2
+      Host: ft.cloudflare.quest
+  - name: 广东省广州市+移动
+    type: trojan
+    server: as.steamdownload.top
+    port: '36643'
+    password: 6e3d2643-6283-4962-82b5-2fca9753e4cb
+  - name: 澳大利亚 悉尼
     type: vmess
     server: 203.24.108.8
     port: 443
@@ -61,37 +53,6 @@ proxies:
     ws-headers:
       Host: fr1.v2ray5.xyz
     tls: true
-  - name: 美国 CloudFlare节点 - 2
-    type: vmess
-    server: lsb-gy.heinu.cf
-    port: 2096
-    uuid: d793c013-f596-4af9-de0a-2062bb864dd7
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /@heinuhome
-    ws-headers:
-      Host: ''
-    tls: true
-  - name: 上海市+电信
-    type: trojan
-    server: official.taipeicitygovernment.kiev.ua
-    port: '8443'
-    password: 5505f6ba-cd37-30ce-8f92-be4120c83d7f
-  - name: 美国 V2CROSS.COM
-    type: vmess
-    server: vus5.0bad.com
-    port: 443
-    uuid: 927094d3-d678-4763-8591-e240d0bcae87
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /chat
-    ws-headers:
-      Host: ''
-    tls: true
 proxy-groups:
   - name: Free-servers
     type: select
@@ -99,37 +60,28 @@ proxy-groups:
       - 自动选择
       - 故障转移
       - 南非 V2CROSS.COM
-      - 澳大利亚 悉尼
-      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
+      - 新加坡 DigitalOcean数据中心
       - 美国 CloudFlare节点
-      - 澳大利亚 悉尼 - 2
-      - 美国 CloudFlare节点 - 2
-      - 上海市+电信
-      - 美国 V2CROSS.COM
+      - 广东省广州市+移动
+      - 澳大利亚 悉尼
   - name: 自动选择
     type: url-test
     proxies:
       - 南非 V2CROSS.COM
-      - 澳大利亚 悉尼
-      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
+      - 新加坡 DigitalOcean数据中心
       - 美国 CloudFlare节点
-      - 澳大利亚 悉尼 - 2
-      - 美国 CloudFlare节点 - 2
-      - 上海市+电信
-      - 美国 V2CROSS.COM
+      - 广东省广州市+移动
+      - 澳大利亚 悉尼
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
       - 南非 V2CROSS.COM
-      - 澳大利亚 悉尼
-      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
+      - 新加坡 DigitalOcean数据中心
       - 美国 CloudFlare节点
-      - 澳大利亚 悉尼 - 2
-      - 美国 CloudFlare节点 - 2
-      - 上海市+电信
-      - 美国 V2CROSS.COM
+      - 广东省广州市+移动
+      - 澳大利亚 悉尼
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
