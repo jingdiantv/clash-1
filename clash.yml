@@ -1,57 +1,21 @@
 proxies:
-  - name: 美国 亚利桑那州凤凰城Oracle云计算数据中心
+  - name: 美国 加利福尼亚州洛杉矶Dedipath数据中心
     type: vmess
-    server: 158.101.7.8
-    port: 80
-    uuid: 95b45c49-f5c0-4959-bb64-2b8fbc4a869c
+    server: 45.89.106.112
+    port: 443
+    uuid: 68b2f386-e061-40cb-8ca7-50e06c10b659
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /
+    ws-path: /ray
     ws-headers:
-      Host: ''
-  - name: 希腊 V2CROSS.COM
+      Host: 45.89.106.112
+  - name: 美国 加利福尼亚州圣何塞PEG TECH
     type: vmess
-    server: 144.24.72.125
-    port: 39867
-    uuid: 1c1d94dc-e79b-4a24-dc9f-7afa92539a80
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /
-    ws-headers:
-      Host: ''
-  - name: 伊朗 V2CROSS.COM
-    type: vmess
-    server: f-us2.wvvvv.eu.org
-    port: 21
-    uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /
-    ws-headers:
-      Host: f-us2.wvvvv.eu.org
-  - name: 丹麦 V2CROSS.COM
-    type: vmess
-    server: 185.162.228.229
-    port: 80
-    uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /
-    ws-headers:
-      Host: lg.v2ray8.xyz
-  - name: 美国 加利福尼亚州圣何塞PEG TECH数据中心
-    type: vmess
-    server: 192.74.229.215
-    port: 51592
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    server: 142.4.99.69
+    port: 41169
+    uuid: b65da4af-a12a-4a59-9316-4549e12ba62c
     alterId: 64
     cipher: auto
     udp: true
@@ -59,35 +23,66 @@ proxies:
     ws-path: /
     ws-headers:
       Host: ''
+  - name: 美国+V2CROSS.COM
+    type: trojan
+    server: 152.70.74.66
+    port: '443'
+    password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
+  - name: 美国 加利福尼亚州洛杉矶Sharktech数据中心
+    type: vmess
+    server: 170.178.179.189
+    port: 443
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /path/031730091420
+    ws-headers:
+      Host: ''
+    tls: true
+  - name: 美国 CloudFlare节点
+    type: vmess
+    server: quiz.vidio.com
+    port: 443
+    uuid: e6442903-4753-4783-8916-ac47c8080e4f
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /
+    ws-headers:
+      Host: dynamic-sg3b.obfs.xyz
+    tls: true
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 美国 亚利桑那州凤凰城Oracle云计算数据中心
-      - 希腊 V2CROSS.COM
-      - 伊朗 V2CROSS.COM
-      - 丹麦 V2CROSS.COM
-      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
+      - 美国 加利福尼亚州洛杉矶Dedipath数据中心
+      - 美国 加利福尼亚州圣何塞PEG TECH
+      - 美国+V2CROSS.COM
+      - 美国 加利福尼亚州洛杉矶Sharktech数据中心
+      - 美国 CloudFlare节点
   - name: 自动选择
     type: url-test
     proxies:
-      - 美国 亚利桑那州凤凰城Oracle云计算数据中心
-      - 希腊 V2CROSS.COM
-      - 伊朗 V2CROSS.COM
-      - 丹麦 V2CROSS.COM
-      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
+      - 美国 加利福尼亚州洛杉矶Dedipath数据中心
+      - 美国 加利福尼亚州圣何塞PEG TECH
+      - 美国+V2CROSS.COM
+      - 美国 加利福尼亚州洛杉矶Sharktech数据中心
+      - 美国 CloudFlare节点
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 美国 亚利桑那州凤凰城Oracle云计算数据中心
-      - 希腊 V2CROSS.COM
-      - 伊朗 V2CROSS.COM
-      - 丹麦 V2CROSS.COM
-      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
+      - 美国 加利福尼亚州洛杉矶Dedipath数据中心
+      - 美国 加利福尼亚州圣何塞PEG TECH
+      - 美国+V2CROSS.COM
+      - 美国 加利福尼亚州洛杉矶Sharktech数据中心
+      - 美国 CloudFlare节点
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
