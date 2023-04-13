@@ -1,26 +1,45 @@
 proxies:
-  - name: 美国+华盛顿Cogent通信公司
-    type: ss
-    server: 38.114.114.19
-    port: '5003'
-    cipher: aes-256-gcm
-    password: g5MeD6Ft3CWlJId
+  - name: 美国 阿里云
+    type: vmess
+    server: 47.251.0.163
+    port: 443
+    uuid: 0c1baef8-6e6b-45b3-bf5e-43fb2e9ccaba
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /202365768675
+    ws-headers:
+      Host: us.3399780.xyz
+    tls: true
+  - name: 美国 CloudFlare节点
+    type: vmess
+    server: 162.159.255.200
+    port: 80
+    uuid: 52466dc2-3550-4310-910c-74b7bf8a020e
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /
+    ws-headers:
+      Host: us-1.acyun.eu.org
   - name: 英国+V2CROSS.COM
     type: ss
     server: 145.239.1.100
     port: '8118'
     cipher: aes-256-gcm
     password: cdBIDV42DCwnfIN
-  - name: 美国 加利福尼亚州洛杉矶Sharktech数据中心
+  - name: 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
     type: vmess
-    server: 170.178.179.189
+    server: 23.224.191.6
     port: 443
     uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
     alterId: 64
     cipher: auto
     udp: true
     network: ws
-    ws-path: /path/031730091420
+    ws-path: /path/220128071100
     ws-headers:
       Host: ''
     tls: true
@@ -29,62 +48,51 @@ proxies:
     server: as.steamdownload.top
     port: '36613'
     password: 7d4a43a2-1d9e-4307-ba3c-586a87272cce
-  - name: 美国 CloudFlare节点
+  - name: 美国 CloudFlare节点 - 2
     type: vmess
-    server: v143a.toddns.tk
-    port: 80
-    uuid: a25881f3-967f-3265-bc7f-9e66857b016b
+    server: ccdc2.6252369.xyz
+    port: 8443
+    uuid: f8949dfe-c501-453c-96b6-6786fb03d5f9
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /jp143-d2xddxxj
+    ws-path: /vxt99
     ws-headers:
-      Host: v143a.toddns.tk
-  - name: 希腊 V2CROSS.COM
-    type: vmess
-    server: 144.24.72.125
-    port: 39867
-    uuid: 1c1d94dc-e79b-4a24-dc9f-7afa92539a80
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /
-    ws-headers:
-      Host: ''
+      Host: ccdc2.6252369.xyz
+    tls: true
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 美国+华盛顿Cogent通信公司
-      - 英国+V2CROSS.COM
-      - 美国 加利福尼亚州洛杉矶Sharktech数据中心
-      - 广东省广州市+移动
+      - 美国 阿里云
       - 美国 CloudFlare节点
-      - 希腊 V2CROSS.COM
+      - 英国+V2CROSS.COM
+      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
+      - 广东省广州市+移动
+      - 美国 CloudFlare节点 - 2
   - name: 自动选择
     type: url-test
     proxies:
-      - 美国+华盛顿Cogent通信公司
-      - 英国+V2CROSS.COM
-      - 美国 加利福尼亚州洛杉矶Sharktech数据中心
-      - 广东省广州市+移动
+      - 美国 阿里云
       - 美国 CloudFlare节点
-      - 希腊 V2CROSS.COM
+      - 英国+V2CROSS.COM
+      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
+      - 广东省广州市+移动
+      - 美国 CloudFlare节点 - 2
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 美国+华盛顿Cogent通信公司
-      - 英国+V2CROSS.COM
-      - 美国 加利福尼亚州洛杉矶Sharktech数据中心
-      - 广东省广州市+移动
+      - 美国 阿里云
       - 美国 CloudFlare节点
-      - 希腊 V2CROSS.COM
+      - 英国+V2CROSS.COM
+      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
+      - 广东省广州市+移动
+      - 美国 CloudFlare节点 - 2
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
