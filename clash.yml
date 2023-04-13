@@ -1,62 +1,7 @@
 proxies:
-  - name: 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
+  - name: 乌克兰 V2CROSS.COM
     type: vmess
-    server: 23.224.14.142
-    port: 55332
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /shirker
-    ws-headers:
-      Host: ''
-  - name: 伊朗 V2CROSS.COM
-    type: vmess
-    server: f-us1.wvvvv.eu.org
-    port: 21
-    uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /
-    ws-headers:
-      Host: f-us1.wvvvv.eu.org
-  - name: 美国+V2CROSS.COM
-    type: trojan
-    server: 152.70.74.66
-    port: '443'
-    password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
-  - name: 美国 V2CROSS.COM
-    type: vmess
-    server: surongwei.eu.org
-    port: 443
-    uuid: 6093eefb-7ab6-41df-aba0-d5fa58147e10
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /reffs7y26g0ua
-    ws-headers:
-      Host: ''
-    tls: true
-  - name: 美国 CloudFlare节点
-    type: vmess
-    server: lsb-gy.heinu.cf
-    port: 2096
-    uuid: d793c013-f596-4af9-de0a-2062bb864dd7
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /@heinuhome
-    ws-headers:
-      Host: ''
-    tls: true
-  - name: 印度 V2CROSS.COM
-    type: vmess
-    server: 103.160.204.12
+    server: 212.110.134.10
     port: 443
     uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
     alterId: 0
@@ -67,53 +12,100 @@ proxies:
     ws-headers:
       Host: 154.v2ray3.xyz
     tls: true
-  - name: 美国 加利福尼亚州圣何塞PEG TECH数据中心
+  - name: 澳大利亚 悉尼
     type: vmess
-    server: 192.74.243.41
-    port: 49206
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
+    server: 203.24.108.100
+    port: 80
+    uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /
+    ws-headers:
+      Host: lg.v2ray8.xyz
+  - name: 美国 CloudFlare节点
+    type: vmess
+    server: d.pgypgykmoljklj.xyz
+    port: 443
+    uuid: fa4cb529-3ac9-4268-bb04-ed4253813508
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /mR17oBKzZ7
+    ws-headers:
+      Host: ''
+    tls: true
+  - name: 伊朗 V2CROSS.COM
+    type: vmess
+    server: f-us2.wvvvv.eu.org
+    port: 21
+    uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0
+    alterId: 0
     cipher: auto
     udp: true
     network: tcp
     ws-path: /
     ws-headers:
-      Host: ''
+      Host: f-us2.wvvvv.eu.org
+  - name: 俄罗斯 V2CROSS.COM
+    type: vmess
+    server: 185.143.220.25
+    port: 443
+    uuid: f28e354e-c2d1-4983-9b07-5acaf1b3b3e5
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /6e9EtZ2dL
+    ws-headers:
+      Host: dengxin.one
+    tls: true
+  - name: 美国 亚利桑那州凤凰城Oracle云计算数据中心
+    type: vmess
+    server: 158.101.7.8
+    port: 80
+    uuid: 95b45c49-f5c0-4959-bb64-2b8fbc4a869c
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /
+    ws-headers:
+      Host: 158.101.7.8
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
-      - 伊朗 V2CROSS.COM
-      - 美国+V2CROSS.COM
-      - 美国 V2CROSS.COM
+      - 乌克兰 V2CROSS.COM
+      - 澳大利亚 悉尼
       - 美国 CloudFlare节点
-      - 印度 V2CROSS.COM
-      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
+      - 伊朗 V2CROSS.COM
+      - 俄罗斯 V2CROSS.COM
+      - 美国 亚利桑那州凤凰城Oracle云计算数据中心
   - name: 自动选择
     type: url-test
     proxies:
-      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
-      - 伊朗 V2CROSS.COM
-      - 美国+V2CROSS.COM
-      - 美国 V2CROSS.COM
+      - 乌克兰 V2CROSS.COM
+      - 澳大利亚 悉尼
       - 美国 CloudFlare节点
-      - 印度 V2CROSS.COM
-      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
+      - 伊朗 V2CROSS.COM
+      - 俄罗斯 V2CROSS.COM
+      - 美国 亚利桑那州凤凰城Oracle云计算数据中心
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
-      - 伊朗 V2CROSS.COM
-      - 美国+V2CROSS.COM
-      - 美国 V2CROSS.COM
+      - 乌克兰 V2CROSS.COM
+      - 澳大利亚 悉尼
       - 美国 CloudFlare节点
-      - 印度 V2CROSS.COM
-      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
+      - 伊朗 V2CROSS.COM
+      - 俄罗斯 V2CROSS.COM
+      - 美国 亚利桑那州凤凰城Oracle云计算数据中心
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
