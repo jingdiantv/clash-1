@@ -1,32 +1,36 @@
 proxies:
-  - name: 美国 V2CROSS.COM
+  - name: 美国 CloudFlare公司CDN节点(shopify)
     type: vmess
-    server: luxl.xyz
-    port: 11016
-    uuid: 74a7f4ca-7d62-43e5-9074-5f748310f00a
+    server: 23.227.38.102
+    port: 80
+    uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /11016
+    ws-path: /
     ws-headers:
-      Host: luxl.xyz
-  - name: 美国 CloudFlare节点
+      Host: fr.v2ray1.xyz
+  - name: 希腊 V2CROSS.COM
     type: vmess
-    server: lsb-gy.heinu.cf
-    port: 2096
-    uuid: d793c013-f596-4af9-de0a-2062bb864dd7
+    server: 144.24.72.125
+    port: 39867
+    uuid: 1c1d94dc-e79b-4a24-dc9f-7afa92539a80
     alterId: 0
     cipher: auto
     udp: true
-    network: ws
-    ws-path: /@heinuhome
+    network: tcp
+    ws-path: /
     ws-headers:
       Host: ''
-    tls: true
+  - name: 美国+V2CROSS.COM
+    type: trojan
+    server: 152.70.74.66
+    port: '443'
+    password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
   - name: 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
     type: vmess
-    server: 23.224.191.6
+    server: 23.224.191.5
     port: 443
     uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
     alterId: 64
@@ -37,31 +41,30 @@ proxies:
     ws-headers:
       Host: ''
     tls: true
-  - name: 澳大利亚 Langwarrin Secondary College
+  - name: 美国 CloudFlare节点
     type: vmess
-    server: 203.30.190.1
-    port: 443
-    uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
+    server: 198.41.203.7
+    port: 80
+    uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /ECTCJ0DF
+    ws-path: /
     ws-headers:
-      Host: 154.v2ray3.xyz
-    tls: true
-  - name: 美国 CloudFlare节点 - 2
+      Host: lg.v2ray8.xyz
+  - name: 香港 BGP.NET CN2数据中心
     type: vmess
-    server: cf-lt.sharecentre.online
+    server: 202.79.172.53
     port: 443
-    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
-    alterId: 0
+    uuid: 30216206-14b7-40e7-995d-61c1219ba584
+    alterId: 64
     cipher: auto
     udp: true
     network: ws
-    ws-path: /shirker
+    ws-path: /path/220128071100
     ws-headers:
-      Host: uk1.scproxy.top
+      Host: ''
     tls: true
 proxy-groups:
   - name: Free-servers
@@ -69,29 +72,32 @@ proxy-groups:
     proxies:
       - 自动选择
       - 故障转移
-      - 美国 V2CROSS.COM
-      - 美国 CloudFlare节点
+      - 美国 CloudFlare公司CDN节点(shopify)
+      - 希腊 V2CROSS.COM
+      - 美国+V2CROSS.COM
       - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
-      - 澳大利亚 Langwarrin Secondary College
-      - 美国 CloudFlare节点 - 2
+      - 美国 CloudFlare节点
+      - 香港 BGP.NET CN2数据中心
   - name: 自动选择
     type: url-test
     proxies:
-      - 美国 V2CROSS.COM
-      - 美国 CloudFlare节点
+      - 美国 CloudFlare公司CDN节点(shopify)
+      - 希腊 V2CROSS.COM
+      - 美国+V2CROSS.COM
       - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
-      - 澳大利亚 Langwarrin Secondary College
-      - 美国 CloudFlare节点 - 2
+      - 美国 CloudFlare节点
+      - 香港 BGP.NET CN2数据中心
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 美国 V2CROSS.COM
-      - 美国 CloudFlare节点
+      - 美国 CloudFlare公司CDN节点(shopify)
+      - 希腊 V2CROSS.COM
+      - 美国+V2CROSS.COM
       - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
-      - 澳大利亚 Langwarrin Secondary College
-      - 美国 CloudFlare节点 - 2
+      - 美国 CloudFlare节点
+      - 香港 BGP.NET CN2数据中心
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
