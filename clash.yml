@@ -1,35 +1,104 @@
 proxies:
-  - name: 美国 CloudFlare节点
+  - name: 美国 V2CROSS.COM
     type: vmess
-    server: lsb-gy.heinu.cf
-    port: 2096
-    uuid: d793c013-f596-4af9-de0a-2062bb864dd7
+    server: 143.42.87.69
+    port: 443
+    uuid: 927094d3-d678-4763-8591-e240d0bcae87
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /@heinuhome
+    ws-path: /chat
     ws-headers:
       Host: ''
     tls: true
-  - name: 广东省广州市+移动
-    type: trojan
-    server: as.steamdownload.top
-    port: '36643'
-    password: 6e3d2643-6283-4962-82b5-2fca9753e4cb
-  - name: 丹麦 V2CROSS.COM
+  - name: 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
     type: vmess
-    server: 185.162.228.229
+    server: 23.224.14.142
+    port: 55332
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /shirker
+    ws-headers:
+      Host: ''
+  - name: 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心 - 2
+    type: vmess
+    server: 23.224.191.5
+    port: 443
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /path/220128071100
+    ws-headers:
+      Host: ''
+    tls: true
+  - name: 美国 加利福尼亚州洛杉矶Sharktech数据中心
+    type: vmess
+    server: 64.32.4.56
+    port: 42175
+    uuid: 8653004f-de67-44c2-9cce-e0830933fb03
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /AUIKN8AU
+    ws-headers:
+      Host: lg1.v2ray6.xyz
+  - name: 美国 加利福尼亚州洛杉矶市SharkTech数据中心
+    type: vmess
+    server: 107.167.4.122
+    port: 46766
+    uuid: 9838c1b4-c3fd-49b5-8a59-2ff05385f17c
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /
+    ws-headers:
+      Host: ''
+  - name: 南非 V2CROSS.COM
+    type: vmess
+    server: 156.225.67.88
+    port: 52292
+    uuid: 20b30916-e203-412e-8ec0-900f3acd5128
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /
+    ws-headers:
+      Host: ''
+  - name: 美国 CloudFlare节点
+    type: vmess
+    server: v143a.toddns.tk
     port: 80
-    uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
+    uuid: a25881f3-967f-3265-bc7f-9e66857b016b
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /
+    ws-path: /jp143-d2xddxxj
     ws-headers:
-      Host: lg.v2ray8.xyz
-  - name: 南非 V2CROSS.COM
+      Host: v143a.toddns.tk
+  - name: 俄罗斯 V2CROSS.COM
+    type: vmess
+    server: 185.143.220.25
+    port: 443
+    uuid: f28e354e-c2d1-4983-9b07-5acaf1b3b3e5
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /6e9EtZ2dL
+    ws-headers:
+      Host: dengxin.one
+    tls: true
+  - name: 南非 V2CROSS.COM - 2
     type: vmess
     server: 156.225.67.145
     port: 51948
@@ -41,108 +110,78 @@ proxies:
     ws-path: /
     ws-headers:
       Host: 18.143.123.35
-  - name: 乌克兰 V2CROSS.COM
+  - name: 澳大利亚 V2CROSS.COM
     type: vmess
-    server: 212.110.134.10
-    port: 443
-    uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
-    alterId: 0
+    server: 140.83.63.38
+    port: 24445
+    uuid: 94c5ef37-4d82-49f9-c624-f01259374a17
+    alterId: 64
     cipher: auto
     udp: true
-    network: ws
-    ws-path: /ECTCJ0DF
+    network: tcp
+    ws-path: /
     ws-headers:
-      Host: 154.v2ray3.xyz
-    tls: true
+      Host: ''
   - name: 美国 CloudFlare节点 - 2
     type: vmess
-    server: 172.64.173.160
-    port: 80
-    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /shirker
-    ws-headers:
-      Host: ca.ilovescp.com
-  - name: 美国 CloudFlare公司CDN节点(shopify)
-    type: vmess
-    server: 23.227.38.39
-    port: 80
-    uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
+    server: new6.huvicloud.com
+    port: 443
+    uuid: a11ca760-9ef9-4a63-95c9-4c5c32d56251
     alterId: 0
     cipher: auto
     udp: true
     network: ws
     ws-path: /
     ws-headers:
-      Host: lg.v2ray8.xyz
-  - name: 美国 CloudFlare节点 - 3
-    type: vmess
-    server: cf.515188.xyz
-    port: 80
-    uuid: f6aa4440-e7be-44e1-80e1-7e45ccd796cc
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /api/v3/download.getFile
-    ws-headers:
-      Host: ssrsub.v01.ssrsub.com
-  - name: 美国 CloudFlare节点 - 4
-    type: vmess
-    server: cf.noaries.de
-    port: 2082
-    uuid: 314c1387-618c-4689-97fc-4bc9a1ae5e05
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /
-    ws-headers:
-      Host: ir2.nmsl.ninja
+      Host: new6.huvicloud.com
+    tls: true
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 美国 CloudFlare节点
-      - 广东省广州市+移动
-      - 丹麦 V2CROSS.COM
+      - 美国 V2CROSS.COM
+      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
+      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心 - 2
+      - 美国 加利福尼亚州洛杉矶Sharktech数据中心
+      - 美国 加利福尼亚州洛杉矶市SharkTech数据中心
       - 南非 V2CROSS.COM
-      - 乌克兰 V2CROSS.COM
+      - 美国 CloudFlare节点
+      - 俄罗斯 V2CROSS.COM
+      - 南非 V2CROSS.COM - 2
+      - 澳大利亚 V2CROSS.COM
       - 美国 CloudFlare节点 - 2
-      - 美国 CloudFlare公司CDN节点(shopify)
-      - 美国 CloudFlare节点 - 3
-      - 美国 CloudFlare节点 - 4
   - name: 自动选择
     type: url-test
     proxies:
-      - 美国 CloudFlare节点
-      - 广东省广州市+移动
-      - 丹麦 V2CROSS.COM
+      - 美国 V2CROSS.COM
+      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
+      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心 - 2
+      - 美国 加利福尼亚州洛杉矶Sharktech数据中心
+      - 美国 加利福尼亚州洛杉矶市SharkTech数据中心
       - 南非 V2CROSS.COM
-      - 乌克兰 V2CROSS.COM
+      - 美国 CloudFlare节点
+      - 俄罗斯 V2CROSS.COM
+      - 南非 V2CROSS.COM - 2
+      - 澳大利亚 V2CROSS.COM
       - 美国 CloudFlare节点 - 2
-      - 美国 CloudFlare公司CDN节点(shopify)
-      - 美国 CloudFlare节点 - 3
-      - 美国 CloudFlare节点 - 4
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 美国 CloudFlare节点
-      - 广东省广州市+移动
-      - 丹麦 V2CROSS.COM
+      - 美国 V2CROSS.COM
+      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
+      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心 - 2
+      - 美国 加利福尼亚州洛杉矶Sharktech数据中心
+      - 美国 加利福尼亚州洛杉矶市SharkTech数据中心
       - 南非 V2CROSS.COM
-      - 乌克兰 V2CROSS.COM
+      - 美国 CloudFlare节点
+      - 俄罗斯 V2CROSS.COM
+      - 南非 V2CROSS.COM - 2
+      - 澳大利亚 V2CROSS.COM
       - 美国 CloudFlare节点 - 2
-      - 美国 CloudFlare公司CDN节点(shopify)
-      - 美国 CloudFlare节点 - 3
-      - 美国 CloudFlare节点 - 4
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
