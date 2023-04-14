@@ -1,29 +1,16 @@
 proxies:
   - name: 美国 CloudFlare节点
     type: vmess
-    server: 1024.day
-    port: 443
-    uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
+    server: lsb-gy.heinu.cf
+    port: 2095
+    uuid: 1eda6b95-f248-4f3b-ae10-d7503415a788
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /AUIKN8AU
+    ws-path: /@heinuhome
     ws-headers:
-      Host: lg1.v2ray6.xyz
-    tls: true
-  - name: 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
-    type: vmess
-    server: 172.247.67.22
-    port: 42940
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /shirker
-    ws-headers:
-      Host: uk1.scproxy.top
+      Host: lsb-gy.heinu.cf
   - name: 丹麦 V2CROSS.COM
     type: vmess
     server: 185.162.228.229
@@ -36,18 +23,6 @@ proxies:
     ws-path: /
     ws-headers:
       Host: lg.v2ray8.xyz
-  - name: 美国 CloudFlare节点 - 2
-    type: vmess
-    server: cf-lt.sharecentre.online
-    port: 80
-    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /shirker
-    ws-headers:
-      Host: de1.sharecentrepro.org
   - name: 俄罗斯 V2CROSS.COM
     type: vmess
     server: 185.143.220.25
@@ -61,6 +36,30 @@ proxies:
     ws-headers:
       Host: dengxin.one
     tls: true
+  - name: 美国 CloudFlare节点 - 2
+    type: vmess
+    server: 172.64.173.160
+    port: 80
+    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /shirker
+    ws-headers:
+      Host: ca.ilovescp.com
+  - name: 美国 CloudFlare节点 - 3
+    type: vmess
+    server: cf.noaries.de
+    port: 2052
+    uuid: 4f7d5d43-226e-48d8-9df0-5e8bf9f77288
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /aries?ed=2048
+    ws-headers:
+      Host: scw-nl.cloudflare.quest
 proxy-groups:
   - name: Free-servers
     type: select
@@ -68,28 +67,28 @@ proxy-groups:
       - 自动选择
       - 故障转移
       - 美国 CloudFlare节点
-      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
       - 丹麦 V2CROSS.COM
-      - 美国 CloudFlare节点 - 2
       - 俄罗斯 V2CROSS.COM
+      - 美国 CloudFlare节点 - 2
+      - 美国 CloudFlare节点 - 3
   - name: 自动选择
     type: url-test
     proxies:
       - 美国 CloudFlare节点
-      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
       - 丹麦 V2CROSS.COM
-      - 美国 CloudFlare节点 - 2
       - 俄罗斯 V2CROSS.COM
+      - 美国 CloudFlare节点 - 2
+      - 美国 CloudFlare节点 - 3
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
       - 美国 CloudFlare节点
-      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
       - 丹麦 V2CROSS.COM
-      - 美国 CloudFlare节点 - 2
       - 俄罗斯 V2CROSS.COM
+      - 美国 CloudFlare节点 - 2
+      - 美国 CloudFlare节点 - 3
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
