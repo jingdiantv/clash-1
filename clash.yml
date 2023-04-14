@@ -1,75 +1,94 @@
 proxies:
-  - name: 沙特阿拉伯+Arabic+Computer+System+Co.
-    type: ss
-    server: 85.208.108.18
-    port: '5003'
-    cipher: aes-256-gcm
-    password: g5MeD6Ft3CWlJId
-  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 2
-    type: ss
-    server: 85.208.108.18
-    port: '8118'
-    cipher: aes-256-gcm
-    password: cdBIDV42DCwnfIN
   - name: 美国 CloudFlare节点
     type: vmess
-    server: cf-lt.sharecentre.online
+    server: 1024.day
     port: 443
-    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
+    uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /shirker
+    ws-path: /AUIKN8AU
     ws-headers:
-      Host: lv1.sharecentrepro.org
+      Host: lg1.v2ray6.xyz
     tls: true
-  - name: 南非 V2CROSS.COM
+  - name: 美国 CloudFlare节点 - 2
     type: vmess
-    server: 156.225.67.76
-    port: 42882
-    uuid: 3e016c4d-986e-42df-838c-6046f3d89ecf
-    alterId: 64
+    server: 172.64.195.14
+    port: 80
+    uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a
+    alterId: 0
     cipher: auto
     udp: true
-    network: tcp
+    network: ws
     ws-path: /
     ws-headers:
-      Host: ''
-  - name: 美国+V2CROSS.COM
-    type: trojan
-    server: 152.70.74.66
-    port: '443'
-    password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
+      Host: fr.v2ray1.xyz
+  - name: 澳大利亚 悉尼
+    type: vmess
+    server: 203.24.108.100
+    port: 80
+    uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /
+    ws-headers:
+      Host: lg.v2ray8.xyz
+  - name: 美国 CloudFlare节点 - 3
+    type: vmess
+    server: 162.159.255.205
+    port: 80
+    uuid: 52466dc2-3550-4310-910c-74b7bf8a020e
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /
+    ws-headers:
+      Host: us-1.acyun.eu.org
+  - name: 美国 CloudFlare节点 - 4
+    type: vmess
+    server: lsb-gy.heinu.cf
+    port: 2095
+    uuid: 1eda6b95-f248-4f3b-ae10-d7503415a788
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /@heinuhome
+    ws-headers:
+      Host: lsb-gy.heinu.cf
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 沙特阿拉伯+Arabic+Computer+System+Co.
-      - 沙特阿拉伯+Arabic+Computer+System+Co. - 2
       - 美国 CloudFlare节点
-      - 南非 V2CROSS.COM
-      - 美国+V2CROSS.COM
+      - 美国 CloudFlare节点 - 2
+      - 澳大利亚 悉尼
+      - 美国 CloudFlare节点 - 3
+      - 美国 CloudFlare节点 - 4
   - name: 自动选择
     type: url-test
     proxies:
-      - 沙特阿拉伯+Arabic+Computer+System+Co.
-      - 沙特阿拉伯+Arabic+Computer+System+Co. - 2
       - 美国 CloudFlare节点
-      - 南非 V2CROSS.COM
-      - 美国+V2CROSS.COM
+      - 美国 CloudFlare节点 - 2
+      - 澳大利亚 悉尼
+      - 美国 CloudFlare节点 - 3
+      - 美国 CloudFlare节点 - 4
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 沙特阿拉伯+Arabic+Computer+System+Co.
-      - 沙特阿拉伯+Arabic+Computer+System+Co. - 2
       - 美国 CloudFlare节点
-      - 南非 V2CROSS.COM
-      - 美国+V2CROSS.COM
+      - 美国 CloudFlare节点 - 2
+      - 澳大利亚 悉尼
+      - 美国 CloudFlare节点 - 3
+      - 美国 CloudFlare节点 - 4
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
