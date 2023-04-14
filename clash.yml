@@ -1,40 +1,4 @@
 proxies:
-  - name: 伊朗 V2CROSS.COM
-    type: vmess
-    server: f-us1.wvvvv.eu.org
-    port: 21
-    uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: ''
-    ws-headers:
-      Host: ''
-  - name: 美国 CloudFlare节点
-    type: vmess
-    server: 162.159.255.205
-    port: 80
-    uuid: 52466dc2-3550-4310-910c-74b7bf8a020e
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /
-    ws-headers:
-      Host: us-1.acyun.eu.org
-  - name: 伊朗 V2CROSS.COM - 2
-    type: vmess
-    server: 5.78.66.52
-    port: 21
-    uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: ''
-    ws-headers:
-      Host: ''
   - name: 澳大利亚 Cranbourne Secondary College
     type: vmess
     server: 203.30.191.192
@@ -48,48 +12,114 @@ proxies:
     ws-headers:
       Host: oplg1.zhujicn2.com
     tls: true
-  - name: 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
+  - name: 美国 CloudFlare节点
     type: vmess
-    server: 23.224.191.6
+    server: lsb-gy.heinu.cf
+    port: 2095
+    uuid: 1eda6b95-f248-4f3b-ae10-d7503415a788
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /@heinuhome
+    ws-headers:
+      Host: lsb-gy.heinu.cf
+  - name: 乌克兰 V2CROSS.COM
+    type: vmess
+    server: 212.110.134.10
     port: 443
+    uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /ECTCJ0DF
+    ws-headers:
+      Host: 154.v2ray3.xyz
+    tls: true
+  - name: 伊朗 V2CROSS.COM
+    type: vmess
+    server: 5.78.66.52
+    port: 21
+    uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: ''
+    ws-headers:
+      Host: ''
+  - name: 美国 加你福尼亚洛杉矶Coperation Coloction数据中心
+    type: vmess
+    server: 198.16.45.166
+    port: 53392
     uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
     alterId: 64
     cipher: auto
     udp: true
-    network: ws
-    ws-path: /path/220128071100
+    network: tcp
+    ws-path: /aceamedv
     ws-headers:
       Host: ''
-    tls: true
+  - name: 印度 V2CROSS.COM
+    type: vmess
+    server: 103.160.204.14
+    port: 80
+    uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /
+    ws-headers:
+      Host: fr.v2ray1.xyz
+  - name: 澳大利亚 悉尼
+    type: vmess
+    server: 203.24.108.100
+    port: 80
+    uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /
+    ws-headers:
+      Host: lg.v2ray8.xyz
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 伊朗 V2CROSS.COM
-      - 美国 CloudFlare节点
-      - 伊朗 V2CROSS.COM - 2
       - 澳大利亚 Cranbourne Secondary College
-      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
+      - 美国 CloudFlare节点
+      - 乌克兰 V2CROSS.COM
+      - 伊朗 V2CROSS.COM
+      - 美国 加你福尼亚洛杉矶Coperation Coloction数据中心
+      - 印度 V2CROSS.COM
+      - 澳大利亚 悉尼
   - name: 自动选择
     type: url-test
     proxies:
-      - 伊朗 V2CROSS.COM
-      - 美国 CloudFlare节点
-      - 伊朗 V2CROSS.COM - 2
       - 澳大利亚 Cranbourne Secondary College
-      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
+      - 美国 CloudFlare节点
+      - 乌克兰 V2CROSS.COM
+      - 伊朗 V2CROSS.COM
+      - 美国 加你福尼亚洛杉矶Coperation Coloction数据中心
+      - 印度 V2CROSS.COM
+      - 澳大利亚 悉尼
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 伊朗 V2CROSS.COM
-      - 美国 CloudFlare节点
-      - 伊朗 V2CROSS.COM - 2
       - 澳大利亚 Cranbourne Secondary College
-      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
+      - 美国 CloudFlare节点
+      - 乌克兰 V2CROSS.COM
+      - 伊朗 V2CROSS.COM
+      - 美国 加你福尼亚洛杉矶Coperation Coloction数据中心
+      - 印度 V2CROSS.COM
+      - 澳大利亚 悉尼
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
