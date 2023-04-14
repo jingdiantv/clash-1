@@ -11,55 +11,56 @@ proxies:
     ws-path: /@heinuhome
     ws-headers:
       Host: lsb-gy.heinu.cf
-  - name: 伊朗 V2CROSS.COM
+  - name: 湖南省 移动(全省通用)
     type: vmess
-    server: f-eu1.wvvvv.eu.org
-    port: 80
-    uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /masvod/public/2023/03/07/20230307_186bb7147ea_r1_1200k.mp4
-    ws-headers:
-      Host: svideo.mfa.gov.cn
-  - name: 美国 CloudFlare节点 - 2
-    type: vmess
-    server: quiz.vidio.com
-    port: 443
-    uuid: e6442903-4753-4783-8916-ac47c8080e4f
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /
-    ws-headers:
-      Host: dynamic-sg3b.obfs.xyz
-    tls: true
-  - name: 美国 CloudFlare节点 - 3
-    type: vmess
-    server: lsb-gy.heinu.cf
-    port: 2095
-    uuid: 1eda6b95-f248-4f3b-ae10-d7503415a788
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /@heinuhome
-    ws-headers:
-      Host: lsb-gy.heinu.cf
-  - name: 美国 加你福尼亚洛杉矶Coperation Coloction数据中心
-    type: vmess
-    server: 198.16.45.166
-    port: 53392
+    server: 111.23.252.214
+    port: 59902
     uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
     alterId: 64
     cipher: auto
     udp: true
     network: tcp
-    ws-path: /aceamedv
+    ws-path: /
     ws-headers:
       Host: ''
+  - name: 美国 V2CROSS.COM
+    type: vmess
+    server: 143.42.87.69
+    port: 443
+    uuid: 927094d3-d678-4763-8591-e240d0bcae87
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /chat
+    ws-headers:
+      Host: ''
+    tls: true
+  - name: 美国 V2CROSS.COM - 2
+    type: vmess
+    server: f-us1.wvvvv.eu.org
+    port: 20
+    uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /
+    ws-headers:
+      Host: de01-cdn.airport-v2.com
+  - name: 日本 东京BGP.NET数据中心
+    type: vmess
+    server: 27.124.2.38
+    port: 443
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /path/031730091420
+    ws-headers:
+      Host: ''
+    tls: true
 proxy-groups:
   - name: Free-servers
     type: select
@@ -67,28 +68,28 @@ proxy-groups:
       - 自动选择
       - 故障转移
       - 美国 CloudFlare节点
-      - 伊朗 V2CROSS.COM
-      - 美国 CloudFlare节点 - 2
-      - 美国 CloudFlare节点 - 3
-      - 美国 加你福尼亚洛杉矶Coperation Coloction数据中心
+      - 湖南省 移动(全省通用)
+      - 美国 V2CROSS.COM
+      - 美国 V2CROSS.COM - 2
+      - 日本 东京BGP.NET数据中心
   - name: 自动选择
     type: url-test
     proxies:
       - 美国 CloudFlare节点
-      - 伊朗 V2CROSS.COM
-      - 美国 CloudFlare节点 - 2
-      - 美国 CloudFlare节点 - 3
-      - 美国 加你福尼亚洛杉矶Coperation Coloction数据中心
+      - 湖南省 移动(全省通用)
+      - 美国 V2CROSS.COM
+      - 美国 V2CROSS.COM - 2
+      - 日本 东京BGP.NET数据中心
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
       - 美国 CloudFlare节点
-      - 伊朗 V2CROSS.COM
-      - 美国 CloudFlare节点 - 2
-      - 美国 CloudFlare节点 - 3
-      - 美国 加你福尼亚洛杉矶Coperation Coloction数据中心
+      - 湖南省 移动(全省通用)
+      - 美国 V2CROSS.COM
+      - 美国 V2CROSS.COM - 2
+      - 日本 东京BGP.NET数据中心
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
