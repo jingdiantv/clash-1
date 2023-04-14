@@ -1,42 +1,65 @@
 proxies:
   - name: 美国 CloudFlare节点
     type: vmess
-    server: lsb-gy.heinu.cf
-    port: 2095
-    uuid: 1eda6b95-f248-4f3b-ae10-d7503415a788
+    server: cf.noaries.de
+    port: 2052
+    uuid: 4f7d5d43-226e-48d8-9df0-5e8bf9f77288
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /@heinuhome
+    ws-path: /aries?ed=2048
     ws-headers:
-      Host: lsb-gy.heinu.cf
-  - name: 丹麦 V2CROSS.COM
+      Host: scw-nl.cloudflare.quest
+  - name: 南非 V2CROSS.COM
     type: vmess
-    server: 185.162.228.229
+    server: 156.225.67.108
+    port: 49920
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /
+    ws-headers:
+      Host: ''
+  - name: 美国 CloudFlare节点 - 2
+    type: vmess
+    server: 162.159.255.205
     port: 80
-    uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
+    uuid: 52466dc2-3550-4310-910c-74b7bf8a020e
     alterId: 0
     cipher: auto
     udp: true
     network: ws
     ws-path: /
     ws-headers:
-      Host: lg.v2ray8.xyz
-  - name: 俄罗斯 V2CROSS.COM
+      Host: us-1.acyun.eu.org
+  - name: 南非 V2CROSS.COM - 2
     type: vmess
-    server: 185.143.220.25
-    port: 443
-    uuid: f28e354e-c2d1-4983-9b07-5acaf1b3b3e5
+    server: 156.225.67.102
+    port: 44388
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /
+    ws-headers:
+      Host: ''
+  - name: 印度 V2CROSS.COM
+    type: vmess
+    server: 103.160.204.14
+    port: 80
+    uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /6e9EtZ2dL
+    ws-path: /
     ws-headers:
-      Host: dengxin.one
-    tls: true
-  - name: 美国 CloudFlare节点 - 2
+      Host: fr.v2ray1.xyz
+  - name: 美国 CloudFlare节点 - 3
     type: vmess
     server: 172.64.173.160
     port: 80
@@ -48,18 +71,6 @@ proxies:
     ws-path: /shirker
     ws-headers:
       Host: ca.ilovescp.com
-  - name: 美国 CloudFlare节点 - 3
-    type: vmess
-    server: cf.noaries.de
-    port: 2052
-    uuid: 4f7d5d43-226e-48d8-9df0-5e8bf9f77288
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /aries?ed=2048
-    ws-headers:
-      Host: scw-nl.cloudflare.quest
 proxy-groups:
   - name: Free-servers
     type: select
@@ -67,17 +78,19 @@ proxy-groups:
       - 自动选择
       - 故障转移
       - 美国 CloudFlare节点
-      - 丹麦 V2CROSS.COM
-      - 俄罗斯 V2CROSS.COM
+      - 南非 V2CROSS.COM
       - 美国 CloudFlare节点 - 2
+      - 南非 V2CROSS.COM - 2
+      - 印度 V2CROSS.COM
       - 美国 CloudFlare节点 - 3
   - name: 自动选择
     type: url-test
     proxies:
       - 美国 CloudFlare节点
-      - 丹麦 V2CROSS.COM
-      - 俄罗斯 V2CROSS.COM
+      - 南非 V2CROSS.COM
       - 美国 CloudFlare节点 - 2
+      - 南非 V2CROSS.COM - 2
+      - 印度 V2CROSS.COM
       - 美国 CloudFlare节点 - 3
     url: http://www.gstatic.com/generate_204
     interval: 86400
@@ -85,9 +98,10 @@ proxy-groups:
     type: fallback
     proxies:
       - 美国 CloudFlare节点
-      - 丹麦 V2CROSS.COM
-      - 俄罗斯 V2CROSS.COM
+      - 南非 V2CROSS.COM
       - 美国 CloudFlare节点 - 2
+      - 南非 V2CROSS.COM - 2
+      - 印度 V2CROSS.COM
       - 美国 CloudFlare节点 - 3
     url: http://www.gstatic.com/generate_204
     interval: 86400
