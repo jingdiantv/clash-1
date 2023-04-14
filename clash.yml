@@ -1,124 +1,95 @@
 proxies:
+  - name: 伊朗 V2CROSS.COM
+    type: vmess
+    server: f-us1.wvvvv.eu.org
+    port: 21
+    uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: ''
+    ws-headers:
+      Host: ''
   - name: 美国 CloudFlare节点
     type: vmess
-    server: 172.64.173.160
+    server: 162.159.255.205
     port: 80
-    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
+    uuid: 52466dc2-3550-4310-910c-74b7bf8a020e
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /shirker
+    ws-path: /
     ws-headers:
-      Host: ca.ilovescp.com
+      Host: us-1.acyun.eu.org
+  - name: 伊朗 V2CROSS.COM - 2
+    type: vmess
+    server: 5.78.66.52
+    port: 21
+    uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: ''
+    ws-headers:
+      Host: ''
+  - name: 澳大利亚 Cranbourne Secondary College
+    type: vmess
+    server: 203.30.191.192
+    port: 443
+    uuid: 56a2188b-2ab7-402c-b9b8-34847fdf0958
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /5QNROSRV
+    ws-headers:
+      Host: oplg1.zhujicn2.com
+    tls: true
   - name: 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
     type: vmess
-    server: 172.247.67.22
-    port: 42940
+    server: 23.224.191.6
+    port: 443
     uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
     alterId: 64
     cipher: auto
     udp: true
-    network: tcp
-    ws-path: /shirker
-    ws-headers:
-      Host: uk1.scproxy.top
-  - name: 南非 V2CROSS.COM
-    type: vmess
-    server: 156.225.67.76
-    port: 42882
-    uuid: 3e016c4d-986e-42df-838c-6046f3d89ecf
-    alterId: 64
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /
+    network: ws
+    ws-path: /path/220128071100
     ws-headers:
       Host: ''
-  - name: 美国 CloudFlare节点 - 2
-    type: vmess
-    server: lsb-gy.heinu.cf
-    port: 2095
-    uuid: 1eda6b95-f248-4f3b-ae10-d7503415a788
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /@heinuhome
-    ws-headers:
-      Host: lsb-gy.heinu.cf
-  - name: 南非 V2CROSS.COM - 2
-    type: vmess
-    server: 156.225.67.68
-    port: 45553
-    uuid: 11117d4c-3b6a-4e76-8bcc-2b41b3e9ca93
-    alterId: 64
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /
-    ws-headers:
-      Host: ''
-  - name: 美国 CloudFlare节点 - 3
-    type: vmess
-    server: 1024.day
-    port: 443
-    uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /AUIKN8AU
-    ws-headers:
-      Host: lg1.v2ray6.xyz
     tls: true
-  - name: 南非 V2CROSS.COM - 3
-    type: vmess
-    server: 156.225.67.121
-    port: 47744
-    uuid: 63b4b829-7f01-4e26-b037-f04b1f098765
-    alterId: 64
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /reffs7y26g0ua
-    ws-headers:
-      Host: surongwei.eu.org
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
+      - 伊朗 V2CROSS.COM
       - 美国 CloudFlare节点
+      - 伊朗 V2CROSS.COM - 2
+      - 澳大利亚 Cranbourne Secondary College
       - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
-      - 南非 V2CROSS.COM
-      - 美国 CloudFlare节点 - 2
-      - 南非 V2CROSS.COM - 2
-      - 美国 CloudFlare节点 - 3
-      - 南非 V2CROSS.COM - 3
   - name: 自动选择
     type: url-test
     proxies:
+      - 伊朗 V2CROSS.COM
       - 美国 CloudFlare节点
+      - 伊朗 V2CROSS.COM - 2
+      - 澳大利亚 Cranbourne Secondary College
       - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
-      - 南非 V2CROSS.COM
-      - 美国 CloudFlare节点 - 2
-      - 南非 V2CROSS.COM - 2
-      - 美国 CloudFlare节点 - 3
-      - 南非 V2CROSS.COM - 3
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
+      - 伊朗 V2CROSS.COM
       - 美国 CloudFlare节点
+      - 伊朗 V2CROSS.COM - 2
+      - 澳大利亚 Cranbourne Secondary College
       - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
-      - 南非 V2CROSS.COM
-      - 美国 CloudFlare节点 - 2
-      - 南非 V2CROSS.COM - 2
-      - 美国 CloudFlare节点 - 3
-      - 南非 V2CROSS.COM - 3
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
