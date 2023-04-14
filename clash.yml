@@ -1,71 +1,16 @@
 proxies:
-  - name: 新加坡 DigitalOcean数据中心
-    type: vmess
-    server: sg1.fightertunnel.xyz
-    port: 80
-    uuid: 4b56da6d-a62e-40e0-85b7-fc7a7ca31c46
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /vmess
-    ws-headers:
-      Host: ''
   - name: 南非 V2CROSS.COM
     type: vmess
-    server: 156.225.67.88
-    port: 52292
-    uuid: 20b30916-e203-412e-8ec0-900f3acd5128
+    server: 156.225.67.145
+    port: 51948
+    uuid: 93503dd5-245a-4eb1-ae2a-57ab9f2b3c29
     alterId: 64
     cipher: auto
     udp: true
     network: tcp
     ws-path: /
     ws-headers:
-      Host: ''
-  - name: 伊朗 V2CROSS.COM
-    type: vmess
-    server: f-us1.wvvvv.eu.org
-    port: 21
-    uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /
-    ws-headers:
-      Host: f-us1.wvvvv.eu.org
-  - name: 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
-    type: vmess
-    server: 23.224.191.5
-    port: 443
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /path/220128071100
-    ws-headers:
-      Host: ''
-    tls: true
-  - name: 美国 加利福尼亚州洛杉矶Sharktech数据中心
-    type: vmess
-    server: 170.178.179.189
-    port: 443
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /path/031730091420
-    ws-headers:
-      Host: ''
-    tls: true
-  - name: 广东省广州市+移动
-    type: trojan
-    server: as.steamdownload.top
-    port: '36643'
-    password: 6e3d2643-6283-4962-82b5-2fca9753e4cb
+      Host: 18.143.123.35
   - name: 美国 加利福尼亚州洛杉矶市SharkTech数据中心
     type: vmess
     server: 107.167.4.122
@@ -78,14 +23,21 @@ proxies:
     ws-path: ''
     ws-headers:
       Host: ''
-  - name: 广东省广州市+移动 - 2
-    type: trojan
-    server: as.steamdownload.top
-    port: '36643'
-    password: 6e3d2643-6283-4962-82b5-2fca9753e4cb
-  - name: 丹麦 V2CROSS.COM
+  - name: 美国 CloudFlare节点
     type: vmess
-    server: 185.162.228.1
+    server: lsb-gy.heinu.cf
+    port: 2095
+    uuid: 1eda6b95-f248-4f3b-ae10-d7503415a788
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /@heinuhome
+    ws-headers:
+      Host: lsb-gy.heinu.cf
+  - name: 澳大利亚 Lyndhurst Secondary College
+    type: vmess
+    server: 203.30.188.1
     port: 443
     uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
     alterId: 0
@@ -96,11 +48,73 @@ proxies:
     ws-headers:
       Host: 154.v2ray3.xyz
     tls: true
+  - name: 香港 阿里云
+    type: vmess
+    server: n1680937004.sxhucjg.cn
+    port: 443
+    uuid: df2cfa39-3dd3-411a-9872-8e508f5e2483
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /
+    ws-headers:
+      Host: ''
+    tls: true
+  - name: 美国 V2CROSS.COM
+    type: vmess
+    server: vuk1.0bad.com
+    port: 443
+    uuid: 927094d3-d678-4763-8591-e240d0bcae87
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /chat
+    ws-headers:
+      Host: ''
+    tls: true
   - name: 南非 V2CROSS.COM - 2
     type: vmess
-    server: 156.225.67.58
-    port: 58188
-    uuid: 9c026efe-6af0-465f-b8c0-3f58c8c2d4c5
+    server: 156.225.67.145
+    port: 51948
+    uuid: 93503dd5-245a-4eb1-ae2a-57ab9f2b3c29
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /
+    ws-headers:
+      Host: 18.143.123.35
+  - name: 新加坡 DigitalOcean数据中心
+    type: vmess
+    server: sg1.fightertunnel.xyz
+    port: 80
+    uuid: 4b56da6d-a62e-40e0-85b7-fc7a7ca31c46
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /vmess
+    ws-headers:
+      Host: ''
+  - name: 美国 V2CROSS.COM - 2
+    type: vmess
+    server: f-us2.wvvvv.eu.org
+    port: 21
+    uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /
+    ws-headers:
+      Host: f-us2.wvvvv.eu.org
+  - name: 澳大利亚 V2CROSS.COM
+    type: vmess
+    server: 140.83.63.38
+    port: 24445
+    uuid: 94c5ef37-4d82-49f9-c624-f01259374a17
     alterId: 64
     cipher: auto
     udp: true
@@ -108,23 +122,10 @@ proxies:
     ws-path: /
     ws-headers:
       Host: ''
-  - name: 美国 CloudFlare节点
-    type: vmess
-    server: www.nivod4.tv
-    port: 443
-    uuid: 56a2188b-2ab7-402c-b9b8-34847fdf0958
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /5QNROSRV
-    ws-headers:
-      Host: lg2.v2ray6.xyz
-    tls: true
   - name: 美国 CloudFlare节点 - 2
     type: vmess
-    server: 172.64.173.160
-    port: 80
+    server: cf-lt.sharecentre.online
+    port: 443
     uuid: 2e496758-950e-4549-8842-d5eec98d9fde
     alterId: 0
     cipher: auto
@@ -132,72 +133,100 @@ proxies:
     network: ws
     ws-path: /shirker
     ws-headers:
-      Host: ca.ilovescp.com
-  - name: 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心 - 2
+      Host: uk1.scproxy.top
+    tls: true
+  - name: 美国 CloudFlare节点 - 3
     type: vmess
-    server: 23.224.14.142
-    port: 55332
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
+    server: r2wind.com
+    port: 80
+    uuid: f6aa4440-e7be-44e1-80e1-7e45ccd796cc
+    alterId: 0
     cipher: auto
     udp: true
-    network: tcp
-    ws-path: /shirker
+    network: ws
+    ws-path: /api/v3/download.getFile
     ws-headers:
-      Host: ''
+      Host: ssrsub.v01.ssrsub.com
+  - name: 美国 CloudFlare节点 - 4
+    type: vmess
+    server: 162.159.255.200
+    port: 80
+    uuid: 52466dc2-3550-4310-910c-74b7bf8a020e
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /
+    ws-headers:
+      Host: us-1.acyun.eu.org
+  - name: 丹麦 V2CROSS.COM
+    type: vmess
+    server: 185.162.228.229
+    port: 80
+    uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /
+    ws-headers:
+      Host: lg.v2ray8.xyz
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 新加坡 DigitalOcean数据中心
       - 南非 V2CROSS.COM
-      - 伊朗 V2CROSS.COM
-      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
-      - 美国 加利福尼亚州洛杉矶Sharktech数据中心
-      - 广东省广州市+移动
       - 美国 加利福尼亚州洛杉矶市SharkTech数据中心
-      - 广东省广州市+移动 - 2
-      - 丹麦 V2CROSS.COM
-      - 南非 V2CROSS.COM - 2
       - 美国 CloudFlare节点
+      - 澳大利亚 Lyndhurst Secondary College
+      - 香港 阿里云
+      - 美国 V2CROSS.COM
+      - 南非 V2CROSS.COM - 2
+      - 新加坡 DigitalOcean数据中心
+      - 美国 V2CROSS.COM - 2
+      - 澳大利亚 V2CROSS.COM
       - 美国 CloudFlare节点 - 2
-      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心 - 2
+      - 美国 CloudFlare节点 - 3
+      - 美国 CloudFlare节点 - 4
+      - 丹麦 V2CROSS.COM
   - name: 自动选择
     type: url-test
     proxies:
-      - 新加坡 DigitalOcean数据中心
       - 南非 V2CROSS.COM
-      - 伊朗 V2CROSS.COM
-      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
-      - 美国 加利福尼亚州洛杉矶Sharktech数据中心
-      - 广东省广州市+移动
       - 美国 加利福尼亚州洛杉矶市SharkTech数据中心
-      - 广东省广州市+移动 - 2
-      - 丹麦 V2CROSS.COM
-      - 南非 V2CROSS.COM - 2
       - 美国 CloudFlare节点
+      - 澳大利亚 Lyndhurst Secondary College
+      - 香港 阿里云
+      - 美国 V2CROSS.COM
+      - 南非 V2CROSS.COM - 2
+      - 新加坡 DigitalOcean数据中心
+      - 美国 V2CROSS.COM - 2
+      - 澳大利亚 V2CROSS.COM
       - 美国 CloudFlare节点 - 2
-      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心 - 2
+      - 美国 CloudFlare节点 - 3
+      - 美国 CloudFlare节点 - 4
+      - 丹麦 V2CROSS.COM
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 新加坡 DigitalOcean数据中心
       - 南非 V2CROSS.COM
-      - 伊朗 V2CROSS.COM
-      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
-      - 美国 加利福尼亚州洛杉矶Sharktech数据中心
-      - 广东省广州市+移动
       - 美国 加利福尼亚州洛杉矶市SharkTech数据中心
-      - 广东省广州市+移动 - 2
-      - 丹麦 V2CROSS.COM
-      - 南非 V2CROSS.COM - 2
       - 美国 CloudFlare节点
+      - 澳大利亚 Lyndhurst Secondary College
+      - 香港 阿里云
+      - 美国 V2CROSS.COM
+      - 南非 V2CROSS.COM - 2
+      - 新加坡 DigitalOcean数据中心
+      - 美国 V2CROSS.COM - 2
+      - 澳大利亚 V2CROSS.COM
       - 美国 CloudFlare节点 - 2
-      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心 - 2
+      - 美国 CloudFlare节点 - 3
+      - 美国 CloudFlare节点 - 4
+      - 丹麦 V2CROSS.COM
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
