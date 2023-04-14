@@ -1,94 +1,95 @@
 proxies:
+  - name: 美国 加利福尼亚州圣何塞PEG TECH
+    type: vmess
+    server: 142.4.110.118
+    port: 50002
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: ''
+    ws-headers:
+      Host: ''
   - name: 美国 CloudFlare节点
     type: vmess
-    server: 162.159.255.205
-    port: 80
-    uuid: 52466dc2-3550-4310-910c-74b7bf8a020e
+    server: quiz.vidio.com
+    port: 443
+    uuid: e6442903-4753-4783-8916-ac47c8080e4f
     alterId: 0
     cipher: auto
     udp: true
     network: ws
     ws-path: /
     ws-headers:
-      Host: us-1.acyun.eu.org
+      Host: dynamic-sg3b.obfs.xyz
+    tls: true
+  - name: 美国 亚利桑那州凤凰城Oracle云计算数据中心
+    type: vmess
+    server: 158.101.7.8
+    port: 80
+    uuid: 95b45c49-f5c0-4959-bb64-2b8fbc4a869c
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /
+    ws-headers:
+      Host: ''
+  - name: 印度 V2CROSS.COM
+    type: vmess
+    server: 103.160.204.14
+    port: 80
+    uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /
+    ws-headers:
+      Host: fr.v2ray1.xyz
   - name: 美国 CloudFlare节点 - 2
     type: vmess
-    server: lsb-gy.heinu.cf
-    port: 2095
-    uuid: 1eda6b95-f248-4f3b-ae10-d7503415a788
+    server: ccdc2.6252369.xyz
+    port: 8443
+    uuid: f8949dfe-c501-453c-96b6-6786fb03d5f9
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /@heinuhome
+    ws-path: /vxt99
     ws-headers:
-      Host: lsb-gy.heinu.cf
-  - name: 南非 V2CROSS.COM
-    type: vmess
-    server: 156.225.67.58
-    port: 58188
-    uuid: 9c026efe-6af0-465f-b8c0-3f58c8c2d4c5
-    alterId: 64
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /
-    ws-headers:
-      Host: ''
-  - name: 俄罗斯 V2CROSS.COM
-    type: vmess
-    server: 185.143.220.25
-    port: 443
-    uuid: f28e354e-c2d1-4983-9b07-5acaf1b3b3e5
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /6e9EtZ2dL
-    ws-headers:
-      Host: dengxin.one
+      Host: ccdc2.6252369.xyz
     tls: true
-  - name: 澳大利亚 V2CROSS.COM
-    type: vmess
-    server: 140.83.63.38
-    port: 24445
-    uuid: 94c5ef37-4d82-49f9-c624-f01259374a17
-    alterId: 64
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /
-    ws-headers:
-      Host: ''
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
+      - 美国 加利福尼亚州圣何塞PEG TECH
       - 美国 CloudFlare节点
+      - 美国 亚利桑那州凤凰城Oracle云计算数据中心
+      - 印度 V2CROSS.COM
       - 美国 CloudFlare节点 - 2
-      - 南非 V2CROSS.COM
-      - 俄罗斯 V2CROSS.COM
-      - 澳大利亚 V2CROSS.COM
   - name: 自动选择
     type: url-test
     proxies:
+      - 美国 加利福尼亚州圣何塞PEG TECH
       - 美国 CloudFlare节点
+      - 美国 亚利桑那州凤凰城Oracle云计算数据中心
+      - 印度 V2CROSS.COM
       - 美国 CloudFlare节点 - 2
-      - 南非 V2CROSS.COM
-      - 俄罗斯 V2CROSS.COM
-      - 澳大利亚 V2CROSS.COM
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
+      - 美国 加利福尼亚州圣何塞PEG TECH
       - 美国 CloudFlare节点
+      - 美国 亚利桑那州凤凰城Oracle云计算数据中心
+      - 印度 V2CROSS.COM
       - 美国 CloudFlare节点 - 2
-      - 南非 V2CROSS.COM
-      - 俄罗斯 V2CROSS.COM
-      - 澳大利亚 V2CROSS.COM
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
