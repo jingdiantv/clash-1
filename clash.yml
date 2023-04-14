@@ -1,20 +1,43 @@
 proxies:
+  - name: 南非 V2CROSS.COM
+    type: vmess
+    server: 156.225.67.192
+    port: 38288
+    uuid: d024fd8b-ea78-4789-b928-70afa1a910ce
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /
+    ws-headers:
+      Host: ''
   - name: 美国 CloudFlare节点
     type: vmess
-    server: ccdc2.6252369.xyz
-    port: 8443
-    uuid: f8949dfe-c501-453c-96b6-6786fb03d5f9
+    server: 172.64.195.14
+    port: 80
+    uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /vxt99
+    ws-path: /
     ws-headers:
-      Host: ccdc2.6252369.xyz
-    tls: true
+      Host: fr.v2ray1.xyz
+  - name: 南非 V2CROSS.COM - 2
+    type: vmess
+    server: 156.225.67.145
+    port: 51948
+    uuid: 93503dd5-245a-4eb1-ae2a-57ab9f2b3c29
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /
+    ws-headers:
+      Host: 18.143.123.35
   - name: 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
     type: vmess
-    server: 23.224.191.5
+    server: 23.224.191.6
     port: 443
     uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
     alterId: 64
@@ -25,35 +48,10 @@ proxies:
     ws-headers:
       Host: ''
     tls: true
-  - name: 丹麦 V2CROSS.COM
-    type: vmess
-    server: 185.162.228.229
-    port: 80
-    uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /
-    ws-headers:
-      Host: lg.v2ray8.xyz
-  - name: 香港 阿里云
-    type: vmess
-    server: n1680937004.sxhucjg.cn
-    port: 443
-    uuid: df2cfa39-3dd3-411a-9872-8e508f5e2483
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /
-    ws-headers:
-      Host: ''
-    tls: true
   - name: 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心 - 2
     type: vmess
-    server: 23.224.14.142
-    port: 55332
+    server: 172.247.67.22
+    port: 42940
     uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
     alterId: 64
     cipher: auto
@@ -61,67 +59,51 @@ proxies:
     network: tcp
     ws-path: /shirker
     ws-headers:
-      Host: ''
+      Host: uk1.scproxy.top
   - name: 美国 加利福尼亚州洛杉矶Sharktech数据中心
     type: vmess
-    server: 170.178.179.189
-    port: 443
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    server: 64.32.4.56
+    port: 42175
+    uuid: 8653004f-de67-44c2-9cce-e0830933fb03
     alterId: 64
     cipher: auto
     udp: true
-    network: ws
-    ws-path: /path/031730091420
+    network: tcp
+    ws-path: /AUIKN8AU
     ws-headers:
-      Host: ''
-    tls: true
-  - name: 新加坡 DigitalOcean数据中心
-    type: vmess
-    server: sg1.fightertunnel.xyz
-    port: 80
-    uuid: 4b56da6d-a62e-40e0-85b7-fc7a7ca31c46
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /vmess
-    ws-headers:
-      Host: ''
+      Host: lg1.v2ray6.xyz
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
+      - 南非 V2CROSS.COM
       - 美国 CloudFlare节点
+      - 南非 V2CROSS.COM - 2
       - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
-      - 丹麦 V2CROSS.COM
-      - 香港 阿里云
       - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心 - 2
       - 美国 加利福尼亚州洛杉矶Sharktech数据中心
-      - 新加坡 DigitalOcean数据中心
   - name: 自动选择
     type: url-test
     proxies:
+      - 南非 V2CROSS.COM
       - 美国 CloudFlare节点
+      - 南非 V2CROSS.COM - 2
       - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
-      - 丹麦 V2CROSS.COM
-      - 香港 阿里云
       - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心 - 2
       - 美国 加利福尼亚州洛杉矶Sharktech数据中心
-      - 新加坡 DigitalOcean数据中心
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
+      - 南非 V2CROSS.COM
       - 美国 CloudFlare节点
+      - 南非 V2CROSS.COM - 2
       - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
-      - 丹麦 V2CROSS.COM
-      - 香港 阿里云
       - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心 - 2
       - 美国 加利福尼亚州洛杉矶Sharktech数据中心
-      - 新加坡 DigitalOcean数据中心
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
