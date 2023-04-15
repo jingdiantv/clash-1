@@ -1,26 +1,46 @@
 proxies:
-  - name: 美国 CloudFlare节点
+  - name: 美国 V2CROSS.COM
     type: vmess
-    server: cf.noaries.de
-    port: 2052
-    uuid: 4f7d5d43-226e-48d8-9df0-5e8bf9f77288
+    server: vde2.0bad.com
+    port: 443
+    uuid: 927094d3-d678-4763-8591-e240d0bcae87
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /aries?ed=2048
+    ws-path: /chat
     ws-headers:
-      Host: scw-nl.cloudflare.quest
-  - name: 美国+Interland
-    type: trojan
-    server: hedy.taherfix1.site
-    port: '443'
-    password: 683ea3d3-eda1-42ba-ac7c-71a222821ff6
+      Host: ''
+    tls: true
+  - name: 澳大利亚 悉尼
+    type: vmess
+    server: 203.24.108.100
+    port: 80
+    uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /
+    ws-headers:
+      Host: lg.v2ray8.xyz
+  - name: 美国 CloudFlare节点
+    type: vmess
+    server: cf-lt.sharecentre.online
+    port: 80
+    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /shirker
+    ws-headers:
+      Host: dp3.scproxy.top
   - name: 南非 V2CROSS.COM
     type: vmess
-    server: 156.225.67.68
-    port: 45553
-    uuid: 11117d4c-3b6a-4e76-8bcc-2b41b3e9ca93
+    server: 156.225.67.76
+    port: 42882
+    uuid: 3e016c4d-986e-42df-838c-6046f3d89ecf
     alterId: 64
     cipher: auto
     udp: true
@@ -30,58 +50,45 @@ proxies:
       Host: ''
   - name: 美国 CloudFlare节点 - 2
     type: vmess
-    server: lsb-gy.heinu.cf
-    port: 2095
-    uuid: 1eda6b95-f248-4f3b-ae10-d7503415a788
+    server: 172.64.195.14
+    port: 80
+    uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /@heinuhome
+    ws-path: /
     ws-headers:
-      Host: lsb-gy.heinu.cf
-  - name: 美国 CloudFlare节点 - 3
-    type: vmess
-    server: ccdc2.6252369.xyz
-    port: 8443
-    uuid: f8949dfe-c501-453c-96b6-6786fb03d5f9
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /vxt99
-    ws-headers:
-      Host: ccdc2.6252369.xyz
-    tls: true
+      Host: fr.v2ray1.xyz
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
+      - 美国 V2CROSS.COM
+      - 澳大利亚 悉尼
       - 美国 CloudFlare节点
-      - 美国+Interland
       - 南非 V2CROSS.COM
       - 美国 CloudFlare节点 - 2
-      - 美国 CloudFlare节点 - 3
   - name: 自动选择
     type: url-test
     proxies:
+      - 美国 V2CROSS.COM
+      - 澳大利亚 悉尼
       - 美国 CloudFlare节点
-      - 美国+Interland
       - 南非 V2CROSS.COM
       - 美国 CloudFlare节点 - 2
-      - 美国 CloudFlare节点 - 3
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
+      - 美国 V2CROSS.COM
+      - 澳大利亚 悉尼
       - 美国 CloudFlare节点
-      - 美国+Interland
       - 南非 V2CROSS.COM
       - 美国 CloudFlare节点 - 2
-      - 美国 CloudFlare节点 - 3
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
