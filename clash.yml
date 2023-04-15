@@ -1,72 +1,94 @@
 proxies:
-  - name: 美国 Amazon EC2服务器
+  - name: 美国 CloudFlare节点
     type: vmess
-    server: eu-de-west-2.292228.xyz
-    port: 80
-    uuid: 22873fd1-2db8-4820-af1d-2843107ee744
+    server: dp1.scproxy.top
+    port: 443
+    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /filetransfer
+    ws-path: /shirker
     ws-headers:
-      Host: ''
-  - name: 广东省佛山市 移动
+      Host: dp1.scproxy.top
+    tls: true
+  - name: 美国 CloudFlare节点 - 2
     type: vmess
-    server: 25.v2-ray.cyou
-    port: 23625
-    uuid: 0dd19d20-ec86-3680-b256-87237bafa89e
-    alterId: 2
+    server: 162.159.255.205
+    port: 80
+    uuid: 52466dc2-3550-4310-910c-74b7bf8a020e
+    alterId: 0
     cipher: auto
     udp: true
     network: ws
     ws-path: /
     ws-headers:
-      Host: 25.v2-ray.cyou
-  - name: 上海市+电信
-    type: trojan
-    server: official.taipeicitygovernment.kiev.ua
-    port: 8443?security=tls&sni=66.42.40.132&type=tcp&headerType=none
-    password: 5505f6ba-cd37-30ce-8f92-be4120c83d7f
-  - name: 广东省广州市+移动
-    type: trojan
-    server: frontend.yijianlian.app
-    port: 54500?security=tls&type=tcp&headerType=none
-    password: b5e4e360-5946-470b-aad0-db98f50faa57
-  - name: 广东省广州市+移动 - 2
-    type: trojan
-    server: frontend.yijianlian.app
-    port: 54410?security=tls&type=tcp&headerType=none
-    password: b5e4e360-5946-470b-aad0-db98f50faa57
+      Host: us-1.acyun.eu.org
+  - name: 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
+    type: vmess
+    server: 23.224.14.116
+    port: 51552
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /shirker
+    ws-headers:
+      Host: hk-hytron.ilovescp.com
+  - name: 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心 - 2
+    type: vmess
+    server: 23.225.33.168
+    port: 56002
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /
+    ws-headers:
+      Host: ''
+  - name: 美国 加利福尼亚州圣何塞PEG TECH数据中心
+    type: vmess
+    server: 192.74.228.174
+    port: 42857
+    uuid: 051b844f-efe3-4847-92aa-66b5de0b6d4e
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: ''
+    ws-headers:
+      Host: ''
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 美国 Amazon EC2服务器
-      - 广东省佛山市 移动
-      - 上海市+电信
-      - 广东省广州市+移动
-      - 广东省广州市+移动 - 2
+      - 美国 CloudFlare节点
+      - 美国 CloudFlare节点 - 2
+      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
+      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心 - 2
+      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
   - name: 自动选择
     type: url-test
     proxies:
-      - 美国 Amazon EC2服务器
-      - 广东省佛山市 移动
-      - 上海市+电信
-      - 广东省广州市+移动
-      - 广东省广州市+移动 - 2
+      - 美国 CloudFlare节点
+      - 美国 CloudFlare节点 - 2
+      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
+      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心 - 2
+      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 美国 Amazon EC2服务器
-      - 广东省佛山市 移动
-      - 上海市+电信
-      - 广东省广州市+移动
-      - 广东省广州市+移动 - 2
+      - 美国 CloudFlare节点
+      - 美国 CloudFlare节点 - 2
+      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
+      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心 - 2
+      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
