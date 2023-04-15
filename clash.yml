@@ -1,118 +1,95 @@
 proxies:
-  - name: 澳大利亚 悉尼
+  - name: 美国 加你福尼亚洛杉矶Coperation Coloction数据中心
     type: vmess
-    server: 203.24.108.100
-    port: 80
-    uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /
-    ws-headers:
-      Host: lg.v2ray8.xyz
-  - name: 美国 CloudFlare节点
-    type: vmess
-    server: cf.noaries.de
-    port: 2052
-    uuid: 4f7d5d43-226e-48d8-9df0-5e8bf9f77288
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /aries?ed=2048
-    ws-headers:
-      Host: scw-nl.cloudflare.quest
-  - name: 美国 CloudFlare节点 - 2
-    type: vmess
-    server: 172.64.195.14
-    port: 80
-    uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /
-    ws-headers:
-      Host: fr.v2ray1.xyz
-  - name: 美国+V2CROSS.COM
-    type: trojan
-    server: us2.trojanvh.xyz
-    port: '80'
-    password: 255c924c-1314-4084-9a9e-1d1a82a5cf49
-  - name: 南非 V2CROSS.COM
-    type: vmess
-    server: 156.225.67.121
-    port: 47744
-    uuid: 63b4b829-7f01-4e26-b037-f04b1f098765
+    server: 198.16.45.166
+    port: 53392
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
     alterId: 64
     cipher: auto
     udp: true
     network: tcp
-    ws-path: /reffs7y26g0ua
+    ws-path: /aceamedv
     ws-headers:
-      Host: surongwei.eu.org
-  - name: 俄罗斯 V2CROSS.COM
+      Host: ''
+  - name: 美国 CloudFlare节点
     type: vmess
-    server: 185.143.220.25
+    server: www.nivod4.tv
     port: 443
-    uuid: f28e354e-c2d1-4983-9b07-5acaf1b3b3e5
+    uuid: 56a2188b-2ab7-402c-b9b8-34847fdf0958
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /6e9EtZ2dL
+    ws-path: /5QNROSRV
     ws-headers:
-      Host: dengxin.one
+      Host: lg2.v2ray6.xyz
     tls: true
-  - name: 俄罗斯 V2CROSS.COM - 2
+  - name: 美国 CloudFlare节点 - 2
     type: vmess
-    server: 185.143.220.25
-    port: 443
-    uuid: f28e354e-c2d1-4983-9b07-5acaf1b3b3e5
+    server: lsb-gy.heinu.cf
+    port: 2096
+    uuid: d793c013-f596-4af9-de0a-2062bb864dd7
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /6e9EtZ2dL
+    ws-path: /@heinuhome
     ws-headers:
-      Host: dengxin.one
+      Host: lsb-gy.heinu.cf
     tls: true
+  - name: 香港 V2CROSS.COM
+    type: vmess
+    server: 156.245.8.66
+    port: 49519
+    uuid: 5a4d69ad-20a9-4941-b223-87bbd09f5f52
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: ''
+    ws-headers:
+      Host: ''
+  - name: 美国 CloudFlare节点 - 3
+    type: vmess
+    server: cf-lt.sharecentre.online
+    port: 80
+    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /shirker
+    ws-headers:
+      Host: lv2.sharecentrepro.org
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 澳大利亚 悉尼
+      - 美国 加你福尼亚洛杉矶Coperation Coloction数据中心
       - 美国 CloudFlare节点
       - 美国 CloudFlare节点 - 2
-      - 美国+V2CROSS.COM
-      - 南非 V2CROSS.COM
-      - 俄罗斯 V2CROSS.COM
-      - 俄罗斯 V2CROSS.COM - 2
+      - 香港 V2CROSS.COM
+      - 美国 CloudFlare节点 - 3
   - name: 自动选择
     type: url-test
     proxies:
-      - 澳大利亚 悉尼
+      - 美国 加你福尼亚洛杉矶Coperation Coloction数据中心
       - 美国 CloudFlare节点
       - 美国 CloudFlare节点 - 2
-      - 美国+V2CROSS.COM
-      - 南非 V2CROSS.COM
-      - 俄罗斯 V2CROSS.COM
-      - 俄罗斯 V2CROSS.COM - 2
+      - 香港 V2CROSS.COM
+      - 美国 CloudFlare节点 - 3
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 澳大利亚 悉尼
+      - 美国 加你福尼亚洛杉矶Coperation Coloction数据中心
       - 美国 CloudFlare节点
       - 美国 CloudFlare节点 - 2
-      - 美国+V2CROSS.COM
-      - 南非 V2CROSS.COM
-      - 俄罗斯 V2CROSS.COM
-      - 俄罗斯 V2CROSS.COM - 2
+      - 香港 V2CROSS.COM
+      - 美国 CloudFlare节点 - 3
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
