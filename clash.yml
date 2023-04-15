@@ -1,37 +1,8 @@
 proxies:
-  - name: 香港 V2CROSS.COM
+  - name: 美国 Datability
     type: vmess
-    server: 156.245.8.66
-    port: 49519
-    uuid: 5a4d69ad-20a9-4941-b223-87bbd09f5f52
-    alterId: 64
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: ''
-    ws-headers:
-      Host: ''
-  - name: 美国 CloudFlare节点
-    type: vmess
-    server: 172.67.140.193
-    port: 80
-    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /shirker
-    ws-headers:
-      Host: uk1.scproxy.top
-  - name: 上海市+电信
-    type: trojan
-    server: 116.192.171.97
-    port: 8443?security=tls&type=tcp&headerType=none
-    password: 5505f6ba-cd37-30ce-8f92-be4120c83d7f
-  - name: 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
-    type: vmess
-    server: 23.225.33.168
-    port: 56002
+    server: 140.99.149.43
+    port: 56882
     uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
     alterId: 64
     cipher: auto
@@ -40,53 +11,18 @@ proxies:
     ws-path: /
     ws-headers:
       Host: ''
-  - name: 伊朗 V2CROSS.COM
+  - name: 美国 加利福尼亚州圣何塞PEG TECH
     type: vmess
-    server: f-eu1.wvvvv.eu.org
-    port: 1
-    uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /
-    ws-headers:
-      Host: f-eu1.wvvvv.eu.org
-  - name: 美国 CloudFlare节点 - 2
-    type: vmess
-    server: cf-lt.sharecentre.online
-    port: 443
-    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /shirker
-    ws-headers:
-      Host: lv1.sharecentrepro.org
-    tls: true
-  - name: 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心 - 2
-    type: vmess
-    server: 23.224.14.116
-    port: 51552
+    server: 142.4.127.4
+    port: 53013
     uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
     alterId: 64
     cipher: auto
     udp: true
     network: tcp
-    ws-path: /shirker
+    ws-path: /
     ws-headers:
-      Host: hk-hytron.ilovescp.com
-  - name: 广东省广州市+移动
-    type: trojan
-    server: frontend.yijianlian.app
-    port: 54430?security=tls&type=tcp&headerType=none
-    password: b5e4e360-5946-470b-aad0-db98f50faa57
-  - name: 上海市+电信 - 2
-    type: trojan
-    server: official.taipeicitygovernment.kiev.ua
-    port: 8443?security=tls&sni=66.42.40.132&type=tcp&headerType=none
-    password: 5505f6ba-cd37-30ce-8f92-be4120c83d7f
+      Host: ''
   - name: 美国 V2CROSS.COM
     type: vmess
     server: f-us1.wvvvv.eu.org
@@ -99,22 +35,22 @@ proxies:
     ws-path: /
     ws-headers:
       Host: de01-cdn.airport-v2.com
-  - name: 美国 Amazon EC2服务器
+  - name: 北美地区 V2CROSS.COM
     type: vmess
-    server: f-as2.wvvvv.eu.org
-    port: 1
-    uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0
-    alterId: 0
+    server: 134.195.96.178
+    port: 666
+    uuid: 4ebc6214-33ab-37cc-a01a-ff97029db0f5
+    alterId: 2
     cipher: auto
     udp: true
-    network: tcp
-    ws-path: /
+    network: ws
+    ws-path: /v2ray
     ws-headers:
-      Host: f-as2.wvvvv.eu.org
-  - name: 美国 CloudFlare节点 - 3
+      Host: ''
+  - name: 美国 CloudFlare节点
     type: vmess
-    server: cf-lt.sharecentre.online
-    port: 80
+    server: dp1.scproxy.top
+    port: 443
     uuid: 2e496758-950e-4549-8842-d5eec98d9fde
     alterId: 0
     cipher: auto
@@ -122,57 +58,76 @@ proxies:
     network: ws
     ws-path: /shirker
     ws-headers:
-      Host: lv3.sharecentrepro.org
+      Host: dp1.scproxy.top
+    tls: true
+  - name: 美国 CloudFlare节点 - 2
+    type: vmess
+    server: cdn.moonfree.top
+    port: 8443
+    uuid: edf140f1-35e9-4160-b5a0-6b27f3419a6f
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /figure
+    ws-headers:
+      Host: usv6warp.happyfree.top
+    tls: true
+  - name: 美国+V2CROSS.COM
+    type: trojan
+    server: 152.70.74.66
+    port: 443?security=tls&type=tcp&headerType=none
+    password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
+  - name: 南非 V2CROSS.COM
+    type: vmess
+    server: 156.225.67.68
+    port: 45553
+    uuid: 11117d4c-3b6a-4e76-8bcc-2b41b3e9ca93
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /
+    ws-headers:
+      Host: ''
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 香港 V2CROSS.COM
-      - 美国 CloudFlare节点
-      - 上海市+电信
-      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
-      - 伊朗 V2CROSS.COM
-      - 美国 CloudFlare节点 - 2
-      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心 - 2
-      - 广东省广州市+移动
-      - 上海市+电信 - 2
+      - 美国 Datability
+      - 美国 加利福尼亚州圣何塞PEG TECH
       - 美国 V2CROSS.COM
-      - 美国 Amazon EC2服务器
-      - 美国 CloudFlare节点 - 3
+      - 北美地区 V2CROSS.COM
+      - 美国 CloudFlare节点
+      - 美国 CloudFlare节点 - 2
+      - 美国+V2CROSS.COM
+      - 南非 V2CROSS.COM
   - name: 自动选择
     type: url-test
     proxies:
-      - 香港 V2CROSS.COM
-      - 美国 CloudFlare节点
-      - 上海市+电信
-      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
-      - 伊朗 V2CROSS.COM
-      - 美国 CloudFlare节点 - 2
-      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心 - 2
-      - 广东省广州市+移动
-      - 上海市+电信 - 2
+      - 美国 Datability
+      - 美国 加利福尼亚州圣何塞PEG TECH
       - 美国 V2CROSS.COM
-      - 美国 Amazon EC2服务器
-      - 美国 CloudFlare节点 - 3
+      - 北美地区 V2CROSS.COM
+      - 美国 CloudFlare节点
+      - 美国 CloudFlare节点 - 2
+      - 美国+V2CROSS.COM
+      - 南非 V2CROSS.COM
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 香港 V2CROSS.COM
-      - 美国 CloudFlare节点
-      - 上海市+电信
-      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
-      - 伊朗 V2CROSS.COM
-      - 美国 CloudFlare节点 - 2
-      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心 - 2
-      - 广东省广州市+移动
-      - 上海市+电信 - 2
+      - 美国 Datability
+      - 美国 加利福尼亚州圣何塞PEG TECH
       - 美国 V2CROSS.COM
-      - 美国 Amazon EC2服务器
-      - 美国 CloudFlare节点 - 3
+      - 北美地区 V2CROSS.COM
+      - 美国 CloudFlare节点
+      - 美国 CloudFlare节点 - 2
+      - 美国+V2CROSS.COM
+      - 南非 V2CROSS.COM
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
