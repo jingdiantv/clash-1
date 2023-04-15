@@ -1,28 +1,9 @@
 proxies:
-  - name: 伊朗 V2CROSS.COM
-    type: vmess
-    server: f-eu1.wvvvv.eu.org
-    port: 1
-    uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /
-    ws-headers:
-      Host: f-eu1.wvvvv.eu.org
-  - name: 美国 CloudFlare节点
-    type: vmess
-    server: v143.toddns.tk
-    port: 80
-    uuid: a25881f3-967f-3265-bc7f-9e66857b016b
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /jp143-d2xddxxj
-    ws-headers:
-      Host: v143.toddns.tk
+  - name: 美国+V2CROSS.COM
+    type: trojan
+    server: us2.trojanvh.xyz
+    port: '80'
+    password: 255c924c-1314-4084-9a9e-1d1a82a5cf49
   - name: 南非豪登省约翰内斯堡 Cloudinnovation数据中心
     type: vmess
     server: 156.249.18.14
@@ -32,36 +13,78 @@ proxies:
     cipher: auto
     udp: true
     network: tcp
+    ws-path: ''
+    ws-headers:
+      Host: ''
+  - name: 南非 V2CROSS.COM
+    type: vmess
+    server: 156.225.67.166
+    port: 49920
+    uuid: ebec2adf-e940-446f-bed4-d8c91143b54a
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: tcp
     ws-path: /
     ws-headers:
       Host: ''
-  - name: 美国+Interland
-    type: trojan
-    server: hedy.taherfix1.site
-    port: 443?security=tls&type=tcp&headerType=none
-    password: 683ea3d3-eda1-42ba-ac7c-71a222821ff6
-  - name: 上海市+电信
-    type: trojan
-    server: 116.192.171.97
-    port: 8443?security=tls&type=tcp&headerType=none
-    password: 5505f6ba-cd37-30ce-8f92-be4120c83d7f
-  - name: 美国 CloudFlare节点 - 2
+  - name: 美国 加利福尼亚州圣何塞PEG TECH
     type: vmess
-    server: cdn.moonfree.top
-    port: 8443
-    uuid: edf140f1-35e9-4160-b5a0-6b27f3419a6f
+    server: 142.4.97.73
+    port: 44942
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /
+    ws-headers:
+      Host: lg.v2ray8.xyz
+  - name: 美国+惠普HP
+    type: trojan
+    server: hk2.microsoftjs.top
+    port: 80?security=tls&sni=tls.microsoftjs.top&type=tcp&headerType=none
+    password: 932fb8f8-e1ca-4339-9d71-2d74757fca41
+  - name: 美国+惠普HP - 2
+    type: trojan
+    server: hk10.microsoftjs.top
+    port: 443?security=tls&sni=tls.microsoftjs.top&type=tcp&headerType=none
+    password: 932fb8f8-e1ca-4339-9d71-2d74757fca41
+  - name: 中国 阿里云
+    type: vmess
+    server: n1681279110.edpmvga.cn
+    port: 443
+    uuid: 597b356c-637d-47db-abbc-25ce99d31d60
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /figure
+    ws-path: /
     ws-headers:
-      Host: usv6warp.happyfree.top
+      Host: n1681279110.edpmvga.cn
     tls: true
-  - name: 美国 加利福尼亚州洛杉矶PetaExpress
+  - name: 江西省南昌市+电信
+    type: trojan
+    server: 106.225.132.4
+    port: '19217'
+    password: 0e0e8057-810e-3b64-b8f5-19baa5f8fa2f
+  - name: 广东省东莞市 电信
     type: vmess
-    server: 107.148.195.20
-    port: 50014
+    server: pro01.my1188.org
+    port: 3143
+    uuid: 0a7b7974-7998-3637-ac1f-3174cee3f882
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /
+    ws-headers:
+      Host: hkt01.pqs-vds.in168.net
+    tls: true
+  - name: 美国 加利福尼亚州圣何塞PEG TECH数据中心
+    type: vmess
+    server: 192.74.242.138
+    port: 44667
     uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
     alterId: 64
     cipher: auto
@@ -70,157 +93,50 @@ proxies:
     ws-path: /
     ws-headers:
       Host: ''
-  - name: 香港 V2CROSS.COM
-    type: vmess
-    server: 156.245.8.166
-    port: 49920
-    uuid: b8df3ef1-887f-4ee4-855f-4f80416c2464
-    alterId: 64
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /shirker
-    ws-headers:
-      Host: ca.ilovescp.com
-  - name: 美国+Interland - 2
-    type: trojan
-    server: hedy.taherfix1.site
-    port: '443'
-    password: 683ea3d3-eda1-42ba-ac7c-71a222821ff6
-  - name: 广东省东莞市 电信
-    type: vmess
-    server: pro01.my1188.org
-    port: 3103
-    uuid: 0a7b7974-7998-3637-ac1f-3174cee3f882
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /
-    ws-headers:
-      Host: ru02.iepl.nbsd.us
-    tls: true
-  - name: 美国 CloudFlare节点 - 3
-    type: vmess
-    server: cf.515188.xyz
-    port: 8080
-    uuid: 9d553e2b-4176-44ef-bf70-48aa8eb6da60
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /api/v3/download.getFile
-    ws-headers:
-      Host: ssrsub.v03.ssrsub.com
-  - name: 广东省东莞市 电信 - 2
-    type: vmess
-    server: pro01.my1188.org
-    port: 3073
-    uuid: 0a7b7974-7998-3637-ac1f-3174cee3f882
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /
-    ws-headers:
-      Host: tw03.yaofan.in168.net
-    tls: true
-  - name: 加拿大+V2CROSS.COM
-    type: trojan
-    server: 625tw.ljydw.top
-    port: 80?security=tls&sni=625tw.ljydw.top&type=tcp&headerType=none
-    password: 4d128a6d-eaf9-4ae2-8665-f39b1d492e7c
-  - name: 美国 V2CROSS.COM
-    type: vmess
-    server: f-us1.wvvvv.eu.org
-    port: 20
-    uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /
-    ws-headers:
-      Host: de01-cdn.airport-v2.com
-  - name: 美国+惠普HP
-    type: trojan
-    server: hk12.microsoftjs.top
-    port: 443?security=tls&sni=tls.microsoftjs.top&type=tcp&headerType=none
-    password: 932fb8f8-e1ca-4339-9d71-2d74757fca41
-  - name: 美国 惠普HP
-    type: vmess
-    server: jp10.microsoftjs.top
-    port: 80
-    uuid: 932fb8f8-e1ca-4339-9d71-2d74757fca41
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /filestreamingservice/files/20f813e2-036a-42a8-92e2-a3a55a0b239b
-    ws-headers:
-      Host: tlu.dl.delivery.mp.microsoft.com
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 伊朗 V2CROSS.COM
-      - 美国 CloudFlare节点
+      - 美国+V2CROSS.COM
       - 南非豪登省约翰内斯堡 Cloudinnovation数据中心
-      - 美国+Interland
-      - 上海市+电信
-      - 美国 CloudFlare节点 - 2
-      - 美国 加利福尼亚州洛杉矶PetaExpress
-      - 香港 V2CROSS.COM
-      - 美国+Interland - 2
-      - 广东省东莞市 电信
-      - 美国 CloudFlare节点 - 3
-      - 广东省东莞市 电信 - 2
-      - 加拿大+V2CROSS.COM
-      - 美国 V2CROSS.COM
+      - 南非 V2CROSS.COM
+      - 美国 加利福尼亚州圣何塞PEG TECH
       - 美国+惠普HP
-      - 美国 惠普HP
+      - 美国+惠普HP - 2
+      - 中国 阿里云
+      - 江西省南昌市+电信
+      - 广东省东莞市 电信
+      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
   - name: 自动选择
     type: url-test
     proxies:
-      - 伊朗 V2CROSS.COM
-      - 美国 CloudFlare节点
+      - 美国+V2CROSS.COM
       - 南非豪登省约翰内斯堡 Cloudinnovation数据中心
-      - 美国+Interland
-      - 上海市+电信
-      - 美国 CloudFlare节点 - 2
-      - 美国 加利福尼亚州洛杉矶PetaExpress
-      - 香港 V2CROSS.COM
-      - 美国+Interland - 2
-      - 广东省东莞市 电信
-      - 美国 CloudFlare节点 - 3
-      - 广东省东莞市 电信 - 2
-      - 加拿大+V2CROSS.COM
-      - 美国 V2CROSS.COM
+      - 南非 V2CROSS.COM
+      - 美国 加利福尼亚州圣何塞PEG TECH
       - 美国+惠普HP
-      - 美国 惠普HP
+      - 美国+惠普HP - 2
+      - 中国 阿里云
+      - 江西省南昌市+电信
+      - 广东省东莞市 电信
+      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 伊朗 V2CROSS.COM
-      - 美国 CloudFlare节点
+      - 美国+V2CROSS.COM
       - 南非豪登省约翰内斯堡 Cloudinnovation数据中心
-      - 美国+Interland
-      - 上海市+电信
-      - 美国 CloudFlare节点 - 2
-      - 美国 加利福尼亚州洛杉矶PetaExpress
-      - 香港 V2CROSS.COM
-      - 美国+Interland - 2
-      - 广东省东莞市 电信
-      - 美国 CloudFlare节点 - 3
-      - 广东省东莞市 电信 - 2
-      - 加拿大+V2CROSS.COM
-      - 美国 V2CROSS.COM
+      - 南非 V2CROSS.COM
+      - 美国 加利福尼亚州圣何塞PEG TECH
       - 美国+惠普HP
-      - 美国 惠普HP
+      - 美国+惠普HP - 2
+      - 中国 阿里云
+      - 江西省南昌市+电信
+      - 广东省东莞市 电信
+      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
