@@ -1,21 +1,33 @@
 proxies:
-  - name: 美国 惠普HP
+  - name: 伊朗 V2CROSS.COM
     type: vmess
-    server: jp10.microsoftjs.top
+    server: f-eu1.wvvvv.eu.org
+    port: 1
+    uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /
+    ws-headers:
+      Host: f-eu1.wvvvv.eu.org
+  - name: 美国 CloudFlare节点
+    type: vmess
+    server: v143.toddns.tk
     port: 80
-    uuid: 932fb8f8-e1ca-4339-9d71-2d74757fca41
+    uuid: a25881f3-967f-3265-bc7f-9e66857b016b
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /filestreamingservice/files/20f813e2-036a-42a8-92e2-a3a55a0b239b
+    ws-path: /jp143-d2xddxxj
     ws-headers:
-      Host: tlu.dl.delivery.mp.microsoft.com
-  - name: 南非 V2CROSS.COM
+      Host: v143.toddns.tk
+  - name: 南非豪登省约翰内斯堡 Cloudinnovation数据中心
     type: vmess
-    server: 156.225.67.68
-    port: 45553
-    uuid: 11117d4c-3b6a-4e76-8bcc-2b41b3e9ca93
+    server: 156.249.18.14
+    port: 49220
+    uuid: 375e70f0-5d46-476f-8d69-0fb35c5548a9
     alterId: 64
     cipher: auto
     udp: true
@@ -23,6 +35,58 @@ proxies:
     ws-path: /
     ws-headers:
       Host: ''
+  - name: 美国+Interland
+    type: trojan
+    server: hedy.taherfix1.site
+    port: 443?security=tls&type=tcp&headerType=none
+    password: 683ea3d3-eda1-42ba-ac7c-71a222821ff6
+  - name: 上海市+电信
+    type: trojan
+    server: 116.192.171.97
+    port: 8443?security=tls&type=tcp&headerType=none
+    password: 5505f6ba-cd37-30ce-8f92-be4120c83d7f
+  - name: 美国 CloudFlare节点 - 2
+    type: vmess
+    server: cdn.moonfree.top
+    port: 8443
+    uuid: edf140f1-35e9-4160-b5a0-6b27f3419a6f
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /figure
+    ws-headers:
+      Host: usv6warp.happyfree.top
+    tls: true
+  - name: 美国 加利福尼亚州洛杉矶PetaExpress
+    type: vmess
+    server: 107.148.195.20
+    port: 50014
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /
+    ws-headers:
+      Host: ''
+  - name: 香港 V2CROSS.COM
+    type: vmess
+    server: 156.245.8.166
+    port: 49920
+    uuid: b8df3ef1-887f-4ee4-855f-4f80416c2464
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /shirker
+    ws-headers:
+      Host: ca.ilovescp.com
+  - name: 美国+Interland - 2
+    type: trojan
+    server: hedy.taherfix1.site
+    port: '443'
+    password: 683ea3d3-eda1-42ba-ac7c-71a222821ff6
   - name: 广东省东莞市 电信
     type: vmess
     server: pro01.my1188.org
@@ -36,10 +100,22 @@ proxies:
     ws-headers:
       Host: ru02.iepl.nbsd.us
     tls: true
+  - name: 美国 CloudFlare节点 - 3
+    type: vmess
+    server: cf.515188.xyz
+    port: 8080
+    uuid: 9d553e2b-4176-44ef-bf70-48aa8eb6da60
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /api/v3/download.getFile
+    ws-headers:
+      Host: ssrsub.v03.ssrsub.com
   - name: 广东省东莞市 电信 - 2
     type: vmess
-    server: in06.my1188.org
-    port: 63091
+    server: pro01.my1188.org
+    port: 3073
     uuid: 0a7b7974-7998-3637-ac1f-3174cee3f882
     alterId: 0
     cipher: auto
@@ -47,140 +123,104 @@ proxies:
     network: ws
     ws-path: /
     ws-headers:
-      Host: uk01-cdn.airport-v2.com
-  - name: 新加坡+腾讯云
+      Host: tw03.yaofan.in168.net
+    tls: true
+  - name: 加拿大+V2CROSS.COM
     type: trojan
-    server: 316sg01.ljydw.top
-    port: 443?security=tls&sni=316sg01.ljydw.top&type=tcp&headerType=none
+    server: 625tw.ljydw.top
+    port: 80?security=tls&sni=625tw.ljydw.top&type=tcp&headerType=none
     password: 4d128a6d-eaf9-4ae2-8665-f39b1d492e7c
-  - name: 上海市 联通
-    type: vmess
-    server: 223.167.41.202
-    port: 63082
-    uuid: 109dcd26-d9e4-3b23-ba25-365505c40944
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /
-    ws-headers:
-      Host: hkt3-cdn.tencent.best
-  - name: 上海市+电信
-    type: trojan
-    server: official.taipeicitygovernment.kiev.ua
-    port: 8443?security=tls&sni=66.42.40.132&type=tcp&headerType=none
-    password: 5505f6ba-cd37-30ce-8f92-be4120c83d7f
-  - name: 美国 加利福尼亚州圣何塞PEG TECH数据中心
-    type: vmess
-    server: 192.74.232.247
-    port: 51802
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /
-    ws-headers:
-      Host: ''
-  - name: 美国 CloudFlare节点
-    type: vmess
-    server: 172.67.140.193
-    port: 80
-    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /shirker
-    ws-headers:
-      Host: uk1.scproxy.top
-  - name: 澳大利亚 悉尼
-    type: vmess
-    server: 203.24.108.100
-    port: 80
-    uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /
-    ws-headers:
-      Host: lg.v2ray8.xyz
   - name: 美国 V2CROSS.COM
     type: vmess
-    server: 143.42.87.69
-    port: 443
-    uuid: 927094d3-d678-4763-8591-e240d0bcae87
+    server: f-us1.wvvvv.eu.org
+    port: 20
+    uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0
     alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /chat
-    ws-headers:
-      Host: 143.42.87.69
-    tls: true
-  - name: 南非 V2CROSS.COM - 2
-    type: vmess
-    server: 156.225.67.76
-    port: 42882
-    uuid: 3e016c4d-986e-42df-838c-6046f3d89ecf
-    alterId: 64
     cipher: auto
     udp: true
     network: tcp
     ws-path: /
     ws-headers:
-      Host: ''
+      Host: de01-cdn.airport-v2.com
+  - name: 美国+惠普HP
+    type: trojan
+    server: hk12.microsoftjs.top
+    port: 443?security=tls&sni=tls.microsoftjs.top&type=tcp&headerType=none
+    password: 932fb8f8-e1ca-4339-9d71-2d74757fca41
+  - name: 美国 惠普HP
+    type: vmess
+    server: jp10.microsoftjs.top
+    port: 80
+    uuid: 932fb8f8-e1ca-4339-9d71-2d74757fca41
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /filestreamingservice/files/20f813e2-036a-42a8-92e2-a3a55a0b239b
+    ws-headers:
+      Host: tlu.dl.delivery.mp.microsoft.com
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 美国 惠普HP
-      - 南非 V2CROSS.COM
-      - 广东省东莞市 电信
-      - 广东省东莞市 电信 - 2
-      - 新加坡+腾讯云
-      - 上海市 联通
-      - 上海市+电信
-      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
+      - 伊朗 V2CROSS.COM
       - 美国 CloudFlare节点
-      - 澳大利亚 悉尼
+      - 南非豪登省约翰内斯堡 Cloudinnovation数据中心
+      - 美国+Interland
+      - 上海市+电信
+      - 美国 CloudFlare节点 - 2
+      - 美国 加利福尼亚州洛杉矶PetaExpress
+      - 香港 V2CROSS.COM
+      - 美国+Interland - 2
+      - 广东省东莞市 电信
+      - 美国 CloudFlare节点 - 3
+      - 广东省东莞市 电信 - 2
+      - 加拿大+V2CROSS.COM
       - 美国 V2CROSS.COM
-      - 南非 V2CROSS.COM - 2
+      - 美国+惠普HP
+      - 美国 惠普HP
   - name: 自动选择
     type: url-test
     proxies:
-      - 美国 惠普HP
-      - 南非 V2CROSS.COM
-      - 广东省东莞市 电信
-      - 广东省东莞市 电信 - 2
-      - 新加坡+腾讯云
-      - 上海市 联通
-      - 上海市+电信
-      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
+      - 伊朗 V2CROSS.COM
       - 美国 CloudFlare节点
-      - 澳大利亚 悉尼
+      - 南非豪登省约翰内斯堡 Cloudinnovation数据中心
+      - 美国+Interland
+      - 上海市+电信
+      - 美国 CloudFlare节点 - 2
+      - 美国 加利福尼亚州洛杉矶PetaExpress
+      - 香港 V2CROSS.COM
+      - 美国+Interland - 2
+      - 广东省东莞市 电信
+      - 美国 CloudFlare节点 - 3
+      - 广东省东莞市 电信 - 2
+      - 加拿大+V2CROSS.COM
       - 美国 V2CROSS.COM
-      - 南非 V2CROSS.COM - 2
+      - 美国+惠普HP
+      - 美国 惠普HP
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 美国 惠普HP
-      - 南非 V2CROSS.COM
-      - 广东省东莞市 电信
-      - 广东省东莞市 电信 - 2
-      - 新加坡+腾讯云
-      - 上海市 联通
-      - 上海市+电信
-      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
+      - 伊朗 V2CROSS.COM
       - 美国 CloudFlare节点
-      - 澳大利亚 悉尼
+      - 南非豪登省约翰内斯堡 Cloudinnovation数据中心
+      - 美国+Interland
+      - 上海市+电信
+      - 美国 CloudFlare节点 - 2
+      - 美国 加利福尼亚州洛杉矶PetaExpress
+      - 香港 V2CROSS.COM
+      - 美国+Interland - 2
+      - 广东省东莞市 电信
+      - 美国 CloudFlare节点 - 3
+      - 广东省东莞市 电信 - 2
+      - 加拿大+V2CROSS.COM
       - 美国 V2CROSS.COM
-      - 南非 V2CROSS.COM - 2
+      - 美国+惠普HP
+      - 美国 惠普HP
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
