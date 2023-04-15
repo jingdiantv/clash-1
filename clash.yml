@@ -1,33 +1,9 @@
 proxies:
-  - name: 美国 CloudFlare节点
+  - name: 湖南省 移动(全省通用)
     type: vmess
-    server: cf.noaries.de
-    port: 2052
-    uuid: 4f7d5d43-226e-48d8-9df0-5e8bf9f77288
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /aries?ed=2048
-    ws-headers:
-      Host: scw-nl.cloudflare.quest
-  - name: 印度 V2CROSS.COM
-    type: vmess
-    server: 103.160.204.14
-    port: 80
-    uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /
-    ws-headers:
-      Host: fr.v2ray1.xyz
-  - name: 南非 V2CROSS.COM
-    type: vmess
-    server: 156.225.67.74
-    port: 53208
-    uuid: 21155efd-8e29-43d2-95bc-fe3190ecb1c6
+    server: 111.23.252.214
+    port: 59902
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
     alterId: 64
     cipher: auto
     udp: true
@@ -35,52 +11,83 @@ proxies:
     ws-path: /
     ws-headers:
       Host: ''
-  - name: 美国 CloudFlare节点 - 2
+  - name: 美国 CloudFlare节点
     type: vmess
-    server: 172.64.195.14
+    server: 162.159.255.205
     port: 80
-    uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a
+    uuid: 52466dc2-3550-4310-910c-74b7bf8a020e
     alterId: 0
     cipher: auto
     udp: true
     network: ws
     ws-path: /
     ws-headers:
-      Host: fr.v2ray1.xyz
-  - name: 美国+V2CROSS.COM
-    type: trojan
-    server: us2.trojanvh.xyz
-    port: '80'
-    password: 255c924c-1314-4084-9a9e-1d1a82a5cf49
+      Host: us-1.acyun.eu.org
+  - name: 伊朗 V2CROSS.COM
+    type: vmess
+    server: f-eu1.wvvvv.eu.org
+    port: 80
+    uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /masvod/public/2023/03/07/20230307_186bb7147ea_r1_1200k.mp4
+    ws-headers:
+      Host: svideo.mfa.gov.cn
+  - name: 香港 V2CROSS.COM
+    type: vmess
+    server: 156.245.8.66
+    port: 49519
+    uuid: 5a4d69ad-20a9-4941-b223-87bbd09f5f52
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: ''
+    ws-headers:
+      Host: ''
+  - name: 南非 V2CROSS.COM
+    type: vmess
+    server: 156.225.67.121
+    port: 47744
+    uuid: 63b4b829-7f01-4e26-b037-f04b1f098765
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /reffs7y26g0ua
+    ws-headers:
+      Host: surongwei.eu.org
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
+      - 湖南省 移动(全省通用)
       - 美国 CloudFlare节点
-      - 印度 V2CROSS.COM
+      - 伊朗 V2CROSS.COM
+      - 香港 V2CROSS.COM
       - 南非 V2CROSS.COM
-      - 美国 CloudFlare节点 - 2
-      - 美国+V2CROSS.COM
   - name: 自动选择
     type: url-test
     proxies:
+      - 湖南省 移动(全省通用)
       - 美国 CloudFlare节点
-      - 印度 V2CROSS.COM
+      - 伊朗 V2CROSS.COM
+      - 香港 V2CROSS.COM
       - 南非 V2CROSS.COM
-      - 美国 CloudFlare节点 - 2
-      - 美国+V2CROSS.COM
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
+      - 湖南省 移动(全省通用)
       - 美国 CloudFlare节点
-      - 印度 V2CROSS.COM
+      - 伊朗 V2CROSS.COM
+      - 香港 V2CROSS.COM
       - 南非 V2CROSS.COM
-      - 美国 CloudFlare节点 - 2
-      - 美国+V2CROSS.COM
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
