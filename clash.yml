@@ -1,29 +1,21 @@
 proxies:
-  - name: 丹麦 V2CROSS.COM
+  - name: 台湾省宜兰县 中华电信
     type: vmess
-    server: 185.162.228.1
-    port: 443
-    uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
+    server: polotw1.applebench.tech
+    port: 56568
+    uuid: 5b011960-a3bf-4b6a-8f10-5eda0815728b
     alterId: 0
     cipher: auto
     udp: true
-    network: ws
-    ws-path: /ECTCJ0DF
+    network: tcp
+    ws-path: /
     ws-headers:
-      Host: 154.v2ray3.xyz
-    tls: true
-  - name: 美国 CloudFlare节点
-    type: vmess
-    server: target.292228.xyz
-    port: 80
-    uuid: 22873fd1-2db8-4820-af1d-2843107ee744
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /filetransfer
-    ws-headers:
-      Host: us-west-1.292228.xyz
+      Host: polotw1.applebench.tech
+  - name: 美国+Interland
+    type: trojan
+    server: hedy.taherfix1.site
+    port: '443'
+    password: 683ea3d3-eda1-42ba-ac7c-71a222821ff6
   - name: 立陶宛 V2CROSS.COM
     type: vmess
     server: 185.148.104.215
@@ -49,41 +41,47 @@ proxies:
     ws-path: /
     ws-headers:
       Host: ''
-  - name: 沙特阿拉伯+Arabic+Computer+System+Co.
-    type: ss
-    server: 85.208.108.94
-    port: '5600'
-    cipher: aes-256-gcm
-    password: Y6R9pAtvxxzmGC
+  - name: 南非 V2CROSS.COM - 2
+    type: vmess
+    server: 156.225.67.166
+    port: 49920
+    uuid: ebec2adf-e940-446f-bed4-d8c91143b54a
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /
+    ws-headers:
+      Host: ''
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 丹麦 V2CROSS.COM
-      - 美国 CloudFlare节点
+      - 台湾省宜兰县 中华电信
+      - 美国+Interland
       - 立陶宛 V2CROSS.COM
       - 南非 V2CROSS.COM
-      - 沙特阿拉伯+Arabic+Computer+System+Co.
+      - 南非 V2CROSS.COM - 2
   - name: 自动选择
     type: url-test
     proxies:
-      - 丹麦 V2CROSS.COM
-      - 美国 CloudFlare节点
+      - 台湾省宜兰县 中华电信
+      - 美国+Interland
       - 立陶宛 V2CROSS.COM
       - 南非 V2CROSS.COM
-      - 沙特阿拉伯+Arabic+Computer+System+Co.
+      - 南非 V2CROSS.COM - 2
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 丹麦 V2CROSS.COM
-      - 美国 CloudFlare节点
+      - 台湾省宜兰县 中华电信
+      - 美国+Interland
       - 立陶宛 V2CROSS.COM
       - 南非 V2CROSS.COM
-      - 沙特阿拉伯+Arabic+Computer+System+Co.
+      - 南非 V2CROSS.COM - 2
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
