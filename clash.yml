@@ -1,17 +1,40 @@
 proxies:
   - name: 美国 V2CROSS.COM
     type: vmess
-    server: vde2.0bad.com
-    port: 443
-    uuid: 927094d3-d678-4763-8591-e240d0bcae87
+    server: f-us1.wvvvv.eu.org
+    port: 20
+    uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0
     alterId: 0
     cipher: auto
     udp: true
-    network: ws
-    ws-path: /chat
+    network: tcp
+    ws-path: /
     ws-headers:
-      Host: vde2.0bad.com
-    tls: true
+      Host: de01-cdn.airport-v2.com
+  - name: 沙特阿拉伯+Arabic+Computer+System+Co.
+    type: ss
+    server: 85.208.108.94
+    port: '5001'
+    cipher: aes-256-gcm
+    password: Y6R9pAtvxxzmGC
+  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 2
+    type: ss
+    server: 85.208.108.94
+    port: '6679'
+    cipher: aes-256-gcm
+    password: TEzjfAYq2IjtuoS
+  - name: 伊朗 V2CROSS.COM
+    type: vmess
+    server: f-eu1.wvvvv.eu.org
+    port: 1
+    uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /
+    ws-headers:
+      Host: f-eu1.wvvvv.eu.org
   - name: 美国 加利福尼亚州圣何塞PEG TECH
     type: vmess
     server: 142.4.127.152
@@ -24,60 +47,23 @@ proxies:
     ws-path: /
     ws-headers:
       Host: ''
-  - name: 沙特阿拉伯+Arabic+Computer+System+Co.
-    type: ss
-    server: 85.208.108.94
-    port: '7001'
-    cipher: aes-256-gcm
-    password: RexnBgU7EV5ADxG
-  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 2
+  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 3
     type: ss
     server: 85.208.108.94
     port: '5601'
     cipher: aes-256-gcm
     password: Y6R9pAtvxxzmGC
-  - name: 广东省佛山市 移动
-    type: vmess
-    server: 25.v2-ray.cyou
-    port: 23625
-    uuid: 0dd19d20-ec86-3680-b256-87237bafa89e
-    alterId: 2
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /
-    ws-headers:
-      Host: 25.v2-ray.cyou
-  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 3
+  - name: 美国+加利福尼亚州圣何塞ColoCrossing数据中心
+    type: trojan
+    server: rn.blowm1k.club
+    port: '14978'
+    password: f5mpynwukL
+  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 4
     type: ss
     server: 85.208.108.94
-    port: '8119'
+    port: '7001'
     cipher: aes-256-gcm
-    password: cdBIDV42DCwnfIN
-  - name: 美国 加利福尼亚州洛杉矶Sharktech数据中心
-    type: vmess
-    server: 64.32.20.91
-    port: 45809
-    uuid: c1bad9a6-1482-4941-a0c4-e85f3cbbcb5a
-    alterId: 64
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: ''
-    ws-headers:
-      Host: ''
-  - name: 越南 V2CROSS.COM
-    type: vmess
-    server: f-as1.wvvvv.eu.org
-    port: 20
-    uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /
-    ws-headers:
-      Host: f-as1.wvvvv.eu.org
+    password: RexnBgU7EV5ADxG
 proxy-groups:
   - name: Free-servers
     type: select
@@ -85,37 +71,37 @@ proxy-groups:
       - 自动选择
       - 故障转移
       - 美国 V2CROSS.COM
-      - 美国 加利福尼亚州圣何塞PEG TECH
       - 沙特阿拉伯+Arabic+Computer+System+Co.
       - 沙特阿拉伯+Arabic+Computer+System+Co. - 2
-      - 广东省佛山市 移动
+      - 伊朗 V2CROSS.COM
+      - 美国 加利福尼亚州圣何塞PEG TECH
       - 沙特阿拉伯+Arabic+Computer+System+Co. - 3
-      - 美国 加利福尼亚州洛杉矶Sharktech数据中心
-      - 越南 V2CROSS.COM
+      - 美国+加利福尼亚州圣何塞ColoCrossing数据中心
+      - 沙特阿拉伯+Arabic+Computer+System+Co. - 4
   - name: 自动选择
     type: url-test
     proxies:
       - 美国 V2CROSS.COM
-      - 美国 加利福尼亚州圣何塞PEG TECH
       - 沙特阿拉伯+Arabic+Computer+System+Co.
       - 沙特阿拉伯+Arabic+Computer+System+Co. - 2
-      - 广东省佛山市 移动
+      - 伊朗 V2CROSS.COM
+      - 美国 加利福尼亚州圣何塞PEG TECH
       - 沙特阿拉伯+Arabic+Computer+System+Co. - 3
-      - 美国 加利福尼亚州洛杉矶Sharktech数据中心
-      - 越南 V2CROSS.COM
+      - 美国+加利福尼亚州圣何塞ColoCrossing数据中心
+      - 沙特阿拉伯+Arabic+Computer+System+Co. - 4
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
       - 美国 V2CROSS.COM
-      - 美国 加利福尼亚州圣何塞PEG TECH
       - 沙特阿拉伯+Arabic+Computer+System+Co.
       - 沙特阿拉伯+Arabic+Computer+System+Co. - 2
-      - 广东省佛山市 移动
+      - 伊朗 V2CROSS.COM
+      - 美国 加利福尼亚州圣何塞PEG TECH
       - 沙特阿拉伯+Arabic+Computer+System+Co. - 3
-      - 美国 加利福尼亚州洛杉矶Sharktech数据中心
-      - 越南 V2CROSS.COM
+      - 美国+加利福尼亚州圣何塞ColoCrossing数据中心
+      - 沙特阿拉伯+Arabic+Computer+System+Co. - 4
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
