@@ -1,43 +1,7 @@
 proxies:
-  - name: 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
+  - name: 越南 V2CROSS.COM
     type: vmess
-    server: 23.224.14.116
-    port: 51552
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /shirker
-    ws-headers:
-      Host: hk-hytron.ilovescp.com
-  - name: 沙特阿拉伯+Arabic+Computer+System+Co.
-    type: ss
-    server: 85.208.108.60
-    port: '5601'
-    cipher: aes-256-gcm
-    password: Y6R9pAtvxxzmGC
-  - name: 南非 V2CROSS.COM
-    type: vmess
-    server: 156.225.67.76
-    port: 42882
-    uuid: 3e016c4d-986e-42df-838c-6046f3d89ecf
-    alterId: 64
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /
-    ws-headers:
-      Host: ''
-  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 2
-    type: ss
-    server: 85.208.108.60
-    port: '8090'
-    cipher: aes-256-gcm
-    password: PCnnH6SQSnfoS27
-  - name: 美国 V2CROSS.COM
-    type: vmess
-    server: f-us1.wvvvv.eu.org
+    server: f-as1.wvvvv.eu.org
     port: 20
     uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0
     alterId: 0
@@ -46,61 +10,102 @@ proxies:
     network: tcp
     ws-path: /
     ws-headers:
-      Host: de01-cdn.airport-v2.com
-  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 3
-    type: ss
-    server: 85.208.108.60
-    port: '5500'
-    cipher: aes-256-gcm
-    password: KixLvKzwjekG00rm
-  - name: 美国 CloudFlare节点
+      Host: f-as1.wvvvv.eu.org
+  - name: 广东省东莞市 电信
     type: vmess
-    server: dp1.scproxy.top
-    port: 443
-    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
+    server: pro01.my1188.org
+    port: 3143
+    uuid: 0a7b7974-7998-3637-ac1f-3174cee3f882
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /shirker
+    ws-path: /
     ws-headers:
-      Host: dp1.scproxy.top
+      Host: hkt01.pqs-vds.in168.net
     tls: true
+  - name: 美国 加利福尼亚州圣何塞PEG TECH
+    type: vmess
+    server: 142.4.126.74
+    port: 31002
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /
+    ws-headers:
+      Host: ''
+  - name: 美国+V2CROSS.COM
+    type: trojan
+    server: 152.70.74.66
+    port: 443?security=tls&type=tcp&headerType=none
+    password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
+  - name: 美国加利福尼亚州洛杉矶 PetaExpress
+    type: vmess
+    server: 198.2.203.35
+    port: 50002
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /
+    ws-headers:
+      Host: ''
+  - name: 沙特阿拉伯+Arabic+Computer+System+Co.
+    type: ss
+    server: 85.208.108.60
+    port: '8888'
+    cipher: aes-256-gcm
+    password: Y6R9pAtvxxzmGC
+  - name: 南非 V2CROSS.COM
+    type: vmess
+    server: 156.225.67.68
+    port: 45553
+    uuid: 11117d4c-3b6a-4e76-8bcc-2b41b3e9ca93
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /
+    ws-headers:
+      Host: ''
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
+      - 越南 V2CROSS.COM
+      - 广东省东莞市 电信
+      - 美国 加利福尼亚州圣何塞PEG TECH
+      - 美国+V2CROSS.COM
+      - 美国加利福尼亚州洛杉矶 PetaExpress
       - 沙特阿拉伯+Arabic+Computer+System+Co.
       - 南非 V2CROSS.COM
-      - 沙特阿拉伯+Arabic+Computer+System+Co. - 2
-      - 美国 V2CROSS.COM
-      - 沙特阿拉伯+Arabic+Computer+System+Co. - 3
-      - 美国 CloudFlare节点
   - name: 自动选择
     type: url-test
     proxies:
-      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
+      - 越南 V2CROSS.COM
+      - 广东省东莞市 电信
+      - 美国 加利福尼亚州圣何塞PEG TECH
+      - 美国+V2CROSS.COM
+      - 美国加利福尼亚州洛杉矶 PetaExpress
       - 沙特阿拉伯+Arabic+Computer+System+Co.
       - 南非 V2CROSS.COM
-      - 沙特阿拉伯+Arabic+Computer+System+Co. - 2
-      - 美国 V2CROSS.COM
-      - 沙特阿拉伯+Arabic+Computer+System+Co. - 3
-      - 美国 CloudFlare节点
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
+      - 越南 V2CROSS.COM
+      - 广东省东莞市 电信
+      - 美国 加利福尼亚州圣何塞PEG TECH
+      - 美国+V2CROSS.COM
+      - 美国加利福尼亚州洛杉矶 PetaExpress
       - 沙特阿拉伯+Arabic+Computer+System+Co.
       - 南非 V2CROSS.COM
-      - 沙特阿拉伯+Arabic+Computer+System+Co. - 2
-      - 美国 V2CROSS.COM
-      - 沙特阿拉伯+Arabic+Computer+System+Co. - 3
-      - 美国 CloudFlare节点
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
