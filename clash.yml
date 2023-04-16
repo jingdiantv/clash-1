@@ -1,75 +1,10 @@
 proxies:
-  - name: 北美地区+V2CROSS.COM
-    type: trojan
-    server: lsj.tstv2raysse.top
-    port: '58850'
-    password: 799c66fa-1188-4d89-bc94-9a6b9587c1b0
   - name: 沙特阿拉伯+Arabic+Computer+System+Co.
-    type: ss
-    server: 85.208.108.94
-    port: '9101'
-    cipher: aes-256-gcm
-    password: e4FCWrgpkji3QY
-  - name: 美国+加利福尼亚州圣何塞ColoCrossing数据中心
-    type: trojan
-    server: rn.blowm1k.club
-    port: '14978'
-    password: f5mpynwukL
-  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 2
-    type: ss
-    server: 85.208.108.94
-    port: '5000'
-    cipher: aes-256-gcm
-    password: Y6R9pAtvxxzmGC
-  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 3
     type: ss
     server: 85.208.108.94
     port: '3306'
     cipher: aes-256-gcm
     password: Y6R9pAtvxxzmGC
-  - name: 美国 Merit网络公司
-    type: vmess
-    server: okvtwo-pikachujp.cloud.okteto.net
-    port: 443
-    uuid: fdcf5262-8b5d-40fe-873c-fd5ffb4ca960
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /vmess
-    ws-headers:
-      Host: okvtwo-pikachujp.cloud.okteto.net
-    tls: true
-  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 4
-    type: ss
-    server: 85.208.108.94
-    port: '7001'
-    cipher: aes-256-gcm
-    password: RexnBgU7EV5ADxG
-  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 5
-    type: ss
-    server: 85.208.108.94
-    port: '8000'
-    cipher: aes-256-gcm
-    password: KixLvKzwjekG00rm
-  - name: 美国 Amazon EC2服务器
-    type: vmess
-    server: pop.china.gfwcaonimanmsl.ml
-    port: 10010
-    uuid: 3b8fb6a5-1193-4bb4-a4bd-5ea854d1350f
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /name
-    ws-headers:
-      Host: pop.china.gfwcaonimanmsl.ml
-  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 6
-    type: ss
-    server: 85.208.108.94
-    port: '8090'
-    cipher: aes-256-gcm
-    password: PCnnH6SQSnfoS27
   - name: 美国 加利福尼亚州圣何塞PEG TECH数据中心
     type: vmess
     server: 192.74.228.172
@@ -82,77 +17,146 @@ proxies:
     ws-path: /
     ws-headers:
       Host: ''
-  - name: 韩国 首尔Amazon数据中心
+  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 2
+    type: ss
+    server: 85.208.108.94
+    port: '7002'
+    cipher: aes-256-gcm
+    password: RexnBgU7EV5ADxG
+  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 3
+    type: ss
+    server: 85.208.108.94
+    port: '8091'
+    cipher: aes-256-gcm
+    password: PCnnH6SQSnfoS27
+  - name: 美国+弗吉尼亚州阿什本Amazon数据中心
+    type: trojan
+    server: aws.blowm1k.club
+    port: '20532'
+    password: SbCfIK4dKM
+  - name: 美国 Datability
     type: vmess
-    server: f-as2.wvvvv.eu.org
-    port: 1
-    uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0
-    alterId: 0
+    server: 140.99.149.43
+    port: 56882
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
     cipher: auto
     udp: true
     network: tcp
     ws-path: /
     ws-headers:
-      Host: f-as2.wvvvv.eu.org
-  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 7
+      Host: ''
+  - name: 美国 V2CROSS.COM
+    type: vmess
+    server: vuk1.0bad.com
+    port: 443
+    uuid: 927094d3-d678-4763-8591-e240d0bcae87
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /chat
+    ws-headers:
+      Host: ''
+    tls: true
+  - name: 美国 CloudFlare节点
+    type: vmess
+    server: cf-lt.sharecentre.online
+    port: 80
+    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /shirker
+    ws-headers:
+      Host: ca.ilovescp.com
+  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 4
     type: ss
     server: 85.208.108.94
-    port: '8882'
+    port: '6379'
     cipher: aes-256-gcm
-    password: kDWvXYZoTBcGkC4
+    password: zDNVedRFPQexG9v
+  - name: 美国 CloudFlare节点 - 2
+    type: vmess
+    server: dp1.scproxy.top
+    port: 443
+    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /shirker
+    ws-headers:
+      Host: dp1.scproxy.top
+    tls: true
+  - name: 日本+V2CROSS.COM
+    type: trojan
+    server: awshk5-tg-data.amazonwebservicess.com
+    port: '443'
+    password: 35eb4bae-2348-42f8-9010-1c7b229df23f
+  - name: 美国 Amazon EC2服务器
+    type: vmess
+    server: ap-in-west.292228.xyz
+    port: 80
+    uuid: 22873fd1-2db8-4820-af1d-2843107ee744
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /filetransfer
+    ws-headers:
+      Host: ''
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 北美地区+V2CROSS.COM
       - 沙特阿拉伯+Arabic+Computer+System+Co.
-      - 美国+加利福尼亚州圣何塞ColoCrossing数据中心
+      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
       - 沙特阿拉伯+Arabic+Computer+System+Co. - 2
       - 沙特阿拉伯+Arabic+Computer+System+Co. - 3
-      - 美国 Merit网络公司
+      - 美国+弗吉尼亚州阿什本Amazon数据中心
+      - 美国 Datability
+      - 美国 V2CROSS.COM
+      - 美国 CloudFlare节点
       - 沙特阿拉伯+Arabic+Computer+System+Co. - 4
-      - 沙特阿拉伯+Arabic+Computer+System+Co. - 5
+      - 美国 CloudFlare节点 - 2
+      - 日本+V2CROSS.COM
       - 美国 Amazon EC2服务器
-      - 沙特阿拉伯+Arabic+Computer+System+Co. - 6
-      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
-      - 韩国 首尔Amazon数据中心
-      - 沙特阿拉伯+Arabic+Computer+System+Co. - 7
   - name: 自动选择
     type: url-test
     proxies:
-      - 北美地区+V2CROSS.COM
       - 沙特阿拉伯+Arabic+Computer+System+Co.
-      - 美国+加利福尼亚州圣何塞ColoCrossing数据中心
+      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
       - 沙特阿拉伯+Arabic+Computer+System+Co. - 2
       - 沙特阿拉伯+Arabic+Computer+System+Co. - 3
-      - 美国 Merit网络公司
+      - 美国+弗吉尼亚州阿什本Amazon数据中心
+      - 美国 Datability
+      - 美国 V2CROSS.COM
+      - 美国 CloudFlare节点
       - 沙特阿拉伯+Arabic+Computer+System+Co. - 4
-      - 沙特阿拉伯+Arabic+Computer+System+Co. - 5
+      - 美国 CloudFlare节点 - 2
+      - 日本+V2CROSS.COM
       - 美国 Amazon EC2服务器
-      - 沙特阿拉伯+Arabic+Computer+System+Co. - 6
-      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
-      - 韩国 首尔Amazon数据中心
-      - 沙特阿拉伯+Arabic+Computer+System+Co. - 7
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 北美地区+V2CROSS.COM
       - 沙特阿拉伯+Arabic+Computer+System+Co.
-      - 美国+加利福尼亚州圣何塞ColoCrossing数据中心
+      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
       - 沙特阿拉伯+Arabic+Computer+System+Co. - 2
       - 沙特阿拉伯+Arabic+Computer+System+Co. - 3
-      - 美国 Merit网络公司
+      - 美国+弗吉尼亚州阿什本Amazon数据中心
+      - 美国 Datability
+      - 美国 V2CROSS.COM
+      - 美国 CloudFlare节点
       - 沙特阿拉伯+Arabic+Computer+System+Co. - 4
-      - 沙特阿拉伯+Arabic+Computer+System+Co. - 5
+      - 美国 CloudFlare节点 - 2
+      - 日本+V2CROSS.COM
       - 美国 Amazon EC2服务器
-      - 沙特阿拉伯+Arabic+Computer+System+Co. - 6
-      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
-      - 韩国 首尔Amazon数据中心
-      - 沙特阿拉伯+Arabic+Computer+System+Co. - 7
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
