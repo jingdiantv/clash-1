@@ -1,55 +1,85 @@
 proxies:
-  - name: 美国 V2CROSS.COM
-    type: vmess
-    server: vjp3.0bad.com
-    port: 443
-    uuid: 927094d3-d678-4763-8591-e240d0bcae87
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /chat
-    ws-headers:
-      Host: ''
-    tls: true
+  - name: 安徽省+移动(全省通用)
+    type: trojan
+    server: 537.ykbkjt.com
+    port: 53214?security=tls&sni=537.ykbkjt.com&type=tcp&headerType=none
+    password: ac46f49a-b0eb-3980-88e9-9d5308a44cbc
+  - name: 安徽省+移动(全省通用) - 2
+    type: trojan
+    server: 431.sydzzl.cloud
+    port: 63654?security=tls&sni=431.sydzzl.cloud&type=tcp&headerType=none
+    password: ac46f49a-b0eb-3980-88e9-9d5308a44cbc
   - name: 美国 CloudFlare节点
     type: vmess
-    server: cf-lt.sharecentre.online
-    port: 443
-    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
+    server: v143.toddns.tk
+    port: 80
+    uuid: a25881f3-967f-3265-bc7f-9e66857b016b
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /shirker
+    ws-path: /jp143-d2xddxxj
     ws-headers:
-      Host: lv1.sharecentrepro.org
-    tls: true
-  - name: 沙特阿拉伯+Arabic+Computer+System+Co.
-    type: ss
-    server: 85.208.108.60
-    port: '7002'
-    cipher: aes-256-gcm
-    password: RexnBgU7EV5ADxG
-  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 2
-    type: ss
-    server: 85.208.108.60
-    port: '8881'
-    cipher: aes-256-gcm
-    password: kDWvXYZoTBcGkC4
-  - name: 广东省东莞市 电信
+      Host: v143.toddns.tk
+  - name: 安徽省+移动(全省通用) - 3
+    type: trojan
+    server: gptb.hnmttr.me
+    port: 31444?security=tls&sni=gptb.hnmttr.me&type=tcp&headerType=none
+    password: ac46f49a-b0eb-3980-88e9-9d5308a44cbc
+  - name: 台湾省台北市 中华电信
     type: vmess
-    server: pro01.my1188.org
-    port: 3073
-    uuid: 0a7b7974-7998-3637-ac1f-3174cee3f882
+    server: tw1.sanfen004.me
+    port: 443
+    uuid: ae63c769-7b4f-4916-b575-9214639fcb8b
     alterId: 0
     cipher: auto
     udp: true
     network: ws
+    ws-path: /zh-cn
+    ws-headers:
+      Host: tw1.sanfen004.me
+    tls: true
+  - name: 美国 华盛顿Cogent通信公司
+    type: vmess
+    server: 38.54.250.54
+    port: 51431
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: tcp
     ws-path: /
     ws-headers:
-      Host: tw03.yaofan.in168.net
-    tls: true
+      Host: lg.v2ray8.xyz
+  - name: 美国 加利福尼亚州圣何塞PEG TECH
+    type: vmess
+    server: 142.4.99.70
+    port: 41169
+    uuid: b65da4af-a12a-4a59-9316-4549e12ba62c
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /
+    ws-headers:
+      Host: ''
+  - name: 安徽省+移动(全省通用) - 4
+    type: trojan
+    server: 267.jpiznehsx.top
+    port: 1114?security=tls&sni=267.jpiznehsx.top&type=tcp&headerType=none
+    password: ac46f49a-b0eb-3980-88e9-9d5308a44cbc
+  - name: 美国 CloudFlare节点 - 2
+    type: vmess
+    server: cf.515188.xyz
+    port: 8080
+    uuid: 9d553e2b-4176-44ef-bf70-48aa8eb6da60
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /api/v3/download.getFile
+    ws-headers:
+      Host: ssrsub.v03.ssrsub.com
   - name: 美国 加利福尼亚州圣何塞PEG TECH数据中心
     type: vmess
     server: 192.74.228.174
@@ -62,119 +92,102 @@ proxies:
     ws-path: ''
     ws-headers:
       Host: ''
+  - name: 沙特阿拉伯+Arabic+Computer+System+Co.
+    type: ss
+    server: 85.208.108.60
+    port: '8009'
+    cipher: aes-256-gcm
+    password: XKFKl2rULjIp74
+  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 2
+    type: ss
+    server: 85.208.108.60
+    port: '6697'
+    cipher: aes-256-gcm
+    password: TEzjfAYq2IjtuoS
+  - name: 安徽省+移动(全省通用) - 5
+    type: trojan
+    server: 380.usmnzhe.life
+    port: 57452?security=tls&sni=380.usmnzhe.life&type=tcp&headerType=none
+    password: ac46f49a-b0eb-3980-88e9-9d5308a44cbc
   - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 3
     type: ss
     server: 85.208.108.60
-    port: '7307'
+    port: '5000'
     cipher: aes-256-gcm
-    password: FoOiGlkAA9yPEGP
+    password: Y6R9pAtvxxzmGC
   - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 4
     type: ss
     server: 85.208.108.60
-    port: '7001'
+    port: '5601'
     cipher: aes-256-gcm
-    password: RexnBgU7EV5ADxG
-  - name: 美国 V2CROSS.COM - 2
-    type: vmess
-    server: 143.42.87.69
-    port: 443
-    uuid: 927094d3-d678-4763-8591-e240d0bcae87
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /chat
-    ws-headers:
-      Host: ''
-    tls: true
-  - name: 广东省东莞市 电信 - 2
-    type: vmess
-    server: pro01.my1188.org
-    port: 3113
-    uuid: 0a7b7974-7998-3637-ac1f-3174cee3f882
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /
-    ws-headers:
-      Host: hkg01.pqs.in168.net
-    tls: true
-  - name: 美国 V2CROSS.COM - 3
-    type: vmess
-    server: f-us1.wvvvv.eu.org
-    port: 20
-    uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /
-    ws-headers:
-      Host: de01-cdn.airport-v2.com
-  - name: 广东省东莞市 电信 - 3
-    type: vmess
-    server: pro01.my1188.org
-    port: 3103
-    uuid: 0a7b7974-7998-3637-ac1f-3174cee3f882
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /
-    ws-headers:
-      Host: ru02.iepl.nbsd.us
-    tls: true
+    password: Y6R9pAtvxxzmGC
+  - name: 安徽省+移动(全省通用) - 6
+    type: trojan
+    server: 349.jpiznehsx.top
+    port: 63636?security=tls&sni=349.jpiznehsx.top&type=tcp&headerType=none
+    password: ac46f49a-b0eb-3980-88e9-9d5308a44cbc
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 美国 V2CROSS.COM
+      - 安徽省+移动(全省通用)
+      - 安徽省+移动(全省通用) - 2
       - 美国 CloudFlare节点
+      - 安徽省+移动(全省通用) - 3
+      - 台湾省台北市 中华电信
+      - 美国 华盛顿Cogent通信公司
+      - 美国 加利福尼亚州圣何塞PEG TECH
+      - 安徽省+移动(全省通用) - 4
+      - 美国 CloudFlare节点 - 2
+      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
       - 沙特阿拉伯+Arabic+Computer+System+Co.
       - 沙特阿拉伯+Arabic+Computer+System+Co. - 2
-      - 广东省东莞市 电信
-      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
+      - 安徽省+移动(全省通用) - 5
       - 沙特阿拉伯+Arabic+Computer+System+Co. - 3
       - 沙特阿拉伯+Arabic+Computer+System+Co. - 4
-      - 美国 V2CROSS.COM - 2
-      - 广东省东莞市 电信 - 2
-      - 美国 V2CROSS.COM - 3
-      - 广东省东莞市 电信 - 3
+      - 安徽省+移动(全省通用) - 6
   - name: 自动选择
     type: url-test
     proxies:
-      - 美国 V2CROSS.COM
+      - 安徽省+移动(全省通用)
+      - 安徽省+移动(全省通用) - 2
       - 美国 CloudFlare节点
+      - 安徽省+移动(全省通用) - 3
+      - 台湾省台北市 中华电信
+      - 美国 华盛顿Cogent通信公司
+      - 美国 加利福尼亚州圣何塞PEG TECH
+      - 安徽省+移动(全省通用) - 4
+      - 美国 CloudFlare节点 - 2
+      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
       - 沙特阿拉伯+Arabic+Computer+System+Co.
       - 沙特阿拉伯+Arabic+Computer+System+Co. - 2
-      - 广东省东莞市 电信
-      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
+      - 安徽省+移动(全省通用) - 5
       - 沙特阿拉伯+Arabic+Computer+System+Co. - 3
       - 沙特阿拉伯+Arabic+Computer+System+Co. - 4
-      - 美国 V2CROSS.COM - 2
-      - 广东省东莞市 电信 - 2
-      - 美国 V2CROSS.COM - 3
-      - 广东省东莞市 电信 - 3
+      - 安徽省+移动(全省通用) - 6
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 美国 V2CROSS.COM
+      - 安徽省+移动(全省通用)
+      - 安徽省+移动(全省通用) - 2
       - 美国 CloudFlare节点
+      - 安徽省+移动(全省通用) - 3
+      - 台湾省台北市 中华电信
+      - 美国 华盛顿Cogent通信公司
+      - 美国 加利福尼亚州圣何塞PEG TECH
+      - 安徽省+移动(全省通用) - 4
+      - 美国 CloudFlare节点 - 2
+      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
       - 沙特阿拉伯+Arabic+Computer+System+Co.
       - 沙特阿拉伯+Arabic+Computer+System+Co. - 2
-      - 广东省东莞市 电信
-      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
+      - 安徽省+移动(全省通用) - 5
       - 沙特阿拉伯+Arabic+Computer+System+Co. - 3
       - 沙特阿拉伯+Arabic+Computer+System+Co. - 4
-      - 美国 V2CROSS.COM - 2
-      - 广东省东莞市 电信 - 2
-      - 美国 V2CROSS.COM - 3
-      - 广东省东莞市 电信 - 3
+      - 安徽省+移动(全省通用) - 6
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
