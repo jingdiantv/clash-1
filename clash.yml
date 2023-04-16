@@ -1,39 +1,4 @@
 proxies:
-  - name: 沙特阿拉伯+Arabic+Computer+System+Co.
-    type: ss
-    server: 85.208.108.94
-    port: '3306'
-    cipher: aes-256-gcm
-    password: Y6R9pAtvxxzmGC
-  - name: 美国 加利福尼亚州圣何塞PEG TECH数据中心
-    type: vmess
-    server: 192.74.228.172
-    port: 42857
-    uuid: 051b844f-efe3-4847-92aa-66b5de0b6d4e
-    alterId: 64
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /
-    ws-headers:
-      Host: ''
-  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 2
-    type: ss
-    server: 85.208.108.94
-    port: '7002'
-    cipher: aes-256-gcm
-    password: RexnBgU7EV5ADxG
-  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 3
-    type: ss
-    server: 85.208.108.94
-    port: '8091'
-    cipher: aes-256-gcm
-    password: PCnnH6SQSnfoS27
-  - name: 美国+弗吉尼亚州阿什本Amazon数据中心
-    type: trojan
-    server: aws.blowm1k.club
-    port: '20532'
-    password: SbCfIK4dKM
   - name: 美国 Datability
     type: vmess
     server: 140.99.149.43
@@ -46,117 +11,92 @@ proxies:
     ws-path: /
     ws-headers:
       Host: ''
-  - name: 美国 V2CROSS.COM
-    type: vmess
-    server: vuk1.0bad.com
-    port: 443
-    uuid: 927094d3-d678-4763-8591-e240d0bcae87
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /chat
-    ws-headers:
-      Host: ''
-    tls: true
   - name: 美国 CloudFlare节点
     type: vmess
-    server: cf-lt.sharecentre.online
+    server: 104.17.3.81
     port: 80
-    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
+    uuid: e40b2de3-b829-4591-a7b6-99d1913f3246
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /shirker
+    ws-path: /worryfree
     ws-headers:
-      Host: ca.ilovescp.com
-  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 4
-    type: ss
-    server: 85.208.108.94
-    port: '6379'
-    cipher: aes-256-gcm
-    password: zDNVedRFPQexG9v
+      Host: w.evouch77.live
   - name: 美国 CloudFlare节点 - 2
     type: vmess
-    server: dp1.scproxy.top
-    port: 443
-    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
+    server: cf.515188.xyz
+    port: 8080
+    uuid: 9d553e2b-4176-44ef-bf70-48aa8eb6da60
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /shirker
+    ws-path: /api/v3/download.getFile
     ws-headers:
-      Host: dp1.scproxy.top
-    tls: true
-  - name: 日本+V2CROSS.COM
-    type: trojan
-    server: awshk5-tg-data.amazonwebservicess.com
-    port: '443'
-    password: 35eb4bae-2348-42f8-9010-1c7b229df23f
-  - name: 美国 Amazon EC2服务器
+      Host: ssrsub.v02.ssrsub.com
+  - name: 沙特阿拉伯+Arabic+Computer+System+Co.
+    type: ss
+    server: 85.208.108.94
+    port: '8009'
+    cipher: aes-256-gcm
+    password: XKFKl2rULjIp74
+  - name: 南非 V2CROSS.COM
     type: vmess
-    server: ap-in-west.292228.xyz
-    port: 80
-    uuid: 22873fd1-2db8-4820-af1d-2843107ee744
-    alterId: 0
+    server: 156.225.67.121
+    port: 47744
+    uuid: 63b4b829-7f01-4e26-b037-f04b1f098765
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /reffs7y26g0ua
+    ws-headers:
+      Host: surongwei.eu.org
+  - name: 江苏省扬州市 移动
+    type: vmess
+    server: data-hk-v1.shwjfkw.cn
+    port: 50207
+    uuid: b1478e24-4916-3abe-8f17-15931012ecbe
+    alterId: 1
     cipher: auto
     udp: true
     network: ws
-    ws-path: /filetransfer
+    ws-path: /hls/cctv5phd.m3u8
     ws-headers:
-      Host: ''
+      Host: YTB-awkj
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 沙特阿拉伯+Arabic+Computer+System+Co.
-      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
-      - 沙特阿拉伯+Arabic+Computer+System+Co. - 2
-      - 沙特阿拉伯+Arabic+Computer+System+Co. - 3
-      - 美国+弗吉尼亚州阿什本Amazon数据中心
       - 美国 Datability
-      - 美国 V2CROSS.COM
       - 美国 CloudFlare节点
-      - 沙特阿拉伯+Arabic+Computer+System+Co. - 4
       - 美国 CloudFlare节点 - 2
-      - 日本+V2CROSS.COM
-      - 美国 Amazon EC2服务器
+      - 沙特阿拉伯+Arabic+Computer+System+Co.
+      - 南非 V2CROSS.COM
+      - 江苏省扬州市 移动
   - name: 自动选择
     type: url-test
     proxies:
-      - 沙特阿拉伯+Arabic+Computer+System+Co.
-      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
-      - 沙特阿拉伯+Arabic+Computer+System+Co. - 2
-      - 沙特阿拉伯+Arabic+Computer+System+Co. - 3
-      - 美国+弗吉尼亚州阿什本Amazon数据中心
       - 美国 Datability
-      - 美国 V2CROSS.COM
       - 美国 CloudFlare节点
-      - 沙特阿拉伯+Arabic+Computer+System+Co. - 4
       - 美国 CloudFlare节点 - 2
-      - 日本+V2CROSS.COM
-      - 美国 Amazon EC2服务器
+      - 沙特阿拉伯+Arabic+Computer+System+Co.
+      - 南非 V2CROSS.COM
+      - 江苏省扬州市 移动
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 沙特阿拉伯+Arabic+Computer+System+Co.
-      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
-      - 沙特阿拉伯+Arabic+Computer+System+Co. - 2
-      - 沙特阿拉伯+Arabic+Computer+System+Co. - 3
-      - 美国+弗吉尼亚州阿什本Amazon数据中心
       - 美国 Datability
-      - 美国 V2CROSS.COM
       - 美国 CloudFlare节点
-      - 沙特阿拉伯+Arabic+Computer+System+Co. - 4
       - 美国 CloudFlare节点 - 2
-      - 日本+V2CROSS.COM
-      - 美国 Amazon EC2服务器
+      - 沙特阿拉伯+Arabic+Computer+System+Co.
+      - 南非 V2CROSS.COM
+      - 江苏省扬州市 移动
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
