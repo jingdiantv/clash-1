@@ -1,8 +1,21 @@
 proxies:
-  - name: 美国 Datability
+  - name: 美国 V2CROSS.COM
     type: vmess
-    server: 140.99.149.43
-    port: 56882
+    server: vde2.0bad.com
+    port: 443
+    uuid: 927094d3-d678-4763-8591-e240d0bcae87
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /chat
+    ws-headers:
+      Host: vde2.0bad.com
+    tls: true
+  - name: 美国 加利福尼亚州圣何塞PEG TECH
+    type: vmess
+    server: 142.4.127.152
+    port: 50042
     uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
     alterId: 64
     cipher: auto
@@ -11,92 +24,98 @@ proxies:
     ws-path: /
     ws-headers:
       Host: ''
-  - name: 美国 CloudFlare节点
-    type: vmess
-    server: 104.17.3.81
-    port: 80
-    uuid: e40b2de3-b829-4591-a7b6-99d1913f3246
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /worryfree
-    ws-headers:
-      Host: w.evouch77.live
-  - name: 美国 CloudFlare节点 - 2
-    type: vmess
-    server: cf.515188.xyz
-    port: 8080
-    uuid: 9d553e2b-4176-44ef-bf70-48aa8eb6da60
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /api/v3/download.getFile
-    ws-headers:
-      Host: ssrsub.v02.ssrsub.com
   - name: 沙特阿拉伯+Arabic+Computer+System+Co.
     type: ss
     server: 85.208.108.94
-    port: '8009'
+    port: '7001'
     cipher: aes-256-gcm
-    password: XKFKl2rULjIp74
-  - name: 南非 V2CROSS.COM
+    password: RexnBgU7EV5ADxG
+  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 2
+    type: ss
+    server: 85.208.108.94
+    port: '5601'
+    cipher: aes-256-gcm
+    password: Y6R9pAtvxxzmGC
+  - name: 广东省佛山市 移动
     type: vmess
-    server: 156.225.67.121
-    port: 47744
-    uuid: 63b4b829-7f01-4e26-b037-f04b1f098765
+    server: 25.v2-ray.cyou
+    port: 23625
+    uuid: 0dd19d20-ec86-3680-b256-87237bafa89e
+    alterId: 2
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /
+    ws-headers:
+      Host: 25.v2-ray.cyou
+  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 3
+    type: ss
+    server: 85.208.108.94
+    port: '8119'
+    cipher: aes-256-gcm
+    password: cdBIDV42DCwnfIN
+  - name: 美国 加利福尼亚州洛杉矶Sharktech数据中心
+    type: vmess
+    server: 64.32.20.91
+    port: 45809
+    uuid: c1bad9a6-1482-4941-a0c4-e85f3cbbcb5a
     alterId: 64
     cipher: auto
     udp: true
     network: tcp
-    ws-path: /reffs7y26g0ua
+    ws-path: ''
     ws-headers:
-      Host: surongwei.eu.org
-  - name: 江苏省扬州市 移动
+      Host: ''
+  - name: 越南 V2CROSS.COM
     type: vmess
-    server: data-hk-v1.shwjfkw.cn
-    port: 50207
-    uuid: b1478e24-4916-3abe-8f17-15931012ecbe
-    alterId: 1
+    server: f-as1.wvvvv.eu.org
+    port: 20
+    uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0
+    alterId: 0
     cipher: auto
     udp: true
-    network: ws
-    ws-path: /hls/cctv5phd.m3u8
+    network: tcp
+    ws-path: /
     ws-headers:
-      Host: YTB-awkj
+      Host: f-as1.wvvvv.eu.org
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 美国 Datability
-      - 美国 CloudFlare节点
-      - 美国 CloudFlare节点 - 2
+      - 美国 V2CROSS.COM
+      - 美国 加利福尼亚州圣何塞PEG TECH
       - 沙特阿拉伯+Arabic+Computer+System+Co.
-      - 南非 V2CROSS.COM
-      - 江苏省扬州市 移动
+      - 沙特阿拉伯+Arabic+Computer+System+Co. - 2
+      - 广东省佛山市 移动
+      - 沙特阿拉伯+Arabic+Computer+System+Co. - 3
+      - 美国 加利福尼亚州洛杉矶Sharktech数据中心
+      - 越南 V2CROSS.COM
   - name: 自动选择
     type: url-test
     proxies:
-      - 美国 Datability
-      - 美国 CloudFlare节点
-      - 美国 CloudFlare节点 - 2
+      - 美国 V2CROSS.COM
+      - 美国 加利福尼亚州圣何塞PEG TECH
       - 沙特阿拉伯+Arabic+Computer+System+Co.
-      - 南非 V2CROSS.COM
-      - 江苏省扬州市 移动
+      - 沙特阿拉伯+Arabic+Computer+System+Co. - 2
+      - 广东省佛山市 移动
+      - 沙特阿拉伯+Arabic+Computer+System+Co. - 3
+      - 美国 加利福尼亚州洛杉矶Sharktech数据中心
+      - 越南 V2CROSS.COM
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 美国 Datability
-      - 美国 CloudFlare节点
-      - 美国 CloudFlare节点 - 2
+      - 美国 V2CROSS.COM
+      - 美国 加利福尼亚州圣何塞PEG TECH
       - 沙特阿拉伯+Arabic+Computer+System+Co.
-      - 南非 V2CROSS.COM
-      - 江苏省扬州市 移动
+      - 沙特阿拉伯+Arabic+Computer+System+Co. - 2
+      - 广东省佛山市 移动
+      - 沙特阿拉伯+Arabic+Computer+System+Co. - 3
+      - 美国 加利福尼亚州洛杉矶Sharktech数据中心
+      - 越南 V2CROSS.COM
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
