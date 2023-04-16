@@ -1,53 +1,4 @@
 proxies:
-  - name: 美国 CloudFlare节点
-    type: vmess
-    server: www.udemy.com
-    port: 443
-    uuid: e6442903-4753-4783-8916-ac47c8080e4f
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /
-    ws-headers:
-      Host: dynamic-sg3b.obfs.xyz
-    tls: true
-  - name: 台湾省新北市 中华电信
-    type: vmess
-    server: hinet1261.gfwisbest.xyz
-    port: 224
-    uuid: 2285133e-b9ba-3fb5-a246-9c7ddcc2cd7a
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /
-    ws-headers:
-      Host: ''
-  - name: 美国 CloudFlare节点 - 2
-    type: vmess
-    server: 172.67.140.193
-    port: 80
-    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /shirker
-    ws-headers:
-      Host: uk1.scproxy.top
-  - name: 南非 V2CROSS.COM
-    type: vmess
-    server: 156.225.67.121
-    port: 47744
-    uuid: 63b4b829-7f01-4e26-b037-f04b1f098765
-    alterId: 64
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /reffs7y26g0ua
-    ws-headers:
-      Host: surongwei.eu.org
   - name: 江苏省扬州市 移动
     type: vmess
     server: data-hk-v1.shwjfkw.cn
@@ -60,49 +11,22 @@ proxies:
     ws-path: /hls/cctv5phd.m3u8
     ws-headers:
       Host: YTB-awkj
-  - name: 印度 V2CROSS.COM
+  - name: 美国加利福尼亚州洛杉矶 MULTACOM数据中心
     type: vmess
-    server: 103.160.204.10
-    port: 443
-    uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
-    alterId: 0
+    server: 23.234.198.83
+    port: 34888
+    uuid: a9abf3e7-87f4-473d-8d03-2f26ca4b3583
+    alterId: 64
     cipher: auto
     udp: true
-    network: ws
-    ws-path: /ECTCJ0DF
-    ws-headers:
-      Host: 154.v2ray3.xyz
-    tls: true
-  - name: 美国 CloudFlare节点 - 3
-    type: vmess
-    server: cloudflare.binghe.design
-    port: 443
-    uuid: 499653f3-495e-4e0d-8e0e-d7fdbbbd8e3f
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
+    network: tcp
     ws-path: ''
     ws-headers:
-      Host: hl.binghe.design
-    tls: true
-  - name: 美国 CloudFlare节点 - 4
-    type: vmess
-    server: api.nivod.tv
-    port: 443
-    uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /ECTCJ0DF
-    ws-headers:
-      Host: 154.v2ray3.xyz
-    tls: true
+      Host: ''
   - name: 美国 加利福尼亚州圣何塞PEG TECH
     type: vmess
-    server: 142.4.127.152
-    port: 50042
+    server: 142.4.126.74
+    port: 31002
     uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
     alterId: 64
     cipher: auto
@@ -111,47 +35,142 @@ proxies:
     ws-path: /
     ws-headers:
       Host: ''
+  - name: 越南 V2CROSS.COM
+    type: vmess
+    server: f-as1.wvvvv.eu.org
+    port: 20
+    uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /
+    ws-headers:
+      Host: f-as1.wvvvv.eu.org
+  - name: 美国 CloudFlare节点
+    type: vmess
+    server: cf-lt.sharecentre.online
+    port: 80
+    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /shirker
+    ws-headers:
+      Host: uk1.scproxy.top
+  - name: 美国+V2CROSS.COM
+    type: trojan
+    server: 152.70.74.66
+    port: 443?security=tls&type=tcp&headerType=none
+    password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
+  - name: 美国加利福尼亚州洛杉矶 PetaExpress
+    type: vmess
+    server: 198.2.203.35
+    port: 50002
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: ''
+    ws-headers:
+      Host: ''
+  - name: 广东省佛山市 移动
+    type: vmess
+    server: 25.v2-ray.cyou
+    port: 23625
+    uuid: 0dd19d20-ec86-3680-b256-87237bafa89e
+    alterId: 2
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /
+    ws-headers:
+      Host: 25.v2-ray.cyou
+  - name: 广东省佛山市 移动 - 2
+    type: vmess
+    server: 25.v2-ray.cyou
+    port: 23625
+    uuid: 0dd19d20-ec86-3680-b256-87237bafa89e
+    alterId: 2
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /
+    ws-headers:
+      Host: 25.v2-ray.cyou
+  - name: 美国 V2CROSS.COM
+    type: vmess
+    server: f-us1.wvvvv.eu.org
+    port: 20
+    uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /
+    ws-headers:
+      Host: de01-cdn.airport-v2.com
+  - name: 伊朗 V2CROSS.COM
+    type: vmess
+    server: fri.iranserverlogin.page
+    port: 31208
+    uuid: 7dca4806-6272-428d-d28a-41a2fc29b0ed
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /
+    ws-headers:
+      Host: fri.iranserverlogin.page
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 美国 CloudFlare节点
-      - 台湾省新北市 中华电信
-      - 美国 CloudFlare节点 - 2
-      - 南非 V2CROSS.COM
       - 江苏省扬州市 移动
-      - 印度 V2CROSS.COM
-      - 美国 CloudFlare节点 - 3
-      - 美国 CloudFlare节点 - 4
+      - 美国加利福尼亚州洛杉矶 MULTACOM数据中心
       - 美国 加利福尼亚州圣何塞PEG TECH
+      - 越南 V2CROSS.COM
+      - 美国 CloudFlare节点
+      - 美国+V2CROSS.COM
+      - 美国加利福尼亚州洛杉矶 PetaExpress
+      - 广东省佛山市 移动
+      - 广东省佛山市 移动 - 2
+      - 美国 V2CROSS.COM
+      - 伊朗 V2CROSS.COM
   - name: 自动选择
     type: url-test
     proxies:
-      - 美国 CloudFlare节点
-      - 台湾省新北市 中华电信
-      - 美国 CloudFlare节点 - 2
-      - 南非 V2CROSS.COM
       - 江苏省扬州市 移动
-      - 印度 V2CROSS.COM
-      - 美国 CloudFlare节点 - 3
-      - 美国 CloudFlare节点 - 4
+      - 美国加利福尼亚州洛杉矶 MULTACOM数据中心
       - 美国 加利福尼亚州圣何塞PEG TECH
+      - 越南 V2CROSS.COM
+      - 美国 CloudFlare节点
+      - 美国+V2CROSS.COM
+      - 美国加利福尼亚州洛杉矶 PetaExpress
+      - 广东省佛山市 移动
+      - 广东省佛山市 移动 - 2
+      - 美国 V2CROSS.COM
+      - 伊朗 V2CROSS.COM
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 美国 CloudFlare节点
-      - 台湾省新北市 中华电信
-      - 美国 CloudFlare节点 - 2
-      - 南非 V2CROSS.COM
       - 江苏省扬州市 移动
-      - 印度 V2CROSS.COM
-      - 美国 CloudFlare节点 - 3
-      - 美国 CloudFlare节点 - 4
+      - 美国加利福尼亚州洛杉矶 MULTACOM数据中心
       - 美国 加利福尼亚州圣何塞PEG TECH
+      - 越南 V2CROSS.COM
+      - 美国 CloudFlare节点
+      - 美国+V2CROSS.COM
+      - 美国加利福尼亚州洛杉矶 PetaExpress
+      - 广东省佛山市 移动
+      - 广东省佛山市 移动 - 2
+      - 美国 V2CROSS.COM
+      - 伊朗 V2CROSS.COM
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
