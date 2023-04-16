@@ -1,73 +1,45 @@
 proxies:
-  - name: 上海市+电信
-    type: trojan
-    server: official.taipeicitygovernment.kiev.ua
-    port: 8443?security=tls&sni=66.42.40.132&type=tcp&headerType=none
-    password: 5505f6ba-cd37-30ce-8f92-be4120c83d7f
-  - name: 美国 加利福尼亚州洛杉矶Sharktech数据中心
-    type: vmess
-    server: 64.32.20.91
-    port: 45809
-    uuid: c1bad9a6-1482-4941-a0c4-e85f3cbbcb5a
-    alterId: 64
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: ''
-    ws-headers:
-      Host: ''
-  - name: 美国加利福尼亚州洛杉矶 PetaExpress
-    type: vmess
-    server: 198.2.203.35
-    port: 50002
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: ''
-    ws-headers:
-      Host: ''
-  - name: 美国 Amazon EC2服务器
-    type: vmess
-    server: ap-in-west.292228.xyz
-    port: 80
-    uuid: 22873fd1-2db8-4820-af1d-2843107ee744
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /filetransfer
-    ws-headers:
-      Host: ''
   - name: 美国 CloudFlare节点
     type: vmess
-    server: cf-lt.sharecentre.online
+    server: www.udemy.com
     port: 443
-    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /shirker
-    ws-headers:
-      Host: lv1.sharecentrepro.org
-    tls: true
-  - name: 伊朗 V2CROSS.COM
-    type: vmess
-    server: fri.iranserverlogin.page
-    port: 31208
-    uuid: 7dca4806-6272-428d-d28a-41a2fc29b0ed
+    uuid: e6442903-4753-4783-8916-ac47c8080e4f
     alterId: 0
     cipher: auto
     udp: true
     network: ws
     ws-path: /
     ws-headers:
-      Host: fri.iranserverlogin.page
-  - name: 越南 V2CROSS.COM
+      Host: dynamic-sg3b.obfs.xyz
+    tls: true
+  - name: 美国 CloudFlare节点 - 2
     type: vmess
-    server: f-as1.wvvvv.eu.org
+    server: api.nivod.tv
+    port: 443
+    uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /ECTCJ0DF
+    ws-headers:
+      Host: 154.v2ray3.xyz
+    tls: true
+  - name: 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
+    type: vmess
+    server: 23.224.14.116
+    port: 51552
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /shirker
+    ws-headers:
+      Host: hk-hytron.ilovescp.com
+  - name: 美国 V2CROSS.COM
+    type: vmess
+    server: f-us1.wvvvv.eu.org
     port: 20
     uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0
     alterId: 0
@@ -76,41 +48,51 @@ proxies:
     network: tcp
     ws-path: /
     ws-headers:
-      Host: f-as1.wvvvv.eu.org
-  - name: 美国加利福尼亚州洛杉矶 MULTACOM数据中心
+      Host: de01-cdn.airport-v2.com
+  - name: 南非 V2CROSS.COM
     type: vmess
-    server: 23.234.198.83
-    port: 34888
-    uuid: a9abf3e7-87f4-473d-8d03-2f26ca4b3583
+    server: 156.225.67.200
+    port: 47811
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
     alterId: 64
     cipher: auto
     udp: true
     network: tcp
-    ws-path: ''
+    ws-path: /msg
     ws-headers:
-      Host: ''
-  - name: 江苏省扬州市 移动
+      Host: cloud.cluster.download.cloudsys.buzz
+  - name: 美国+加利福尼亚州圣何塞ColoCrossing数据中心
+    type: trojan
+    server: rn.blowm1k.club
+    port: '14978'
+    password: f5mpynwukL
+  - name: 南非 V2CROSS.COM - 2
     type: vmess
-    server: data-hk-v1.shwjfkw.cn
-    port: 50207
-    uuid: b1478e24-4916-3abe-8f17-15931012ecbe
-    alterId: 1
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /hls/cctv5phd.m3u8
-    ws-headers:
-      Host: YTB-awkj
-  - name: 南非 V2CROSS.COM
-    type: vmess
-    server: 156.225.67.40
-    port: 35611
-    uuid: de491802-233e-47f2-8c6c-d19bcf5bd56b
+    server: 156.225.67.108
+    port: 49920
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
     alterId: 64
     cipher: auto
     udp: true
     network: tcp
     ws-path: /
+    ws-headers:
+      Host: ''
+  - name: 上海市+电信
+    type: trojan
+    server: 116.192.171.97
+    port: 8443?security=tls&type=tcp&headerType=none
+    password: 5505f6ba-cd37-30ce-8f92-be4120c83d7f
+  - name: 美国 加利福尼亚州圣何塞PEG TECH
+    type: vmess
+    server: 142.4.99.70
+    port: 41169
+    uuid: b65da4af-a12a-4a59-9316-4549e12ba62c
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: ''
     ws-headers:
       Host: ''
 proxy-groups:
@@ -119,44 +101,41 @@ proxy-groups:
     proxies:
       - 自动选择
       - 故障转移
-      - 上海市+电信
-      - 美国 加利福尼亚州洛杉矶Sharktech数据中心
-      - 美国加利福尼亚州洛杉矶 PetaExpress
-      - 美国 Amazon EC2服务器
       - 美国 CloudFlare节点
-      - 伊朗 V2CROSS.COM
-      - 越南 V2CROSS.COM
-      - 美国加利福尼亚州洛杉矶 MULTACOM数据中心
-      - 江苏省扬州市 移动
+      - 美国 CloudFlare节点 - 2
+      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
+      - 美国 V2CROSS.COM
       - 南非 V2CROSS.COM
+      - 美国+加利福尼亚州圣何塞ColoCrossing数据中心
+      - 南非 V2CROSS.COM - 2
+      - 上海市+电信
+      - 美国 加利福尼亚州圣何塞PEG TECH
   - name: 自动选择
     type: url-test
     proxies:
-      - 上海市+电信
-      - 美国 加利福尼亚州洛杉矶Sharktech数据中心
-      - 美国加利福尼亚州洛杉矶 PetaExpress
-      - 美国 Amazon EC2服务器
       - 美国 CloudFlare节点
-      - 伊朗 V2CROSS.COM
-      - 越南 V2CROSS.COM
-      - 美国加利福尼亚州洛杉矶 MULTACOM数据中心
-      - 江苏省扬州市 移动
+      - 美国 CloudFlare节点 - 2
+      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
+      - 美国 V2CROSS.COM
       - 南非 V2CROSS.COM
+      - 美国+加利福尼亚州圣何塞ColoCrossing数据中心
+      - 南非 V2CROSS.COM - 2
+      - 上海市+电信
+      - 美国 加利福尼亚州圣何塞PEG TECH
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 上海市+电信
-      - 美国 加利福尼亚州洛杉矶Sharktech数据中心
-      - 美国加利福尼亚州洛杉矶 PetaExpress
-      - 美国 Amazon EC2服务器
       - 美国 CloudFlare节点
-      - 伊朗 V2CROSS.COM
-      - 越南 V2CROSS.COM
-      - 美国加利福尼亚州洛杉矶 MULTACOM数据中心
-      - 江苏省扬州市 移动
+      - 美国 CloudFlare节点 - 2
+      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
+      - 美国 V2CROSS.COM
       - 南非 V2CROSS.COM
+      - 美国+加利福尼亚州圣何塞ColoCrossing数据中心
+      - 南非 V2CROSS.COM - 2
+      - 上海市+电信
+      - 美国 加利福尼亚州圣何塞PEG TECH
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
