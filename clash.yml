@@ -1,64 +1,41 @@
 proxies:
-  - name: 美国+Microsoft数据中心
-    type: trojan
-    server: fscsg.fscloud123456789.com
-    port: '443'
-    password: ed19b239-8e49-4b82-979a-24b84fa7b173
-  - name: 美国 加利福尼亚州洛杉矶MULTACOM数据中心
+  - name: 美国 CloudFlare节点
     type: vmess
-    server: rnrn3g.555456.xyz
+    server: us.3399780.xyz
     port: 443
-    uuid: 17c6c64e-eb3c-44ae-98f8-d469713f91f1
+    uuid: 0c1baef8-6e6b-45b3-bf5e-43fb2e9ccaba
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /lpkuvws
+    ws-path: /202365768675
     ws-headers:
-      Host: rnrn3g.555456.xyz
+      Host: ''
     tls: true
-  - name: 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
+  - name: 美国 Cloudinnovation数据中心
     type: vmess
-    server: 23.225.33.170
-    port: 56002
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    server: 154.85.0.7
+    port: 42220
+    uuid: 4ec0ae62-de09-4029-904a-0313d4628ecf
     alterId: 64
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: ''
+    ws-headers:
+      Host: ''
+  - name: 韩国 首尔Amazon数据中心
+    type: vmess
+    server: f-as2.wvvvv.eu.org
+    port: 1
+    uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0
+    alterId: 0
     cipher: auto
     udp: true
     network: tcp
     ws-path: /
     ws-headers:
-      Host: ''
-  - name: 沙特阿拉伯+Arabic+Computer+System+Co.
-    type: ss
-    server: 85.208.108.94
-    port: '6679'
-    cipher: aes-256-gcm
-    password: TEzjfAYq2IjtuoS
-  - name: 美国 CloudFlare节点
-    type: vmess
-    server: 172.67.217.222
-    port: 80
-    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /shirker
-    ws-headers:
-      Host: dp3.scproxy.top
-  - name: 广东省佛山市 移动
-    type: vmess
-    server: 25.v2-ray.cyou
-    port: 23625
-    uuid: 0dd19d20-ec86-3680-b256-87237bafa89e
-    alterId: 2
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /
-    ws-headers:
-      Host: 25.v2-ray.cyou
+      Host: f-as2.wvvvv.eu.org
   - name: 南非 V2CROSS.COM
     type: vmess
     server: 156.225.67.106
@@ -68,60 +45,65 @@ proxies:
     cipher: auto
     udp: true
     network: tcp
-    ws-path: /
+    ws-path: ''
     ws-headers:
       Host: ''
   - name: 美国 CloudFlare节点 - 2
     type: vmess
-    server: new3.hucloud-dns.xyz
-    port: 443
-    uuid: 1c8ad3f2-835c-4fda-b9b6-881d3cadfd8e
+    server: cf.515188.xyz
+    port: 8080
+    uuid: 9d553e2b-4176-44ef-bf70-48aa8eb6da60
     alterId: 0
     cipher: auto
     udp: true
     network: ws
+    ws-path: /api/v3/download.getFile
+    ws-headers:
+      Host: ssrsub.v03.ssrsub.com
+  - name: 伊朗 V2CROSS.COM
+    type: vmess
+    server: f-eu1.wvvvv.eu.org
+    port: 1
+    uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: tcp
     ws-path: /
     ws-headers:
-      Host: ''
-    tls: true
+      Host: f-eu1.wvvvv.eu.org
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 美国+Microsoft数据中心
-      - 美国 加利福尼亚州洛杉矶MULTACOM数据中心
-      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
-      - 沙特阿拉伯+Arabic+Computer+System+Co.
       - 美国 CloudFlare节点
-      - 广东省佛山市 移动
+      - 美国 Cloudinnovation数据中心
+      - 韩国 首尔Amazon数据中心
       - 南非 V2CROSS.COM
       - 美国 CloudFlare节点 - 2
+      - 伊朗 V2CROSS.COM
   - name: 自动选择
     type: url-test
     proxies:
-      - 美国+Microsoft数据中心
-      - 美国 加利福尼亚州洛杉矶MULTACOM数据中心
-      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
-      - 沙特阿拉伯+Arabic+Computer+System+Co.
       - 美国 CloudFlare节点
-      - 广东省佛山市 移动
+      - 美国 Cloudinnovation数据中心
+      - 韩国 首尔Amazon数据中心
       - 南非 V2CROSS.COM
       - 美国 CloudFlare节点 - 2
+      - 伊朗 V2CROSS.COM
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 美国+Microsoft数据中心
-      - 美国 加利福尼亚州洛杉矶MULTACOM数据中心
-      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
-      - 沙特阿拉伯+Arabic+Computer+System+Co.
       - 美国 CloudFlare节点
-      - 广东省佛山市 移动
+      - 美国 Cloudinnovation数据中心
+      - 韩国 首尔Amazon数据中心
       - 南非 V2CROSS.COM
       - 美国 CloudFlare节点 - 2
+      - 伊朗 V2CROSS.COM
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
