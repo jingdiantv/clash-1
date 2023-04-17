@@ -1,54 +1,34 @@
 proxies:
-  - name: 美国 CloudFlare节点
+  - name: 俄罗斯 圣彼得堡
     type: vmess
-    server: us.3399780.xyz
-    port: 443
-    uuid: 0c1baef8-6e6b-45b3-bf5e-43fb2e9ccaba
+    server: 5.101.68.5
+    port: 80
+    uuid: 5175c861-8fcc-40f9-d8e2-86981d979a65
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /202365768675
+    ws-path: /mehdi
     ws-headers:
-      Host: ''
-    tls: true
-  - name: 美国 Cloudinnovation数据中心
+      Host: mehdi.mashtopituanbipi.tk
+  - name: 广东省佛山市 移动
     type: vmess
-    server: 154.85.0.7
-    port: 42220
-    uuid: 4ec0ae62-de09-4029-904a-0313d4628ecf
-    alterId: 64
+    server: 25.v2-ray.cyou
+    port: 23625
+    uuid: 0dd19d20-ec86-3680-b256-87237bafa89e
+    alterId: 2
     cipher: auto
     udp: true
-    network: tcp
-    ws-path: ''
-    ws-headers:
-      Host: ''
-  - name: 韩国 首尔Amazon数据中心
-    type: vmess
-    server: f-as2.wvvvv.eu.org
-    port: 1
-    uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: tcp
+    network: ws
     ws-path: /
     ws-headers:
-      Host: f-as2.wvvvv.eu.org
-  - name: 南非 V2CROSS.COM
-    type: vmess
-    server: 156.225.67.106
-    port: 49920
-    uuid: 29a5d48e-24f1-48fd-a5e1-9a46cb31032f
-    alterId: 64
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: ''
-    ws-headers:
-      Host: ''
-  - name: 美国 CloudFlare节点 - 2
+      Host: 25.v2-ray.cyou
+  - name: 美国+DXC+Technology
+    type: trojan
+    server: fscsg.fscloud123456789.com
+    port: '443'
+    password: ed19b239-8e49-4b82-979a-24b84fa7b173
+  - name: 美国 CloudFlare节点
     type: vmess
     server: cf.515188.xyz
     port: 8080
@@ -59,51 +39,41 @@ proxies:
     network: ws
     ws-path: /api/v3/download.getFile
     ws-headers:
-      Host: ssrsub.v03.ssrsub.com
-  - name: 伊朗 V2CROSS.COM
-    type: vmess
-    server: f-eu1.wvvvv.eu.org
-    port: 1
-    uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /
-    ws-headers:
-      Host: f-eu1.wvvvv.eu.org
+      Host: ssrsub.v01.ssrsub.com
+  - name: 美国+弗吉尼亚州阿什本Amazon数据中心
+    type: trojan
+    server: aws.blowm1k.club
+    port: '20532'
+    password: SbCfIK4dKM
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
+      - 俄罗斯 圣彼得堡
+      - 广东省佛山市 移动
+      - 美国+DXC+Technology
       - 美国 CloudFlare节点
-      - 美国 Cloudinnovation数据中心
-      - 韩国 首尔Amazon数据中心
-      - 南非 V2CROSS.COM
-      - 美国 CloudFlare节点 - 2
-      - 伊朗 V2CROSS.COM
+      - 美国+弗吉尼亚州阿什本Amazon数据中心
   - name: 自动选择
     type: url-test
     proxies:
+      - 俄罗斯 圣彼得堡
+      - 广东省佛山市 移动
+      - 美国+DXC+Technology
       - 美国 CloudFlare节点
-      - 美国 Cloudinnovation数据中心
-      - 韩国 首尔Amazon数据中心
-      - 南非 V2CROSS.COM
-      - 美国 CloudFlare节点 - 2
-      - 伊朗 V2CROSS.COM
+      - 美国+弗吉尼亚州阿什本Amazon数据中心
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
+      - 俄罗斯 圣彼得堡
+      - 广东省佛山市 移动
+      - 美国+DXC+Technology
       - 美国 CloudFlare节点
-      - 美国 Cloudinnovation数据中心
-      - 韩国 首尔Amazon数据中心
-      - 南非 V2CROSS.COM
-      - 美国 CloudFlare节点 - 2
-      - 伊朗 V2CROSS.COM
+      - 美国+弗吉尼亚州阿什本Amazon数据中心
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
