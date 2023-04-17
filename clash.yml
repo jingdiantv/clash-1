@@ -1,125 +1,106 @@
 proxies:
-  - name: 美国+V2CROSS.COM
-    type: trojan
-    server: 152.70.74.66
-    port: 443?security=tls&type=tcp&headerType=none
-    password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
-  - name: 沙特阿拉伯+Arabic+Computer+System+Co.
-    type: ss
-    server: 85.208.108.21
-    port: '8000'
-    cipher: aes-256-gcm
-    password: KixLvKzwjekG00rm
-  - name: 美国 CloudFlare节点
+  - name: 美国 Datability
     type: vmess
-    server: cf.515188.xyz
-    port: 8080
-    uuid: 9d553e2b-4176-44ef-bf70-48aa8eb6da60
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /api/v3/download.getFile
-    ws-headers:
-      Host: ssrsub.v03.ssrsub.com
-  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 2
-    type: ss
-    server: 85.208.108.21
-    port: '5004'
-    cipher: aes-256-gcm
-    password: g5MeD6Ft3CWlJId
-  - name: 美国 CloudFlare节点 - 2
-    type: vmess
-    server: cf.noaries.de
-    port: 8080
-    uuid: a0f153d8-e32f-41f3-9bcd-073f579e2264
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /aries?ed=2048
-    ws-headers:
-      Host: buyvm.cloudflare.quest
-  - name: 加拿大+V2CROSS.COM
-    type: ss
-    server: 135.181.114.242
-    port: '8478'
-    cipher: chacha20-ietf-poly1305
-    password: siF98xBL2v1i
-  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 3
-    type: ss
-    server: 85.208.108.21
-    port: '5601'
-    cipher: aes-256-gcm
-    password: Y6R9pAtvxxzmGC
-  - name: 韩国 首尔Amazon数据中心
-    type: vmess
-    server: f-as2.wvvvv.eu.org
-    port: 1
-    uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0
-    alterId: 0
+    server: 140.99.149.43
+    port: 56882
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
     cipher: auto
     udp: true
     network: tcp
     ws-path: /
     ws-headers:
-      Host: f-as2.wvvvv.eu.org
-  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 4
+      Host: ''
+  - name: 沙特阿拉伯+Arabic+Computer+System+Co.
     type: ss
     server: 85.208.108.21
-    port: '7001'
+    port: '8888'
+    cipher: aes-256-gcm
+    password: Y6R9pAtvxxzmGC
+  - name: 美国 CloudFlare节点
+    type: vmess
+    server: 172.67.140.193
+    port: 80
+    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /shirker
+    ws-headers:
+      Host: uk1.scproxy.top
+  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 2
+    type: ss
+    server: 85.208.108.21
+    port: '9101'
+    cipher: aes-256-gcm
+    password: e4FCWrgpkji3QY
+  - name: 美国 V2CROSS.COM
+    type: vmess
+    server: vde2.0bad.com
+    port: 443
+    uuid: 927094d3-d678-4763-8591-e240d0bcae87
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /chat
+    ws-headers:
+      Host: vde2.0bad.com
+    tls: true
+  - name: 美国 惠普公司
+    type: vmess
+    server: 15.235.166.61
+    port: 10000
+    uuid: 89dc26f4-da91-11ed-9e06-1b87fe270149
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /vpnjantit
+    ws-headers:
+      Host: ''
+  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 3
+    type: ss
+    server: 85.208.108.21
+    port: '7002'
     cipher: aes-256-gcm
     password: RexnBgU7EV5ADxG
-  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 5
-    type: ss
-    server: 85.208.108.21
-    port: '5500'
-    cipher: aes-256-gcm
-    password: KixLvKzwjekG00rm
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 美国+V2CROSS.COM
+      - 美国 Datability
       - 沙特阿拉伯+Arabic+Computer+System+Co.
       - 美国 CloudFlare节点
       - 沙特阿拉伯+Arabic+Computer+System+Co. - 2
-      - 美国 CloudFlare节点 - 2
-      - 加拿大+V2CROSS.COM
+      - 美国 V2CROSS.COM
+      - 美国 惠普公司
       - 沙特阿拉伯+Arabic+Computer+System+Co. - 3
-      - 韩国 首尔Amazon数据中心
-      - 沙特阿拉伯+Arabic+Computer+System+Co. - 4
-      - 沙特阿拉伯+Arabic+Computer+System+Co. - 5
   - name: 自动选择
     type: url-test
     proxies:
-      - 美国+V2CROSS.COM
+      - 美国 Datability
       - 沙特阿拉伯+Arabic+Computer+System+Co.
       - 美国 CloudFlare节点
       - 沙特阿拉伯+Arabic+Computer+System+Co. - 2
-      - 美国 CloudFlare节点 - 2
-      - 加拿大+V2CROSS.COM
+      - 美国 V2CROSS.COM
+      - 美国 惠普公司
       - 沙特阿拉伯+Arabic+Computer+System+Co. - 3
-      - 韩国 首尔Amazon数据中心
-      - 沙特阿拉伯+Arabic+Computer+System+Co. - 4
-      - 沙特阿拉伯+Arabic+Computer+System+Co. - 5
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 美国+V2CROSS.COM
+      - 美国 Datability
       - 沙特阿拉伯+Arabic+Computer+System+Co.
       - 美国 CloudFlare节点
       - 沙特阿拉伯+Arabic+Computer+System+Co. - 2
-      - 美国 CloudFlare节点 - 2
-      - 加拿大+V2CROSS.COM
+      - 美国 V2CROSS.COM
+      - 美国 惠普公司
       - 沙特阿拉伯+Arabic+Computer+System+Co. - 3
-      - 韩国 首尔Amazon数据中心
-      - 沙特阿拉伯+Arabic+Computer+System+Co. - 4
-      - 沙特阿拉伯+Arabic+Computer+System+Co. - 5
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
