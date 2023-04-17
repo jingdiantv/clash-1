@@ -1,80 +1,73 @@
 proxies:
-  - name: 加拿大+V2CROSS.COM
-    type: ss
-    server: 135.181.114.242
-    port: '8478'
-    cipher: chacha20-ietf-poly1305
-    password: siF98xBL2v1i
-  - name: 美国 CloudFlare节点
-    type: vmess
-    server: cf.515188.xyz
-    port: 8080
-    uuid: 9d553e2b-4176-44ef-bf70-48aa8eb6da60
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /api/v3/download.getFile
-    ws-headers:
-      Host: ssrsub.v01.ssrsub.com
-  - name: 瑞士+V2CROSS.COM
+  - name: 美国+Microsoft数据中心
     type: trojan
-    server: 195.15.243.26
+    server: aujs.stablize.top
     port: '443'
-    password: '4478'
-  - name: 安徽省合肥市 移动
+    password: 85f0aed5-6694-4194-90d3-9b33352e0791
+  - name: 越南 V2CROSS.COM
     type: vmess
-    server: 120.210.205.220
-    port: 36918
-    uuid: 411dacd6-030b-41ad-bfb6-3a822ec83014
-    alterId: 64
+    server: f-as1.wvvvv.eu.org
+    port: 20
+    uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0
+    alterId: 0
     cipher: auto
     udp: true
     network: tcp
     ws-path: /
     ws-headers:
-      Host: ''
-  - name: 美国 加利福尼亚州旧金山Amazon数据中心
+      Host: f-as1.wvvvv.eu.org
+  - name: 上海市+电信
+    type: trojan
+    server: 116.192.171.97
+    port: 8443?security=tls&type=tcp&headerType=none
+    password: 5505f6ba-cd37-30ce-8f92-be4120c83d7f
+  - name: 卢森堡+V2CROSS.COM
+    type: ss
+    server: 46.226.111.148
+    port: '443'
+    cipher: chacha20-ietf-poly1305
+    password: D9rakkd9NJyWhTrSrM6Rbe
+  - name: 俄罗斯 V2CROSS.COM
     type: vmess
-    server: pop.usa.gfwcaonimanmsl.ml
-    port: 8966
-    uuid: 3b8fb6a5-1193-4bb4-a4bd-5ea854d1350f
+    server: f-us1.wvvvv.eu.org
+    port: 20
+    uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0
     alterId: 0
     cipher: auto
     udp: true
-    network: ws
-    ws-path: /name
+    network: tcp
+    ws-path: ''
     ws-headers:
-      Host: pop.usa.gfwcaonimanmsl.ml
+      Host: ''
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 加拿大+V2CROSS.COM
-      - 美国 CloudFlare节点
-      - 瑞士+V2CROSS.COM
-      - 安徽省合肥市 移动
-      - 美国 加利福尼亚州旧金山Amazon数据中心
+      - 美国+Microsoft数据中心
+      - 越南 V2CROSS.COM
+      - 上海市+电信
+      - 卢森堡+V2CROSS.COM
+      - 俄罗斯 V2CROSS.COM
   - name: 自动选择
     type: url-test
     proxies:
-      - 加拿大+V2CROSS.COM
-      - 美国 CloudFlare节点
-      - 瑞士+V2CROSS.COM
-      - 安徽省合肥市 移动
-      - 美国 加利福尼亚州旧金山Amazon数据中心
+      - 美国+Microsoft数据中心
+      - 越南 V2CROSS.COM
+      - 上海市+电信
+      - 卢森堡+V2CROSS.COM
+      - 俄罗斯 V2CROSS.COM
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 加拿大+V2CROSS.COM
-      - 美国 CloudFlare节点
-      - 瑞士+V2CROSS.COM
-      - 安徽省合肥市 移动
-      - 美国 加利福尼亚州旧金山Amazon数据中心
+      - 美国+Microsoft数据中心
+      - 越南 V2CROSS.COM
+      - 上海市+电信
+      - 卢森堡+V2CROSS.COM
+      - 俄罗斯 V2CROSS.COM
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
