@@ -2,13 +2,43 @@ proxies:
   - name: 沙特阿拉伯+Arabic+Computer+System+Co.
     type: ss
     server: 85.208.108.94
-    port: '5500'
+    port: '443'
     cipher: aes-256-gcm
-    password: KixLvKzwjekG00rm
-  - name: 越南 V2CROSS.COM
+    password: pKEW8JPByTVTLtM
+  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 2
+    type: ss
+    server: 85.208.108.94
+    port: '2375'
+    cipher: aes-256-gcm
+    password: faBAoD54k87UJG7
+  - name: 安徽省合肥市 移动
     type: vmess
-    server: f-as1.wvvvv.eu.org
-    port: 20
+    server: 120.210.205.220
+    port: 36918
+    uuid: 411dacd6-030b-41ad-bfb6-3a822ec83014
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /
+    ws-headers:
+      Host: ''
+  - name: 韩国首尔 UCloud
+    type: vmess
+    server: 118.193.69.158
+    port: 53173
+    uuid: 3b76d1a8-55fd-465e-aa04-68c39a506175
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /
+    ws-headers:
+      Host: ''
+  - name: 韩国 首尔Amazon数据中心
+    type: vmess
+    server: f-as2.wvvvv.eu.org
+    port: 1
     uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0
     alterId: 0
     cipher: auto
@@ -16,42 +46,7 @@ proxies:
     network: tcp
     ws-path: /
     ws-headers:
-      Host: f-as1.wvvvv.eu.org
-  - name: 澳大利亚 Langwarrin Secondary College
-    type: vmess
-    server: 203.30.190.2
-    port: 8880
-    uuid: 56a2188b-2ab7-402c-b9b8-34847fdf0958
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /
-    ws-headers:
-      Host: lg.trump2023.net
-  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 2
-    type: ss
-    server: 85.208.108.94
-    port: '9102'
-    cipher: aes-256-gcm
-    password: e4FCWrgpkji3QY
-  - name: 美国+弗吉尼亚州阿什本Amazon数据中心
-    type: trojan
-    server: aws.blowm1k.club
-    port: '20532'
-    password: SbCfIK4dKM
-  - name: 美国 CloudFlare节点
-    type: vmess
-    server: 162.159.255.205
-    port: 80
-    uuid: 52466dc2-3550-4310-910c-74b7bf8a020e
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /
-    ws-headers:
-      Host: us-1.acyun.eu.org
+      Host: f-as2.wvvvv.eu.org
 proxy-groups:
   - name: Free-servers
     type: select
@@ -59,31 +54,28 @@ proxy-groups:
       - 自动选择
       - 故障转移
       - 沙特阿拉伯+Arabic+Computer+System+Co.
-      - 越南 V2CROSS.COM
-      - 澳大利亚 Langwarrin Secondary College
       - 沙特阿拉伯+Arabic+Computer+System+Co. - 2
-      - 美国+弗吉尼亚州阿什本Amazon数据中心
-      - 美国 CloudFlare节点
+      - 安徽省合肥市 移动
+      - 韩国首尔 UCloud
+      - 韩国 首尔Amazon数据中心
   - name: 自动选择
     type: url-test
     proxies:
       - 沙特阿拉伯+Arabic+Computer+System+Co.
-      - 越南 V2CROSS.COM
-      - 澳大利亚 Langwarrin Secondary College
       - 沙特阿拉伯+Arabic+Computer+System+Co. - 2
-      - 美国+弗吉尼亚州阿什本Amazon数据中心
-      - 美国 CloudFlare节点
+      - 安徽省合肥市 移动
+      - 韩国首尔 UCloud
+      - 韩国 首尔Amazon数据中心
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
       - 沙特阿拉伯+Arabic+Computer+System+Co.
-      - 越南 V2CROSS.COM
-      - 澳大利亚 Langwarrin Secondary College
       - 沙特阿拉伯+Arabic+Computer+System+Co. - 2
-      - 美国+弗吉尼亚州阿什本Amazon数据中心
-      - 美国 CloudFlare节点
+      - 安徽省合肥市 移动
+      - 韩国首尔 UCloud
+      - 韩国 首尔Amazon数据中心
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
