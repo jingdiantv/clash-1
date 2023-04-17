@@ -1,40 +1,9 @@
 proxies:
-  - name: 俄罗斯 V2CROSS.COM
-    type: vmess
-    server: f-us1.wvvvv.eu.org
-    port: 20
-    uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /
-    ws-headers:
-      Host: de01-cdn.airport-v2.com
-  - name: 安徽省合肥市 移动
-    type: vmess
-    server: 120.210.205.220
-    port: 36918
-    uuid: 411dacd6-030b-41ad-bfb6-3a822ec83014
-    alterId: 64
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /
-    ws-headers:
-      Host: ''
-  - name: 广东省佛山市 移动
-    type: vmess
-    server: 25.v2-ray.cyou
-    port: 23625
-    uuid: 0dd19d20-ec86-3680-b256-87237bafa89e
-    alterId: 2
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /
-    ws-headers:
-      Host: 25.v2-ray.cyou
+  - name: 美国+弗吉尼亚州阿什本Amazon数据中心
+    type: trojan
+    server: aws.blowm1k.club
+    port: '20532'
+    password: SbCfIK4dKM
   - name: 美国 加利福尼亚州洛杉矶Krypt机房
     type: vmess
     server: 67.229.243.65
@@ -48,47 +17,73 @@ proxies:
     ws-headers:
       Host: ''
     tls: true
-  - name: 俄罗斯 V2CROSS.COM - 2
+  - name: 南非豪登省约翰内斯堡 Cloudinnovation数据中心
     type: vmess
-    server: f-us1.wvvvv.eu.org
-    port: 20
-    uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0
+    server: 156.249.18.15
+    port: 49220
+    uuid: 375e70f0-5d46-476f-8d69-0fb35c5548a9
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /mehdi
+    ws-headers:
+      Host: ''
+  - name: 美国+Microsoft数据中心
+    type: trojan
+    server: aujs.stablize.top
+    port: '443'
+    password: 85f0aed5-6694-4194-90d3-9b33352e0791
+  - name: 韩国首尔 UCloud
+    type: vmess
+    server: 118.193.69.158
+    port: 53173
+    uuid: 3b76d1a8-55fd-465e-aa04-68c39a506175
     alterId: 0
     cipher: auto
     udp: true
     network: tcp
-    ws-path: ''
+    ws-path: /
     ws-headers:
       Host: ''
+  - name: 加拿大+V2CROSS.COM
+    type: ss
+    server: 135.181.114.242
+    port: '8478'
+    cipher: chacha20-ietf-poly1305
+    password: siF98xBL2v1i
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 俄罗斯 V2CROSS.COM
-      - 安徽省合肥市 移动
-      - 广东省佛山市 移动
+      - 美国+弗吉尼亚州阿什本Amazon数据中心
       - 美国 加利福尼亚州洛杉矶Krypt机房
-      - 俄罗斯 V2CROSS.COM - 2
+      - 南非豪登省约翰内斯堡 Cloudinnovation数据中心
+      - 美国+Microsoft数据中心
+      - 韩国首尔 UCloud
+      - 加拿大+V2CROSS.COM
   - name: 自动选择
     type: url-test
     proxies:
-      - 俄罗斯 V2CROSS.COM
-      - 安徽省合肥市 移动
-      - 广东省佛山市 移动
+      - 美国+弗吉尼亚州阿什本Amazon数据中心
       - 美国 加利福尼亚州洛杉矶Krypt机房
-      - 俄罗斯 V2CROSS.COM - 2
+      - 南非豪登省约翰内斯堡 Cloudinnovation数据中心
+      - 美国+Microsoft数据中心
+      - 韩国首尔 UCloud
+      - 加拿大+V2CROSS.COM
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 俄罗斯 V2CROSS.COM
-      - 安徽省合肥市 移动
-      - 广东省佛山市 移动
+      - 美国+弗吉尼亚州阿什本Amazon数据中心
       - 美国 加利福尼亚州洛杉矶Krypt机房
-      - 俄罗斯 V2CROSS.COM - 2
+      - 南非豪登省约翰内斯堡 Cloudinnovation数据中心
+      - 美国+Microsoft数据中心
+      - 韩国首尔 UCloud
+      - 加拿大+V2CROSS.COM
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
