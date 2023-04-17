@@ -1,10 +1,9 @@
 proxies:
-  - name: 沙特阿拉伯+Arabic+Computer+System+Co.
-    type: ss
-    server: 85.208.108.94
-    port: '5004'
-    cipher: aes-256-gcm
-    password: g5MeD6Ft3CWlJId
+  - name: 美国+Microsoft数据中心
+    type: trojan
+    server: fscsg.fscloud123456789.com
+    port: '443'
+    password: ed19b239-8e49-4b82-979a-24b84fa7b173
   - name: 美国 加利福尼亚州洛杉矶MULTACOM数据中心
     type: vmess
     server: rnrn3g.555456.xyz
@@ -18,6 +17,36 @@ proxies:
     ws-headers:
       Host: rnrn3g.555456.xyz
     tls: true
+  - name: 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
+    type: vmess
+    server: 23.225.33.170
+    port: 56002
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /
+    ws-headers:
+      Host: ''
+  - name: 沙特阿拉伯+Arabic+Computer+System+Co.
+    type: ss
+    server: 85.208.108.94
+    port: '6679'
+    cipher: aes-256-gcm
+    password: TEzjfAYq2IjtuoS
+  - name: 美国 CloudFlare节点
+    type: vmess
+    server: 172.67.217.222
+    port: 80
+    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /shirker
+    ws-headers:
+      Host: dp3.scproxy.top
   - name: 广东省佛山市 移动
     type: vmess
     server: 25.v2-ray.cyou
@@ -30,32 +59,7 @@ proxies:
     ws-path: /
     ws-headers:
       Host: 25.v2-ray.cyou
-  - name: 美国 CloudFlare节点
-    type: vmess
-    server: cf-lt.sharecentre.online
-    port: 443
-    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /shirker
-    ws-headers:
-      Host: lv3.sharecentrepro.org
-    tls: true
   - name: 南非 V2CROSS.COM
-    type: vmess
-    server: 156.225.67.61
-    port: 49955
-    uuid: 6193116d-96f9-4d7a-9be5-5bb06a69af0b
-    alterId: 64
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: ''
-    ws-headers:
-      Host: ''
-  - name: 南非 V2CROSS.COM - 2
     type: vmess
     server: 156.225.67.106
     port: 49920
@@ -64,117 +68,60 @@ proxies:
     cipher: auto
     udp: true
     network: tcp
-    ws-path: ''
+    ws-path: /
     ws-headers:
       Host: ''
-  - name: 瑞士+V2CROSS.COM
-    type: trojan
-    server: 195.15.243.26
-    port: '443'
-    password: '4478'
-  - name: 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
-    type: vmess
-    server: 23.224.14.116
-    port: 51552
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /shirker
-    ws-headers:
-      Host: hk-hytron.ilovescp.com
   - name: 美国 CloudFlare节点 - 2
     type: vmess
-    server: cf.noaries.de
-    port: 8080
-    uuid: a0f153d8-e32f-41f3-9bcd-073f579e2264
+    server: new3.hucloud-dns.xyz
+    port: 443
+    uuid: 1c8ad3f2-835c-4fda-b9b6-881d3cadfd8e
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /aries?ed=2048
-    ws-headers:
-      Host: buyvm.cloudflare.quest
-  - name: 台湾省新北市 中华电信
-    type: vmess
-    server: hinet1261.gfwisbest.xyz
-    port: 224
-    uuid: 2285133e-b9ba-3fb5-a246-9c7ddcc2cd7a
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: tcp
     ws-path: /
     ws-headers:
       Host: ''
-  - name: 越南 V2CROSS.COM
-    type: vmess
-    server: f-as1.wvvvv.eu.org
-    port: 20
-    uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /
-    ws-headers:
-      Host: f-as1.wvvvv.eu.org
-  - name: 美国+V2CROSS.COM
-    type: trojan
-    server: 152.70.74.66
-    port: 443?security=tls&type=tcp&headerType=none
-    password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
+    tls: true
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 沙特阿拉伯+Arabic+Computer+System+Co.
+      - 美国+Microsoft数据中心
       - 美国 加利福尼亚州洛杉矶MULTACOM数据中心
-      - 广东省佛山市 移动
-      - 美国 CloudFlare节点
-      - 南非 V2CROSS.COM
-      - 南非 V2CROSS.COM - 2
-      - 瑞士+V2CROSS.COM
       - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
+      - 沙特阿拉伯+Arabic+Computer+System+Co.
+      - 美国 CloudFlare节点
+      - 广东省佛山市 移动
+      - 南非 V2CROSS.COM
       - 美国 CloudFlare节点 - 2
-      - 台湾省新北市 中华电信
-      - 越南 V2CROSS.COM
-      - 美国+V2CROSS.COM
   - name: 自动选择
     type: url-test
     proxies:
-      - 沙特阿拉伯+Arabic+Computer+System+Co.
+      - 美国+Microsoft数据中心
       - 美国 加利福尼亚州洛杉矶MULTACOM数据中心
-      - 广东省佛山市 移动
-      - 美国 CloudFlare节点
-      - 南非 V2CROSS.COM
-      - 南非 V2CROSS.COM - 2
-      - 瑞士+V2CROSS.COM
       - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
+      - 沙特阿拉伯+Arabic+Computer+System+Co.
+      - 美国 CloudFlare节点
+      - 广东省佛山市 移动
+      - 南非 V2CROSS.COM
       - 美国 CloudFlare节点 - 2
-      - 台湾省新北市 中华电信
-      - 越南 V2CROSS.COM
-      - 美国+V2CROSS.COM
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 沙特阿拉伯+Arabic+Computer+System+Co.
+      - 美国+Microsoft数据中心
       - 美国 加利福尼亚州洛杉矶MULTACOM数据中心
-      - 广东省佛山市 移动
-      - 美国 CloudFlare节点
-      - 南非 V2CROSS.COM
-      - 南非 V2CROSS.COM - 2
-      - 瑞士+V2CROSS.COM
       - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
+      - 沙特阿拉伯+Arabic+Computer+System+Co.
+      - 美国 CloudFlare节点
+      - 广东省佛山市 移动
+      - 南非 V2CROSS.COM
       - 美国 CloudFlare节点 - 2
-      - 台湾省新北市 中华电信
-      - 越南 V2CROSS.COM
-      - 美国+V2CROSS.COM
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
