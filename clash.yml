@@ -1,89 +1,80 @@
 proxies:
-  - name: 美国+弗吉尼亚州阿什本Amazon数据中心
-    type: trojan
-    server: aws.blowm1k.club
-    port: '20532'
-    password: SbCfIK4dKM
-  - name: 美国 加利福尼亚州洛杉矶Krypt机房
-    type: vmess
-    server: 67.229.243.65
-    port: 23738
-    uuid: a52907d9-9b68-4d4e-8f1f-2d5e18c98c45
-    alterId: 64
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /us13/getData
-    ws-headers:
-      Host: ''
-    tls: true
-  - name: 南非豪登省约翰内斯堡 Cloudinnovation数据中心
-    type: vmess
-    server: 156.249.18.15
-    port: 49220
-    uuid: 375e70f0-5d46-476f-8d69-0fb35c5548a9
-    alterId: 64
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /mehdi
-    ws-headers:
-      Host: ''
-  - name: 美国+Microsoft数据中心
-    type: trojan
-    server: aujs.stablize.top
-    port: '443'
-    password: 85f0aed5-6694-4194-90d3-9b33352e0791
-  - name: 韩国首尔 UCloud
-    type: vmess
-    server: 118.193.69.158
-    port: 53173
-    uuid: 3b76d1a8-55fd-465e-aa04-68c39a506175
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /
-    ws-headers:
-      Host: ''
   - name: 加拿大+V2CROSS.COM
     type: ss
     server: 135.181.114.242
     port: '8478'
     cipher: chacha20-ietf-poly1305
     password: siF98xBL2v1i
+  - name: 美国 CloudFlare节点
+    type: vmess
+    server: cf.515188.xyz
+    port: 8080
+    uuid: 9d553e2b-4176-44ef-bf70-48aa8eb6da60
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /api/v3/download.getFile
+    ws-headers:
+      Host: ssrsub.v01.ssrsub.com
+  - name: 瑞士+V2CROSS.COM
+    type: trojan
+    server: 195.15.243.26
+    port: '443'
+    password: '4478'
+  - name: 安徽省合肥市 移动
+    type: vmess
+    server: 120.210.205.220
+    port: 36918
+    uuid: 411dacd6-030b-41ad-bfb6-3a822ec83014
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /
+    ws-headers:
+      Host: ''
+  - name: 美国 加利福尼亚州旧金山Amazon数据中心
+    type: vmess
+    server: pop.usa.gfwcaonimanmsl.ml
+    port: 8966
+    uuid: 3b8fb6a5-1193-4bb4-a4bd-5ea854d1350f
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /name
+    ws-headers:
+      Host: pop.usa.gfwcaonimanmsl.ml
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 美国+弗吉尼亚州阿什本Amazon数据中心
-      - 美国 加利福尼亚州洛杉矶Krypt机房
-      - 南非豪登省约翰内斯堡 Cloudinnovation数据中心
-      - 美国+Microsoft数据中心
-      - 韩国首尔 UCloud
       - 加拿大+V2CROSS.COM
+      - 美国 CloudFlare节点
+      - 瑞士+V2CROSS.COM
+      - 安徽省合肥市 移动
+      - 美国 加利福尼亚州旧金山Amazon数据中心
   - name: 自动选择
     type: url-test
     proxies:
-      - 美国+弗吉尼亚州阿什本Amazon数据中心
-      - 美国 加利福尼亚州洛杉矶Krypt机房
-      - 南非豪登省约翰内斯堡 Cloudinnovation数据中心
-      - 美国+Microsoft数据中心
-      - 韩国首尔 UCloud
       - 加拿大+V2CROSS.COM
+      - 美国 CloudFlare节点
+      - 瑞士+V2CROSS.COM
+      - 安徽省合肥市 移动
+      - 美国 加利福尼亚州旧金山Amazon数据中心
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 美国+弗吉尼亚州阿什本Amazon数据中心
-      - 美国 加利福尼亚州洛杉矶Krypt机房
-      - 南非豪登省约翰内斯堡 Cloudinnovation数据中心
-      - 美国+Microsoft数据中心
-      - 韩国首尔 UCloud
       - 加拿大+V2CROSS.COM
+      - 美国 CloudFlare节点
+      - 瑞士+V2CROSS.COM
+      - 安徽省合肥市 移动
+      - 美国 加利福尼亚州旧金山Amazon数据中心
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
