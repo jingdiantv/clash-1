@@ -2,51 +2,68 @@ proxies:
   - name: 沙特阿拉伯+Arabic+Computer+System+Co.
     type: ss
     server: 85.208.108.94
-    port: '443'
+    port: '3306'
     cipher: aes-256-gcm
-    password: pKEW8JPByTVTLtM
+    password: Y6R9pAtvxxzmGC
   - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 2
     type: ss
     server: 85.208.108.94
-    port: '2375'
+    port: '8119'
     cipher: aes-256-gcm
-    password: faBAoD54k87UJG7
-  - name: 安徽省合肥市 移动
+    password: cdBIDV42DCwnfIN
+  - name: 美国 加利福尼亚州洛杉矶市CeraNetworks数据中心
     type: vmess
-    server: 120.210.205.220
-    port: 36918
-    uuid: 411dacd6-030b-41ad-bfb6-3a822ec83014
+    server: 172.247.194.3
+    port: 44404
+    uuid: bb25859e-f6da-4101-989f-b4dd67a22682
     alterId: 64
     cipher: auto
     udp: true
     network: tcp
-    ws-path: /
+    ws-path: ''
     ws-headers:
       Host: ''
-  - name: 韩国首尔 UCloud
+  - name: 美国+加利福尼亚州圣何塞ColoCrossing数据中心
+    type: trojan
+    server: rn.blowm1k.club
+    port: '14978'
+    password: f5mpynwukL
+  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 3
+    type: ss
+    server: 85.208.108.94
+    port: '3306'
+    cipher: aes-256-gcm
+    password: Y6R9pAtvxxzmGC
+  - name: 美国 CloudFlare节点
     type: vmess
-    server: 118.193.69.158
-    port: 53173
-    uuid: 3b76d1a8-55fd-465e-aa04-68c39a506175
+    server: 172.67.217.222
+    port: 80
+    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
     alterId: 0
     cipher: auto
     udp: true
-    network: tcp
-    ws-path: /
+    network: ws
+    ws-path: /shirker
     ws-headers:
-      Host: ''
-  - name: 韩国 首尔Amazon数据中心
+      Host: dp3.scproxy.top
+  - name: 美国 Amazon数据中心
     type: vmess
-    server: f-as2.wvvvv.eu.org
-    port: 1
-    uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0
+    server: pop.china.gfwcaonimanmsl.ml
+    port: 10010
+    uuid: 3b8fb6a5-1193-4bb4-a4bd-5ea854d1350f
     alterId: 0
     cipher: auto
     udp: true
-    network: tcp
-    ws-path: /
+    network: ws
+    ws-path: /name
     ws-headers:
-      Host: f-as2.wvvvv.eu.org
+      Host: pop.china.gfwcaonimanmsl.ml
+  - name: 美国+华盛顿Cogent通信公司
+    type: ss
+    server: 38.75.136.102
+    port: '5003'
+    cipher: aes-256-gcm
+    password: g5MeD6Ft3CWlJId
 proxy-groups:
   - name: Free-servers
     type: select
@@ -55,17 +72,23 @@ proxy-groups:
       - 故障转移
       - 沙特阿拉伯+Arabic+Computer+System+Co.
       - 沙特阿拉伯+Arabic+Computer+System+Co. - 2
-      - 安徽省合肥市 移动
-      - 韩国首尔 UCloud
-      - 韩国 首尔Amazon数据中心
+      - 美国 加利福尼亚州洛杉矶市CeraNetworks数据中心
+      - 美国+加利福尼亚州圣何塞ColoCrossing数据中心
+      - 沙特阿拉伯+Arabic+Computer+System+Co. - 3
+      - 美国 CloudFlare节点
+      - 美国 Amazon数据中心
+      - 美国+华盛顿Cogent通信公司
   - name: 自动选择
     type: url-test
     proxies:
       - 沙特阿拉伯+Arabic+Computer+System+Co.
       - 沙特阿拉伯+Arabic+Computer+System+Co. - 2
-      - 安徽省合肥市 移动
-      - 韩国首尔 UCloud
-      - 韩国 首尔Amazon数据中心
+      - 美国 加利福尼亚州洛杉矶市CeraNetworks数据中心
+      - 美国+加利福尼亚州圣何塞ColoCrossing数据中心
+      - 沙特阿拉伯+Arabic+Computer+System+Co. - 3
+      - 美国 CloudFlare节点
+      - 美国 Amazon数据中心
+      - 美国+华盛顿Cogent通信公司
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
@@ -73,9 +96,12 @@ proxy-groups:
     proxies:
       - 沙特阿拉伯+Arabic+Computer+System+Co.
       - 沙特阿拉伯+Arabic+Computer+System+Co. - 2
-      - 安徽省合肥市 移动
-      - 韩国首尔 UCloud
-      - 韩国 首尔Amazon数据中心
+      - 美国 加利福尼亚州洛杉矶市CeraNetworks数据中心
+      - 美国+加利福尼亚州圣何塞ColoCrossing数据中心
+      - 沙特阿拉伯+Arabic+Computer+System+Co. - 3
+      - 美国 CloudFlare节点
+      - 美国 Amazon数据中心
+      - 美国+华盛顿Cogent通信公司
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
