@@ -1,32 +1,38 @@
 proxies:
-  - name: 沙特阿拉伯+Arabic+Computer+System+Co.
-    type: ss
-    server: 85.208.108.94
-    port: '8888'
-    cipher: aes-256-gcm
-    password: Y6R9pAtvxxzmGC
-  - name: 美国 加利福尼亚州旧金山Amazon数据中心
+  - name: 美国 CloudFlare节点
     type: vmess
-    server: pop.china.gfwcaonimanmsl.ml
-    port: 10010
-    uuid: 3b8fb6a5-1193-4bb4-a4bd-5ea854d1350f
+    server: cf-lt.sharecentre.online
+    port: 80
+    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /name
+    ws-path: /shirker
     ws-headers:
-      Host: pop.china.gfwcaonimanmsl.ml
-  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 2
+      Host: uk1.scproxy.top
+  - name: 沙特阿拉伯+Arabic+Computer+System+Co.
     type: ss
     server: 85.208.108.94
-    port: '7001'
+    port: '5004'
     cipher: aes-256-gcm
-    password: RexnBgU7EV5ADxG
-  - name: 美国 Datability
+    password: g5MeD6Ft3CWlJId
+  - name: 美国 CloudFlare公司CDN节点(shopify)
     type: vmess
-    server: 140.99.149.43
-    port: 56882
+    server: 23.227.38.22
+    port: 2052
+    uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /
+    ws-headers:
+      Host: oplg.trump2023.us
+  - name: 美国 加利福尼亚州圣何塞PEG TECH
+    type: vmess
+    server: 142.4.127.152
+    port: 50042
     uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
     alterId: 64
     cipher: auto
@@ -35,99 +41,77 @@ proxies:
     ws-path: /
     ws-headers:
       Host: ''
-  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 3
-    type: ss
-    server: 85.208.108.94
-    port: '5601'
-    cipher: aes-256-gcm
-    password: Y6R9pAtvxxzmGC
-  - name: 美国 CloudFlare节点
+  - name: 美国 CloudFlare节点 - 2
     type: vmess
-    server: cf.noaries.de
-    port: 2082
-    uuid: 314c1387-618c-4689-97fc-4bc9a1ae5e05
+    server: germany1.unlimiteddev.co
+    port: 80
+    uuid: 97ea79a6-615c-4ad7-8083-4f3b49cbe8a2
     alterId: 0
     cipher: auto
     udp: true
     network: ws
     ws-path: /
     ws-headers:
-      Host: ir2.nmsl.ninja
-  - name: 美国 Merit网络公司
+      Host: germany1.unlimiteddev.co
+  - name: 美国 CloudFlare节点 - 3
     type: vmess
-    server: okvtwo-pikachujp.cloud.okteto.net
-    port: 443
-    uuid: fdcf5262-8b5d-40fe-873c-fd5ffb4ca960
+    server: 172.67.217.222
+    port: 80
+    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /vmess
+    ws-path: /shirker
     ws-headers:
-      Host: okvtwo-pikachujp.cloud.okteto.net
-    tls: true
-  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 4
-    type: ss
-    server: 85.208.108.94
-    port: '6697'
-    cipher: aes-256-gcm
-    password: TEzjfAYq2IjtuoS
-  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 5
-    type: ss
-    server: 85.208.108.94
-    port: '3306'
-    cipher: aes-256-gcm
-    password: Y6R9pAtvxxzmGC
-  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 6
-    type: ss
-    server: 85.208.108.94
-    port: '5600'
-    cipher: aes-256-gcm
-    password: Y6R9pAtvxxzmGC
+      Host: dp3.scproxy.top
+  - name: 韩国 首尔Amazon数据中心
+    type: vmess
+    server: f-as2.wvvvv.eu.org
+    port: 1
+    uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /
+    ws-headers:
+      Host: f-as2.wvvvv.eu.org
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 沙特阿拉伯+Arabic+Computer+System+Co.
-      - 美国 加利福尼亚州旧金山Amazon数据中心
-      - 沙特阿拉伯+Arabic+Computer+System+Co. - 2
-      - 美国 Datability
-      - 沙特阿拉伯+Arabic+Computer+System+Co. - 3
       - 美国 CloudFlare节点
-      - 美国 Merit网络公司
-      - 沙特阿拉伯+Arabic+Computer+System+Co. - 4
-      - 沙特阿拉伯+Arabic+Computer+System+Co. - 5
-      - 沙特阿拉伯+Arabic+Computer+System+Co. - 6
+      - 沙特阿拉伯+Arabic+Computer+System+Co.
+      - 美国 CloudFlare公司CDN节点(shopify)
+      - 美国 加利福尼亚州圣何塞PEG TECH
+      - 美国 CloudFlare节点 - 2
+      - 美国 CloudFlare节点 - 3
+      - 韩国 首尔Amazon数据中心
   - name: 自动选择
     type: url-test
     proxies:
-      - 沙特阿拉伯+Arabic+Computer+System+Co.
-      - 美国 加利福尼亚州旧金山Amazon数据中心
-      - 沙特阿拉伯+Arabic+Computer+System+Co. - 2
-      - 美国 Datability
-      - 沙特阿拉伯+Arabic+Computer+System+Co. - 3
       - 美国 CloudFlare节点
-      - 美国 Merit网络公司
-      - 沙特阿拉伯+Arabic+Computer+System+Co. - 4
-      - 沙特阿拉伯+Arabic+Computer+System+Co. - 5
-      - 沙特阿拉伯+Arabic+Computer+System+Co. - 6
+      - 沙特阿拉伯+Arabic+Computer+System+Co.
+      - 美国 CloudFlare公司CDN节点(shopify)
+      - 美国 加利福尼亚州圣何塞PEG TECH
+      - 美国 CloudFlare节点 - 2
+      - 美国 CloudFlare节点 - 3
+      - 韩国 首尔Amazon数据中心
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 沙特阿拉伯+Arabic+Computer+System+Co.
-      - 美国 加利福尼亚州旧金山Amazon数据中心
-      - 沙特阿拉伯+Arabic+Computer+System+Co. - 2
-      - 美国 Datability
-      - 沙特阿拉伯+Arabic+Computer+System+Co. - 3
       - 美国 CloudFlare节点
-      - 美国 Merit网络公司
-      - 沙特阿拉伯+Arabic+Computer+System+Co. - 4
-      - 沙特阿拉伯+Arabic+Computer+System+Co. - 5
-      - 沙特阿拉伯+Arabic+Computer+System+Co. - 6
+      - 沙特阿拉伯+Arabic+Computer+System+Co.
+      - 美国 CloudFlare公司CDN节点(shopify)
+      - 美国 加利福尼亚州圣何塞PEG TECH
+      - 美国 CloudFlare节点 - 2
+      - 美国 CloudFlare节点 - 3
+      - 韩国 首尔Amazon数据中心
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
