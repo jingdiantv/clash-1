@@ -1,30 +1,37 @@
 proxies:
+  - name: 沙特阿拉伯+Arabic+Computer+System+Co.
+    type: ss
+    server: 85.208.108.21
+    port: '9101'
+    cipher: aes-256-gcm
+    password: e4FCWrgpkji3QY
+  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 2
+    type: ss
+    server: 85.208.108.21
+    port: '8091'
+    cipher: aes-256-gcm
+    password: PCnnH6SQSnfoS27
+  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 3
+    type: ss
+    server: 85.208.108.21
+    port: '2376'
+    cipher: aes-256-gcm
+    password: faBAoD54k87UJG7
   - name: 美国 CloudFlare节点
     type: vmess
-    server: 162.159.255.205
-    port: 80
-    uuid: 52466dc2-3550-4310-910c-74b7bf8a020e
+    server: cf.noaries.de
+    port: 8080
+    uuid: a0f153d8-e32f-41f3-9bcd-073f579e2264
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /
+    ws-path: /aries?ed=2048
     ws-headers:
-      Host: us-1.acyun.eu.org
-  - name: 美国+V2CROSS.COM
-    type: trojan
-    server: 152.70.74.66
-    port: 443?security=tls&type=tcp&headerType=none
-    password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
-  - name: 沙特阿拉伯+Arabic+Computer+System+Co.
-    type: ss
-    server: 85.208.108.21
-    port: '8118'
-    cipher: aes-256-gcm
-    password: cdBIDV42DCwnfIN
-  - name: 韩国 首尔Amazon数据中心
+      Host: buyvm.cloudflare.quest
+  - name: 美国 V2CROSS.COM
     type: vmess
-    server: f-as2.wvvvv.eu.org
+    server: f-eu1.wvvvv.eu.org
     port: 1
     uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0
     alterId: 0
@@ -33,57 +40,78 @@ proxies:
     network: tcp
     ws-path: /
     ws-headers:
-      Host: f-as2.wvvvv.eu.org
-  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 2
+      Host: f-eu1.wvvvv.eu.org
+  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 4
     type: ss
     server: 85.208.108.21
-    port: '8000'
+    port: '8008'
     cipher: aes-256-gcm
-    password: KixLvKzwjekG00rm
-  - name: 美国 CloudFlare节点 - 2
+    password: XKFKl2rULjIp74
+  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 5
+    type: ss
+    server: 85.208.108.21
+    port: '5600'
+    cipher: aes-256-gcm
+    password: Y6R9pAtvxxzmGC
+  - name: 江苏省扬州市 移动
     type: vmess
-    server: germany1.unlimiteddev.co
-    port: 80
-    uuid: 97ea79a6-615c-4ad7-8083-4f3b49cbe8a2
-    alterId: 0
+    server: data-hk-v1.shwjfkw.cn
+    port: 50207
+    uuid: b1478e24-4916-3abe-8f17-15931012ecbe
+    alterId: 1
     cipher: auto
     udp: true
     network: ws
-    ws-path: /
+    ws-path: /hls/cctv5phd.m3u8
     ws-headers:
-      Host: germany1.unlimiteddev.co
+      Host: YTB-awkj
+  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 6
+    type: ss
+    server: 85.208.108.21
+    port: '2375'
+    cipher: aes-256-gcm
+    password: faBAoD54k87UJG7
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 美国 CloudFlare节点
-      - 美国+V2CROSS.COM
       - 沙特阿拉伯+Arabic+Computer+System+Co.
-      - 韩国 首尔Amazon数据中心
       - 沙特阿拉伯+Arabic+Computer+System+Co. - 2
-      - 美国 CloudFlare节点 - 2
+      - 沙特阿拉伯+Arabic+Computer+System+Co. - 3
+      - 美国 CloudFlare节点
+      - 美国 V2CROSS.COM
+      - 沙特阿拉伯+Arabic+Computer+System+Co. - 4
+      - 沙特阿拉伯+Arabic+Computer+System+Co. - 5
+      - 江苏省扬州市 移动
+      - 沙特阿拉伯+Arabic+Computer+System+Co. - 6
   - name: 自动选择
     type: url-test
     proxies:
-      - 美国 CloudFlare节点
-      - 美国+V2CROSS.COM
       - 沙特阿拉伯+Arabic+Computer+System+Co.
-      - 韩国 首尔Amazon数据中心
       - 沙特阿拉伯+Arabic+Computer+System+Co. - 2
-      - 美国 CloudFlare节点 - 2
+      - 沙特阿拉伯+Arabic+Computer+System+Co. - 3
+      - 美国 CloudFlare节点
+      - 美国 V2CROSS.COM
+      - 沙特阿拉伯+Arabic+Computer+System+Co. - 4
+      - 沙特阿拉伯+Arabic+Computer+System+Co. - 5
+      - 江苏省扬州市 移动
+      - 沙特阿拉伯+Arabic+Computer+System+Co. - 6
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 美国 CloudFlare节点
-      - 美国+V2CROSS.COM
       - 沙特阿拉伯+Arabic+Computer+System+Co.
-      - 韩国 首尔Amazon数据中心
       - 沙特阿拉伯+Arabic+Computer+System+Co. - 2
-      - 美国 CloudFlare节点 - 2
+      - 沙特阿拉伯+Arabic+Computer+System+Co. - 3
+      - 美国 CloudFlare节点
+      - 美国 V2CROSS.COM
+      - 沙特阿拉伯+Arabic+Computer+System+Co. - 4
+      - 沙特阿拉伯+Arabic+Computer+System+Co. - 5
+      - 江苏省扬州市 移动
+      - 沙特阿拉伯+Arabic+Computer+System+Co. - 6
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
