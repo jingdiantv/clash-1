@@ -8,107 +8,43 @@ proxies:
     cipher: auto
     udp: true
     network: tcp
-    ws-path: ''
+    ws-path: /
     ws-headers:
       Host: ''
-  - name: 亚太地区 V2CROSS.COM
+  - name: 美国 V2CROSS.COM
     type: vmess
-    server: f-as1.wvvvv.eu.org
-    port: 20
-    uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0
+    server: 131.186.41.192
+    port: 26297
+    uuid: b0ed6eb7-dc30-4897-df50-c2c1d4ee6e91
     alterId: 0
     cipher: auto
     udp: true
     network: tcp
     ws-path: /
     ws-headers:
-      Host: f-as1.wvvvv.eu.org
+      Host: ''
+  - name: 美国+弗吉尼亚州阿什本Amazon数据中心
+    type: trojan
+    server: aws.blowm1k.club
+    port: '20532'
+    password: SbCfIK4dKM
   - name: 美国 CloudFlare节点
     type: vmess
-    server: lsb-gy.heinu.cf
-    port: 2096
-    uuid: d793c013-f596-4af9-de0a-2062bb864dd7
+    server: cf.515188.xyz
+    port: 8080
+    uuid: 9d553e2b-4176-44ef-bf70-48aa8eb6da60
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /@heinuhome
+    ws-path: /api/v3/download.getFile
     ws-headers:
-      Host: ''
-    tls: true
-  - name: 美国 CloudFlare节点 - 2
-    type: vmess
-    server: cf-lt.sharecentre.online
-    port: 80
-    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /shirker
-    ws-headers:
-      Host: lv2.sharecentrepro.org
-  - name: 英国 V2CROSS.COM
-    type: vmess
-    server: 83.142.225.32
-    port: 443
-    uuid: 5267ca71-97e6-44c8-8fb5-9fe4afe0954e
-    alterId: 64
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /path/220128071100
-    ws-headers:
-      Host: ''
-    tls: true
-  - name: 美国 CloudFlare节点 - 3
-    type: vmess
-    server: 172.64.194.13
-    port: 8880
-    uuid: 56a2188b-2ab7-402c-b9b8-34847fdf0958
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /
-    ws-headers:
-      Host: lg.trump2023.net
-  - name: 美国 CloudFlare节点 - 4
-    type: vmess
-    server: 3.mamadcucu.com
-    port: 2086
-    uuid: 929344e1-473c-4feb-b86b-fde3ee1ccd16
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /ArsalanTauBot
-    ws-headers:
-      Host: 3.mamadcucu.com
-  - name: 美国 CloudFlare节点 - 5
-    type: vmess
-    server: 172.67.140.193
-    port: 80
-    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /shirker
-    ws-headers:
-      Host: uk1.scproxy.top
-  - name: 韩国 首尔Amazon数据中心
-    type: vmess
-    server: f-as2.wvvvv.eu.org
-    port: 1
-    uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /
-    ws-headers:
-      Host: ''
+      Host: ssrsub.v02.ssrsub.com
+  - name: 美国+V2CROSS.COM
+    type: trojan
+    server: 152.70.74.66
+    port: 443?security=tls&type=tcp&headerType=none
+    password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
 proxy-groups:
   - name: Free-servers
     type: select
@@ -116,40 +52,28 @@ proxy-groups:
       - 自动选择
       - 故障转移
       - 香港 V2CROSS.COM
-      - 亚太地区 V2CROSS.COM
+      - 美国 V2CROSS.COM
+      - 美国+弗吉尼亚州阿什本Amazon数据中心
       - 美国 CloudFlare节点
-      - 美国 CloudFlare节点 - 2
-      - 英国 V2CROSS.COM
-      - 美国 CloudFlare节点 - 3
-      - 美国 CloudFlare节点 - 4
-      - 美国 CloudFlare节点 - 5
-      - 韩国 首尔Amazon数据中心
+      - 美国+V2CROSS.COM
   - name: 自动选择
     type: url-test
     proxies:
       - 香港 V2CROSS.COM
-      - 亚太地区 V2CROSS.COM
+      - 美国 V2CROSS.COM
+      - 美国+弗吉尼亚州阿什本Amazon数据中心
       - 美国 CloudFlare节点
-      - 美国 CloudFlare节点 - 2
-      - 英国 V2CROSS.COM
-      - 美国 CloudFlare节点 - 3
-      - 美国 CloudFlare节点 - 4
-      - 美国 CloudFlare节点 - 5
-      - 韩国 首尔Amazon数据中心
+      - 美国+V2CROSS.COM
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
       - 香港 V2CROSS.COM
-      - 亚太地区 V2CROSS.COM
+      - 美国 V2CROSS.COM
+      - 美国+弗吉尼亚州阿什本Amazon数据中心
       - 美国 CloudFlare节点
-      - 美国 CloudFlare节点 - 2
-      - 英国 V2CROSS.COM
-      - 美国 CloudFlare节点 - 3
-      - 美国 CloudFlare节点 - 4
-      - 美国 CloudFlare节点 - 5
-      - 韩国 首尔Amazon数据中心
+      - 美国+V2CROSS.COM
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
