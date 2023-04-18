@@ -1,24 +1,7 @@
 proxies:
-  - name: 美国+V2CROSS.COM
-    type: trojan
-    server: 170.187.134.190
-    port: 8443?sni=170-187-134-190.ipv4.rush.ml
-    password: cf4295378e209e70d12c5bdd017144dfd1c772d3
-  - name: 沙特阿拉伯+Arabic+Computer+System+Co.
-    type: ss
-    server: 85.208.108.21
-    port: '8090'
-    cipher: aes-256-gcm
-    password: PCnnH6SQSnfoS27
-  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 2
-    type: ss
-    server: 85.208.108.21
-    port: '8000'
-    cipher: aes-256-gcm
-    password: KixLvKzwjekG00rm
   - name: 美国 CloudFlare节点
     type: vmess
-    server: 172.67.217.222
+    server: cf-lt.sharecentre.online
     port: 80
     uuid: 2e496758-950e-4549-8842-d5eec98d9fde
     alterId: 0
@@ -27,7 +10,49 @@ proxies:
     network: ws
     ws-path: /shirker
     ws-headers:
-      Host: dp3.scproxy.top
+      Host: lv3.sharecentrepro.org
+  - name: 沙特阿拉伯+Arabic+Computer+System+Co.
+    type: ss
+    server: 85.208.108.21
+    port: '9102'
+    cipher: aes-256-gcm
+    password: e4FCWrgpkji3QY
+  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 2
+    type: ss
+    server: 85.208.108.21
+    port: '5000'
+    cipher: aes-256-gcm
+    password: Y6R9pAtvxxzmGC
+  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 3
+    type: ss
+    server: 85.208.108.21
+    port: '8118'
+    cipher: aes-256-gcm
+    password: cdBIDV42DCwnfIN
+  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 4
+    type: ss
+    server: 85.208.108.21
+    port: '7002'
+    cipher: aes-256-gcm
+    password: RexnBgU7EV5ADxG
+  - name: 江苏省扬州市 移动
+    type: vmess
+    server: data-hk-v1.shwjfkw.cn
+    port: 50207
+    uuid: b1478e24-4916-3abe-8f17-15931012ecbe
+    alterId: 1
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /hls/cctv5phd.m3u8
+    ws-headers:
+      Host: YTB-awkj
+  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 5
+    type: ss
+    server: 85.208.108.21
+    port: '8888'
+    cipher: aes-256-gcm
+    password: Y6R9pAtvxxzmGC
   - name: 美国 Datability
     type: vmess
     server: 140.99.149.43
@@ -40,78 +65,44 @@ proxies:
     ws-path: /
     ws-headers:
       Host: ''
-  - name: 美国 CloudFlare节点 - 2
-    type: vmess
-    server: cf-lt.sharecentre.online
-    port: 443
-    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /shirker
-    ws-headers:
-      Host: lv3.sharecentrepro.org
-    tls: true
-  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 3
-    type: ss
-    server: 85.208.108.21
-    port: '7001'
-    cipher: aes-256-gcm
-    password: RexnBgU7EV5ADxG
-  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 4
-    type: ss
-    server: 85.208.108.21
-    port: '8009'
-    cipher: aes-256-gcm
-    password: XKFKl2rULjIp74
-  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 5
-    type: ss
-    server: 85.208.108.21
-    port: '7002'
-    cipher: aes-256-gcm
-    password: RexnBgU7EV5ADxG
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 美国+V2CROSS.COM
+      - 美国 CloudFlare节点
       - 沙特阿拉伯+Arabic+Computer+System+Co.
       - 沙特阿拉伯+Arabic+Computer+System+Co. - 2
-      - 美国 CloudFlare节点
-      - 美国 Datability
-      - 美国 CloudFlare节点 - 2
       - 沙特阿拉伯+Arabic+Computer+System+Co. - 3
       - 沙特阿拉伯+Arabic+Computer+System+Co. - 4
+      - 江苏省扬州市 移动
       - 沙特阿拉伯+Arabic+Computer+System+Co. - 5
+      - 美国 Datability
   - name: 自动选择
     type: url-test
     proxies:
-      - 美国+V2CROSS.COM
+      - 美国 CloudFlare节点
       - 沙特阿拉伯+Arabic+Computer+System+Co.
       - 沙特阿拉伯+Arabic+Computer+System+Co. - 2
-      - 美国 CloudFlare节点
-      - 美国 Datability
-      - 美国 CloudFlare节点 - 2
       - 沙特阿拉伯+Arabic+Computer+System+Co. - 3
       - 沙特阿拉伯+Arabic+Computer+System+Co. - 4
+      - 江苏省扬州市 移动
       - 沙特阿拉伯+Arabic+Computer+System+Co. - 5
+      - 美国 Datability
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 美国+V2CROSS.COM
+      - 美国 CloudFlare节点
       - 沙特阿拉伯+Arabic+Computer+System+Co.
       - 沙特阿拉伯+Arabic+Computer+System+Co. - 2
-      - 美国 CloudFlare节点
-      - 美国 Datability
-      - 美国 CloudFlare节点 - 2
       - 沙特阿拉伯+Arabic+Computer+System+Co. - 3
       - 沙特阿拉伯+Arabic+Computer+System+Co. - 4
+      - 江苏省扬州市 移动
       - 沙特阿拉伯+Arabic+Computer+System+Co. - 5
+      - 美国 Datability
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
