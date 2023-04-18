@@ -1,9 +1,9 @@
 proxies:
-  - name: 美国 V2CROSS.COM
+  - name: 南非 V2CROSS.COM
     type: vmess
-    server: 137.175.1.3
-    port: 50003
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    server: 156.225.67.125
+    port: 43922
+    uuid: 3a3c8a9c-334e-4360-adb8-a80a57ddcbbf
     alterId: 64
     cipher: auto
     udp: true
@@ -11,131 +11,163 @@ proxies:
     ws-path: ''
     ws-headers:
       Host: ''
-  - name: 广东省佛山市 移动
+  - name: 韩国 首尔Amazon数据中心
     type: vmess
-    server: 25.v2-ray.cyou
-    port: 23625
-    uuid: 0dd19d20-ec86-3680-b256-87237bafa89e
-    alterId: 2
+    server: f-as2.wvvvv.eu.org
+    port: 1
+    uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0
+    alterId: 0
     cipher: auto
     udp: true
-    network: ws
+    network: tcp
     ws-path: /
     ws-headers:
-      Host: 25.v2-ray.cyou
-  - name: 美国 惠普HP
+      Host: ''
+  - name: 美国 V2CROSS.COM
     type: vmess
-    server: 16.162.74.222
+    server: 143.42.99.183
     port: 443
-    uuid: 6ff66f42-38d7-41c6-9a08-0d48f2ef3aa5
+    uuid: 927094d3-d678-4763-8591-e240d0bcae87
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /zh-cn
+    ws-path: /chat
     ws-headers:
       Host: ''
     tls: true
-  - name: 南非 V2CROSS.COM
+  - name: 美国 CloudFlare节点
     type: vmess
-    server: 156.225.67.250
-    port: 49920
-    uuid: 3fd637ad-46fe-4f85-a6e8-86b00bca1122
+    server: 3.mamadcucu.com
+    port: 2086
+    uuid: 929344e1-473c-4feb-b86b-fde3ee1ccd16
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /ArsalanTauBot
+    ws-headers:
+      Host: 3.mamadcucu.com
+  - name: 美国+康涅狄格学院
+    type: trojan
+    server: lond.inbarayeman.xyz
+    port: '443'
+    password: fd3677a5-b5ba-4991-b346-b5887b879d84
+  - name: 上海市+电信
+    type: trojan
+    server: 116.192.171.97
+    port: 8443?security=tls&type=tcp&headerType=none
+    password: 5505f6ba-cd37-30ce-8f92-be4120c83d7f
+  - name: 香港 V2CROSS.COM
+    type: vmess
+    server: 156.245.8.105
+    port: 30779
+    uuid: fe5f69e7-e183-439b-950b-9661ef0651f2
     alterId: 64
     cipher: auto
     udp: true
     network: tcp
     ws-path: ''
-    ws-headers:
-      Host: ''
-  - name: 美国 CloudFlare节点
-    type: vmess
-    server: cf.515188.xyz
-    port: 8080
-    uuid: 9d553e2b-4176-44ef-bf70-48aa8eb6da60
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /api/v3/download.getFile
-    ws-headers:
-      Host: ssrsub.v02.ssrsub.com
-  - name: 南非 V2CROSS.COM - 2
-    type: vmess
-    server: 156.225.67.250
-    port: 49920
-    uuid: 3fd637ad-46fe-4f85-a6e8-86b00bca1122
-    alterId: 64
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /
     ws-headers:
       Host: ''
   - name: 美国 CloudFlare节点 - 2
     type: vmess
-    server: cf-lt.sharecentre.online
+    server: medieval-distribute-failed-arrivals.trycloudflare.com
     port: 443
-    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
+    uuid: 545c636f-4c88-41b4-bfc0-149b5a6848f4
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /shirker
+    ws-path: /vmess?ed=2048
     ws-headers:
-      Host: lv1.sharecentrepro.org
+      Host: medieval-distribute-failed-arrivals.trycloudflare.com
     tls: true
-  - name: 台湾省宜兰县 中华电信
+  - name: 英国 V2CROSS.COM
     type: vmess
-    server: tw1.sanfen001.pics
+    server: 83.142.225.32
     port: 443
-    uuid: 134e78bd-39d4-4c39-90d7-c7639167a7a9
-    alterId: 0
+    uuid: 5267ca71-97e6-44c8-8fb5-9fe4afe0954e
+    alterId: 64
     cipher: auto
     udp: true
     network: ws
-    ws-path: /zh-cn
+    ws-path: /path/220128071100
     ws-headers:
       Host: ''
     tls: true
+  - name: 美国 CloudFlare节点 - 3
+    type: vmess
+    server: new3.hucloud-dns.xyz
+    port: 443
+    uuid: 1c8ad3f2-835c-4fda-b9b6-881d3cadfd8e
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /
+    ws-headers:
+      Host: ''
+    tls: true
+  - name: 印度尼西亚 V2CROSS.COM
+    type: vmess
+    server: p5i16.bhoikfostyahya.my.id
+    port: 80
+    uuid: 9b96e89c-f227-40a2-b7f3-7ef26bf732e9
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /vmess
+    ws-headers:
+      Host: p5i16.bhoikfostyahya.my.id
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 美国 V2CROSS.COM
-      - 广东省佛山市 移动
-      - 美国 惠普HP
       - 南非 V2CROSS.COM
+      - 韩国 首尔Amazon数据中心
+      - 美国 V2CROSS.COM
       - 美国 CloudFlare节点
-      - 南非 V2CROSS.COM - 2
+      - 美国+康涅狄格学院
+      - 上海市+电信
+      - 香港 V2CROSS.COM
       - 美国 CloudFlare节点 - 2
-      - 台湾省宜兰县 中华电信
+      - 英国 V2CROSS.COM
+      - 美国 CloudFlare节点 - 3
+      - 印度尼西亚 V2CROSS.COM
   - name: 自动选择
     type: url-test
     proxies:
-      - 美国 V2CROSS.COM
-      - 广东省佛山市 移动
-      - 美国 惠普HP
       - 南非 V2CROSS.COM
+      - 韩国 首尔Amazon数据中心
+      - 美国 V2CROSS.COM
       - 美国 CloudFlare节点
-      - 南非 V2CROSS.COM - 2
+      - 美国+康涅狄格学院
+      - 上海市+电信
+      - 香港 V2CROSS.COM
       - 美国 CloudFlare节点 - 2
-      - 台湾省宜兰县 中华电信
+      - 英国 V2CROSS.COM
+      - 美国 CloudFlare节点 - 3
+      - 印度尼西亚 V2CROSS.COM
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 美国 V2CROSS.COM
-      - 广东省佛山市 移动
-      - 美国 惠普HP
       - 南非 V2CROSS.COM
+      - 韩国 首尔Amazon数据中心
+      - 美国 V2CROSS.COM
       - 美国 CloudFlare节点
-      - 南非 V2CROSS.COM - 2
+      - 美国+康涅狄格学院
+      - 上海市+电信
+      - 香港 V2CROSS.COM
       - 美国 CloudFlare节点 - 2
-      - 台湾省宜兰县 中华电信
+      - 英国 V2CROSS.COM
+      - 美国 CloudFlare节点 - 3
+      - 印度尼西亚 V2CROSS.COM
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
