@@ -1,39 +1,26 @@
 proxies:
-  - name: 美国 CloudFlare节点
-    type: vmess
-    server: germany1.unlimiteddev.co
-    port: 80
-    uuid: 97ea79a6-615c-4ad7-8083-4f3b49cbe8a2
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /
-    ws-headers:
-      Host: germany1.unlimiteddev.co
-  - name: 美国+V2CROSS.COM
+  - name: 沙特阿拉伯+Arabic+Computer+System+Co.
     type: ss
-    server: 172.99.188.99
-    port: '6379'
+    server: 85.208.108.21
+    port: '5003'
     cipher: aes-256-gcm
-    password: zDNVedRFPQexG9v
-  - name: 美国 CloudFlare节点 - 2
-    type: vmess
-    server: surongwei.eu.org
-    port: 443
-    uuid: 6093eefb-7ab6-41df-aba0-d5fa58147e10
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /reffs7y26g0ua
-    ws-headers:
-      Host: surongwei.eu.org
-    tls: true
+    password: g5MeD6Ft3CWlJId
+  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 2
+    type: ss
+    server: 85.208.108.21
+    port: '3306'
+    cipher: aes-256-gcm
+    password: Y6R9pAtvxxzmGC
+  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 3
+    type: ss
+    server: 85.208.108.21
+    port: '8008'
+    cipher: aes-256-gcm
+    password: XKFKl2rULjIp74
   - name: 美国 加利福尼亚州旧金山Amazon数据中心
     type: vmess
-    server: pop.usa.gfwcaonimanmsl.ml
-    port: 8966
+    server: pop.china.gfwcaonimanmsl.ml
+    port: 10010
     uuid: 3b8fb6a5-1193-4bb4-a4bd-5ea854d1350f
     alterId: 0
     cipher: auto
@@ -41,27 +28,28 @@ proxies:
     network: ws
     ws-path: /name
     ws-headers:
-      Host: pop.usa.gfwcaonimanmsl.ml
-  - name: 沙特阿拉伯+Arabic+Computer+System+Co.
+      Host: ''
+  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 4
     type: ss
     server: 85.208.108.21
-    port: '8118'
+    port: '5500'
     cipher: aes-256-gcm
-    password: cdBIDV42DCwnfIN
-  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 2
+    password: KixLvKzwjekG00rm
+  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 5
     type: ss
     server: 85.208.108.21
-    port: '8090'
+    port: '6697'
     cipher: aes-256-gcm
-    password: PCnnH6SQSnfoS27
-  - name: 瑞士+V2CROSS.COM
-    type: trojan
-    server: 195.15.243.26
-    port: '443'
-    password: '4478'
-  - name: 美国 CloudFlare节点 - 3
+    password: TEzjfAYq2IjtuoS
+  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 6
+    type: ss
+    server: 85.208.108.21
+    port: '8080'
+    cipher: aes-256-gcm
+    password: KixLvKzwjekG00rm
+  - name: 美国 CloudFlare节点
     type: vmess
-    server: 172.67.217.222
+    server: cf-lt.sharecentre.online
     port: 80
     uuid: 2e496758-950e-4549-8842-d5eec98d9fde
     alterId: 0
@@ -70,54 +58,60 @@ proxies:
     network: ws
     ws-path: /shirker
     ws-headers:
-      Host: dp3.scproxy.top
-  - name: 沙特阿拉伯+Arabic+Computer+System+Co. - 3
-    type: ss
-    server: 85.208.108.21
-    port: '3389'
-    cipher: aes-256-gcm
-    password: Y6R9pAtvxxzmGC
+      Host: lv3.sharecentrepro.org
+  - name: 美国 V2CROSS.COM
+    type: vmess
+    server: f-eu1.wvvvv.eu.org
+    port: 1
+    uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /
+    ws-headers:
+      Host: f-eu1.wvvvv.eu.org
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 美国 CloudFlare节点
-      - 美国+V2CROSS.COM
-      - 美国 CloudFlare节点 - 2
-      - 美国 加利福尼亚州旧金山Amazon数据中心
       - 沙特阿拉伯+Arabic+Computer+System+Co.
       - 沙特阿拉伯+Arabic+Computer+System+Co. - 2
-      - 瑞士+V2CROSS.COM
-      - 美国 CloudFlare节点 - 3
       - 沙特阿拉伯+Arabic+Computer+System+Co. - 3
+      - 美国 加利福尼亚州旧金山Amazon数据中心
+      - 沙特阿拉伯+Arabic+Computer+System+Co. - 4
+      - 沙特阿拉伯+Arabic+Computer+System+Co. - 5
+      - 沙特阿拉伯+Arabic+Computer+System+Co. - 6
+      - 美国 CloudFlare节点
+      - 美国 V2CROSS.COM
   - name: 自动选择
     type: url-test
     proxies:
-      - 美国 CloudFlare节点
-      - 美国+V2CROSS.COM
-      - 美国 CloudFlare节点 - 2
-      - 美国 加利福尼亚州旧金山Amazon数据中心
       - 沙特阿拉伯+Arabic+Computer+System+Co.
       - 沙特阿拉伯+Arabic+Computer+System+Co. - 2
-      - 瑞士+V2CROSS.COM
-      - 美国 CloudFlare节点 - 3
       - 沙特阿拉伯+Arabic+Computer+System+Co. - 3
+      - 美国 加利福尼亚州旧金山Amazon数据中心
+      - 沙特阿拉伯+Arabic+Computer+System+Co. - 4
+      - 沙特阿拉伯+Arabic+Computer+System+Co. - 5
+      - 沙特阿拉伯+Arabic+Computer+System+Co. - 6
+      - 美国 CloudFlare节点
+      - 美国 V2CROSS.COM
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 美国 CloudFlare节点
-      - 美国+V2CROSS.COM
-      - 美国 CloudFlare节点 - 2
-      - 美国 加利福尼亚州旧金山Amazon数据中心
       - 沙特阿拉伯+Arabic+Computer+System+Co.
       - 沙特阿拉伯+Arabic+Computer+System+Co. - 2
-      - 瑞士+V2CROSS.COM
-      - 美国 CloudFlare节点 - 3
       - 沙特阿拉伯+Arabic+Computer+System+Co. - 3
+      - 美国 加利福尼亚州旧金山Amazon数据中心
+      - 沙特阿拉伯+Arabic+Computer+System+Co. - 4
+      - 沙特阿拉伯+Arabic+Computer+System+Co. - 5
+      - 沙特阿拉伯+Arabic+Computer+System+Co. - 6
+      - 美国 CloudFlare节点
+      - 美国 V2CROSS.COM
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
