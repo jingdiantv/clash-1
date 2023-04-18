@@ -1,80 +1,96 @@
 proxies:
-  - name: 新加坡+亚马逊(Amazon)公司数据中心
-    type: trojan
-    server: sg-csjc.syjd.xyz
-    port: 443?allowInsecure=1&peer=sg-csjc.syjd.xyz&tfo=1
-    password: 87bd6efd-2fb5-4920-852d-921d7c29f916
-  - name: 瑞士+V2CROSS.COM
-    type: trojan
-    server: 195.15.243.26
-    port: '443'
-    password: '4478'
-  - name: 美国 CloudFlare节点
+  - name: 台湾省新北市 中华电信
     type: vmess
-    server: cdnjs.com
-    port: 443
-    uuid: 2F094845-E2BD-EBF7-DEB7-995992436FAF
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /speedtest
-    ws-headers:
-      Host: Lille.kotick.site
-    tls: true
-  - name: 美国 CloudFlare节点 - 2
-    type: vmess
-    server: cf.noaries.de
-    port: 8080
-    uuid: a0f153d8-e32f-41f3-9bcd-073f579e2264
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /aries?ed=2048
-    ws-headers:
-      Host: buyvm.cloudflare.quest
-  - name: 韩国 首尔Amazon数据中心
-    type: vmess
-    server: f-as2.wvvvv.eu.org
-    port: 1
-    uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0
+    server: hinet1261.gfwisbest.xyz
+    port: 224
+    uuid: 2285133e-b9ba-3fb5-a246-9c7ddcc2cd7a
     alterId: 0
     cipher: auto
     udp: true
     network: tcp
     ws-path: /
     ws-headers:
-      Host: f-as2.wvvvv.eu.org
+      Host: ''
+  - name: 香港 阿里云
+    type: vmess
+    server: n1680936772.edpmvga.cn
+    port: 443
+    uuid: a8054320-efe0-4ce0-a1a6-7d616105f354
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /
+    ws-headers:
+      Host: n1680936772.edpmvga.cn
+    tls: true
+  - name: 美国 CloudFlare节点
+    type: vmess
+    server: cf-lt.sharecentre.online
+    port: 80
+    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /shirker
+    ws-headers:
+      Host: lv2.sharecentrepro.org
+  - name: 美国 惠普HP
+    type: vmess
+    server: 16.162.74.222
+    port: 443
+    uuid: 6ff66f42-38d7-41c6-9a08-0d48f2ef3aa5
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /zh-cn
+    ws-headers:
+      Host: ''
+    tls: true
+  - name: 日本 V2CROSS.COM
+    type: vmess
+    server: hk6.af49c4e4c2ef.sanfen001.pics
+    port: 443
+    uuid: 134e78bd-39d4-4c39-90d7-c7639167a7a9
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /zh-cn
+    ws-headers:
+      Host: ''
+    tls: true
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 新加坡+亚马逊(Amazon)公司数据中心
-      - 瑞士+V2CROSS.COM
+      - 台湾省新北市 中华电信
+      - 香港 阿里云
       - 美国 CloudFlare节点
-      - 美国 CloudFlare节点 - 2
-      - 韩国 首尔Amazon数据中心
+      - 美国 惠普HP
+      - 日本 V2CROSS.COM
   - name: 自动选择
     type: url-test
     proxies:
-      - 新加坡+亚马逊(Amazon)公司数据中心
-      - 瑞士+V2CROSS.COM
+      - 台湾省新北市 中华电信
+      - 香港 阿里云
       - 美国 CloudFlare节点
-      - 美国 CloudFlare节点 - 2
-      - 韩国 首尔Amazon数据中心
+      - 美国 惠普HP
+      - 日本 V2CROSS.COM
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 新加坡+亚马逊(Amazon)公司数据中心
-      - 瑞士+V2CROSS.COM
+      - 台湾省新北市 中华电信
+      - 香港 阿里云
       - 美国 CloudFlare节点
-      - 美国 CloudFlare节点 - 2
-      - 韩国 首尔Amazon数据中心
+      - 美国 惠普HP
+      - 日本 V2CROSS.COM
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
