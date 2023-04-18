@@ -1,66 +1,4 @@
 proxies:
-  - name: 伊朗 V2CROSS.COM
-    type: vmess
-    server: f-us1.wvvvv.eu.org
-    port: 20
-    uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /
-    ws-headers:
-      Host: de01-cdn.airport-v2.com
-  - name: 美国 CloudFlare节点
-    type: vmess
-    server: medieval-distribute-failed-arrivals.trycloudflare.com
-    port: 443
-    uuid: 545c636f-4c88-41b4-bfc0-149b5a6848f4
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /vmess?ed=2048
-    ws-headers:
-      Host: medieval-distribute-failed-arrivals.trycloudflare.com
-    tls: true
-  - name: 美国 CloudFlare节点 - 2
-    type: vmess
-    server: 162.159.255.205
-    port: 80
-    uuid: 52466dc2-3550-4310-910c-74b7bf8a020e
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /
-    ws-headers:
-      Host: us-1.acyun.eu.org
-  - name: 美国 惠普HP
-    type: vmess
-    server: hk3.af49c4e4c2ef.sanfen001.pics
-    port: 443
-    uuid: e5ffd02e-a82b-40d1-83aa-23f9f6841abb
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /zh-cn
-    ws-headers:
-      Host: ''
-    tls: true
-  - name: 香港 V2CROSS.COM
-    type: vmess
-    server: 156.245.8.105
-    port: 30779
-    uuid: fe5f69e7-e183-439b-950b-9661ef0651f2
-    alterId: 64
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /
-    ws-headers:
-      Host: ''
   - name: 美国 V2CROSS.COM
     type: vmess
     server: 137.175.1.3
@@ -70,49 +8,19 @@ proxies:
     cipher: auto
     udp: true
     network: tcp
-    ws-path: /
+    ws-path: ''
     ws-headers:
       Host: ''
-  - name: 美国 惠普HP - 2
+  - name: 美国 Amazon数据中心
     type: vmess
-    server: 16.162.74.222
-    port: 443
-    uuid: 6ff66f42-38d7-41c6-9a08-0d48f2ef3aa5
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /zh-cn
-    ws-headers:
-      Host: ''
-    tls: true
-  - name: 日本+V2CROSS.COM
-    type: trojan
-    server: microsoft-hk02.syjd.xyz
-    port: 443?allowInsecure=1&peer=microsoft-hk02.syjd.xyz&tfo=1
-    password: 87bd6efd-2fb5-4920-852d-921d7c29f916
-  - name: 台湾省新北市 中华电信
-    type: vmess
-    server: hinet1261.gfwisbest.xyz
-    port: 224
-    uuid: 2285133e-b9ba-3fb5-a246-9c7ddcc2cd7a
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /
-    ws-headers:
-      Host: ''
-  - name: 伊朗 V2CROSS.COM - 2
-    type: vmess
-    server: f-us1.wvvvv.eu.org
-    port: 20
+    server: f-as2.wvvvv.eu.org
+    port: 1
     uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0
     alterId: 0
     cipher: auto
     udp: true
     network: tcp
-    ws-path: ''
+    ws-path: /
     ws-headers:
       Host: ''
   - name: 美国 V2CROSS.COM - 2
@@ -124,56 +32,48 @@ proxies:
     cipher: auto
     udp: true
     network: tcp
-    ws-path: ''
+    ws-path: /
     ws-headers:
       Host: ''
+  - name: 日本+V2CROSS.COM
+    type: trojan
+    server: microsoft-hk02.syjd.xyz
+    port: 443?allowInsecure=1&peer=microsoft-hk02.syjd.xyz&tfo=1
+    password: 87bd6efd-2fb5-4920-852d-921d7c29f916
+  - name: 日本+东京Amazon数据中心
+    type: trojan
+    server: jp-csjc.syjd.xyz
+    port: '443'
+    password: 87bd6efd-2fb5-4920-852d-921d7c29f916
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 伊朗 V2CROSS.COM
-      - 美国 CloudFlare节点
-      - 美国 CloudFlare节点 - 2
-      - 美国 惠普HP
-      - 香港 V2CROSS.COM
       - 美国 V2CROSS.COM
-      - 美国 惠普HP - 2
-      - 日本+V2CROSS.COM
-      - 台湾省新北市 中华电信
-      - 伊朗 V2CROSS.COM - 2
+      - 美国 Amazon数据中心
       - 美国 V2CROSS.COM - 2
+      - 日本+V2CROSS.COM
+      - 日本+东京Amazon数据中心
   - name: 自动选择
     type: url-test
     proxies:
-      - 伊朗 V2CROSS.COM
-      - 美国 CloudFlare节点
-      - 美国 CloudFlare节点 - 2
-      - 美国 惠普HP
-      - 香港 V2CROSS.COM
       - 美国 V2CROSS.COM
-      - 美国 惠普HP - 2
-      - 日本+V2CROSS.COM
-      - 台湾省新北市 中华电信
-      - 伊朗 V2CROSS.COM - 2
+      - 美国 Amazon数据中心
       - 美国 V2CROSS.COM - 2
+      - 日本+V2CROSS.COM
+      - 日本+东京Amazon数据中心
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 伊朗 V2CROSS.COM
-      - 美国 CloudFlare节点
-      - 美国 CloudFlare节点 - 2
-      - 美国 惠普HP
-      - 香港 V2CROSS.COM
       - 美国 V2CROSS.COM
-      - 美国 惠普HP - 2
-      - 日本+V2CROSS.COM
-      - 台湾省新北市 中华电信
-      - 伊朗 V2CROSS.COM - 2
+      - 美国 Amazon数据中心
       - 美国 V2CROSS.COM - 2
+      - 日本+V2CROSS.COM
+      - 日本+东京Amazon数据中心
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
