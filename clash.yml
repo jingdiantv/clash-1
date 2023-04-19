@@ -1,16 +1,21 @@
 proxies:
   - name: 美国 CloudFlare节点
     type: vmess
-    server: 104.17.3.81
+    server: 162.159.255.205
     port: 80
-    uuid: e40b2de3-b829-4591-a7b6-99d1913f3246
+    uuid: 52466dc2-3550-4310-910c-74b7bf8a020e
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /worryfree
+    ws-path: /
     ws-headers:
-      Host: w.evouch77.live
+      Host: us-1.acyun.eu.org
+  - name: 法国+OVH数据中心
+    type: trojan
+    server: 54.37.185.148
+    port: 32894?type=tcp&sni=fararu.com&allowInsecure=1
+    password: HchlVCfnXB
   - name: 台湾省台北市 中华电信
     type: vmess
     server: hinet1261.gfwisbest.xyz
@@ -23,11 +28,18 @@ proxies:
     ws-path: /
     ws-headers:
       Host: ''
-  - name: 美国+加利福尼亚州圣何塞ColoCrossing数据中心
-    type: trojan
-    server: rn.blowm1k.club
-    port: '14978'
-    password: f5mpynwukL
+  - name: 美国 华盛顿Cogent通信公司
+    type: vmess
+    server: 38.6.224.13
+    port: 59130
+    uuid: cb33912f-155f-4c91-d509-75e760999ea5
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /
+    ws-headers:
+      Host: ''
   - name: 伊朗 V2CROSS.COM
     type: vmess
     server: 109.122.221.98
@@ -59,16 +71,18 @@ proxy-groups:
       - 自动选择
       - 故障转移
       - 美国 CloudFlare节点
+      - 法国+OVH数据中心
       - 台湾省台北市 中华电信
-      - 美国+加利福尼亚州圣何塞ColoCrossing数据中心
+      - 美国 华盛顿Cogent通信公司
       - 伊朗 V2CROSS.COM
       - 美国 CloudFlare节点 - 2
   - name: 自动选择
     type: url-test
     proxies:
       - 美国 CloudFlare节点
+      - 法国+OVH数据中心
       - 台湾省台北市 中华电信
-      - 美国+加利福尼亚州圣何塞ColoCrossing数据中心
+      - 美国 华盛顿Cogent通信公司
       - 伊朗 V2CROSS.COM
       - 美国 CloudFlare节点 - 2
     url: http://www.gstatic.com/generate_204
@@ -77,8 +91,9 @@ proxy-groups:
     type: fallback
     proxies:
       - 美国 CloudFlare节点
+      - 法国+OVH数据中心
       - 台湾省台北市 中华电信
-      - 美国+加利福尼亚州圣何塞ColoCrossing数据中心
+      - 美国 华盛顿Cogent通信公司
       - 伊朗 V2CROSS.COM
       - 美国 CloudFlare节点 - 2
     url: http://www.gstatic.com/generate_204
