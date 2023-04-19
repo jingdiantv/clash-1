@@ -1,30 +1,66 @@
 proxies:
-  - name: 美国 惠普HP
+  - name: 美国 V2CROSS.COM
     type: vmess
-    server: 16.163.94.236
+    server: 170.187.206.48
     port: 443
-    uuid: 6ff66f42-38d7-41c6-9a08-0d48f2ef3aa5
+    uuid: 927094d3-d678-4763-8591-e240d0bcae87
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /zh-cn
+    ws-path: /chat
     ws-headers:
       Host: ''
     tls: true
-  - name: 广东省揭阳市 移动
+  - name: 美国+V2CROSS.COM
+    type: trojan
+    server: 170-187-134-190.ipv4.rush.ml
+    port: '8443'
+    password: cf4295378e209e70d12c5bdd017144dfd1c772d3
+  - name: 荷兰 V2CROSS.COM
     type: vmess
-    server: 120.240.163.62
-    port: 59629
+    server: 46.182.107.15
+    port: 51332
     uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
     alterId: 64
     cipher: auto
     udp: true
     network: tcp
-    ws-path: /
+    ws-path: ''
     ws-headers:
       Host: ''
-  - name: 美国 惠普HP - 2
+  - name: 摩尔多瓦 V2CROSS.COM
+    type: vmess
+    server: 185.193.30.158
+    port: 443
+    uuid: A59E320C-BAC6-45E3-8A27-1518610708D0
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /speedtest
+    ws-headers:
+      Host: Amsterdam.v2ray.online
+    tls: true
+  - name: 瑞士+V2CROSS.COM
+    type: trojan
+    server: 195.15.243.26
+    port: '443'
+    password: '4478'
+  - name: 美国 V2CROSS.COM - 2
+    type: vmess
+    server: ch.learnpropy.click
+    port: 2053
+    uuid: 8cab8fb7-4977-4ec2-8bba-2914dd43bfbd
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /gsdg43575
+    ws-headers:
+      Host: abs.learnpropy.click
+    tls: true
+  - name: 美国 惠普HP
     type: vmess
     server: hk4.af49c4e4c2ef.sanfen001.pics
     port: 443
@@ -34,64 +70,43 @@ proxies:
     udp: true
     network: ws
     ws-path: /zh-cn
-    ws-headers:
-      Host: ''
+    ws-headers: {}
     tls: true
-  - name: 美国+V2CROSS.COM
-    type: trojan
-    server: 152.70.74.66
-    port: 443?security=tls&type=tcp&headerType=none
-    password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
-  - name: 美国 CloudFlare节点
-    type: vmess
-    server: surongwei.eu.org
-    port: 443
-    uuid: 6093eefb-7ab6-41df-aba0-d5fa58147e10
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /reffs7y26g0ua
-    ws-headers:
-      Host: surongwei.eu.org
-    tls: true
-  - name: 香港+阿里云
-    type: trojan
-    server: tr.dns.tlz.asia
-    port: 1231?type=tcp&allowInsecure=1
-    password: bHlD0P4J1B
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 美国 惠普HP
-      - 广东省揭阳市 移动
-      - 美国 惠普HP - 2
+      - 美国 V2CROSS.COM
       - 美国+V2CROSS.COM
-      - 美国 CloudFlare节点
-      - 香港+阿里云
+      - 荷兰 V2CROSS.COM
+      - 摩尔多瓦 V2CROSS.COM
+      - 瑞士+V2CROSS.COM
+      - 美国 V2CROSS.COM - 2
+      - 美国 惠普HP
   - name: 自动选择
     type: url-test
     proxies:
-      - 美国 惠普HP
-      - 广东省揭阳市 移动
-      - 美国 惠普HP - 2
+      - 美国 V2CROSS.COM
       - 美国+V2CROSS.COM
-      - 美国 CloudFlare节点
-      - 香港+阿里云
+      - 荷兰 V2CROSS.COM
+      - 摩尔多瓦 V2CROSS.COM
+      - 瑞士+V2CROSS.COM
+      - 美国 V2CROSS.COM - 2
+      - 美国 惠普HP
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 美国 惠普HP
-      - 广东省揭阳市 移动
-      - 美国 惠普HP - 2
+      - 美国 V2CROSS.COM
       - 美国+V2CROSS.COM
-      - 美国 CloudFlare节点
-      - 香港+阿里云
+      - 荷兰 V2CROSS.COM
+      - 摩尔多瓦 V2CROSS.COM
+      - 瑞士+V2CROSS.COM
+      - 美国 V2CROSS.COM - 2
+      - 美国 惠普HP
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
