@@ -1,41 +1,35 @@
 proxies:
+  - name: 广东省揭阳市 移动
+    type: vmess
+    server: 120.240.163.62
+    port: 59629
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /
+    ws-headers:
+      Host: ''
+  - name: 美国+V2CROSS.COM
+    type: trojan
+    server: 152.70.74.66
+    port: 443?security=tls&type=tcp&headerType=none
+    password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
+  - name: 美国 惠普HP
+    type: vmess
+    server: 16.162.74.222
+    port: 443
+    uuid: 6ff66f42-38d7-41c6-9a08-0d48f2ef3aa5
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /zh-cn
+    ws-headers:
+      Host: ''
+    tls: true
   - name: 美国 CloudFlare节点
-    type: vmess
-    server: 3.mamadcucu.com
-    port: 2086
-    uuid: 929344e1-473c-4feb-b86b-fde3ee1ccd16
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /ArsalanTauBot
-    ws-headers:
-      Host: 3.mamadcucu.com
-  - name: 美国 CloudFlare节点 - 2
-    type: vmess
-    server: cf.noaries.de
-    port: 8080
-    uuid: a0f153d8-e32f-41f3-9bcd-073f579e2264
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /aries?ed=2048
-    ws-headers:
-      Host: buyvm.cloudflare.quest
-  - name: 江苏省扬州市 移动
-    type: vmess
-    server: data-hk-v1.shwjfkw.cn
-    port: 50207
-    uuid: b1478e24-4916-3abe-8f17-15931012ecbe
-    alterId: 1
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /hls/cctv5phd.m3u8
-    ws-headers:
-      Host: YTB-awkj
-  - name: 美国 CloudFlare节点 - 3
     type: vmess
     server: microsoftdebug.com
     port: 80
@@ -47,86 +41,56 @@ proxies:
     ws-path: /secx
     ws-headers:
       Host: v1.us9.microsoftdebug.com
-  - name: 美国 CloudFlare节点 - 4
-    type: vmess
-    server: cf.yj2022.ga
-    port: 443
-    uuid: 4b5e4565-322f-4223-a891-78a84f189726
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /WKtzeN11GLqwVNBTp9mX
-    ws-headers:
-      Host: finland1.yj2022.ga
-    tls: true
-  - name: 上海市+电信
+  - name: 香港+Amazon数据中心
     type: trojan
-    server: 116.192.171.97
-    port: 8443?security=tls&type=tcp&headerType=none
-    password: 5505f6ba-cd37-30ce-8f92-be4120c83d7f
-  - name: 美国 CloudFlare节点 - 5
+    server: hk04.ggcloud.cc
+    port: '10030'
+    password: 8a371621-e98b-3961-ab5d-a80faab88593
+  - name: 美国 加利福尼亚州洛杉矶Sharktech数据中心
     type: vmess
-    server: 172.67.217.222
-    port: 80
-    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
-    alterId: 0
+    server: 67.21.72.41
+    port: 443
+    uuid: 2566d00f-218c-48f7-9a36-13d3d6f1a724
+    alterId: 64
     cipher: auto
     udp: true
     network: ws
-    ws-path: /shirker
+    ws-path: /path/173418141123
     ws-headers:
-      Host: dp3.scproxy.top
-  - name: 广东省佛山市 移动
-    type: vmess
-    server: 25.v2-ray.cyou
-    port: 23625
-    uuid: 0dd19d20-ec86-3680-b256-87237bafa89e
-    alterId: 2
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /
-    ws-headers:
-      Host: 25.v2-ray.cyou
+      Host: www.17080100.xyz
+    tls: true
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
+      - 广东省揭阳市 移动
+      - 美国+V2CROSS.COM
+      - 美国 惠普HP
       - 美国 CloudFlare节点
-      - 美国 CloudFlare节点 - 2
-      - 江苏省扬州市 移动
-      - 美国 CloudFlare节点 - 3
-      - 美国 CloudFlare节点 - 4
-      - 上海市+电信
-      - 美国 CloudFlare节点 - 5
-      - 广东省佛山市 移动
+      - 香港+Amazon数据中心
+      - 美国 加利福尼亚州洛杉矶Sharktech数据中心
   - name: 自动选择
     type: url-test
     proxies:
+      - 广东省揭阳市 移动
+      - 美国+V2CROSS.COM
+      - 美国 惠普HP
       - 美国 CloudFlare节点
-      - 美国 CloudFlare节点 - 2
-      - 江苏省扬州市 移动
-      - 美国 CloudFlare节点 - 3
-      - 美国 CloudFlare节点 - 4
-      - 上海市+电信
-      - 美国 CloudFlare节点 - 5
-      - 广东省佛山市 移动
+      - 香港+Amazon数据中心
+      - 美国 加利福尼亚州洛杉矶Sharktech数据中心
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
+      - 广东省揭阳市 移动
+      - 美国+V2CROSS.COM
+      - 美国 惠普HP
       - 美国 CloudFlare节点
-      - 美国 CloudFlare节点 - 2
-      - 江苏省扬州市 移动
-      - 美国 CloudFlare节点 - 3
-      - 美国 CloudFlare节点 - 4
-      - 上海市+电信
-      - 美国 CloudFlare节点 - 5
-      - 广东省佛山市 移动
+      - 香港+Amazon数据中心
+      - 美国 加利福尼亚州洛杉矶Sharktech数据中心
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
