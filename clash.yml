@@ -1,31 +1,21 @@
 proxies:
-  - name: 美国 华盛顿Cogent通信公司
+  - name: 美国 CloudFlare节点
     type: vmess
-    server: 38.40.219.184
-    port: 50462
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-headers: {}
-  - name: 亚太地区 V2CROSS.COM
-    type: vmess
-    server: f-as1.wvvvv.eu.org
-    port: 20
-    uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0
+    server: 104.17.3.81
+    port: 80
+    uuid: e40b2de3-b829-4591-a7b6-99d1913f3246
     alterId: 0
     cipher: auto
     udp: true
-    network: tcp
-    ws-path: /
+    network: ws
+    ws-path: /worryfree
     ws-headers:
-      Host: f-as1.wvvvv.eu.org
-  - name: 美国 华盛顿Cogent通信公司 - 2
+      Host: w.evouch77.live
+  - name: 台湾省台北市 中华电信
     type: vmess
-    server: 38.6.224.13
-    port: 59130
-    uuid: cb33912f-155f-4c91-d509-75e760999ea5
+    server: hinet1261.gfwisbest.xyz
+    port: 224
+    uuid: 2285133e-b9ba-3fb5-a246-9c7ddcc2cd7a
     alterId: 0
     cipher: auto
     udp: true
@@ -33,9 +23,26 @@ proxies:
     ws-path: /
     ws-headers:
       Host: ''
-  - name: 美国 CloudFlare节点
+  - name: 美国+加利福尼亚州圣何塞ColoCrossing数据中心
+    type: trojan
+    server: rn.blowm1k.club
+    port: '14978'
+    password: f5mpynwukL
+  - name: 伊朗 V2CROSS.COM
     type: vmess
-    server: 172.67.217.222
+    server: 109.122.221.98
+    port: 28633
+    uuid: d47d6a05-92d0-42d5-b624-22431f263453
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /
+    ws-headers:
+      Host: ''
+  - name: 美国 CloudFlare节点 - 2
+    type: vmess
+    server: cf-lt.sharecentre.online
     port: 80
     uuid: 2e496758-950e-4549-8842-d5eec98d9fde
     alterId: 0
@@ -44,136 +51,36 @@ proxies:
     network: ws
     ws-path: /shirker
     ws-headers:
-      Host: dp3.scproxy.top
-  - name: 美国 CloudFlare节点 - 2
-    type: vmess
-    server: cdnjs.com
-    port: 443
-    uuid: DCE76061-EE65-49DB-997C-A6A880DADE3A
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /speedtest
-    ws-headers:
-      Host: Amsterdam.kotick.site
-    tls: true
-  - name: 美国 CloudFlare节点 - 3
-    type: vmess
-    server: cf-lt.sharecentre.online
-    port: 443
-    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /shirker
-    ws-headers:
       Host: lv1.sharecentrepro.org
-    tls: true
-  - name: 美国 V2CROSS.COM
-    type: vmess
-    server: ch.learnpropy.click
-    port: 2053
-    uuid: 8cab8fb7-4977-4ec2-8bba-2914dd43bfbd
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /gsdg43575
-    ws-headers:
-      Host: abs.learnpropy.click
-    tls: true
-  - name: 美国+V2CROSS.COM
-    type: trojan
-    server: 152.70.74.66
-    port: 443?security=tls&type=tcp&headerType=none
-    password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
-  - name: 美国 CloudFlare节点 - 4
-    type: vmess
-    server: cf.yj2022.ga
-    port: 443
-    uuid: 4b5e4565-322f-4223-a891-78a84f189726
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /WKtzeN11GLqwVNBTp9mX
-    ws-headers:
-      Host: finland1.yj2022.ga
-    tls: true
-  - name: 美国 CloudFlare节点 - 5
-    type: vmess
-    server: lsb-gy.heinu.cf
-    port: 2096
-    uuid: d793c013-f596-4af9-de0a-2062bb864dd7
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /@heinuhome
-    ws-headers: {}
-    tls: true
-  - name: 美国 惠普HP
-    type: vmess
-    server: 16.162.74.222
-    port: 443
-    uuid: 6ff66f42-38d7-41c6-9a08-0d48f2ef3aa5
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /zh-cn
-    ws-headers:
-      Host: ''
-    tls: true
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 美国 华盛顿Cogent通信公司
-      - 亚太地区 V2CROSS.COM
-      - 美国 华盛顿Cogent通信公司 - 2
       - 美国 CloudFlare节点
+      - 台湾省台北市 中华电信
+      - 美国+加利福尼亚州圣何塞ColoCrossing数据中心
+      - 伊朗 V2CROSS.COM
       - 美国 CloudFlare节点 - 2
-      - 美国 CloudFlare节点 - 3
-      - 美国 V2CROSS.COM
-      - 美国+V2CROSS.COM
-      - 美国 CloudFlare节点 - 4
-      - 美国 CloudFlare节点 - 5
-      - 美国 惠普HP
   - name: 自动选择
     type: url-test
     proxies:
-      - 美国 华盛顿Cogent通信公司
-      - 亚太地区 V2CROSS.COM
-      - 美国 华盛顿Cogent通信公司 - 2
       - 美国 CloudFlare节点
+      - 台湾省台北市 中华电信
+      - 美国+加利福尼亚州圣何塞ColoCrossing数据中心
+      - 伊朗 V2CROSS.COM
       - 美国 CloudFlare节点 - 2
-      - 美国 CloudFlare节点 - 3
-      - 美国 V2CROSS.COM
-      - 美国+V2CROSS.COM
-      - 美国 CloudFlare节点 - 4
-      - 美国 CloudFlare节点 - 5
-      - 美国 惠普HP
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 美国 华盛顿Cogent通信公司
-      - 亚太地区 V2CROSS.COM
-      - 美国 华盛顿Cogent通信公司 - 2
       - 美国 CloudFlare节点
+      - 台湾省台北市 中华电信
+      - 美国+加利福尼亚州圣何塞ColoCrossing数据中心
+      - 伊朗 V2CROSS.COM
       - 美国 CloudFlare节点 - 2
-      - 美国 CloudFlare节点 - 3
-      - 美国 V2CROSS.COM
-      - 美国+V2CROSS.COM
-      - 美国 CloudFlare节点 - 4
-      - 美国 CloudFlare节点 - 5
-      - 美国 惠普HP
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
