@@ -1,38 +1,76 @@
 proxies:
-  - name: 美国 Datability
+  - name: 美国 华盛顿Cogent通信公司
     type: vmess
-    server: 140.99.149.43
-    port: 56882
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /
-    ws-headers:
-      Host: ''
-  - name: 美国 加你福尼亚洛杉矶Coperation Coloction数据中心
-    type: vmess
-    server: 198.16.45.166
-    port: 53392
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /aceamedv
-    ws-headers:
-      Host: ''
-  - name: 美国 加利福尼亚州森尼韦尔市PEG TECH公司
-    type: vmess
-    server: 142.0.139.54
-    port: 57072
+    server: 38.40.219.184
+    port: 50462
     uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
     alterId: 64
     cipher: auto
     udp: true
     network: tcp
     ws-headers: {}
+  - name: 亚太地区 V2CROSS.COM
+    type: vmess
+    server: f-as1.wvvvv.eu.org
+    port: 20
+    uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /
+    ws-headers:
+      Host: f-as1.wvvvv.eu.org
+  - name: 美国 华盛顿Cogent通信公司 - 2
+    type: vmess
+    server: 38.6.224.13
+    port: 59130
+    uuid: cb33912f-155f-4c91-d509-75e760999ea5
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /
+    ws-headers:
+      Host: ''
+  - name: 美国 CloudFlare节点
+    type: vmess
+    server: 172.67.217.222
+    port: 80
+    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /shirker
+    ws-headers:
+      Host: dp3.scproxy.top
+  - name: 美国 CloudFlare节点 - 2
+    type: vmess
+    server: cdnjs.com
+    port: 443
+    uuid: DCE76061-EE65-49DB-997C-A6A880DADE3A
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /speedtest
+    ws-headers:
+      Host: Amsterdam.kotick.site
+    tls: true
+  - name: 美国 CloudFlare节点 - 3
+    type: vmess
+    server: cf-lt.sharecentre.online
+    port: 443
+    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /shirker
+    ws-headers:
+      Host: lv1.sharecentrepro.org
+    tls: true
   - name: 美国 V2CROSS.COM
     type: vmess
     server: ch.learnpropy.click
@@ -46,72 +84,48 @@ proxies:
     ws-headers:
       Host: abs.learnpropy.click
     tls: true
-  - name: 美国 CloudFlare节点
+  - name: 美国+V2CROSS.COM
+    type: trojan
+    server: 152.70.74.66
+    port: 443?security=tls&type=tcp&headerType=none
+    password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
+  - name: 美国 CloudFlare节点 - 4
     type: vmess
-    server: chmikhori.servernett.shop
-    port: 8080
-    uuid: 466cd53b-475a-4a92-f159-103c47777237
+    server: cf.yj2022.ga
+    port: 443
+    uuid: 4b5e4565-322f-4223-a891-78a84f189726
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /
+    ws-path: /WKtzeN11GLqwVNBTp9mX
+    ws-headers:
+      Host: finland1.yj2022.ga
+    tls: true
+  - name: 美国 CloudFlare节点 - 5
+    type: vmess
+    server: lsb-gy.heinu.cf
+    port: 2096
+    uuid: d793c013-f596-4af9-de0a-2062bb864dd7
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /@heinuhome
+    ws-headers: {}
+    tls: true
+  - name: 美国 惠普HP
+    type: vmess
+    server: 16.162.74.222
+    port: 443
+    uuid: 6ff66f42-38d7-41c6-9a08-0d48f2ef3aa5
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /zh-cn
     ws-headers:
       Host: ''
-  - name: 欧盟 V2CROSS.COM
-    type: vmess
-    server: 45.86.11.199
-    port: 44101
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-headers: {}
-  - name: 美国+华盛顿Cogent通信公司
-    type: ss
-    server: 38.75.136.34
-    port: '8090'
-    cipher: aes-256-gcm
-    password: PCnnH6SQSnfoS27
-  - name: 新加坡+Amazon数据中心
-    type: trojan
-    server: sg-csjc.syjd.xyz
-    port: '443'
-    password: 87bd6efd-2fb5-4920-852d-921d7c29f916
-  - name: 美国 加利福尼亚州圣何塞PEG TECH数据中心
-    type: vmess
-    server: 192.74.242.139
-    port: 44667
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-headers: {}
-  - name: 韩国 首尔Amazon数据中心
-    type: vmess
-    server: f-as2.wvvvv.eu.org
-    port: 1
-    uuid: 0da1d372-ec60-4b89-8a3f-79159438c6f0
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /
-    ws-headers:
-      Host: f-as2.wvvvv.eu.org
-  - name: 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
-    type: vmess
-    server: 23.224.110.183
-    port: 443
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /path/080712342310
-    ws-headers: {}
     tls: true
 proxy-groups:
   - name: Free-servers
@@ -119,47 +133,47 @@ proxy-groups:
     proxies:
       - 自动选择
       - 故障转移
-      - 美国 Datability
-      - 美国 加你福尼亚洛杉矶Coperation Coloction数据中心
-      - 美国 加利福尼亚州森尼韦尔市PEG TECH公司
-      - 美国 V2CROSS.COM
+      - 美国 华盛顿Cogent通信公司
+      - 亚太地区 V2CROSS.COM
+      - 美国 华盛顿Cogent通信公司 - 2
       - 美国 CloudFlare节点
-      - 欧盟 V2CROSS.COM
-      - 美国+华盛顿Cogent通信公司
-      - 新加坡+Amazon数据中心
-      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
-      - 韩国 首尔Amazon数据中心
-      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
+      - 美国 CloudFlare节点 - 2
+      - 美国 CloudFlare节点 - 3
+      - 美国 V2CROSS.COM
+      - 美国+V2CROSS.COM
+      - 美国 CloudFlare节点 - 4
+      - 美国 CloudFlare节点 - 5
+      - 美国 惠普HP
   - name: 自动选择
     type: url-test
     proxies:
-      - 美国 Datability
-      - 美国 加你福尼亚洛杉矶Coperation Coloction数据中心
-      - 美国 加利福尼亚州森尼韦尔市PEG TECH公司
-      - 美国 V2CROSS.COM
+      - 美国 华盛顿Cogent通信公司
+      - 亚太地区 V2CROSS.COM
+      - 美国 华盛顿Cogent通信公司 - 2
       - 美国 CloudFlare节点
-      - 欧盟 V2CROSS.COM
-      - 美国+华盛顿Cogent通信公司
-      - 新加坡+Amazon数据中心
-      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
-      - 韩国 首尔Amazon数据中心
-      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
+      - 美国 CloudFlare节点 - 2
+      - 美国 CloudFlare节点 - 3
+      - 美国 V2CROSS.COM
+      - 美国+V2CROSS.COM
+      - 美国 CloudFlare节点 - 4
+      - 美国 CloudFlare节点 - 5
+      - 美国 惠普HP
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 美国 Datability
-      - 美国 加你福尼亚洛杉矶Coperation Coloction数据中心
-      - 美国 加利福尼亚州森尼韦尔市PEG TECH公司
-      - 美国 V2CROSS.COM
+      - 美国 华盛顿Cogent通信公司
+      - 亚太地区 V2CROSS.COM
+      - 美国 华盛顿Cogent通信公司 - 2
       - 美国 CloudFlare节点
-      - 欧盟 V2CROSS.COM
-      - 美国+华盛顿Cogent通信公司
-      - 新加坡+Amazon数据中心
-      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
-      - 韩国 首尔Amazon数据中心
-      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
+      - 美国 CloudFlare节点 - 2
+      - 美国 CloudFlare节点 - 3
+      - 美国 V2CROSS.COM
+      - 美国+V2CROSS.COM
+      - 美国 CloudFlare节点 - 4
+      - 美国 CloudFlare节点 - 5
+      - 美国 惠普HP
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
