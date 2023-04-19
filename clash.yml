@@ -1,94 +1,97 @@
 proxies:
+  - name: 美国 惠普HP
+    type: vmess
+    server: 16.163.94.236
+    port: 443
+    uuid: 6ff66f42-38d7-41c6-9a08-0d48f2ef3aa5
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /zh-cn
+    ws-headers:
+      Host: ''
+    tls: true
+  - name: 广东省揭阳市 移动
+    type: vmess
+    server: 120.240.163.62
+    port: 59629
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /
+    ws-headers:
+      Host: ''
+  - name: 美国 惠普HP - 2
+    type: vmess
+    server: hk4.af49c4e4c2ef.sanfen001.pics
+    port: 443
+    uuid: 6ff66f42-38d7-41c6-9a08-0d48f2ef3aa5
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /zh-cn
+    ws-headers:
+      Host: ''
+    tls: true
+  - name: 美国+V2CROSS.COM
+    type: trojan
+    server: 152.70.74.66
+    port: 443?security=tls&type=tcp&headerType=none
+    password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
   - name: 美国 CloudFlare节点
     type: vmess
-    server: 172.67.217.222
-    port: 80
-    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
+    server: surongwei.eu.org
+    port: 443
+    uuid: 6093eefb-7ab6-41df-aba0-d5fa58147e10
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /shirker
+    ws-path: /reffs7y26g0ua
     ws-headers:
-      Host: dp3.scproxy.top
-  - name: 美国 CloudFlare节点 - 2
-    type: vmess
-    server: germany1.unlimiteddev.co
-    port: 80
-    uuid: 97ea79a6-615c-4ad7-8083-4f3b49cbe8a2
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /
-    ws-headers:
-      Host: germany1.unlimiteddev.co
-  - name: 广东省佛山市 移动
-    type: vmess
-    server: 25.v2-ray.cyou
-    port: 23625
-    uuid: 0dd19d20-ec86-3680-b256-87237bafa89e
-    alterId: 2
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /
-    ws-headers:
-      Host: 25.v2-ray.cyou
-  - name: 美国 V2CROSS.COM
-    type: vmess
-    server: ch.learnpropy.click
-    port: 2053
-    uuid: 8cab8fb7-4977-4ec2-8bba-2914dd43bfbd
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /gsdg43575
-    ws-headers:
-      Host: abs.learnpropy.click
+      Host: surongwei.eu.org
     tls: true
-  - name: 美国 CloudFlare节点 - 3
-    type: vmess
-    server: 3.mamadcucu.com
-    port: 2086
-    uuid: 929344e1-473c-4feb-b86b-fde3ee1ccd16
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /ArsalanTauBot
-    ws-headers:
-      Host: 3.mamadcucu.com
+  - name: 香港+阿里云
+    type: trojan
+    server: tr.dns.tlz.asia
+    port: 1231?type=tcp&allowInsecure=1
+    password: bHlD0P4J1B
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
+      - 美国 惠普HP
+      - 广东省揭阳市 移动
+      - 美国 惠普HP - 2
+      - 美国+V2CROSS.COM
       - 美国 CloudFlare节点
-      - 美国 CloudFlare节点 - 2
-      - 广东省佛山市 移动
-      - 美国 V2CROSS.COM
-      - 美国 CloudFlare节点 - 3
+      - 香港+阿里云
   - name: 自动选择
     type: url-test
     proxies:
+      - 美国 惠普HP
+      - 广东省揭阳市 移动
+      - 美国 惠普HP - 2
+      - 美国+V2CROSS.COM
       - 美国 CloudFlare节点
-      - 美国 CloudFlare节点 - 2
-      - 广东省佛山市 移动
-      - 美国 V2CROSS.COM
-      - 美国 CloudFlare节点 - 3
+      - 香港+阿里云
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
+      - 美国 惠普HP
+      - 广东省揭阳市 移动
+      - 美国 惠普HP - 2
+      - 美国+V2CROSS.COM
       - 美国 CloudFlare节点
-      - 美国 CloudFlare节点 - 2
-      - 广东省佛山市 移动
-      - 美国 V2CROSS.COM
-      - 美国 CloudFlare节点 - 3
+      - 香港+阿里云
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
