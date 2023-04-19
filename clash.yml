@@ -1,64 +1,4 @@
 proxies:
-  - name: 美国 CloudFlare节点
-    type: vmess
-    server: cf.yj2022.ga
-    port: 443
-    uuid: 4b5e4565-322f-4223-a891-78a84f189726
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /WKtzeN11GLqwVNBTp9mX
-    ws-headers:
-      Host: finland1.yj2022.ga
-    tls: true
-  - name: 亚太地区 V2CROSS.COM
-    type: vmess
-    server: susuku.putrastores.xyz
-    port: 443
-    uuid: b04942a1-44f6-4365-a072-b86c0affe6b5
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /vmess
-    ws-headers:
-      Host: susuku.putrastores.xyz
-    tls: true
-  - name: 美国+V2CROSS.COM
-    type: trojan
-    server: 170-187-134-190.ipv4.rush.ml
-    port: '8443'
-    password: cf4295378e209e70d12c5bdd017144dfd1c772d3
-  - name: 法国+OVH数据中心
-    type: trojan
-    server: a1.veryfastnet1.tk
-    port: 32894?type=tcp&sni=jamaran.ir&allowInsecure=1
-    password: HchlVCfnXB
-  - name: 广东省佛山市 移动
-    type: vmess
-    server: 25.v2-ray.cyou
-    port: 23625
-    uuid: 0dd19d20-ec86-3680-b256-87237bafa89e
-    alterId: 2
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /
-    ws-headers:
-      Host: 25.v2-ray.cyou
-  - name: 美国 CloudFlare节点 - 2
-    type: vmess
-    server: 172.67.217.222
-    port: 80
-    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /shirker
-    ws-headers:
-      Host: dp3.scproxy.top
   - name: 法国 V2CROSS.COM
     type: vmess
     server: 194.146.49.64
@@ -71,41 +11,123 @@ proxies:
     ws-path: /ArsalanTauBot
     ws-headers:
       Host: ''
+  - name: 上海市+电信
+    type: trojan
+    server: 116.192.171.97
+    port: 8443?security=tls&type=tcp&headerType=none
+    password: 5505f6ba-cd37-30ce-8f92-be4120c83d7f
+  - name: 美国 惠普HP
+    type: vmess
+    server: 16.163.94.236
+    port: 443
+    uuid: 6ff66f42-38d7-41c6-9a08-0d48f2ef3aa5
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /zh-cn
+    ws-headers:
+      Host: ''
+    tls: true
+  - name: 美国 CloudFlare节点
+    type: vmess
+    server: 104.17.3.81
+    port: 80
+    uuid: e40b2de3-b829-4591-a7b6-99d1913f3246
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /worryfree
+    ws-headers:
+      Host: w.evouch77.live
+  - name: 美国 惠普HP - 2
+    type: vmess
+    server: hk4.af49c4e4c2ef.sanfen001.pics
+    port: 443
+    uuid: 6ff66f42-38d7-41c6-9a08-0d48f2ef3aa5
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /zh-cn
+    ws-headers: {}
+    tls: true
+  - name: 美国 惠普HP - 3
+    type: vmess
+    server: hk2.c2bfe79372be.sanfen001.pics
+    port: 443
+    uuid: 6ff66f42-38d7-41c6-9a08-0d48f2ef3aa5
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /zh-cn
+    ws-headers: {}
+    tls: true
+  - name: 美国 惠普HP - 4
+    type: vmess
+    server: 16.163.94.236
+    port: 443
+    uuid: 6ff66f42-38d7-41c6-9a08-0d48f2ef3aa5
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /zh-cn
+    ws-headers:
+      Host: ''
+    tls: true
+  - name: 美国 CloudFlare节点 - 2
+    type: vmess
+    server: lsb-gy.heinu.cf
+    port: 2096
+    uuid: d793c013-f596-4af9-de0a-2062bb864dd7
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /@heinuhome
+    ws-headers: {}
+    tls: true
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 美国 CloudFlare节点
-      - 亚太地区 V2CROSS.COM
-      - 美国+V2CROSS.COM
-      - 法国+OVH数据中心
-      - 广东省佛山市 移动
-      - 美国 CloudFlare节点 - 2
       - 法国 V2CROSS.COM
+      - 上海市+电信
+      - 美国 惠普HP
+      - 美国 CloudFlare节点
+      - 美国 惠普HP - 2
+      - 美国 惠普HP - 3
+      - 美国 惠普HP - 4
+      - 美国 CloudFlare节点 - 2
   - name: 自动选择
     type: url-test
     proxies:
-      - 美国 CloudFlare节点
-      - 亚太地区 V2CROSS.COM
-      - 美国+V2CROSS.COM
-      - 法国+OVH数据中心
-      - 广东省佛山市 移动
-      - 美国 CloudFlare节点 - 2
       - 法国 V2CROSS.COM
+      - 上海市+电信
+      - 美国 惠普HP
+      - 美国 CloudFlare节点
+      - 美国 惠普HP - 2
+      - 美国 惠普HP - 3
+      - 美国 惠普HP - 4
+      - 美国 CloudFlare节点 - 2
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 美国 CloudFlare节点
-      - 亚太地区 V2CROSS.COM
-      - 美国+V2CROSS.COM
-      - 法国+OVH数据中心
-      - 广东省佛山市 移动
-      - 美国 CloudFlare节点 - 2
       - 法国 V2CROSS.COM
+      - 上海市+电信
+      - 美国 惠普HP
+      - 美国 CloudFlare节点
+      - 美国 惠普HP - 2
+      - 美国 惠普HP - 3
+      - 美国 惠普HP - 4
+      - 美国 CloudFlare节点 - 2
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
