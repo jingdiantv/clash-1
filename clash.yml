@@ -1,30 +1,5 @@
 proxies:
-  - name: 美国 Microsoft数据中心
-    type: vmess
-    server: 58f84dd3-49bf-663b-f21b-6f6562601afa.interface.buzz
-    port: 443
-    uuid: 285adff2-eb0b-41f6-80d7-8a8fc65b10fc
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /index.html
-    ws-headers:
-      Host: apps.apple.com
   - name: 美国 CloudFlare节点
-    type: vmess
-    server: cf.yj2022.ga
-    port: 443
-    uuid: 4b5e4565-322f-4223-a891-78a84f189726
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /WKtzeN11GLqwVNBTp9mX
-    ws-headers:
-      Host: finland1.yj2022.ga
-    tls: true
-  - name: 美国 CloudFlare节点 - 2
     type: vmess
     server: new3.hucloud-dns.xyz
     port: 443
@@ -37,71 +12,79 @@ proxies:
     ws-headers:
       Host: ''
     tls: true
-  - name: 广东省揭阳市 移动
+  - name: 广东省广州市 移动
     type: vmess
-    server: 120.240.163.62
-    port: 59629
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-headers: {}
-  - name: 美国 CloudFlare节点 - 3
-    type: vmess
-    server: cf.noaries.de
-    port: 2082
-    uuid: 314c1387-618c-4689-97fc-4bc9a1ae5e05
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /
-    ws-headers:
-      Host: ir2.nmsl.ninja
-  - name: 上海市 联通
-    type: vmess
-    server: 223.167.41.202
-    port: 63087
+    server: 120.232.179.161
+    port: 63078
     uuid: b96f9e5b-7b2a-3c03-b1b3-2e93234f9108
     alterId: 0
     cipher: auto
     udp: true
-    network: tcp
-    ws-headers: {}
+    network: ws
+    ws-path: ''
+    ws-headers:
+      Host: hk-balancer.airport-v2.com
     tls: true
+  - name: 美国 CloudFlare节点 - 2
+    type: vmess
+    server: lsb-gy.heinu.cf
+    port: 2096
+    uuid: d793c013-f596-4af9-de0a-2062bb864dd7
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /@heinuhome
+    ws-headers:
+      Host: lsb-gy.heinu.cf
+    tls: true
+  - name: 江苏省扬州市 移动
+    type: vmess
+    server: data-hk-v1.shwjfkw.cn
+    port: 50207
+    uuid: b1478e24-4916-3abe-8f17-15931012ecbe
+    alterId: 1
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /hls/cctv5phd.m3u8
+    ws-headers:
+      Host: YTB-awkj
+  - name: 法国+V2CROSS.COM
+    type: ss
+    server: 92.243.24.58
+    port: '443'
+    cipher: chacha20-ietf-poly1305
+    password: h2Bd2jFzAuYA
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 美国 Microsoft数据中心
       - 美国 CloudFlare节点
+      - 广东省广州市 移动
       - 美国 CloudFlare节点 - 2
-      - 广东省揭阳市 移动
-      - 美国 CloudFlare节点 - 3
-      - 上海市 联通
+      - 江苏省扬州市 移动
+      - 法国+V2CROSS.COM
   - name: 自动选择
     type: url-test
     proxies:
-      - 美国 Microsoft数据中心
       - 美国 CloudFlare节点
+      - 广东省广州市 移动
       - 美国 CloudFlare节点 - 2
-      - 广东省揭阳市 移动
-      - 美国 CloudFlare节点 - 3
-      - 上海市 联通
+      - 江苏省扬州市 移动
+      - 法国+V2CROSS.COM
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 美国 Microsoft数据中心
       - 美国 CloudFlare节点
+      - 广东省广州市 移动
       - 美国 CloudFlare节点 - 2
-      - 广东省揭阳市 移动
-      - 美国 CloudFlare节点 - 3
-      - 上海市 联通
+      - 江苏省扬州市 移动
+      - 法国+V2CROSS.COM
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
