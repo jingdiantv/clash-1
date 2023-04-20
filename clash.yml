@@ -1,100 +1,61 @@
 proxies:
-  - name: 瑞典+V2CROSS.COM
-    type: ss
-    server: 167.88.63.79
-    port: '2375'
-    cipher: aes-256-gcm
-    password: faBAoD54k87UJG7
-  - name: 美国 V2CROSS.COM
-    type: vmess
-    server: aseman.shiftino.online
-    port: 21309
-    uuid: 19890f55-27de-48ce-ba04-d941ccaf7a62
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /
-    ws-headers:
-      Host: ''
-    tls: true
-  - name: 德国 法兰克福Oracle云计算数据中心
-    type: vmess
-    server: 130.61.111.167
-    port: 21872
-    uuid: 9a7a75d4-ab7e-4ba0-bbfa-a4acddc18084
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /
-    ws-headers:
-      Host: ''
-  - name: 美国 V2CROSS.COM - 2
-    type: vmess
-    server: 1.huaxia4364.icu
-    port: 80
-    uuid: 34d3b5e5-5208-4b5f-b9e2-2c6932dc4810
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /
-    ws-headers:
-      Host: 1.huaxia4364.icu
-  - name: 上海市 联通
-    type: vmess
-    server: 223.167.41.202
-    port: 63081
-    uuid: b96f9e5b-7b2a-3c03-b1b3-2e93234f9108
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: ''
-    ws-headers:
-      Host: hkt2-cdn.tencent.best
-  - name: 美国 V2CROSS.COM - 3
-    type: vmess
-    server: 1.huaxia4364.icu
-    port: 80
-    uuid: 34d3b5e5-5208-4b5f-b9e2-2c6932dc4810
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /
-    ws-headers:
-      Host: ''
-  - name: 台湾省新北市 中华电信
-    type: vmess
-    server: hinet1261.gfwisbest.xyz
-    port: 224
-    uuid: 2285133e-b9ba-3fb5-a246-9c7ddcc2cd7a
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /
-    ws-headers:
-      Host: ''
   - name: 美国 CloudFlare节点
     type: vmess
-    server: d.pgypgykmoljklj.xyz
-    port: 443
-    uuid: fa4cb529-3ac9-4268-bb04-ed4253813508
+    server: cf.515188.xyz
+    port: 8080
+    uuid: 9d553e2b-4176-44ef-bf70-48aa8eb6da60
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /mR17oBKzZ7
+    ws-path: /api/v3/download.getFile
     ws-headers:
-      Host: d.pgypgykmoljklj.xyz
-    tls: true
-  - name: 美国 加利福尼亚州圣何塞PEG TECH
+      Host: ssrsub.v03.ssrsub.com
+  - name: 法国+OVH数据中心
+    type: trojan
+    server: 54.37.185.148
+    port: '32894'
+    password: HchlVCfnXB
+  - name: 美国 CloudFlare节点 - 2
     type: vmess
-    server: 142.4.126.56
-    port: 33302
+    server: 172.67.217.222
+    port: 80
+    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /shirker
+    ws-headers:
+      Host: dp3.scproxy.top
+  - name: 美国 CloudFlare节点 - 3
+    type: vmess
+    server: 172.67.140.193
+    port: 80
+    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /shirker
+    ws-headers:
+      Host: uk1.scproxy.top
+  - name: 马来西亚 V2CROSS.COM
+    type: vmess
+    server: join-bede.vmessorg.fun
+    port: 80
+    uuid: 94645613-dab4-41f2-bc48-6aa5fcfb9119
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /
+    ws-headers:
+      Host: ''
+  - name: 美国 Datability
+    type: vmess
+    server: 140.99.149.43
+    port: 56882
     uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
     alterId: 64
     cipher: auto
@@ -103,57 +64,37 @@ proxies:
     ws-path: /
     ws-headers:
       Host: ''
-  - name: 美国 CloudFlare节点 - 2
+  - name: 上海市 联通
     type: vmess
-    server: cf.bakapie.cf
-    port: 2096
-    uuid: cae6201f-50fe-4895-8930-841f1d8c4eb7
+    server: 223.167.41.202
+    port: 63078
+    uuid: b96f9e5b-7b2a-3c03-b1b3-2e93234f9108
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /index
+    ws-path: ''
     ws-headers:
-      Host: 4bb4ced4.ikunxiao.top
+      Host: hk-balancer.airport-v2.com
     tls: true
-  - name: 广东省佛山市 移动
+  - name: 广东省广州市 移动
     type: vmess
-    server: 25.v2-ray.cyou
-    port: 23625
-    uuid: 0dd19d20-ec86-3680-b256-87237bafa89e
-    alterId: 2
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /
-    ws-headers:
-      Host: 25.v2-ray.cyou
-  - name: 美国 CloudFlare节点 - 3
-    type: vmess
-    server: cf-lt.sharecentre.online
-    port: 443
-    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
+    server: 120.232.179.161
+    port: 63078
+    uuid: b96f9e5b-7b2a-3c03-b1b3-2e93234f9108
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /shirker
+    ws-path: ''
     ws-headers:
-      Host: lv1.sharecentrepro.org
+      Host: hk-balancer.airport-v2.com
     tls: true
-  - name: 美国 惠普HP
-    type: vmess
-    server: 16.163.94.236
-    port: 443
-    uuid: 6ff66f42-38d7-41c6-9a08-0d48f2ef3aa5
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /zh-cn
-    ws-headers:
-      Host: ''
-    tls: true
+  - name: 美国+Microsoft数据中心
+    type: trojan
+    server: fschk.fscloud123456789.com
+    port: '443'
+    password: 38541d74-6ffd-4352-988d-715ee989947c
   - name: 上海市 联通 - 2
     type: vmess
     server: 223.167.41.125
@@ -167,77 +108,88 @@ proxies:
     ws-headers:
       Host: tw-load-balancer.myn1des.com
     tls: true
+  - name: 瑞士+V2CROSS.COM
+    type: trojan
+    server: 195.15.243.26
+    port: '443'
+    password: '4478'
+  - name: 香港 BGP.NET CN2数据中心
+    type: vmess
+    server: 202.79.172.53
+    port: 443
+    uuid: 30216206-14b7-40e7-995d-61c1219ba584
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /path/220128071100
+    ws-headers:
+      Host: ''
+    tls: true
   - name: 美国 CloudFlare节点 - 4
     type: vmess
-    server: cf.yj2022.ga
-    port: 443
-    uuid: 4b5e4565-322f-4223-a891-78a84f189726
+    server: cf-lt.sharecentre.online
+    port: 80
+    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /WKtzeN11GLqwVNBTp9mX
+    ws-path: /shirker
     ws-headers:
-      Host: finland1.yj2022.ga
-    tls: true
+      Host: dp1.scproxy.top
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 瑞典+V2CROSS.COM
-      - 美国 V2CROSS.COM
-      - 德国 法兰克福Oracle云计算数据中心
-      - 美国 V2CROSS.COM - 2
-      - 上海市 联通
-      - 美国 V2CROSS.COM - 3
-      - 台湾省新北市 中华电信
       - 美国 CloudFlare节点
-      - 美国 加利福尼亚州圣何塞PEG TECH
+      - 法国+OVH数据中心
       - 美国 CloudFlare节点 - 2
-      - 广东省佛山市 移动
       - 美国 CloudFlare节点 - 3
-      - 美国 惠普HP
+      - 马来西亚 V2CROSS.COM
+      - 美国 Datability
+      - 上海市 联通
+      - 广东省广州市 移动
+      - 美国+Microsoft数据中心
       - 上海市 联通 - 2
+      - 瑞士+V2CROSS.COM
+      - 香港 BGP.NET CN2数据中心
       - 美国 CloudFlare节点 - 4
   - name: 自动选择
     type: url-test
     proxies:
-      - 瑞典+V2CROSS.COM
-      - 美国 V2CROSS.COM
-      - 德国 法兰克福Oracle云计算数据中心
-      - 美国 V2CROSS.COM - 2
-      - 上海市 联通
-      - 美国 V2CROSS.COM - 3
-      - 台湾省新北市 中华电信
       - 美国 CloudFlare节点
-      - 美国 加利福尼亚州圣何塞PEG TECH
+      - 法国+OVH数据中心
       - 美国 CloudFlare节点 - 2
-      - 广东省佛山市 移动
       - 美国 CloudFlare节点 - 3
-      - 美国 惠普HP
+      - 马来西亚 V2CROSS.COM
+      - 美国 Datability
+      - 上海市 联通
+      - 广东省广州市 移动
+      - 美国+Microsoft数据中心
       - 上海市 联通 - 2
+      - 瑞士+V2CROSS.COM
+      - 香港 BGP.NET CN2数据中心
       - 美国 CloudFlare节点 - 4
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 瑞典+V2CROSS.COM
-      - 美国 V2CROSS.COM
-      - 德国 法兰克福Oracle云计算数据中心
-      - 美国 V2CROSS.COM - 2
-      - 上海市 联通
-      - 美国 V2CROSS.COM - 3
-      - 台湾省新北市 中华电信
       - 美国 CloudFlare节点
-      - 美国 加利福尼亚州圣何塞PEG TECH
+      - 法国+OVH数据中心
       - 美国 CloudFlare节点 - 2
-      - 广东省佛山市 移动
       - 美国 CloudFlare节点 - 3
-      - 美国 惠普HP
+      - 马来西亚 V2CROSS.COM
+      - 美国 Datability
+      - 上海市 联通
+      - 广东省广州市 移动
+      - 美国+Microsoft数据中心
       - 上海市 联通 - 2
+      - 瑞士+V2CROSS.COM
+      - 香港 BGP.NET CN2数据中心
       - 美国 CloudFlare节点 - 4
     url: http://www.gstatic.com/generate_204
     interval: 86400
