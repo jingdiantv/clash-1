@@ -1,18 +1,44 @@
 proxies:
-  - name: 美国 CloudFlare节点
+  - name: 上海市+电信
+    type: trojan
+    server: 116.192.171.97
+    port: 8443?security=tls&type=tcp&headerType=none
+    password: 5505f6ba-cd37-30ce-8f92-be4120c83d7f
+  - name: 广东省揭阳市 移动
     type: vmess
-    server: new3.hucloud-dns.xyz
-    port: 443
-    uuid: 1c8ad3f2-835c-4fda-b9b6-881d3cadfd8e
+    server: 120.240.163.62
+    port: 59629
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-headers: {}
+  - name: 上海市 联通
+    type: vmess
+    server: 223.167.41.202
+    port: 63081
+    uuid: b96f9e5b-7b2a-3c03-b1b3-2e93234f9108
     alterId: 0
     cipher: auto
     udp: true
     network: ws
     ws-path: ''
     ws-headers:
+      Host: hkt2-cdn.tencent.best
+  - name: 南非 V2CROSS.COM
+    type: vmess
+    server: 156.225.67.213
+    port: 47134
+    uuid: 3ca912da-6ac2-418f-b9cf-45b6f694579b
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /
+    ws-headers:
       Host: ''
-    tls: true
-  - name: 美国 CloudFlare节点 - 2
+  - name: 美国 CloudFlare节点
     type: vmess
     server: 172.67.217.222
     port: 80
@@ -24,134 +50,80 @@ proxies:
     ws-path: /shirker
     ws-headers:
       Host: dp3.scproxy.top
-  - name: 美国 CloudFlare节点 - 3
+  - name: 江苏省扬州市 移动
     type: vmess
-    server: cf-lt.sharecentre.online
-    port: 80
-    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
-    alterId: 0
+    server: data-hk-v1.shwjfkw.cn
+    port: 50207
+    uuid: b1478e24-4916-3abe-8f17-15931012ecbe
+    alterId: 1
     cipher: auto
     udp: true
     network: ws
-    ws-path: /shirker
+    ws-path: /hls/cctv5phd.m3u8
     ws-headers:
-      Host: de1.sharecentrepro.org
-  - name: 美国 CloudFlare节点 - 4
-    type: vmess
-    server: 3.mamadcucu.com
-    port: 2086
-    uuid: 929344e1-473c-4feb-b86b-fde3ee1ccd16
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /ArsalanTauBot
-    ws-headers:
-      Host: 3.mamadcucu.com
-  - name: 美国 Microsoft数据中心
-    type: vmess
-    server: 58f84dd3-49bf-663b-f21b-6f6562601afa.interface.buzz
-    port: 443
-    uuid: 285adff2-eb0b-41f6-80d7-8a8fc65b10fc
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /index.html
-    ws-headers:
-      Host: apps.apple.com
-  - name: 美国 CloudFlare节点 - 5
-    type: vmess
-    server: 162.159.135.233
-    port: 443
-    uuid: c7cd1c90-dd35-11ed-b332-205c6d5f5d78
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /8ox2gy04
-    ws-headers:
-      Host: us-2.0rd.net
-    tls: true
-  - name: 美国 惠普HP
-    type: vmess
-    server: 16.163.94.236
-    port: 443
-    uuid: 6ff66f42-38d7-41c6-9a08-0d48f2ef3aa5
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /zh-cn
-    ws-headers:
-      Host: ''
-    tls: true
-  - name: 安徽省合肥市 移动
-    type: vmess
-    server: 120.210.205.220
-    port: 36918
-    uuid: 411dacd6-030b-41ad-bfb6-3a822ec83014
-    alterId: 64
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /
-    ws-headers:
-      Host: ''
-  - name: 上海市 联通
+      Host: YTB-awkj
+  - name: 上海市 联通 - 2
     type: vmess
     server: 223.167.41.125
-    port: 63088
+    port: 63082
     uuid: b96f9e5b-7b2a-3c03-b1b3-2e93234f9108
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /mugua
+    ws-path: ''
     ws-headers:
-      Host: tw-load-balancer.myn1des.com
-    tls: true
+      Host: hkt3-cdn.tencent.best
+  - name: 广东省佛山市 移动
+    type: vmess
+    server: 25.v2-ray.cyou
+    port: 23625
+    uuid: 0dd19d20-ec86-3680-b256-87237bafa89e
+    alterId: 2
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /
+    ws-headers:
+      Host: 25.v2-ray.cyou
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 美国 CloudFlare节点
-      - 美国 CloudFlare节点 - 2
-      - 美国 CloudFlare节点 - 3
-      - 美国 CloudFlare节点 - 4
-      - 美国 Microsoft数据中心
-      - 美国 CloudFlare节点 - 5
-      - 美国 惠普HP
-      - 安徽省合肥市 移动
+      - 上海市+电信
+      - 广东省揭阳市 移动
       - 上海市 联通
+      - 南非 V2CROSS.COM
+      - 美国 CloudFlare节点
+      - 江苏省扬州市 移动
+      - 上海市 联通 - 2
+      - 广东省佛山市 移动
   - name: 自动选择
     type: url-test
     proxies:
-      - 美国 CloudFlare节点
-      - 美国 CloudFlare节点 - 2
-      - 美国 CloudFlare节点 - 3
-      - 美国 CloudFlare节点 - 4
-      - 美国 Microsoft数据中心
-      - 美国 CloudFlare节点 - 5
-      - 美国 惠普HP
-      - 安徽省合肥市 移动
+      - 上海市+电信
+      - 广东省揭阳市 移动
       - 上海市 联通
+      - 南非 V2CROSS.COM
+      - 美国 CloudFlare节点
+      - 江苏省扬州市 移动
+      - 上海市 联通 - 2
+      - 广东省佛山市 移动
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 美国 CloudFlare节点
-      - 美国 CloudFlare节点 - 2
-      - 美国 CloudFlare节点 - 3
-      - 美国 CloudFlare节点 - 4
-      - 美国 Microsoft数据中心
-      - 美国 CloudFlare节点 - 5
-      - 美国 惠普HP
-      - 安徽省合肥市 移动
+      - 上海市+电信
+      - 广东省揭阳市 移动
       - 上海市 联通
+      - 南非 V2CROSS.COM
+      - 美国 CloudFlare节点
+      - 江苏省扬州市 移动
+      - 上海市 联通 - 2
+      - 广东省佛山市 移动
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
