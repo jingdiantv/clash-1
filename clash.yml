@@ -2,27 +2,41 @@ proxies:
   - name: 上海市 联通
     type: vmess
     server: 223.167.41.202
-    port: 63081
+    port: 63088
     uuid: b96f9e5b-7b2a-3c03-b1b3-2e93234f9108
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: ''
+    ws-path: /mugua
     ws-headers:
-      Host: hkt2-cdn.tencent.best
+      Host: tw-load-balancer.myn1des.com
+    tls: true
   - name: 美国 CloudFlare节点
     type: vmess
-    server: 104.17.3.81
-    port: 80
-    uuid: e40b2de3-b829-4591-a7b6-99d1913f3246
+    server: new3.hucloud-dns.xyz
+    port: 443
+    uuid: 1c8ad3f2-835c-4fda-b9b6-881d3cadfd8e
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /worryfree
+    ws-path: /
     ws-headers:
-      Host: w.evouch77.live
+      Host: ''
+    tls: true
+  - name: 美国 CloudFlare节点 - 2
+    type: vmess
+    server: cf.noaries.de
+    port: 2082
+    uuid: 314c1387-618c-4689-97fc-4bc9a1ae5e05
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /
+    ws-headers:
+      Host: ir2.nmsl.ninja
   - name: 广东省佛山市 移动
     type: vmess
     server: 25.v2-ray.cyou
@@ -35,35 +49,19 @@ proxies:
     ws-path: /
     ws-headers:
       Host: 25.v2-ray.cyou
-  - name: 马来西亚 V2CROSS.COM
+  - name: 美国 CloudFlare节点 - 3
     type: vmess
-    server: join-bede.vmessorg.fun
-    port: 80
-    uuid: d9655785-26e9-45bc-8abb-62a24e4bb441
+    server: cf-lt.sharecentre.online
+    port: 443
+    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /
+    ws-path: /shirker
     ws-headers:
-      Host: ''
-  - name: 美国+V2CROSS.COM
-    type: trojan
-    server: 152.70.74.66
-    port: 443?security=tls&type=tcp&headerType=none
-    password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
-  - name: 广东省佛山市 移动 - 2
-    type: vmess
-    server: 25.v2-ray.cyou
-    port: 23625
-    uuid: 0dd19d20-ec86-3680-b256-87237bafa89e
-    alterId: 2
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /
-    ws-headers:
-      Host: 25.v2-ray.cyou
+      Host: lv1.sharecentrepro.org
+    tls: true
 proxy-groups:
   - name: Free-servers
     type: select
@@ -72,19 +70,17 @@ proxy-groups:
       - 故障转移
       - 上海市 联通
       - 美国 CloudFlare节点
+      - 美国 CloudFlare节点 - 2
       - 广东省佛山市 移动
-      - 马来西亚 V2CROSS.COM
-      - 美国+V2CROSS.COM
-      - 广东省佛山市 移动 - 2
+      - 美国 CloudFlare节点 - 3
   - name: 自动选择
     type: url-test
     proxies:
       - 上海市 联通
       - 美国 CloudFlare节点
+      - 美国 CloudFlare节点 - 2
       - 广东省佛山市 移动
-      - 马来西亚 V2CROSS.COM
-      - 美国+V2CROSS.COM
-      - 广东省佛山市 移动 - 2
+      - 美国 CloudFlare节点 - 3
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
@@ -92,10 +88,9 @@ proxy-groups:
     proxies:
       - 上海市 联通
       - 美国 CloudFlare节点
+      - 美国 CloudFlare节点 - 2
       - 广东省佛山市 移动
-      - 马来西亚 V2CROSS.COM
-      - 美国+V2CROSS.COM
-      - 广东省佛山市 移动 - 2
+      - 美国 CloudFlare节点 - 3
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
