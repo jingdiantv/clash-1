@@ -1,129 +1,88 @@
 proxies:
-  - name: 上海市+电信
-    type: trojan
-    server: 116.192.171.97
-    port: 8443?security=tls&type=tcp&headerType=none
-    password: 5505f6ba-cd37-30ce-8f92-be4120c83d7f
-  - name: 广东省揭阳市 移动
+  - name: 马来西亚 V2CROSS.COM
     type: vmess
-    server: 120.240.163.62
-    port: 59629
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-headers: {}
-  - name: 上海市 联通
-    type: vmess
-    server: 223.167.41.202
-    port: 63081
-    uuid: b96f9e5b-7b2a-3c03-b1b3-2e93234f9108
+    server: join-bede.vmessorg.fun
+    port: 80
+    uuid: 94645613-dab4-41f2-bc48-6aa5fcfb9119
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: ''
+    ws-path: /
     ws-headers:
-      Host: hkt2-cdn.tencent.best
-  - name: 南非 V2CROSS.COM
+      Host: ''
+  - name: 希腊 V2CROSS.COM
     type: vmess
-    server: 156.225.67.213
-    port: 47134
-    uuid: 3ca912da-6ac2-418f-b9cf-45b6f694579b
+    server: aop.ssfree.ru
+    port: 443
+    uuid: d3197a0e-df2f-11ed-9f00-000017022008
     alterId: 64
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /getweather
+    ws-headers:
+      Host: ''
+    tls: true
+  - name: 台湾省新北市 中华电信
+    type: vmess
+    server: hinet1261.gfwisbest.xyz
+    port: 224
+    uuid: 2285133e-b9ba-3fb5-a246-9c7ddcc2cd7a
+    alterId: 0
     cipher: auto
     udp: true
     network: tcp
     ws-path: /
     ws-headers:
       Host: ''
-  - name: 美国 CloudFlare节点
+  - name: 美国+V2CROSS.COM
+    type: trojan
+    server: 170.187.134.190
+    port: >-
+      8443?security=tls&sni=170-187-134-190.ipv4.rush.ml&type=tcp&headerType=none
+    password: cf4295378e209e70d12c5bdd017144dfd1c772d3
+  - name: 马来西亚 V2CROSS.COM - 2
     type: vmess
-    server: 172.67.217.222
+    server: join-bede.vmessorg.fun
     port: 80
-    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
+    uuid: d9655785-26e9-45bc-8abb-62a24e4bb441
     alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /shirker
-    ws-headers:
-      Host: dp3.scproxy.top
-  - name: 江苏省扬州市 移动
-    type: vmess
-    server: data-hk-v1.shwjfkw.cn
-    port: 50207
-    uuid: b1478e24-4916-3abe-8f17-15931012ecbe
-    alterId: 1
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /hls/cctv5phd.m3u8
-    ws-headers:
-      Host: YTB-awkj
-  - name: 上海市 联通 - 2
-    type: vmess
-    server: 223.167.41.125
-    port: 63082
-    uuid: b96f9e5b-7b2a-3c03-b1b3-2e93234f9108
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: ''
-    ws-headers:
-      Host: hkt3-cdn.tencent.best
-  - name: 广东省佛山市 移动
-    type: vmess
-    server: 25.v2-ray.cyou
-    port: 23625
-    uuid: 0dd19d20-ec86-3680-b256-87237bafa89e
-    alterId: 2
     cipher: auto
     udp: true
     network: ws
     ws-path: /
     ws-headers:
-      Host: 25.v2-ray.cyou
+      Host: ''
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 上海市+电信
-      - 广东省揭阳市 移动
-      - 上海市 联通
-      - 南非 V2CROSS.COM
-      - 美国 CloudFlare节点
-      - 江苏省扬州市 移动
-      - 上海市 联通 - 2
-      - 广东省佛山市 移动
+      - 马来西亚 V2CROSS.COM
+      - 希腊 V2CROSS.COM
+      - 台湾省新北市 中华电信
+      - 美国+V2CROSS.COM
+      - 马来西亚 V2CROSS.COM - 2
   - name: 自动选择
     type: url-test
     proxies:
-      - 上海市+电信
-      - 广东省揭阳市 移动
-      - 上海市 联通
-      - 南非 V2CROSS.COM
-      - 美国 CloudFlare节点
-      - 江苏省扬州市 移动
-      - 上海市 联通 - 2
-      - 广东省佛山市 移动
+      - 马来西亚 V2CROSS.COM
+      - 希腊 V2CROSS.COM
+      - 台湾省新北市 中华电信
+      - 美国+V2CROSS.COM
+      - 马来西亚 V2CROSS.COM - 2
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 上海市+电信
-      - 广东省揭阳市 移动
-      - 上海市 联通
-      - 南非 V2CROSS.COM
-      - 美国 CloudFlare节点
-      - 江苏省扬州市 移动
-      - 上海市 联通 - 2
-      - 广东省佛山市 移动
+      - 马来西亚 V2CROSS.COM
+      - 希腊 V2CROSS.COM
+      - 台湾省新北市 中华电信
+      - 美国+V2CROSS.COM
+      - 马来西亚 V2CROSS.COM - 2
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
