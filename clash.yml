@@ -1,8 +1,51 @@
 proxies:
-  - name: 广东省东莞市 电信
+  - name: 美国+V2CROSS.COM
+    type: trojan
+    server: 170.187.134.190
+    port: >-
+      8443?security=tls&sni=170-187-134-190.ipv4.rush.ml&type=tcp&headerType=none
+    password: cf4295378e209e70d12c5bdd017144dfd1c772d3
+  - name: 美国 CloudFlare节点
     type: vmess
-    server: 59.36.139.14
-    port: 63090
+    server: cdn.yuntujisu.ml
+    port: 2095
+    uuid: a0ac5ff5-b177-44d7-a555-aec820fcaa9d
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /zh-cn
+    ws-headers:
+      Host: jp1.yuntujisu.tk
+  - name: 美国 CloudFlare节点 - 2
+    type: vmess
+    server: cf-lt.sharecentre.online
+    port: 80
+    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /shirker
+    ws-headers:
+      Host: lv3.sharecentrepro.org
+  - name: 上海市 联通
+    type: vmess
+    server: 223.167.41.125
+    port: 63088
+    uuid: b96f9e5b-7b2a-3c03-b1b3-2e93234f9108
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /mugua
+    ws-headers:
+      Host: tw-load-balancer.myn1des.com
+    tls: true
+  - name: 上海市 联通 - 2
+    type: vmess
+    server: 223.167.41.202
+    port: 63087
     uuid: b96f9e5b-7b2a-3c03-b1b3-2e93234f9108
     alterId: 0
     cipher: auto
@@ -10,86 +53,35 @@ proxies:
     network: tcp
     ws-headers: {}
     tls: true
-  - name: 广东省广州市 移动
-    type: vmess
-    server: 120.232.179.161
-    port: 63078
-    uuid: b96f9e5b-7b2a-3c03-b1b3-2e93234f9108
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: ''
-    ws-headers:
-      Host: hk-balancer.airport-v2.com
-    tls: true
-  - name: 美国 惠普HP
-    type: vmess
-    server: hk4.af49c4e4c2ef.sanfen001.pics
-    port: 443
-    uuid: 6ff66f42-38d7-41c6-9a08-0d48f2ef3aa5
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /zh-cn
-    ws-headers:
-      Host: ''
-    tls: true
-  - name: 上海市 联通
-    type: vmess
-    server: 223.167.41.202
-    port: 63081
-    uuid: b96f9e5b-7b2a-3c03-b1b3-2e93234f9108
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: ''
-    ws-headers:
-      Host: hkt2-cdn.tencent.best
-  - name: 美国 惠普HP - 2
-    type: vmess
-    server: hk2.c2bfe79372be.sanfen001.pics
-    port: 443
-    uuid: 6ff66f42-38d7-41c6-9a08-0d48f2ef3aa5
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /zh-cn
-    ws-headers:
-      Host: ''
-    tls: true
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 广东省东莞市 电信
-      - 广东省广州市 移动
-      - 美国 惠普HP
+      - 美国+V2CROSS.COM
+      - 美国 CloudFlare节点
+      - 美国 CloudFlare节点 - 2
       - 上海市 联通
-      - 美国 惠普HP - 2
+      - 上海市 联通 - 2
   - name: 自动选择
     type: url-test
     proxies:
-      - 广东省东莞市 电信
-      - 广东省广州市 移动
-      - 美国 惠普HP
+      - 美国+V2CROSS.COM
+      - 美国 CloudFlare节点
+      - 美国 CloudFlare节点 - 2
       - 上海市 联通
-      - 美国 惠普HP - 2
+      - 上海市 联通 - 2
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 广东省东莞市 电信
-      - 广东省广州市 移动
-      - 美国 惠普HP
+      - 美国+V2CROSS.COM
+      - 美国 CloudFlare节点
+      - 美国 CloudFlare节点 - 2
       - 上海市 联通
-      - 美国 惠普HP - 2
+      - 上海市 联通 - 2
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
