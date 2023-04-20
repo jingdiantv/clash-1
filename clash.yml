@@ -1,20 +1,8 @@
 proxies:
-  - name: 美国 V2CROSS.COM
+  - name: 上海市 联通
     type: vmess
-    server: flos1.ydnode.us
-    port: 80
-    uuid: db0af0f2-a278-3019-9ef8-f064d7a0726c
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /v2ray
-    ws-headers:
-      Host: flos1.ydnode.us
-  - name: 广东省广州市 移动
-    type: vmess
-    server: 120.232.179.161
-    port: 63078
+    server: 223.167.41.202
+    port: 63081
     uuid: b96f9e5b-7b2a-3c03-b1b3-2e93234f9108
     alterId: 0
     cipher: auto
@@ -22,13 +10,36 @@ proxies:
     network: ws
     ws-path: ''
     ws-headers:
-      Host: hk-balancer.airport-v2.com
-    tls: true
+      Host: hkt2-cdn.tencent.best
+  - name: 美国 CloudFlare节点
+    type: vmess
+    server: 104.17.3.81
+    port: 80
+    uuid: e40b2de3-b829-4591-a7b6-99d1913f3246
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /worryfree
+    ws-headers:
+      Host: w.evouch77.live
+  - name: 广东省佛山市 移动
+    type: vmess
+    server: 25.v2-ray.cyou
+    port: 23625
+    uuid: 0dd19d20-ec86-3680-b256-87237bafa89e
+    alterId: 2
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /
+    ws-headers:
+      Host: 25.v2-ray.cyou
   - name: 马来西亚 V2CROSS.COM
     type: vmess
     server: join-bede.vmessorg.fun
     port: 80
-    uuid: 94645613-dab4-41f2-bc48-6aa5fcfb9119
+    uuid: d9655785-26e9-45bc-8abb-62a24e4bb441
     alterId: 0
     cipher: auto
     udp: true
@@ -36,59 +47,55 @@ proxies:
     ws-path: /
     ws-headers:
       Host: ''
-  - name: 美国 CloudFlare节点
+  - name: 美国+V2CROSS.COM
+    type: trojan
+    server: 152.70.74.66
+    port: 443?security=tls&type=tcp&headerType=none
+    password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
+  - name: 广东省佛山市 移动 - 2
     type: vmess
-    server: cf-lt.sharecentre.online
-    port: 80
-    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
-    alterId: 0
+    server: 25.v2-ray.cyou
+    port: 23625
+    uuid: 0dd19d20-ec86-3680-b256-87237bafa89e
+    alterId: 2
     cipher: auto
     udp: true
     network: ws
-    ws-path: /shirker
+    ws-path: /
     ws-headers:
-      Host: lv1.sharecentrepro.org
-  - name: 美国 加你福尼亚洛杉矶Coperation Coloction数据中心
-    type: vmess
-    server: 198.16.45.166
-    port: 53392
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /aceamedv
-    ws-headers:
-      Host: ''
+      Host: 25.v2-ray.cyou
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 美国 V2CROSS.COM
-      - 广东省广州市 移动
-      - 马来西亚 V2CROSS.COM
+      - 上海市 联通
       - 美国 CloudFlare节点
-      - 美国 加你福尼亚洛杉矶Coperation Coloction数据中心
+      - 广东省佛山市 移动
+      - 马来西亚 V2CROSS.COM
+      - 美国+V2CROSS.COM
+      - 广东省佛山市 移动 - 2
   - name: 自动选择
     type: url-test
     proxies:
-      - 美国 V2CROSS.COM
-      - 广东省广州市 移动
-      - 马来西亚 V2CROSS.COM
+      - 上海市 联通
       - 美国 CloudFlare节点
-      - 美国 加你福尼亚洛杉矶Coperation Coloction数据中心
+      - 广东省佛山市 移动
+      - 马来西亚 V2CROSS.COM
+      - 美国+V2CROSS.COM
+      - 广东省佛山市 移动 - 2
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 美国 V2CROSS.COM
-      - 广东省广州市 移动
-      - 马来西亚 V2CROSS.COM
+      - 上海市 联通
       - 美国 CloudFlare节点
-      - 美国 加你福尼亚洛杉矶Coperation Coloction数据中心
+      - 广东省佛山市 移动
+      - 马来西亚 V2CROSS.COM
+      - 美国+V2CROSS.COM
+      - 广东省佛山市 移动 - 2
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
