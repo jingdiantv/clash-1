@@ -1,91 +1,54 @@
 proxies:
-  - name: 浙江省嘉兴市+联通
-    type: ss
-    server: 123.158.253.2
-    port: '38724'
-    cipher: aes-128-gcm
-    password: e1391926-7121-4fc7-ac83-ec4a920f7171
-  - name: 法国+V2CROSS.COM
-    type: ss
-    server: 92.243.24.58
-    port: '443'
-    cipher: chacha20-ietf-poly1305
-    password: h2Bd2jFzAuYA
-  - name: 美国+V2CROSS.COM
-    type: ss
-    server: 172.99.188.99
-    port: '5003'
-    cipher: aes-256-gcm
-    password: g5MeD6Ft3CWlJId
-  - name: 美国+V2CROSS.COM - 2
-    type: ss
-    server: 172.99.188.99
-    port: '5004'
-    cipher: aes-256-gcm
-    password: g5MeD6Ft3CWlJId
-  - name: 浙江省嘉兴市+联通 - 2
-    type: ss
-    server: 123.158.253.2
-    port: '38705'
-    cipher: aes-128-gcm
-    password: e1391926-7121-4fc7-ac83-ec4a920f7171
-  - name: 美国+V2CROSS.COM - 3
-    type: trojan
-    server: 152.70.74.66
-    port: 443?security=tls&type=tcp&headerType=none
-    password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
-  - name: 美国+V2CROSS.COM - 4
-    type: ss
-    server: 172.99.188.99
-    port: '2375'
-    cipher: aes-256-gcm
-    password: faBAoD54k87UJG7
-  - name: 安徽省合肥市+移动
-    type: ss
-    server: 112.30.145.82
-    port: '37908'
-    cipher: aes-128-gcm
-    password: e1391926-7121-4fc7-ac83-ec4a920f7171
-  - name: 广东省佛山市 移动
+  - name: 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
     type: vmess
-    server: 25.v2-ray.cyou
-    port: 23625
-    uuid: 0dd19d20-ec86-3680-b256-87237bafa89e
-    alterId: 2
+    server: 23.224.110.183
+    port: 443
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
     cipher: auto
     udp: true
     network: ws
-    ws-path: /
-    ws-headers:
-      Host: 25.v2-ray.cyou
-  - name: 美国 CloudFlare节点
-    type: vmess
-    server: 3.mamadcucu.com
-    port: 2086
-    uuid: 929344e1-473c-4feb-b86b-fde3ee1ccd16
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /ArsalanTauBot
+    ws-path: /path/080712342310
     ws-headers:
       Host: ''
-  - name: 广东省东莞市 电信
+    tls: true
+  - name: 美国 CloudFlare节点
     type: vmess
-    server: 59.36.84.180
-    port: 63094
-    uuid: b96f9e5b-7b2a-3c03-b1b3-2e93234f9108
+    server: cf-lt.sharecentre.online
+    port: 443
+    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
     alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /shirker
+    ws-headers:
+      Host: lv1.sharecentrepro.org
+    tls: true
+  - name: 美国+V2CROSS.COM
+    type: ss
+    server: >-
+      ak1643.www.outline.network.fr8678825324247b8176d59f83c30bd94d23d2e3ac5cd4a743bkwqeikvdyufr.cyou
+    port: '8888'
+    cipher: aes-256-gcm
+    password: Y6R9pAtvxxzmGC
+  - name: 美国 加你福尼亚洛杉矶Coperation Coloction数据中心
+    type: vmess
+    server: 198.16.45.166
+    port: 53392
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
     cipher: auto
     udp: true
     network: tcp
-    ws-headers: {}
-    tls: true
-  - name: 瑞士+V2CROSS.COM
+    ws-path: /aceamedv
+    ws-headers:
+      Host: ''
+  - name: 上海市+电信
     type: trojan
-    server: 195.15.243.26
-    port: '443'
-    password: '4478'
+    server: official.taipeicitygovernment.kiev.ua
+    port: 8443?security=tls&sni=66.42.40.132&type=tcp&headerType=none
+    password: 5505f6ba-cd37-30ce-8f92-be4120c83d7f
   - name: 美国 CloudFlare节点 - 2
     type: vmess
     server: 172.67.217.222
@@ -98,9 +61,63 @@ proxies:
     ws-path: /shirker
     ws-headers:
       Host: dp3.scproxy.top
-  - name: 上海市 联通
+  - name: 瑞典+V2CROSS.COM
+    type: ss
+    server: 167.88.63.79
+    port: '8881'
+    cipher: aes-256-gcm
+    password: kDWvXYZoTBcGkC4
+  - name: 马来西亚 V2CROSS.COM
     type: vmess
-    server: 223.167.41.202
+    server: join-bede.vmessorg.fun
+    port: 80
+    uuid: 94645613-dab4-41f2-bc48-6aa5fcfb9119
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /
+    ws-headers:
+      Host: ''
+  - name: 浙江省嘉兴市+联通
+    type: ss
+    server: 123.158.253.159
+    port: '38721'
+    cipher: aes-128-gcm
+    password: e1391926-7121-4fc7-ac83-ec4a920f7171
+  - name: 浙江省嘉兴市+联通 - 2
+    type: ss
+    server: 123.158.253.159
+    port: '38704'
+    cipher: aes-128-gcm
+    password: e1391926-7121-4fc7-ac83-ec4a920f7171
+  - name: 美国 CloudFlare节点 - 3
+    type: vmess
+    server: 104.17.3.81
+    port: 80
+    uuid: e40b2de3-b829-4591-a7b6-99d1913f3246
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /worryfree
+    ws-headers:
+      Host: w.evouch77.live
+  - name: 美国 CloudFlare节点 - 4
+    type: vmess
+    server: microsoftdebug.com
+    port: 80
+    uuid: 0673903d-6ff4-437c-87ee-ebdbda5e52a6
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /secx
+    ws-headers:
+      Host: v1.us9.microsoftdebug.com
+  - name: 广东省广州市 移动
+    type: vmess
+    server: 120.232.179.161
     port: 63078
     uuid: b96f9e5b-7b2a-3c03-b1b3-2e93234f9108
     alterId: 0
@@ -111,86 +128,129 @@ proxies:
     ws-headers:
       Host: hk-balancer.airport-v2.com
     tls: true
-  - name: 美国 V2CROSS.COM
+  - name: 瑞典+V2CROSS.COM - 2
+    type: ss
+    server: 167.88.63.79
+    port: '3306'
+    cipher: aes-256-gcm
+    password: Y6R9pAtvxxzmGC
+  - name: 马来西亚 V2CROSS.COM - 2
     type: vmess
-    server: 137.175.63.135
-    port: 59009
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    server: join-bede.vmessorg.fun
+    port: 80
+    uuid: 94645613-dab4-41f2-bc48-6aa5fcfb9119
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /
+    ws-headers:
+      Host: ''
+  - name: 法国+V2CROSS.COM
+    type: ss
+    server: 92.243.24.58
+    port: '443'
+    cipher: chacha20-ietf-poly1305
+    password: h2Bd2jFzAuYA
+  - name: 美国+V2CROSS.COM - 2
+    type: ss
+    server: 172.99.188.99
+    port: '5001'
+    cipher: aes-256-gcm
+    password: Y6R9pAtvxxzmGC
+  - name: 美国 CloudFlare节点 - 5
+    type: vmess
+    server: cf.515188.xyz
+    port: 8080
+    uuid: 9d553e2b-4176-44ef-bf70-48aa8eb6da60
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /api/v3/download.getFile
+    ws-headers:
+      Host: ssrsub.v01.ssrsub.com
+  - name: 南非 V2CROSS.COM
+    type: vmess
+    server: 156.225.67.166
+    port: 49440
+    uuid: ebec2adf-e940-446f-bed4-d8c91143b54a
     alterId: 64
     cipher: auto
     udp: true
     network: tcp
-    ws-path: ''
-    ws-headers:
-      Host: ''
-  - name: 浙江省嘉兴市+联通 - 3
-    type: ss
-    server: 123.158.253.159
-    port: '38705'
-    cipher: aes-128-gcm
-    password: e1391926-7121-4fc7-ac83-ec4a920f7171
+    ws-headers: {}
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 浙江省嘉兴市+联通
-      - 法国+V2CROSS.COM
-      - 美国+V2CROSS.COM
-      - 美国+V2CROSS.COM - 2
-      - 浙江省嘉兴市+联通 - 2
-      - 美国+V2CROSS.COM - 3
-      - 美国+V2CROSS.COM - 4
-      - 安徽省合肥市+移动
-      - 广东省佛山市 移动
+      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
       - 美国 CloudFlare节点
-      - 广东省东莞市 电信
-      - 瑞士+V2CROSS.COM
+      - 美国+V2CROSS.COM
+      - 美国 加你福尼亚洛杉矶Coperation Coloction数据中心
+      - 上海市+电信
       - 美国 CloudFlare节点 - 2
-      - 上海市 联通
-      - 美国 V2CROSS.COM
-      - 浙江省嘉兴市+联通 - 3
+      - 瑞典+V2CROSS.COM
+      - 马来西亚 V2CROSS.COM
+      - 浙江省嘉兴市+联通
+      - 浙江省嘉兴市+联通 - 2
+      - 美国 CloudFlare节点 - 3
+      - 美国 CloudFlare节点 - 4
+      - 广东省广州市 移动
+      - 瑞典+V2CROSS.COM - 2
+      - 马来西亚 V2CROSS.COM - 2
+      - 法国+V2CROSS.COM
+      - 美国+V2CROSS.COM - 2
+      - 美国 CloudFlare节点 - 5
+      - 南非 V2CROSS.COM
   - name: 自动选择
     type: url-test
     proxies:
-      - 浙江省嘉兴市+联通
-      - 法国+V2CROSS.COM
-      - 美国+V2CROSS.COM
-      - 美国+V2CROSS.COM - 2
-      - 浙江省嘉兴市+联通 - 2
-      - 美国+V2CROSS.COM - 3
-      - 美国+V2CROSS.COM - 4
-      - 安徽省合肥市+移动
-      - 广东省佛山市 移动
+      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
       - 美国 CloudFlare节点
-      - 广东省东莞市 电信
-      - 瑞士+V2CROSS.COM
+      - 美国+V2CROSS.COM
+      - 美国 加你福尼亚洛杉矶Coperation Coloction数据中心
+      - 上海市+电信
       - 美国 CloudFlare节点 - 2
-      - 上海市 联通
-      - 美国 V2CROSS.COM
-      - 浙江省嘉兴市+联通 - 3
+      - 瑞典+V2CROSS.COM
+      - 马来西亚 V2CROSS.COM
+      - 浙江省嘉兴市+联通
+      - 浙江省嘉兴市+联通 - 2
+      - 美国 CloudFlare节点 - 3
+      - 美国 CloudFlare节点 - 4
+      - 广东省广州市 移动
+      - 瑞典+V2CROSS.COM - 2
+      - 马来西亚 V2CROSS.COM - 2
+      - 法国+V2CROSS.COM
+      - 美国+V2CROSS.COM - 2
+      - 美国 CloudFlare节点 - 5
+      - 南非 V2CROSS.COM
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 浙江省嘉兴市+联通
-      - 法国+V2CROSS.COM
-      - 美国+V2CROSS.COM
-      - 美国+V2CROSS.COM - 2
-      - 浙江省嘉兴市+联通 - 2
-      - 美国+V2CROSS.COM - 3
-      - 美国+V2CROSS.COM - 4
-      - 安徽省合肥市+移动
-      - 广东省佛山市 移动
+      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
       - 美国 CloudFlare节点
-      - 广东省东莞市 电信
-      - 瑞士+V2CROSS.COM
+      - 美国+V2CROSS.COM
+      - 美国 加你福尼亚洛杉矶Coperation Coloction数据中心
+      - 上海市+电信
       - 美国 CloudFlare节点 - 2
-      - 上海市 联通
-      - 美国 V2CROSS.COM
-      - 浙江省嘉兴市+联通 - 3
+      - 瑞典+V2CROSS.COM
+      - 马来西亚 V2CROSS.COM
+      - 浙江省嘉兴市+联通
+      - 浙江省嘉兴市+联通 - 2
+      - 美国 CloudFlare节点 - 3
+      - 美国 CloudFlare节点 - 4
+      - 广东省广州市 移动
+      - 瑞典+V2CROSS.COM - 2
+      - 马来西亚 V2CROSS.COM - 2
+      - 法国+V2CROSS.COM
+      - 美国+V2CROSS.COM - 2
+      - 美国 CloudFlare节点 - 5
+      - 南非 V2CROSS.COM
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
