@@ -1,16 +1,16 @@
 proxies:
-  - name: 上海市 联通
+  - name: 美国 惠普HP
     type: vmess
-    server: 223.167.41.202
-    port: 63088
-    uuid: b96f9e5b-7b2a-3c03-b1b3-2e93234f9108
+    server: hk2.c2bfe79372be.sanfen001.pics
+    port: 443
+    uuid: 6ff66f42-38d7-41c6-9a08-0d48f2ef3aa5
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /mugua
+    ws-path: /zh-cn
     ws-headers:
-      Host: tw-load-balancer.myn1des.com
+      Host: ''
     tls: true
   - name: 美国 CloudFlare节点
     type: vmess
@@ -25,18 +25,6 @@ proxies:
     ws-headers:
       Host: ''
     tls: true
-  - name: 美国 CloudFlare节点 - 2
-    type: vmess
-    server: cf.noaries.de
-    port: 2082
-    uuid: 314c1387-618c-4689-97fc-4bc9a1ae5e05
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /
-    ws-headers:
-      Host: ir2.nmsl.ninja
   - name: 广东省佛山市 移动
     type: vmess
     server: 25.v2-ray.cyou
@@ -49,18 +37,31 @@ proxies:
     ws-path: /
     ws-headers:
       Host: 25.v2-ray.cyou
-  - name: 美国 CloudFlare节点 - 3
+  - name: 美国 CloudFlare节点 - 2
     type: vmess
-    server: cf-lt.sharecentre.online
-    port: 443
-    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
+    server: lsb-gy.heinu.cf
+    port: 2096
+    uuid: d793c013-f596-4af9-de0a-2062bb864dd7
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /shirker
+    ws-path: /@heinuhome
     ws-headers:
-      Host: lv1.sharecentrepro.org
+      Host: ''
+    tls: true
+  - name: 美国 CloudFlare节点 - 3
+    type: vmess
+    server: cdnjs.com
+    port: 443
+    uuid: DCE76061-EE65-49DB-997C-A6A880DADE3A
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /speedtest
+    ws-headers:
+      Host: Amsterdam.kotick.site
     tls: true
 proxy-groups:
   - name: Free-servers
@@ -68,28 +69,28 @@ proxy-groups:
     proxies:
       - 自动选择
       - 故障转移
-      - 上海市 联通
+      - 美国 惠普HP
       - 美国 CloudFlare节点
-      - 美国 CloudFlare节点 - 2
       - 广东省佛山市 移动
+      - 美国 CloudFlare节点 - 2
       - 美国 CloudFlare节点 - 3
   - name: 自动选择
     type: url-test
     proxies:
-      - 上海市 联通
+      - 美国 惠普HP
       - 美国 CloudFlare节点
-      - 美国 CloudFlare节点 - 2
       - 广东省佛山市 移动
+      - 美国 CloudFlare节点 - 2
       - 美国 CloudFlare节点 - 3
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 上海市 联通
+      - 美国 惠普HP
       - 美国 CloudFlare节点
-      - 美国 CloudFlare节点 - 2
       - 广东省佛山市 移动
+      - 美国 CloudFlare节点 - 2
       - 美国 CloudFlare节点 - 3
     url: http://www.gstatic.com/generate_204
     interval: 86400
