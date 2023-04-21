@@ -1,28 +1,4 @@
 proxies:
-  - name: 广东省佛山市 移动
-    type: vmess
-    server: 25.v2-ray.cyou
-    port: 23625
-    uuid: 0dd19d20-ec86-3680-b256-87237bafa89e
-    alterId: 2
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /
-    ws-headers:
-      Host: 25.v2-ray.cyou
-  - name: 美国 加利福尼亚州洛杉矶Sharktech数据中心
-    type: vmess
-    server: 64.32.4.56
-    port: 42175
-    uuid: 8653004f-de67-44c2-9cce-e0830933fb03
-    alterId: 64
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: ''
-    ws-headers:
-      Host: ''
   - name: 美国 惠普HP
     type: vmess
     server: hk3.af49c4e4c2ef.sanfen004.me
@@ -38,51 +14,82 @@ proxies:
     tls: true
   - name: 美国 CloudFlare节点
     type: vmess
-    server: cdnjs.com
+    server: 104.17.3.81
+    port: 80
+    uuid: e40b2de3-b829-4591-a7b6-99d1913f3246
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /worryfree
+    ws-headers:
+      Host: w.evouch77.live
+  - name: 美国 CloudFlare节点 - 2
+    type: vmess
+    server: cf.515188.xyz
+    port: 8080
+    uuid: 9d553e2b-4176-44ef-bf70-48aa8eb6da60
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /api/v3/download.getFile
+    ws-headers:
+      Host: ssrsub.v03.ssrsub.com
+  - name: 美国 CloudFlare节点 - 3
+    type: vmess
+    server: v2ray.online
     port: 443
-    uuid: DCE76061-EE65-49DB-997C-A6A880DADE3A
+    uuid: 00BBF5B8-173E-6818-9927-5AD1AA073C7D
     alterId: 0
     cipher: auto
     udp: true
     network: ws
     ws-path: /speedtest
     ws-headers:
-      Host: Amsterdam.kotick.site
+      Host: Kansas.v2ray.online
     tls: true
-  - name: 瑞士+V2CROSS.COM
-    type: trojan
-    server: 195.15.243.26
-    port: '443'
-    password: '4478'
+  - name: 美国 CloudFlare节点 - 4
+    type: vmess
+    server: surongwei.eu.org
+    port: 443
+    uuid: 6093eefb-7ab6-41df-aba0-d5fa58147e10
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /reffs7y26g0ua
+    ws-headers: {}
+    tls: true
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 广东省佛山市 移动
-      - 美国 加利福尼亚州洛杉矶Sharktech数据中心
       - 美国 惠普HP
       - 美国 CloudFlare节点
-      - 瑞士+V2CROSS.COM
+      - 美国 CloudFlare节点 - 2
+      - 美国 CloudFlare节点 - 3
+      - 美国 CloudFlare节点 - 4
   - name: 自动选择
     type: url-test
     proxies:
-      - 广东省佛山市 移动
-      - 美国 加利福尼亚州洛杉矶Sharktech数据中心
       - 美国 惠普HP
       - 美国 CloudFlare节点
-      - 瑞士+V2CROSS.COM
+      - 美国 CloudFlare节点 - 2
+      - 美国 CloudFlare节点 - 3
+      - 美国 CloudFlare节点 - 4
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 广东省佛山市 移动
-      - 美国 加利福尼亚州洛杉矶Sharktech数据中心
       - 美国 惠普HP
       - 美国 CloudFlare节点
-      - 瑞士+V2CROSS.COM
+      - 美国 CloudFlare节点 - 2
+      - 美国 CloudFlare节点 - 3
+      - 美国 CloudFlare节点 - 4
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
