@@ -1,87 +1,74 @@
 proxies:
-  - name: 美国 V2CROSS.COM
-    type: vmess
-    server: 143.42.99.183
-    port: 443
-    uuid: 927094d3-d678-4763-8591-e240d0bcae87
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /chat
-    ws-headers: {}
-    tls: true
   - name: 瑞典+V2CROSS.COM
     type: ss
     server: 167.88.63.79
-    port: '3306'
+    port: '5003'
     cipher: aes-256-gcm
-    password: Y6R9pAtvxxzmGC
-  - name: 美国 CloudFlare节点
+    password: g5MeD6Ft3CWlJId
+  - name: 瑞士+V2CROSS.COM
+    type: trojan
+    server: 195.15.243.26
+    port: '443'
+    password: '4478'
+  - name: 新加坡 DigitalOcean数据中心
     type: vmess
-    server: cf.noaries.de
-    port: 2082
-    uuid: 314c1387-618c-4689-97fc-4bc9a1ae5e05
+    server: 188.166.188.209
+    port: 80
+    uuid: addbf473-e902-419d-b18d-74dcf1a4799a
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /
-    ws-headers:
-      Host: ir2.nmsl.ninja
-  - name: 美国 加利福尼亚州洛杉矶Sharktech数据中心
+    ws-path: /ph5gvpn
+    ws-headers: {}
+  - name: 美国 惠普HP
     type: vmess
-    server: 64.32.21.241
-    port: 44313
-    uuid: 57f93e92-ebb9-4f16-9bdc-8225d2010995
-    alterId: 64
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /
-    ws-headers:
-      Host: ''
-  - name: 美国 CloudFlare节点 - 2
-    type: vmess
-    server: cf.515188.xyz
-    port: 8080
-    uuid: 9d553e2b-4176-44ef-bf70-48aa8eb6da60
+    server: hk3.af49c4e4c2ef.sanfen004.me
+    port: 443
+    uuid: 1172d7fe-4a5d-4d07-92f6-aefa4212347f
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /api/v3/download.getFile
+    ws-path: /zh-cn
     ws-headers:
-      Host: ssrsub.v01.ssrsub.com
+      Host: www.microsoft.com
+    tls: true
+  - name: 瑞典+V2CROSS.COM - 2
+    type: ss
+    server: 167.88.63.79
+    port: '8882'
+    cipher: aes-256-gcm
+    password: kDWvXYZoTBcGkC4
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 美国 V2CROSS.COM
       - 瑞典+V2CROSS.COM
-      - 美国 CloudFlare节点
-      - 美国 加利福尼亚州洛杉矶Sharktech数据中心
-      - 美国 CloudFlare节点 - 2
+      - 瑞士+V2CROSS.COM
+      - 新加坡 DigitalOcean数据中心
+      - 美国 惠普HP
+      - 瑞典+V2CROSS.COM - 2
   - name: 自动选择
     type: url-test
     proxies:
-      - 美国 V2CROSS.COM
       - 瑞典+V2CROSS.COM
-      - 美国 CloudFlare节点
-      - 美国 加利福尼亚州洛杉矶Sharktech数据中心
-      - 美国 CloudFlare节点 - 2
+      - 瑞士+V2CROSS.COM
+      - 新加坡 DigitalOcean数据中心
+      - 美国 惠普HP
+      - 瑞典+V2CROSS.COM - 2
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 美国 V2CROSS.COM
       - 瑞典+V2CROSS.COM
-      - 美国 CloudFlare节点
-      - 美国 加利福尼亚州洛杉矶Sharktech数据中心
-      - 美国 CloudFlare节点 - 2
+      - 瑞士+V2CROSS.COM
+      - 新加坡 DigitalOcean数据中心
+      - 美国 惠普HP
+      - 瑞典+V2CROSS.COM - 2
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
