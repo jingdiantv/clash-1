@@ -1,41 +1,17 @@
 proxies:
+  - name: 美国 加利福尼亚州圣何塞PEG TECH数据中心
+    type: vmess
+    server: 192.74.228.171
+    port: 42857
+    uuid: 051b844f-efe3-4847-92aa-66b5de0b6d4e
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /
+    ws-headers:
+      Host: n1674862929.gofdwgy.cn
   - name: 美国 CloudFlare节点
-    type: vmess
-    server: cf.noaries.de
-    port: 2082
-    uuid: 314c1387-618c-4689-97fc-4bc9a1ae5e05
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /
-    ws-headers:
-      Host: ir2.nmsl.ninja
-  - name: 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
-    type: vmess
-    server: 23.225.33.169
-    port: 56002
-    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-    alterId: 64
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: /
-    ws-headers:
-      Host: ''
-  - name: 美国 加利福尼亚州洛杉矶市SharkTech数据中心
-    type: vmess
-    server: 107.167.4.122
-    port: 46766
-    uuid: 9838c1b4-c3fd-49b5-8a59-2ff05385f17c
-    alterId: 64
-    cipher: auto
-    udp: true
-    network: tcp
-    ws-path: ''
-    ws-headers:
-      Host: ''
-  - name: 美国 CloudFlare节点 - 2
     type: vmess
     server: 172.67.217.222
     port: 80
@@ -47,18 +23,43 @@ proxies:
     ws-path: /shirker
     ws-headers:
       Host: dp3.scproxy.top
-  - name: 美国 惠普HP
+  - name: 美国 CloudFlare节点 - 2
     type: vmess
-    server: hk3.af49c4e4c2ef.sanfen004.me
-    port: 443
-    uuid: 1172d7fe-4a5d-4d07-92f6-aefa4212347f
+    server: cf-lt.sharecentre.online
+    port: 80
+    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
     alterId: 0
     cipher: auto
     udp: true
     network: ws
-    ws-path: /zh-cn
+    ws-path: /shirker
     ws-headers:
-      Host: www.microsoft.com
+      Host: lv1.sharecentrepro.org
+  - name: 美国 CloudFlare节点 - 3
+    type: vmess
+    server: v2ray.online
+    port: 443
+    uuid: 00BBF5B8-173E-6818-9927-5AD1AA073C7D
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /speedtest
+    ws-headers:
+      Host: Kansas.v2ray.online
+    tls: true
+  - name: 澳大利亚 V2CROSS.COM
+    type: vmess
+    server: 203.29.53.13
+    port: 443
+    uuid: 65481a70-dec5-11ed-b735-205c6d5f5d78
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /5sdayu8b
+    ws-headers:
+      Host: pl.0rd.net
     tls: true
 proxy-groups:
   - name: Free-servers
@@ -66,29 +67,29 @@ proxy-groups:
     proxies:
       - 自动选择
       - 故障转移
+      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
       - 美国 CloudFlare节点
-      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
-      - 美国 加利福尼亚州洛杉矶市SharkTech数据中心
       - 美国 CloudFlare节点 - 2
-      - 美国 惠普HP
+      - 美国 CloudFlare节点 - 3
+      - 澳大利亚 V2CROSS.COM
   - name: 自动选择
     type: url-test
     proxies:
+      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
       - 美国 CloudFlare节点
-      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
-      - 美国 加利福尼亚州洛杉矶市SharkTech数据中心
       - 美国 CloudFlare节点 - 2
-      - 美国 惠普HP
+      - 美国 CloudFlare节点 - 3
+      - 澳大利亚 V2CROSS.COM
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
+      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
       - 美国 CloudFlare节点
-      - 美国加利福尼亚州洛杉矶 Coperation Coloction数据中心
-      - 美国 加利福尼亚州洛杉矶市SharkTech数据中心
       - 美国 CloudFlare节点 - 2
-      - 美国 惠普HP
+      - 美国 CloudFlare节点 - 3
+      - 澳大利亚 V2CROSS.COM
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
