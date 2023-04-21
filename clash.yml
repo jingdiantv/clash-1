@@ -1,31 +1,7 @@
 proxies:
-  - name: 瑞典+V2CROSS.COM
-    type: ss
-    server: 167.88.63.79
-    port: '3389'
-    cipher: aes-256-gcm
-    password: Y6R9pAtvxxzmGC
-  - name: 美国+华盛顿Cogent通信公司
-    type: ss
-    server: 38.68.135.18
-    port: '5500'
-    cipher: aes-256-gcm
-    password: KixLvKzwjekG00rm
-  - name: 美国 CloudFlare节点
-    type: vmess
-    server: 172.67.217.222
-    port: 80
-    uuid: 2e496758-950e-4549-8842-d5eec98d9fde
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /shirker
-    ws-headers:
-      Host: dp3.scproxy.top
   - name: 美国 V2CROSS.COM
     type: vmess
-    server: vus5.0bad.com
+    server: 143.42.99.183
     port: 443
     uuid: 927094d3-d678-4763-8591-e240d0bcae87
     alterId: 0
@@ -33,61 +9,79 @@ proxies:
     udp: true
     network: ws
     ws-path: /chat
+    ws-headers: {}
+    tls: true
+  - name: 瑞典+V2CROSS.COM
+    type: ss
+    server: 167.88.63.79
+    port: '3306'
+    cipher: aes-256-gcm
+    password: Y6R9pAtvxxzmGC
+  - name: 美国 CloudFlare节点
+    type: vmess
+    server: cf.noaries.de
+    port: 2082
+    uuid: 314c1387-618c-4689-97fc-4bc9a1ae5e05
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /
+    ws-headers:
+      Host: ir2.nmsl.ninja
+  - name: 美国 加利福尼亚州洛杉矶Sharktech数据中心
+    type: vmess
+    server: 64.32.21.241
+    port: 44313
+    uuid: 57f93e92-ebb9-4f16-9bdc-8225d2010995
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-path: /
     ws-headers:
       Host: ''
-    tls: true
-  - name: 瑞典+V2CROSS.COM - 2
-    type: ss
-    server: 167.88.63.79
-    port: '8009'
-    cipher: aes-256-gcm
-    password: XKFKl2rULjIp74
-  - name: 美国+V2CROSS.COM
-    type: trojan
-    server: 152.70.74.66
-    port: 443?security=tls&type=tcp&headerType=none
-    password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
-  - name: 瑞典+V2CROSS.COM - 3
-    type: ss
-    server: 167.88.63.79
-    port: '5003'
-    cipher: aes-256-gcm
-    password: g5MeD6Ft3CWlJId
+  - name: 美国 CloudFlare节点 - 2
+    type: vmess
+    server: cf.515188.xyz
+    port: 8080
+    uuid: 9d553e2b-4176-44ef-bf70-48aa8eb6da60
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /api/v3/download.getFile
+    ws-headers:
+      Host: ssrsub.v01.ssrsub.com
 proxy-groups:
   - name: Free-servers
     type: select
     proxies:
       - 自动选择
       - 故障转移
-      - 瑞典+V2CROSS.COM
-      - 美国+华盛顿Cogent通信公司
-      - 美国 CloudFlare节点
       - 美国 V2CROSS.COM
-      - 瑞典+V2CROSS.COM - 2
-      - 美国+V2CROSS.COM
-      - 瑞典+V2CROSS.COM - 3
+      - 瑞典+V2CROSS.COM
+      - 美国 CloudFlare节点
+      - 美国 加利福尼亚州洛杉矶Sharktech数据中心
+      - 美国 CloudFlare节点 - 2
   - name: 自动选择
     type: url-test
     proxies:
-      - 瑞典+V2CROSS.COM
-      - 美国+华盛顿Cogent通信公司
-      - 美国 CloudFlare节点
       - 美国 V2CROSS.COM
-      - 瑞典+V2CROSS.COM - 2
-      - 美国+V2CROSS.COM
-      - 瑞典+V2CROSS.COM - 3
+      - 瑞典+V2CROSS.COM
+      - 美国 CloudFlare节点
+      - 美国 加利福尼亚州洛杉矶Sharktech数据中心
+      - 美国 CloudFlare节点 - 2
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
-      - 瑞典+V2CROSS.COM
-      - 美国+华盛顿Cogent通信公司
-      - 美国 CloudFlare节点
       - 美国 V2CROSS.COM
-      - 瑞典+V2CROSS.COM - 2
-      - 美国+V2CROSS.COM
-      - 瑞典+V2CROSS.COM - 3
+      - 瑞典+V2CROSS.COM
+      - 美国 CloudFlare节点
+      - 美国 加利福尼亚州洛杉矶Sharktech数据中心
+      - 美国 CloudFlare节点 - 2
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
