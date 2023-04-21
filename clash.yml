@@ -2,44 +2,55 @@ proxies:
   - name: 瑞典+V2CROSS.COM
     type: ss
     server: 167.88.63.79
-    port: '5003'
+    port: '8118'
     cipher: aes-256-gcm
-    password: g5MeD6Ft3CWlJId
-  - name: 瑞士+V2CROSS.COM
-    type: trojan
-    server: 195.15.243.26
-    port: '443'
-    password: '4478'
-  - name: 新加坡 DigitalOcean数据中心
-    type: vmess
-    server: 188.166.188.209
-    port: 80
-    uuid: addbf473-e902-419d-b18d-74dcf1a4799a
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /ph5gvpn
-    ws-headers: {}
-  - name: 美国 惠普HP
-    type: vmess
-    server: hk3.af49c4e4c2ef.sanfen004.me
-    port: 443
-    uuid: 1172d7fe-4a5d-4d07-92f6-aefa4212347f
-    alterId: 0
-    cipher: auto
-    udp: true
-    network: ws
-    ws-path: /zh-cn
-    ws-headers:
-      Host: www.microsoft.com
-    tls: true
+    password: cdBIDV42DCwnfIN
   - name: 瑞典+V2CROSS.COM - 2
     type: ss
     server: 167.88.63.79
-    port: '8882'
+    port: '3389'
     cipher: aes-256-gcm
-    password: kDWvXYZoTBcGkC4
+    password: Y6R9pAtvxxzmGC
+  - name: 美国 加利福尼亚州圣何塞PEG TECH数据中心
+    type: vmess
+    server: 192.74.239.199
+    port: 56002
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    udp: true
+    network: tcp
+    ws-headers: {}
+  - name: 美国+V2CROSS.COM
+    type: trojan
+    server: 152.70.74.66
+    port: 443?security=tls&type=tcp&headerType=none
+    password: d906afe5-7c3c-4ddc-aaa4-61c154a82e5e
+  - name: 美国 Akamai科技公司CDN网络节点
+    type: vmess
+    server: vin1.0bad.com
+    port: 443
+    uuid: 927094d3-d678-4763-8591-e240d0bcae87
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /chat
+    ws-headers:
+      Host: vin1.0bad.com
+    tls: true
+  - name: 美国 V2CROSS.COM
+    type: vmess
+    server: flos1.ydnode.us
+    port: 80
+    uuid: db0af0f2-a278-3019-9ef8-f064d7a0726c
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-path: /v2ray
+    ws-headers:
+      Host: flos1.ydnode.us
 proxy-groups:
   - name: Free-servers
     type: select
@@ -47,28 +58,31 @@ proxy-groups:
       - 自动选择
       - 故障转移
       - 瑞典+V2CROSS.COM
-      - 瑞士+V2CROSS.COM
-      - 新加坡 DigitalOcean数据中心
-      - 美国 惠普HP
       - 瑞典+V2CROSS.COM - 2
+      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
+      - 美国+V2CROSS.COM
+      - 美国 Akamai科技公司CDN网络节点
+      - 美国 V2CROSS.COM
   - name: 自动选择
     type: url-test
     proxies:
       - 瑞典+V2CROSS.COM
-      - 瑞士+V2CROSS.COM
-      - 新加坡 DigitalOcean数据中心
-      - 美国 惠普HP
       - 瑞典+V2CROSS.COM - 2
+      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
+      - 美国+V2CROSS.COM
+      - 美国 Akamai科技公司CDN网络节点
+      - 美国 V2CROSS.COM
     url: http://www.gstatic.com/generate_204
     interval: 86400
   - name: 故障转移
     type: fallback
     proxies:
       - 瑞典+V2CROSS.COM
-      - 瑞士+V2CROSS.COM
-      - 新加坡 DigitalOcean数据中心
-      - 美国 惠普HP
       - 瑞典+V2CROSS.COM - 2
+      - 美国 加利福尼亚州圣何塞PEG TECH数据中心
+      - 美国+V2CROSS.COM
+      - 美国 Akamai科技公司CDN网络节点
+      - 美国 V2CROSS.COM
     url: http://www.gstatic.com/generate_204
     interval: 86400
 rule-providers:
